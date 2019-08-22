@@ -15,8 +15,10 @@ Make following components
 
 - Navbar
   - Home
-  - Education & Experience
+  - About
+  - Portfolio
   - Blog
+  - contact
 - Body
   - Name | Display picture | Profession | Resume
   - About Me
