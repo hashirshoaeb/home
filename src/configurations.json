@@ -1,0 +1,26 @@
+{
+  "backgroundType": "plain",
+  "plainBackgroundMode": "daylight",
+  "devIntro": "Hi, I'm Hashir Shoaib",
+  "devDesc": "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist",
+  "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
+  "backgroundImageUrl": "http://hdwpro.com/wp-content/uploads/2017/03/Art-Background-Image.png",
+  "icons": [
+    {
+      "image": "fa-github",
+      "url": "https://github.com/hashirshoaeb"
+    },
+    {
+      "image": "fa-facebook",
+      "url": "https://www.facebook.com/hashir.shoaeb"
+    },
+    {
+      "image": "fa-instagram",
+      "url": "https://www.instagram.com/hashir.shoaeb/"
+    },
+    {
+      "image": "fa-linkedin",
+      "url": "https://www.linkedin.com/in/hashir-shoaeb/"
+    }
+  ]
+}

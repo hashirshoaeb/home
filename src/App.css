@@ -2,32 +2,393 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.App-main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: 100;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.intro {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 2.75em;
+  font-weight: 600;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.change-mode {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.icons-social i {
+  padding: 10px;
+  font-size: 2em;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Daylight CSS */
+
+.daylight .App-main {
+  background-color: #282c34;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.daylight .change-mode:before {
+  color: yellow;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+  content: '\f185';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.daylight .icons-social a {
+  color: #fafafa;
+}
+
+.daylight .icons-social a svg path {
+  fill: #fafafa;
+}
+
+/* Nightlight CSS */
+
+.nightlight .App-main {
+  background-color: #fafafa;
+  color: #000;
+}
+
+.nightlight .change-mode:before {
+  color: black;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+  content: '\f186';
+}
+
+.nightlight .icons-social a {
+  color: #000;
+}
+
+.nightlight .icons-social a svg path {
+  fill: #000;
+}
+
+/* Custom CSS Start From Here */
+
+/* day CSS */
+
+.day .App-main {
+  background-color: #282c34;
+  color: white;
+}
+
+.day .icons-social a {
+  color: #fafafa;
+}
+
+.day .icons-social a svg path {
+  fill: #fafafa;
+}
+
+/* night CSS */
+
+.night .App-main {
+  background-color: #fafafa;
+  color: #000;
+}
+
+.night .icons-social a {
+  color: #000;
+}
+
+.night .icons-social a svg path {
+  fill: #000;
+}
+
+/* Dark Colors CSS */
+
+/* terminal CSS */
+
+.terminal .App-main {
+  background-color: #1565c0;
+  color: #ffeb3b;
+}
+
+.terminal .icons-social a {
+  color: #ffeb3b;
+}
+
+.terminal .icons-social a svg path {
+  fill: #ffeb3b;
+}
+
+/* torquoise CSS */
+
+.torquoise .App-main {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.torquoise .icons-social a {
+  color: #fff;
+}
+
+.torquoise .icons-social a svg path {
+  fill: #fff;
+}
+
+/* peterriver CSS */
+
+.peterriver .App-main {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.peterriver .icons-social a {
+  color: #fff;
+}
+
+.peterriver .icons-social a svg path {
+  fill: #fff;
+}
+
+/* amythyst CSS */
+
+.amythyst .App-main {
+  background-color: #9b59b6;
+  color: #fff;
+}
+
+.amythyst .icons-social a {
+  color: #fff;
+}
+
+.amythyst .icons-social a svg path {
+  fill: #fff;
+}
+
+/* carrot CSS */
+
+.carrot .App-main {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.carrot .icons-social a {
+  color: #fff;
+}
+
+.carrot .icons-social a svg path {
+  fill: #fff;
+}
+
+/* alizarin CSS */
+
+.alizarin .App-main {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.alizarin .icons-social a {
+  color: #fff;
+}
+
+.alizarin .icons-social a svg path {
+  fill: #fff;
+}
+
+/* Light Colors CSS */
+
+/* lightred CSS */
+
+.lightred .App-main {
+  background-color: #ffcdd2;
+  color: #000;
+}
+
+.lightred .icons-social a {
+  color: #000;
+}
+
+.lightred .icons-social a svg path {
+  fill: #000;
+}
+
+/* lightpurple CSS */
+
+.lightpurple .App-main {
+  background-color: #e1bee7;
+  color: #000;
+}
+
+.lightpurple .icons-social a {
+  color: #000;
+}
+
+.lightpurple .icons-social a svg path {
+  fill: #000;
+}
+
+/* lightgreen CSS */
+
+.lightgreen .App-main {
+  background-color: #c8e6c9;
+  color: #000;
+}
+
+.lightgreen .icons-social a {
+  color: #000;
+}
+
+.lightgreen .icons-social a svg path {
+  fill: #000;
+}
+
+/* lightblue CSS */
+
+.lightblue .App-main {
+  background-color: #b3e5fc;
+  color: #000;
+}
+
+.lightblue .icons-social a {
+  color: #000;
+}
+
+.lightblue .icons-social a svg path {
+  fill: #000;
+}
+
+/* lightyellow CSS */
+
+.lightyellow .App-main {
+  background-color: #fff9c4;
+  color: #000;
+}
+
+.lightyellow .icons-social a {
+  color: #000;
+}
+
+.lightyellow .icons-social a svg path {
+  fill: #000;
+}
+
+/* Gradient background */
+
+.gradient {
+  width: 100wh;
+  height: 100vh;
+  color: #fff;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+.gradient .App-main {
+  color: #fff;
+}
+
+.gradient .icons-social a {
+  color: #fff;
+}
+
+.gradient .icons-social a svg path {
+  fill: #fff;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    background-position: 100% 50%;
   }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Full Page Background Image CSS */
+
+.full-bg-image {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.full-bg-image .App-main {
+  color: #fff;
+}
+
+.full-bg-image .icons-social a {
+  color: #fff;
+}
+
+.full-bg-image .icons-social a svg path {
+  fill: #fff;
 }
