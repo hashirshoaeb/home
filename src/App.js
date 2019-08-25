@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Typist from "react-typist";
 import "./App.css";
+import "./bootstrap.css";
 import Configs from "./configurations.json";
 
 class App extends Component {
