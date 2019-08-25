@@ -20,7 +20,7 @@
 }
 
 .intro {
-  font-family: 'Reem Kufi', sans-serif;
+  font-family: "Reem Kufi", sans-serif;
   font-size: 2.75em;
   font-weight: 600;
   margin-left: 0.5em;
@@ -71,9 +71,9 @@
 
 .daylight .change-mode:before {
   color: yellow;
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  content: '\f185';
+  content: "\f185";
 }
 
 .daylight .icons-social a {
@@ -93,9 +93,9 @@
 
 .nightlight .change-mode:before {
   color: black;
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  content: '\f186';
+  content: "\f186";
 }
 
 .nightlight .icons-social a {
@@ -135,175 +135,6 @@
 }
 
 .night .icons-social a svg path {
-  fill: #000;
-}
-
-/* Dark Colors CSS */
-
-/* terminal CSS */
-
-.terminal .App-main {
-  background-color: #1565c0;
-  color: #ffeb3b;
-}
-
-.terminal .icons-social a {
-  color: #ffeb3b;
-}
-
-.terminal .icons-social a svg path {
-  fill: #ffeb3b;
-}
-
-/* torquoise CSS */
-
-.torquoise .App-main {
-  background-color: #1abc9c;
-  color: #fff;
-}
-
-.torquoise .icons-social a {
-  color: #fff;
-}
-
-.torquoise .icons-social a svg path {
-  fill: #fff;
-}
-
-/* peterriver CSS */
-
-.peterriver .App-main {
-  background-color: #3498db;
-  color: #fff;
-}
-
-.peterriver .icons-social a {
-  color: #fff;
-}
-
-.peterriver .icons-social a svg path {
-  fill: #fff;
-}
-
-/* amythyst CSS */
-
-.amythyst .App-main {
-  background-color: #9b59b6;
-  color: #fff;
-}
-
-.amythyst .icons-social a {
-  color: #fff;
-}
-
-.amythyst .icons-social a svg path {
-  fill: #fff;
-}
-
-/* carrot CSS */
-
-.carrot .App-main {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.carrot .icons-social a {
-  color: #fff;
-}
-
-.carrot .icons-social a svg path {
-  fill: #fff;
-}
-
-/* alizarin CSS */
-
-.alizarin .App-main {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.alizarin .icons-social a {
-  color: #fff;
-}
-
-.alizarin .icons-social a svg path {
-  fill: #fff;
-}
-
-/* Light Colors CSS */
-
-/* lightred CSS */
-
-.lightred .App-main {
-  background-color: #ffcdd2;
-  color: #000;
-}
-
-.lightred .icons-social a {
-  color: #000;
-}
-
-.lightred .icons-social a svg path {
-  fill: #000;
-}
-
-/* lightpurple CSS */
-
-.lightpurple .App-main {
-  background-color: #e1bee7;
-  color: #000;
-}
-
-.lightpurple .icons-social a {
-  color: #000;
-}
-
-.lightpurple .icons-social a svg path {
-  fill: #000;
-}
-
-/* lightgreen CSS */
-
-.lightgreen .App-main {
-  background-color: #c8e6c9;
-  color: #000;
-}
-
-.lightgreen .icons-social a {
-  color: #000;
-}
-
-.lightgreen .icons-social a svg path {
-  fill: #000;
-}
-
-/* lightblue CSS */
-
-.lightblue .App-main {
-  background-color: #b3e5fc;
-  color: #000;
-}
-
-.lightblue .icons-social a {
-  color: #000;
-}
-
-.lightblue .icons-social a svg path {
-  fill: #000;
-}
-
-/* lightyellow CSS */
-
-.lightyellow .App-main {
-  background-color: #fff9c4;
-  color: #000;
-}
-
-.lightyellow .icons-social a {
-  color: #000;
-}
-
-.lightyellow .icons-social a svg path {
   fill: #000;
 }
 

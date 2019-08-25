@@ -7,23 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      darkBackgroundModes: [
-        "day",
-        "terminal",
-        "torquoise",
-        "alizarin",
-        "amythyst",
-        "carrot",
-        "peterriver"
-      ],
-      lightBackgroundModes: [
-        "night",
-        "lightred",
-        "lightpurple",
-        "lightgreen",
-        "lightblue",
-        "lightyellow"
-      ],
+      darkBackgroundModes: ["day"],
+      lightBackgroundModes: ["night"],
       backgroundType: Configs.backgroundType || "plain",
       appClass: Configs.plainBackgroundMode || "daylight",
       devIntro: Configs.devIntro || "Lorem Ipsum",
@@ -44,11 +29,6 @@ class App extends Component {
       this.setState({
         appClass: "gradient",
         bgStyle: this.prepareGradientStyleSheets()
-      });
-    } else if (this.checkIfImageTypeEnabled()) {
-      this.setState({
-        appClass: "full-bg-image",
-        bgStyle: this.prepareBackgroundImageStyle()
       });
     }
   };
@@ -75,10 +55,6 @@ class App extends Component {
     return this.state.backgroundType === "plain";
   };
 
-  checkIfImageTypeEnabled = () => {
-    return this.state.backgroundType === "image";
-  };
-
   prepareGradientStyleSheets = () => {
     if (Configs.gradientColors) {
       return {
@@ -90,24 +66,6 @@ class App extends Component {
         background:
           "linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB)",
         backgroundSize: "400% 400%"
-      };
-    }
-  };
-
-  prepareBackgroundImageStyle = () => {
-    if (Configs.backgroundImageUrl) {
-      return {
-        background:
-          'url("' +
-          Configs.backgroundImageUrl +
-          '") no-repeat center center fixed',
-        backgroundSize: "cover"
-      };
-    } else {
-      return {
-        background:
-          'url("/images/sample-background.jpg") no-repeat center center fixed',
-        backgroundSize: "cover"
       };
     }
   };
@@ -136,35 +94,6 @@ class App extends Component {
     }
   };
 
-  changeBackgroundBasedonMode = () => {
-    if (
-      this.checkIfNightModeEnabled() &&
-      this.state.backgroundIndex < this.state.lightBackgroundModes.length - 1
-    ) {
-      this.setState({
-        backgroundIndex: this.state.backgroundIndex + 1,
-        backgroundMode: this.state.lightBackgroundModes[
-          this.state.backgroundIndex + 1
-        ]
-      });
-    } else if (
-      this.checkIfDayModeEnabled() &&
-      this.state.backgroundIndex < this.state.darkBackgroundModes.length - 1
-    ) {
-      this.setState({
-        backgroundIndex: this.state.backgroundIndex + 1,
-        backgroundMode: this.state.darkBackgroundModes[
-          this.state.backgroundIndex + 1
-        ]
-      });
-    } else {
-      this.setState({
-        backgroundIndex: 0,
-        backgroundMode: this.getDefaultModeBasedOnBackgroundType()
-      });
-    }
-  };
-
   render() {
     const {
       appClass,
@@ -178,10 +107,7 @@ class App extends Component {
     return (
       <div className={appClass} style={bgStyle}>
         <div className="change-mode" onClick={this.changeThemeMode} />
-        <div
-          className={backgroundMode}
-          onClick={this.changeBackgroundBasedonMode}
-        >
+        <div className={backgroundMode}>
           <main className="App-main">
             <h1 className="intro">{devIntro}</h1>
             <div className="tagline">
