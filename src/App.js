@@ -67,31 +67,19 @@ class MainBody extends Component {
     super(props);
     this.state = {
       backgroundType: "gradient",
-      devInfo: "devInfo",
-      devDesc: "afks slkdfhj kjhfdjk slekjhf slksjh rjnfnb dcnmbd leriv",
-      bgStyle: this.prepareGradientStyleSheets()
+      devInfo: "Hi, I'm Hashir Shoaib",
+      devDesc:
+        "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist"
     };
   }
 
-  prepareGradientStyleSheets = () => {
-    return {
-      background: "linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB)",
-      backgroundSize: "400% 400%"
-    };
-  };
-
   render() {
     return (
-      <div
-        className="jumbotron jumbotron-fluid bg-transparent"
-        style={this.state.bgStyle}
-      >
+      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light">
         <div className=" container container-fluid text-center">
-          <h1 className="display-4">Hello, world! {this.state.devInfo}</h1>
+          <h1 className="display-1">{this.state.devInfo}</h1>
           <p className="lead">
-            {this.state.devDesc} This is a simple hero unit, a simple
-            jumbotron-style component for calling extra attention to featured
-            content or information.
+            <Typist>{this.state.devDesc}</Typist>
           </p>
           <hr className="my-4" />
           <p>
@@ -115,7 +103,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="hii">
+      <div>
         <Navbar></Navbar>
         <MainBody></MainBody>
       </div>
