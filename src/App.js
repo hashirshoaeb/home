@@ -11,53 +11,43 @@ class Navbar extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
-              </li>
-            </ul>
+      <nav className="navbar navbar-expand-sm navbar-light bg-transparent fixed-top">
+        <a className="navbar-brand" href="#">
+          Navbar
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-item nav-link active" href="#">
+              Home <span className="sr-only">(current)</span>
+            </a>
+            <a className="nav-item nav-link" href="#">
+              Features
+            </a>
+            <a className="nav-item nav-link" href="#">
+              Pricing
+            </a>
+            <a
+              className="nav-item nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+            >
+              Disabled
+            </a>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 }
@@ -69,15 +59,96 @@ class MainBody extends Component {
       backgroundType: "gradient",
       devInfo: "Hi, I'm Hashir Shoaib",
       devDesc:
-        "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist"
+        "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist",
+      icons: [
+        {
+          image: "fa-github",
+          url: "https://github.com/hashirshoaeb"
+        },
+        {
+          image: "fa-facebook",
+          url: "https://www.facebook.com/hashir.shoaeb"
+        },
+        {
+          image: "fa-instagram",
+          url: "https://www.instagram.com/hashir.shoaeb/"
+        },
+        {
+          image: "fa-linkedin",
+          url: "https://www.linkedin.com/in/hashir-shoaeb/"
+        }
+      ]
     };
   }
 
+  handleScroll = e => {
+    this.setState({ devInfo: "I'm scrolling" });
+    console.log("trigered");
+  };
+  toggleHover = e => {
+    console.log("hover trigered");
+  };
+  componentDidMount = () => {
+    window.addEventListener("scroll", this.handleScroll);
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
+
   render() {
+    const socialicons = {
+      color: "white",
+      paddingLeft: "5px",
+      paddingRight: "5px",
+      transition: "all 0.8s"
+    };
     return (
       <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light">
         <div className=" container container-fluid text-center">
-          <h1 className="display-1">{this.state.devInfo}</h1>
+          <h1 className="display-1" onScroll={this.handleScroll}>
+            {this.state.devInfo}
+          </h1>
+          <p className="lead">
+            <Typist>{this.state.devDesc}</Typist>
+          </p>
+          <hr className="my-4" />
+
+          <div className=" p-5">
+            {this.state.icons.map(icon => (
+              <a target="_blank" rel="noopener noreferrer" href={`${icon.url}`}>
+                <i
+                  className={`fab ${icon.image}  fa-3x`}
+                  style={socialicons}
+                  onMouseEnter={this.toggleHover}
+                  onMouseLeave={this.toggleHover}
+                />
+              </a>
+            ))}
+          </div>
+
+          <a className="btn btn-primary btn-lg" href="#" role="button">
+            Learn more
+          </a>
+        </div>
+      </div>
+    );
+  }
+}
+
+class AboutMe extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading: "About me",
+      devDesc: "asdj kjahs jash yg tf rdfhjg jaygd hjgbv jbhvhc"
+    };
+  }
+  render() {
+    return (
+      <div className="jumbotron jumbotron-fluid my-n5">
+        <div className=" container container-fluid p-5">
+          <h1 className="display-1">{this.state.heading}</h1>
           <p className="lead">
             <Typist>{this.state.devDesc}</Typist>
           </p>
@@ -95,6 +166,40 @@ class MainBody extends Component {
   }
 }
 
+class Projects extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heading: "My Projects"
+    };
+  }
+  render() {
+    return (
+      <div className="jumbotron jumbotron-fluid my-n5">
+        <div className=" container container-fluid p-5">
+          <h1 className="display-1">{this.state.heading}</h1>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bgStyle: { backgroundColor: "#f5f5f5" }
+    };
+  }
+  render() {
+    return (
+      <footer style={this.state.bgStyle} className=" mt-auto py-3 text-center">
+        <strong> &copy; 2019 </strong> Built with Reactjs
+      </footer>
+    );
+  }
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -106,6 +211,9 @@ class App extends Component {
       <div>
         <Navbar></Navbar>
         <MainBody></MainBody>
+        <AboutMe></AboutMe>
+        <Projects></Projects>
+        <Footer></Footer>
       </div>
     );
   }

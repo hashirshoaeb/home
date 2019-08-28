@@ -2,7 +2,7 @@
 
 ## Description
 
-It is a personal static website/portfolio hosted with GitHub Pages. Site URL: [hashirshoaeb.github.io](https://hashirshoaeb.github.io).
+It is a personal static website/portfolio hosted with GitHub Pages. Site URL: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
 
 ## Roadmap
 
