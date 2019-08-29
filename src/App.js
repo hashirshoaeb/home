@@ -57,7 +57,7 @@ class MainBody extends Component {
     super(props);
     this.state = {
       backgroundType: "gradient",
-      devInfo: "Hi, I'm Hashir Shoaib",
+      devInfo: "Hashir Shoaib",
       devDesc:
         "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist",
       icons: [
@@ -82,8 +82,8 @@ class MainBody extends Component {
   }
 
   handleScroll = e => {
-    this.setState({ devInfo: "I'm scrolling" });
-    console.log("trigered");
+    this.setState({ devInfo: "Hashir Shoaib" });
+    console.log("scroll trigered");
   };
   toggleHover = e => {
     console.log("hover trigered");
@@ -104,15 +104,14 @@ class MainBody extends Component {
       transition: "all 0.8s"
     };
     return (
-      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light">
-        <div className=" container container-fluid text-center">
+      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center flex-wrap m-0">
+        <div className=" container container-fluid text-center ">
           <h1 className="display-1" onScroll={this.handleScroll}>
             {this.state.devInfo}
           </h1>
           <p className="lead">
             <Typist>{this.state.devDesc}</Typist>
           </p>
-          <hr className="my-4" />
 
           <div className=" p-5">
             {this.state.icons.map(icon => (
@@ -146,7 +145,7 @@ class AboutMe extends Component {
   }
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid my-n5">
+      <div className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
           <h1 className="display-1">{this.state.heading}</h1>
           <p className="lead">
@@ -166,7 +165,7 @@ class AboutMe extends Component {
   }
 }
 
-class Projects extends Component {
+class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -175,9 +174,36 @@ class Projects extends Component {
   }
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid my-n5">
+      <div className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
           <h1 className="display-1">{this.state.heading}</h1>
+          <div className=" card-columns">
+            <ProjectCard></ProjectCard>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class ProjectCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
         </div>
       </div>
     );
@@ -209,10 +235,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <MainBody></MainBody>
-        <AboutMe></AboutMe>
-        <Projects></Projects>
+        {/* <AboutMe></AboutMe> */}
+        {/* <Project></Project> */}
         <Footer></Footer>
       </div>
     );
