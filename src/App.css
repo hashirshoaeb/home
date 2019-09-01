@@ -67,3 +67,19 @@
     background-position: 0% 7%;
   }
 }
+
+.socialicons {
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: all 0.8s;
+  margin: 4px;
+}
+
+.socialiconshover {
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: all 0.8s;
+  margin: 4px;
+}

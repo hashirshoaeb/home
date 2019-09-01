@@ -40,7 +40,7 @@ class Navbar extends Component {
             <a
               className="nav-item nav-link disabled"
               href="#"
-              tabindex="-1"
+              tabIndex="-1"
               aria-disabled="true"
             >
               Disabled
@@ -57,36 +57,31 @@ class MainBody extends Component {
     super(props);
     this.state = {
       backgroundType: "gradient",
-      devInfo: "Hashir Shoaib",
+      devInfo: "Hi, I'm Hashir Shoaib",
       devDesc:
         "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist",
-      icons: [
-        {
-          image: "fa-github",
-          url: "https://github.com/hashirshoaeb"
-        },
-        {
-          image: "fa-facebook",
-          url: "https://www.facebook.com/hashir.shoaeb"
-        },
-        {
-          image: "fa-instagram",
-          url: "https://www.instagram.com/hashir.shoaeb/"
-        },
-        {
-          image: "fa-linkedin",
-          url: "https://www.linkedin.com/in/hashir-shoaeb/"
-        }
-      ]
+      hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"]
     };
   }
 
   handleScroll = e => {
-    this.setState({ devInfo: "Hashir Shoaib" });
+    this.setState({ devInfo: "I'm scrolling" });
     console.log("scroll trigered");
   };
-  toggleHover = e => {
-    console.log("hover trigered");
+
+  toggleHover = data => {
+    const newhoverStatus = [...this.state.hoverstatus];
+    if (data.event === "enter") {
+      newhoverStatus[data.icon.id] = "socialiconshover";
+      this.setState({ hoverstatus: newhoverStatus });
+      if (data.icon.id === 0) {
+      }
+    } else {
+      newhoverStatus[data.icon.id] = "socialicons";
+      this.setState({ hoverstatus: newhoverStatus });
+      if (data.icon.id === 0) {
+      }
+    }
   };
   componentDidMount = () => {
     window.addEventListener("scroll", this.handleScroll);
@@ -97,12 +92,32 @@ class MainBody extends Component {
   };
 
   render() {
-    const socialicons = {
-      color: "white",
-      paddingLeft: "5px",
-      paddingRight: "5px",
-      transition: "all 0.8s"
-    };
+    const icons = [
+      {
+        id: 0,
+        image: "fa-github",
+        url: "https://github.com/hashirshoaeb",
+        style: "socialicons"
+      },
+      {
+        id: 1,
+        image: "fa-facebook",
+        url: "https://www.facebook.com/hashir.shoaeb",
+        style: "socialicons"
+      },
+      {
+        id: 2,
+        image: "fa-instagram",
+        url: "https://www.instagram.com/hashir.shoaeb/",
+        style: "socialicons"
+      },
+      {
+        id: 3,
+        image: "fa-linkedin",
+        url: "https://www.linkedin.com/in/hashir-shoaeb/",
+        style: "socialicons"
+      }
+    ];
     return (
       <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center flex-wrap m-0">
         <div className=" container container-fluid text-center ">
@@ -114,20 +129,30 @@ class MainBody extends Component {
           </p>
 
           <div className=" p-5">
-            {this.state.icons.map(icon => (
-              <a target="_blank" rel="noopener noreferrer" href={`${icon.url}`}>
+            {icons.map(icon => (
+              <a
+                key={icon.id}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`${icon.url}`}
+              >
                 <i
-                  className={`fab ${icon.image}  fa-3x`}
-                  style={socialicons}
-                  onMouseEnter={this.toggleHover}
-                  onMouseLeave={this.toggleHover}
+                  className={`fab ${icon.image}  fa-3x ${
+                    this.state.hoverstatus[icon.id]
+                  }`}
+                  onMouseEnter={() =>
+                    this.toggleHover({ icon: icon, event: "enter" })
+                  }
+                  onMouseLeave={() =>
+                    this.toggleHover({ icon: icon, event: "leave" })
+                  }
                 />
               </a>
             ))}
           </div>
 
           <a className="btn btn-primary btn-lg" href="#" role="button">
-            Learn more
+            More about me
           </a>
         </div>
       </div>
@@ -176,8 +201,11 @@ class Project extends Component {
     return (
       <div className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
-          <h1 className="display-1">{this.state.heading}</h1>
-          <div className=" card-columns">
+          <h1 className="display-1 pb-5">{this.state.heading}</h1>
+          <div className=" row">
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
           </div>
         </div>
@@ -193,17 +221,20 @@ class ProjectCard extends Component {
   }
   render() {
     return (
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
+      <div className="col-md-5">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -235,10 +266,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar></Navbar> */}
+        <Navbar></Navbar>
         <MainBody></MainBody>
-        {/* <AboutMe></AboutMe> */}
-        {/* <Project></Project> */}
+        <AboutMe></AboutMe>
+        <Project></Project>
         <Footer></Footer>
       </div>
     );

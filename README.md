@@ -1,4 +1,4 @@
-# hashirshoaeb.github.io
+# hashirshoaeb.github.io/home
 
 ## Description
 
@@ -25,9 +25,9 @@ Make following components
   - Things I'm good at (Skills)
   - Projects
   - Interests and Hobbies
-  - Contact / Follow / Find me / Facebook / Linkedin / GitHub / Instagram
+  - Contact / Follow / Find me / Facebook / Linkedin / GitHub / Instagram / Email
 - Footer
-  - Acknowledgements
+  - Acknowledgements (contributors)
   - Copyrights - open source
 
 ## Contributing
