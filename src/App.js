@@ -3,6 +3,7 @@ import Typist from "react-typist";
 import "./App.css";
 import Configs from "./configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 import $ from "jquery";
 import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -56,17 +57,16 @@ class MainBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundType: "gradient",
-      devInfo: "Hi, I'm Hashir Shoaib",
-      devDesc:
-        "🧔🏻Engineer | Programmer | 👨🏻‍💻Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist",
+      backgroundType: Configs.backgroundType,
+      devInfo: Configs.devIntro,
+      devDesc: Configs.devDesc,
       hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"]
     };
   }
 
   handleScroll = e => {
-    this.setState({ devInfo: "I'm scrolling" });
-    console.log("scroll trigered");
+    this.setState({ devInfo: "Hashir Shoaib" });
+    // console.log("scroll trigered");
   };
 
   toggleHover = data => {
@@ -92,32 +92,7 @@ class MainBody extends Component {
   };
 
   render() {
-    const icons = [
-      {
-        id: 0,
-        image: "fa-github",
-        url: "https://github.com/hashirshoaeb",
-        style: "socialicons"
-      },
-      {
-        id: 1,
-        image: "fa-facebook",
-        url: "https://www.facebook.com/hashir.shoaeb",
-        style: "socialicons"
-      },
-      {
-        id: 2,
-        image: "fa-instagram",
-        url: "https://www.instagram.com/hashir.shoaeb/",
-        style: "socialicons"
-      },
-      {
-        id: 3,
-        image: "fa-linkedin",
-        url: "https://www.linkedin.com/in/hashir-shoaeb/",
-        style: "socialicons"
-      }
-    ];
+    const icons = Configs.icons;
     return (
       <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center flex-wrap m-0">
         <div className=" container container-fluid text-center ">
@@ -165,25 +140,53 @@ class AboutMe extends Component {
     super(props);
     this.state = {
       heading: "About me",
-      devDesc: "asdj kjahs jash yg tf rdfhjg jaygd hjgbv jbhvhc"
+      aboutDev: Configs.aboutDev,
+      instaProfilePic: "bad request"
     };
   }
+
+  componentDidMount = () => {
+    this.handleRequest();
+  };
+
+  handleRequest = e => {
+    console.log("request trigered");
+    axios
+      .get(Configs.instaHTTPGet)
+      .then(response => {
+        // handle success
+        console.log(response.data.graphql);
+        this.setState({
+          instaProfilePic: response.data.graphql.user.profile_pic_url_hd
+        });
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function() {
+        // always executed
+      });
+  };
+
   render() {
     return (
       <div className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
-          <h1 className="display-1">{this.state.heading}</h1>
-          <p className="lead">
-            <Typist>{this.state.devDesc}</Typist>
-          </p>
-          <hr className="my-4" />
-          <p>
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
-          </p>
-          <a className="btn btn-primary btn-lg" href="#" role="button">
-            Learn more
-          </a>
+          <div className="row">
+            <div className=" col-5 d-none d-lg-block align-self-center">
+              <img
+                className=" border border-secondary rounded-circle"
+                src={this.state.instaProfilePic}
+              ></img>
+            </div>
+            <div className=" col-lg-7">
+              <h1 className="display-4 mb-5 text-center">
+                {this.state.heading}
+              </h1>
+              <p className=" lead text-center">{this.state.aboutDev}</p>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -201,7 +204,7 @@ class Project extends Component {
     return (
       <div className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
-          <h1 className="display-1 pb-5">{this.state.heading}</h1>
+          <h1 className="display-4 pb-5">{this.state.heading}</h1>
           <div className=" row">
             <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
@@ -221,7 +224,7 @@ class ProjectCard extends Component {
   }
   render() {
     return (
-      <div className="col-md-5">
+      <div className="col-md-6">
         <div class="card shadow-lg p-3 mb-5 bg-white rounded">
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
@@ -266,10 +269,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <MainBody></MainBody>
         <AboutMe></AboutMe>
-        <Project></Project>
+        {/* <Project></Project> */}
         <Footer></Footer>
       </div>
     );

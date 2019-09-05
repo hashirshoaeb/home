@@ -1,25 +1,35 @@
 {
-  "backgroundType": "plain",
+  "backgroundType": "gradient",
   "plainBackgroundMode": "daylight",
-  "devIntro": "Hi, I'm Hashir Shoaib",
+  "devIntro": "Hashir Shoaib",
   "devDesc": "🧔🏻 Engineer | Programmer | 👨🏻‍💻 Web Developer | 📸 Photographer | 🥋Athlete | 👩‍🎨 Artist ",
   "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
   "icons": [
     {
+      "id": 0,
       "image": "fa-github",
-      "url": "https://github.com/hashirshoaeb"
+      "url": "https://github.com/hashirshoaeb",
+      "style": "socialicons"
     },
     {
+      "id": 1,
       "image": "fa-facebook",
-      "url": "https://www.facebook.com/hashir.shoaeb"
+      "url": "https://www.facebook.com/hashir.shoaeb",
+      "style": "socialicons"
     },
     {
+      "id": 2,
       "image": "fa-instagram",
-      "url": "https://www.instagram.com/hashir.shoaeb/"
+      "url": "https://www.instagram.com/hashir.shoaeb/",
+      "style": "socialicons"
     },
     {
+      "id": 3,
       "image": "fa-linkedin",
-      "url": "https://www.linkedin.com/in/hashir-shoaeb/"
+      "url": "https://www.linkedin.com/in/hashir-shoaeb/",
+      "style": "socialicons"
     }
-  ]
+  ],
+  "instaHTTPGet": "https://www.instagram.com/hashir.shoaeb/?__a=1",
+  "aboutDev": "An Engineer who is a former Intern at RiseTech. He holds a Bachelor's degree in Computer Engineering from National University of Sciences and Technology. He has keen interest in Robotics, and recently working on his Final Year Project. He also has three years' experience in Web Development, working in crossfunctional teams and using mulitple web platforms. Hashir is passionate about teaching machines how to think."
 }
