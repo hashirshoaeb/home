@@ -296,7 +296,7 @@ class ProjectCard extends Component {
     return (
       <div className="col-md-6">
         <div className="card shadow-lg p-3 mb-5 bg-white rounded">
-          <img src="..." className="card-img-top" alt="..." />
+          <img src="" className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{this.state.value.name} </h5>
             <p className="card-text">
