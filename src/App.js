@@ -94,15 +94,12 @@ class MainBody extends Component {
   render() {
     const icons = Configs.icons;
     return (
-      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center flex-wrap m-0">
+      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0">
         <div className=" container container-fluid text-center ">
           <h1 className="display-1" onScroll={this.handleScroll}>
             {this.state.devInfo}
           </h1>
-          <p className="lead">
-            <Typist>{this.state.devDesc}</Typist>
-          </p>
-
+          <Typist className="lead"> {this.state.devDesc}</Typist>
           <div className=" p-5">
             {icons.map(icon => (
               <a
@@ -126,7 +123,11 @@ class MainBody extends Component {
             ))}
           </div>
 
-          <a className="btn btn-primary btn-lg" href="#" role="button">
+          <a
+            className="btn btn-primary btn-lg"
+            href="#divaboutme"
+            role="button"
+          >
             More about me
           </a>
         </div>
@@ -150,12 +151,12 @@ class AboutMe extends Component {
   };
 
   handleRequest = e => {
-    console.log("request trigered");
+    // console.log("request trigered");
     axios
-      .get(Configs.instaHTTPGet)
+      .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
       .then(response => {
         // handle success
-        console.log(response.data.graphql);
+        // console.log(response.data.graphql);
         this.setState({
           instaProfilePic: response.data.graphql.user.profile_pic_url_hd
         });
@@ -171,7 +172,7 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid m-0">
+      <div id="divaboutme" className="jumbotron jumbotron-fluid m-0">
         <div className=" container container-fluid p-5">
           <div className="row">
             <div className=" col-5 d-none d-lg-block align-self-center">
@@ -197,19 +198,51 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heading: "My Projects"
+      heading: "My Projects",
+      projectsArray: []
     };
   }
+
+  componentDidMount = () => {
+    this.handleRequest();
+  };
+
+  handleRequest = e => {
+    // console.log("github request trigered");
+    axios
+      .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
+      .then(response => {
+        // handle success
+        // console.log(response.data.slice(0, 4));
+        this.setState({
+          projectsArray: response.data.slice(0, 4)
+        });
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function() {
+        // always executed
+      });
+  };
+
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid m-0">
+      <div
+        id="divproject"
+        className="jumbotron jumbotron-fluid bg-transparent m-0"
+      >
         <div className=" container container-fluid p-5">
           <h1 className="display-4 pb-5">{this.state.heading}</h1>
           <div className=" row">
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
+            {this.state.projectsArray.map(project => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                value={project}
+              ></ProjectCard>
+            ))}
           </div>
         </div>
       </div>
@@ -220,22 +253,61 @@ class Project extends Component {
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      value: this.props.value,
+      updated_at: "0 mints"
+    };
   }
+  componentDidMount = () => {
+    this.handleUpdatetime();
+  };
+  handleUpdatetime = () => {
+    const date = new Date(this.state.value.pushed_at);
+    const nowdate = new Date();
+    var diff = nowdate.getTime() - date.getTime();
+    var hours = Math.trunc(diff / 1000 / 60 / 60);
+    if (hours < 24) {
+      this.setState({ updated_at: hours.toString() + " hours ago" });
+    } else {
+      var monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ];
+      var day = date.getDate();
+      var monthIndex = date.getMonth();
+      var year = date.getFullYear();
+      this.setState({
+        updated_at: "on " + day + " " + monthNames[monthIndex] + " " + year
+      });
+    }
+  };
+
   render() {
     return (
       <div className="col-md-6">
-        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+        <div className="card shadow-lg p-3 mb-5 bg-white rounded">
+          <img src="..." className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{this.state.value.name} </h5>
+            <p className="card-text">
+              {this.state.value.description}{" "}
+              https://api.github.com/repos/hashirshoaeb/home/languages pushed_at
+              stargazers_count updated_at
             </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
+            <p className="card-text">
+              <small className="text-muted">
+                Updated {this.state.updated_at}
+              </small>
             </p>
           </div>
         </div>
@@ -272,7 +344,7 @@ class App extends Component {
         {/* <Navbar></Navbar> */}
         <MainBody></MainBody>
         <AboutMe></AboutMe>
-        {/* <Project></Project> */}
+        <Project></Project>
         <Footer></Footer>
       </div>
     );
@@ -280,133 +352,3 @@ class App extends Component {
 }
 
 export default App;
-
-// class App extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       darkBackgroundModes: ["day"],
-//       lightBackgroundModes: ["night"],
-//       backgroundType: Configs.backgroundType || "plain",
-//       appClass: Configs.plainBackgroundMode || "daylight",
-//       devIntro: Configs.devIntro || "Lorem Ipsum",
-//       devDesc:
-//         Configs.devDesc ||
-//         "Aute veniam ut deserunt cillum irure pariatur Lorem dolore anim nostrud quis veniam elit culpa.",
-//       backgroundMode: "default",
-//       backgroundIndex: 0,
-//       bgStyle: {},
-//       icons: Configs.icons || []
-//     };
-//   }
-
-//   componentWillMount = () => {
-//     if (this.checkIfPlainTypeEnabled()) {
-//       return true;
-//     } else if (this.checkIfGradientTypeEnabled()) {
-//       this.setState({
-//         appClass: "gradient",
-//         bgStyle: this.prepareGradientStyleSheets()
-//       });
-//     }
-//   };
-
-//   checkIfNightModeEnabled = () => {
-//     return (
-//       this.state.backgroundType === "plain" &&
-//       this.state.appClass === "nightlight"
-//     );
-//   };
-
-//   checkIfDayModeEnabled = () => {
-//     return (
-//       this.state.backgroundType === "plain" &&
-//       this.state.appClass === "daylight"
-//     );
-//   };
-
-//   checkIfGradientTypeEnabled = () => {
-//     return this.state.backgroundType === "gradient";
-//   };
-
-//   checkIfPlainTypeEnabled = () => {
-//     return this.state.backgroundType === "plain";
-//   };
-
-//   prepareGradientStyleSheets = () => {
-//     if (Configs.gradientColors) {
-//       return {
-//         background: "linear-gradient(-45deg, " + Configs.gradientColors + ")",
-//         backgroundSize: "400% 400%"
-//       };
-//     } else {
-//       return {
-//         background:
-//           "linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB)",
-//         backgroundSize: "400% 400%"
-//       };
-//     }
-//   };
-
-//   getDefaultModeBasedOnBackgroundType = () => {
-//     if (this.checkIfNightModeEnabled()) {
-//       return this.state.lightBackgroundModes[0];
-//     } else if (this.checkIfDayModeEnabled()) {
-//       return this.state.darkBackgroundModes[0];
-//     }
-//   };
-
-//   changeThemeMode = e => {
-//     if (this.checkIfNightModeEnabled()) {
-//       this.setState({
-//         appClass: "daylight",
-//         backgroundIndex: 0,
-//         backgroundMode: this.state.darkBackgroundModes[0]
-//       });
-//     } else if (this.checkIfDayModeEnabled()) {
-//       this.setState({
-//         appClass: "nightlight",
-//         backgroundIndex: 0,
-//         backgroundMode: this.state.lightBackgroundModes[0]
-//       });
-//     }
-//   };
-
-//   render() {
-//     const {
-//       appClass,
-//       bgStyle,
-//       backgroundMode,
-//       devIntro,
-//       devDesc,
-//       icons
-//     } = this.state;
-
-//     return (
-//       <div className={appClass} style={bgStyle}>
-//         <div className="change-mode" onClick={this.changeThemeMode} />
-//         <div className={backgroundMode}>
-//           <main className="App-main">
-//             <h1 className="intro">{devIntro}</h1>
-//             <div className="tagline">
-//               <Typist>{devDesc}</Typist>
-//             </div>
-//             <div className="icons-social">
-//               {icons.map(icon => (
-//                 <a
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   href={`${icon.url}`}
-//                 >
-//                   <i className={`fab ${icon.image}`} />
-//                 </a>
-//               ))}
-//             </div>
-//           </main>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;

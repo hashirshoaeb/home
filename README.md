@@ -18,17 +18,18 @@ Make following components
   - About
   - Portfolio
   - Blog
-  - contact
+  - Contact
 - Body
-  - Name | Display picture | Profession | Resume
+  - Name | Display picture (using instagram api) | Profession | Resume
   - About Me
   - Things I'm good at (Skills)
-  - Projects
+  - Projects (using gitHub api)
   - Interests and Hobbies
-  - Contact / Follow / Find me / Facebook / Linkedin / GitHub / Instagram / Email
+  - Contact / Follow / Find me / Facebook / Linkedin / GitHub / Instagram / Email / codepen
 - Footer
   - Acknowledgements (contributors)
   - Copyrights - open source
+  - (qoute: Dream big, Think big)
 
 ## Contributing
 
