@@ -319,7 +319,7 @@ class ProjectCard extends Component {
             <p className="card-text">
               <a href="" className=" text-dark card-link mr-4">
                 <i className="fab fa-github" /> Stars{" "}
-                <span class="badge badge-dark">
+                <span className="badge badge-dark">
                   {this.state.stargazers_count}
                 </span>
               </a>
@@ -346,7 +346,7 @@ class Language extends Component {
       .get(this.props.value)
       .then(response => {
         // handle success
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({ data: response.data });
       })
       .catch(function(error) {
