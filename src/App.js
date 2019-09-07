@@ -124,7 +124,7 @@ class MainBody extends Component {
           </div>
 
           <a
-            className="btn btn-primary btn-lg"
+            className="btn btn-outline-light btn-lg"
             href="#divaboutme"
             role="button"
           >
@@ -198,7 +198,7 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heading: "My Projects",
+      heading: "Recent Projects",
       projectsArray: []
     };
   }
@@ -255,7 +255,9 @@ class ProjectCard extends Component {
     super(props);
     this.state = {
       value: this.props.value,
-      updated_at: "0 mints"
+      updated_at: "0 mints",
+      stargazers_count: this.props.value.stargazers_count,
+      download_url: this.props.value.svn_url + "/archive/master.zip"
     };
   }
   componentDidMount = () => {
@@ -293,24 +295,88 @@ class ProjectCard extends Component {
   };
 
   render() {
+    // https://api.github.com/repos/hashirshoaeb/home/languages
+    // pushed_at stargazers_count updated_at
     return (
       <div className="col-md-6">
         <div className="card shadow-lg p-3 mb-5 bg-white rounded">
-          <img src="" className="card-img-top" alt="..." />
+          {/* <img src="" className="card-img-top" alt="..." /> */}
           <div className="card-body">
             <h5 className="card-title">{this.state.value.name} </h5>
+            <p className="card-text">{this.state.value.description} </p>
+
+            <a
+              href={this.state.download_url}
+              className=" btn btn-outline-secondary"
+            >
+              <i className="fab fa-github" /> Clone Project
+            </a>
+
+            <hr />
+
+            <Language value={this.state.value.languages_url}></Language>
+
             <p className="card-text">
-              {this.state.value.description}{" "}
-              https://api.github.com/repos/hashirshoaeb/home/languages pushed_at
-              stargazers_count updated_at
-            </p>
-            <p className="card-text">
+              <a href="" className=" text-dark card-link mr-4">
+                <i className="fab fa-github" /> Stars{" "}
+                <span class="badge badge-dark">
+                  {this.state.stargazers_count}
+                </span>
+              </a>
               <small className="text-muted">
                 Updated {this.state.updated_at}
               </small>
             </p>
           </div>
         </div>
+      </div>
+    );
+  }
+}
+
+class Language extends Component {
+  state = {
+    data: []
+  };
+  componentDidMount = () => {
+    this.handleRequest();
+  };
+  handleRequest = () => {
+    axios
+      .get(this.props.value)
+      .then(response => {
+        // handle success
+        console.log(response.data);
+        this.setState({ data: response.data });
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function() {
+        // always executed
+      });
+  };
+
+  render() {
+    const array = [];
+    var total_count = 0;
+    for (var index in this.state.data) {
+      array.push(index);
+      total_count = total_count + this.state.data[index];
+      // console.log(index, this.state.data[index]);
+    }
+    // console.log("array contains ", array, this.state.data[array[0]]);
+    return (
+      <div className="pb-3">
+        Languages:{" "}
+        {array.map(language => (
+          <a key={language} className="badge badge-light card-link">
+            {language}:{" "}
+            {Math.trunc((this.state.data[language] / total_count) * 1000) / 10}{" "}
+            %
+          </a>
+        ))}
       </div>
     );
   }
@@ -326,7 +392,16 @@ class Footer extends Component {
   render() {
     return (
       <footer style={this.state.bgStyle} className=" mt-auto py-3 text-center">
-        <strong> &copy; 2019 </strong> Built with Reactjs
+        {/* <strong> &copy; 2019 </strong>*/}
+        <i className="fas fa-code"></i> with <i className="fas fa-heart"></i> by{" "}
+        Hashir Shoaib using <i className="fab fa-react"></i>
+        <p>
+          <small className="text-muted">
+            {" "}
+            Project code is open source. Feel free to fork and make your own
+            version.
+          </small>
+        </p>
       </footer>
     );
   }

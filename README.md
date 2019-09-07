@@ -6,10 +6,13 @@ It is a personal static website/portfolio hosted with GitHub Pages. Site URL: [h
 
 ## Roadmap
 
-Use following to build website
+Using following to build website
 
 - [Reactjs](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Typist](https://github.com/jstejada/react-typist)
+- [GitHub Api](https://developer.github.com/v3/repos/)
+- [Instagram Api](https://www.instagram.com/developer/embedding/)
 
 Make following components
 
@@ -20,16 +23,22 @@ Make following components
   - Blog
   - Contact
 - Body
-  - Name | Display picture (using instagram api) | Profession | Resume
-  - About Me
-  - Things I'm good at (Skills)
-  - Projects (using gitHub api)
-  - Interests and Hobbies
+  - Name| Profession
   - Contact / Follow / Find me / Facebook / Linkedin / GitHub / Instagram / Email / codepen
+  - Resume
+  - About Me
+    - Display picture (using instagram api)
+    - Interests, Goals and Hobbies
+  - Projects (using gitHub api)
+  - Things I'm good at (Skills)
 - Footer
   - Acknowledgements (contributors)
   - Copyrights - open source
   - (qoute: Dream big, Think big)
+
+## Sharing
+
+Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [configurations.json](https://github.com/hashirshoaeb/home/blob/master/src/configurations.json) file. Mark star if you like the project ;)
 
 ## Contributing
 
@@ -39,6 +48,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 - UI improvments
 - Grammar check | Spelling mistakes
+- Code optimization
+- Hover property on social icons
 
 ## License
 
