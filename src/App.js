@@ -4,18 +4,17 @@ import "./App.css";
 import Configs from "./configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import $ from "jquery";
 import Popper from "popper.js";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
 class Navbar extends Component {
   state = {};
   render() {
     return (
       <nav className="navbar navbar-expand-sm navbar-light bg-transparent fixed-top">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <a className="navbar-brand" href="#"></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,22 +28,17 @@ class Navbar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="#">
+            <a className="nav-item nav-link active" href="#divmainbody">
               Home <span className="sr-only">(current)</span>
             </a>
             <a className="nav-item nav-link" href="#">
-              Features
+              About me
             </a>
             <a className="nav-item nav-link" href="#">
-              Pricing
+              Projects
             </a>
-            <a
-              className="nav-item nav-link disabled"
-              href="#"
-              tabIndex="-1"
-              aria-disabled="true"
-            >
-              Disabled
+            <a className="nav-item nav-link" href="./A">
+              Contact
             </a>
           </div>
         </div>
@@ -63,12 +57,17 @@ class MainBody extends Component {
       hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"]
     };
   }
+  componentDidMount = () => {
+    window.addEventListener("scroll", this.handleScroll);
+  };
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
 
   handleScroll = e => {
     this.setState({ devInfo: "Hashir Shoaib" });
     // console.log("scroll trigered");
   };
-
   toggleHover = data => {
     const newhoverStatus = [...this.state.hoverstatus];
     if (data.event === "enter") {
@@ -83,18 +82,14 @@ class MainBody extends Component {
       }
     }
   };
-  componentDidMount = () => {
-    window.addEventListener("scroll", this.handleScroll);
-  };
-
-  componentWillUnmount = () => {
-    window.removeEventListener("scroll", this.handleScroll);
-  };
 
   render() {
     const icons = Configs.icons;
     return (
-      <div className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0">
+      <div
+        id="divmainbody"
+        className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+      >
         <div className=" container container-fluid text-center ">
           <h1 className="display-1" onScroll={this.handleScroll}>
             {this.state.devInfo}
@@ -122,7 +117,6 @@ class MainBody extends Component {
               </a>
             ))}
           </div>
-
           <a
             className="btn btn-outline-light btn-lg"
             href="#divaboutme"
@@ -145,13 +139,11 @@ class AboutMe extends Component {
       instaProfilePic: "bad request"
     };
   }
-
   componentDidMount = () => {
     this.handleRequest();
   };
 
   handleRequest = e => {
-    // console.log("request trigered");
     axios
       .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
       .then(response => {
@@ -202,13 +194,11 @@ class Project extends Component {
       projectsArray: []
     };
   }
-
   componentDidMount = () => {
     this.handleRequest();
   };
 
   handleRequest = e => {
-    // console.log("github request trigered");
     axios
       .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
       .then(response => {
@@ -263,6 +253,7 @@ class ProjectCard extends Component {
   componentDidMount = () => {
     this.handleUpdatetime();
   };
+
   handleUpdatetime = () => {
     const date = new Date(this.state.value.pushed_at);
     const nowdate = new Date();
@@ -295,8 +286,6 @@ class ProjectCard extends Component {
   };
 
   render() {
-    // https://api.github.com/repos/hashirshoaeb/home/languages
-    // pushed_at stargazers_count updated_at
     return (
       <div className="col-md-6">
         <div className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -304,18 +293,14 @@ class ProjectCard extends Component {
           <div className="card-body">
             <h5 className="card-title">{this.state.value.name} </h5>
             <p className="card-text">{this.state.value.description} </p>
-
             <a
               href={this.state.download_url}
               className=" btn btn-outline-secondary"
             >
               <i className="fab fa-github" /> Clone Project
             </a>
-
             <hr />
-
             <Language value={this.state.value.languages_url}></Language>
-
             <p className="card-text">
               <a href="" className=" text-dark card-link mr-4">
                 <i className="fab fa-github" /> Stars{" "}
@@ -341,6 +326,7 @@ class Language extends Component {
   componentDidMount = () => {
     this.handleRequest();
   };
+
   handleRequest = () => {
     axios
       .get(this.props.value)
@@ -416,7 +402,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar></Navbar> */}
+        <Navbar></Navbar>
         <MainBody></MainBody>
         <AboutMe></AboutMe>
         <Project></Project>
