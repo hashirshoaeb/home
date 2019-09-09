@@ -5,16 +5,23 @@ import Configs from "./configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 import $ from "jquery";
 import Popper from "popper.js";
+import Contact from "./Contact";
+import About from "./About";
 
 class Navbar extends Component {
-  state = {};
+  state = {
+    bgStyle: { background: "rgba(245, 245, 245, 0.7)" }
+  };
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-light bg-transparent fixed-top">
-        <a className="navbar-brand" href="#"></a>
+      <nav
+        style={this.state.bgStyle}
+        className="navbar navbar-expand-sm navbar-light fixed-top"
+      >
+        <a className="navbar-brand" href="./"></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,16 +35,16 @@ class Navbar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="#divmainbody">
+            <a className="nav-item nav-link active" href="./#divmainbody">
               Home <span className="sr-only">(current)</span>
             </a>
-            <a className="nav-item nav-link" href="#">
-              About me
+            <a className="nav-item nav-link" href="./About">
+              About
             </a>
-            <a className="nav-item nav-link" href="#">
+            <a className="nav-item nav-link" href="./#divproject">
               Projects
             </a>
-            <a className="nav-item nav-link" href="./A">
+            <a className="nav-item nav-link" href="./Contact">
               Contact
             </a>
           </div>
@@ -86,45 +93,49 @@ class MainBody extends Component {
   render() {
     const icons = Configs.icons;
     return (
-      <div
-        id="divmainbody"
-        className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
-      >
-        <div className=" container container-fluid text-center ">
-          <h1 className="display-1" onScroll={this.handleScroll}>
-            {this.state.devInfo}
-          </h1>
-          <Typist className="lead"> {this.state.devDesc}</Typist>
-          <div className=" p-5">
-            {icons.map(icon => (
-              <a
-                key={icon.id}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`${icon.url}`}
-              >
-                <i
-                  className={`fab ${icon.image}  fa-3x ${
-                    this.state.hoverstatus[icon.id]
-                  }`}
-                  onMouseEnter={() =>
-                    this.toggleHover({ icon: icon, event: "enter" })
-                  }
-                  onMouseLeave={() =>
-                    this.toggleHover({ icon: icon, event: "leave" })
-                  }
-                />
-              </a>
-            ))}
+      <div>
+        <div
+          id="divmainbody"
+          className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+        >
+          <div className=" container container-fluid text-center ">
+            <h1 className="display-1" onScroll={this.handleScroll}>
+              {this.state.devInfo}
+            </h1>
+            <Typist className="lead"> {this.state.devDesc}</Typist>
+            <div className=" p-5">
+              {icons.map(icon => (
+                <a
+                  key={icon.id}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`${icon.url}`}
+                >
+                  <i
+                    className={`fab ${icon.image}  fa-3x ${
+                      this.state.hoverstatus[icon.id]
+                    }`}
+                    onMouseEnter={() =>
+                      this.toggleHover({ icon: icon, event: "enter" })
+                    }
+                    onMouseLeave={() =>
+                      this.toggleHover({ icon: icon, event: "leave" })
+                    }
+                  />
+                </a>
+              ))}
+            </div>
+            <a
+              className="btn btn-outline-light btn-lg"
+              href="#divaboutme"
+              role="button"
+            >
+              More about me
+            </a>
           </div>
-          <a
-            className="btn btn-outline-light btn-lg"
-            href="#divaboutme"
-            role="button"
-          >
-            More about me
-          </a>
         </div>
+        <AboutMe></AboutMe>
+        <Project></Project>
       </div>
     );
   }
@@ -402,11 +413,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
-        <MainBody></MainBody>
-        <AboutMe></AboutMe>
-        <Project></Project>
-        <Footer></Footer>
+        <BrowserRouter>
+          <Navbar></Navbar>
+          <Route path="/" exact component={MainBody}></Route>
+          <Route path="/contact" exact component={Contact}></Route>
+          <Route path="/about" exact component={About}></Route>
+          <Footer></Footer>
+        </BrowserRouter>
       </div>
     );
   }
