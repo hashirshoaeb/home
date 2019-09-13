@@ -5,54 +5,8 @@ import Configs from "./configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
 import $ from "jquery";
 import Popper from "popper.js";
-import Contact from "./Contact";
-import About from "./About";
-
-class Navbar extends Component {
-  state = {
-    bgStyle: { background: "rgba(245, 245, 245, 0.7)" }
-  };
-  render() {
-    return (
-      <nav
-        style={this.state.bgStyle}
-        className="navbar navbar-expand-sm navbar-light fixed-top"
-      >
-        <a className="navbar-brand" href="./"></a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="./#divmainbody">
-              Home <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-item nav-link" href="./About">
-              About
-            </a>
-            <a className="nav-item nav-link" href="./#divproject">
-              Projects
-            </a>
-            <a className="nav-item nav-link" href="./Contact">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-}
 
 class MainBody extends Component {
   constructor(props) {
@@ -134,8 +88,6 @@ class MainBody extends Component {
             </a>
           </div>
         </div>
-        <AboutMe></AboutMe>
-        <Project></Project>
       </div>
     );
   }
@@ -258,7 +210,8 @@ class ProjectCard extends Component {
       value: this.props.value,
       updated_at: "0 mints",
       stargazers_count: this.props.value.stargazers_count,
-      download_url: this.props.value.svn_url + "/archive/master.zip"
+      download_url: this.props.value.svn_url + "/archive/master.zip",
+      repo_url: this.props.value.svn_url
     };
   }
   componentDidMount = () => {
@@ -306,9 +259,16 @@ class ProjectCard extends Component {
             <p className="card-text">{this.state.value.description} </p>
             <a
               href={this.state.download_url}
-              className=" btn btn-outline-secondary"
+              className=" btn btn-outline-secondary mr-3"
             >
               <i className="fab fa-github" /> Clone Project
+            </a>
+            <a
+              href={this.state.repo_url}
+              target=" _blank"
+              className=" btn btn-outline-secondary"
+            >
+              <i className="fab fa-github" /> Repo
             </a>
             <hr />
             <Language value={this.state.value.languages_url}></Language>
@@ -413,13 +373,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
-          <Navbar></Navbar>
-          <Route path="/" exact component={MainBody}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
-          <Route path="/about" exact component={About}></Route>
-          <Footer></Footer>
-        </BrowserRouter>
+        <MainBody></MainBody>
+        <AboutMe></AboutMe>
+        <Project></Project>
+        <Footer></Footer>
       </div>
     );
   }
