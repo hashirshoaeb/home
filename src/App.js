@@ -26,7 +26,7 @@ class MainBody extends Component {
   };
 
   handleScroll = e => {
-    this.setState({ devInfo: "Hashir Shoaib" });
+    //this.setState({ devInfo: "Hashir Shoaib" });
     // console.log("scroll trigered");
   };
   toggleHover = data => {
@@ -351,7 +351,14 @@ class Footer extends Component {
       <footer style={this.state.bgStyle} className=" mt-auto py-3 text-center">
         {/* <strong> &copy; 2019 </strong>*/}
         <i className="fas fa-code"></i> with <i className="fas fa-heart"></i> by{" "}
-        Hashir Shoaib using <i className="fab fa-react"></i>
+        <a
+          className=" badge badge-dark"
+          target="_blank"
+          href={"https://github.com/hashirshoaeb"}
+        >
+          Hashir Shoaib
+        </a>{" "}
+        using <i className="fab fa-react"></i>
         <p>
           <small className="text-muted">
             {" "}
