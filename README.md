@@ -84,6 +84,16 @@ If anyone is looking to make some contribution, then following are the issues th
 - Hover property on social icons
 - Routing
 
+## Showcase 🚀
+
+Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
+
+Following awesome people have created their own version.
+
+1. [@khizarkhizar](https://github.com/khizarkhizar) version : https://khizarkhizar.github.io/home/
+
+2. [@meullah](https://github.com/meullah) version : https://meullah.github.io/home/
+
 ## License
 
 [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
