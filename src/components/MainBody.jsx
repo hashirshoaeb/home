@@ -18,7 +18,6 @@ class MainBody extends Component {
 
   toggleHover = data => {
     const newhoverStatus = [...this.state.hoverstatus];
-    console.log(data.event, data.icon.id)
     if (data.event === "enter") {
       newhoverStatus[data.icon.id] = "socialiconshover";
       this.setState({ hoverstatus: newhoverStatus });

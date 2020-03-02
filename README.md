@@ -1,8 +1,8 @@
-# hashirshoaeb.github.io/home
+# [Developer's Portfolio](hashirshoaeb.github.io/home)
 
-It is a personal static website/portfolio hosted with GitHub Pages, build to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
+It is a personal static website/portfolio template hosted with GitHub Pages, build to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
 
-## Dependencies
+## Technology Stack 🛠️
 
 Dependencies defined in package.json
 
@@ -21,8 +21,8 @@ Dependencies defined in package.json
 - About Me
   - Display picture (using instagram api)
   - Interests, Goals and Hobbies
-- Projects (using gitHub api)
   - Things I'm good at (Skills)
+- Projects (using gitHub api)
 - Footer
   - Acknowledgements (contributors)
   - Copyrights - open source
@@ -30,9 +30,9 @@ Dependencies defined in package.json
 
 ## Sharing
 
-Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [src/configurations.json](./src/configurations.json) file. Mark star if you like the project.
+Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [src/configurations.json](./src/configurations.json) file. Mark star ⭐ if you like the project.
 
-## Instructions
+## Setup And Deployment 🔧
 
 1. To Get Started, Fork the repository to your github account:
 2. Clone the forked repo from your account using :
@@ -49,7 +49,7 @@ Project is open source. Feel free to make your own version. All you need to do i
    "homepage": "https://<your-username>.github.io/home"
    ```
 
-5. Edit title and meta description in [public/index.html](./public/index.html).
+5. Edit [title](./public/index.html#L32) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
 
 6. After editing run the following bash commands
 
@@ -94,6 +94,32 @@ Following awesome people have created their own version.
 
 2. [@meullah](https://github.com/meullah) version : https://meullah.github.io/home/
 
-## License
+3. [@AymunTariq](https://github.com/AymunTariq) version : https://github.com/AymunTariq/home/
+
+## Contributors ✨
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.facebook.com/hashir.shoaeb">
+        <img src="https://avatars2.githubusercontent.com/u/35165481?v=4" width="100px;" alt=""/>
+        <br />
+        <sub><b>Hashir Shoaib</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/iprithvitharun">
+        <img src="https://avatars2.githubusercontent.com/u/58725708?v=4" width="100px;" alt=""/>
+        <br />
+        <sub><b>Prithvi Tharun</b></sub>
+      </a>
+      <br />
+    </td>
+    
+  </tr>
+</table>
+
+## License 📄
 
 [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
