@@ -32,6 +32,10 @@ Dependencies defined in package.json
 
 Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [src/configurations.json](./src/configurations.json) file. Mark star ⭐ if you like the project.
 
+## Prerequisites
+
+You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed in your PC. Also you should own a GitHub account.
+
 ## Setup And Deployment 🔧
 
 1. To Get Started, Fork the repository to your github account:
