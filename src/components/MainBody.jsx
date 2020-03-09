@@ -52,10 +52,10 @@ class MainBody extends Component {
                     className={`fab ${icon.image}  fa-3x ${
                       this.state.hoverstatus[icon.id]
                     }`}
-                    onMouseEnter={() =>
+                    onMouseOver={() =>
                       this.toggleHover({ icon: icon, event: "enter" })
                     }
-                    onMouseLeave={() =>
+                    onMouseOut={() =>
                       this.toggleHover({ icon: icon, event: "leave" })
                     }
                   />
