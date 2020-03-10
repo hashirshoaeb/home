@@ -1,16 +1,29 @@
-# [Developer's Portfolio](hashirshoaeb.github.io/home)
+# [Developer's Portfolio](https://hashirshoaeb.github.io/home)
 
-It is a personal static website/portfolio template hosted with GitHub Pages, build to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
+[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/home)
+
+It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
+
+## Table of Contents
+- [Technology Stack 🛠️](#technology-stack-)
+- [Structure](#structure)
+- [Sharing](#sharing)
+- [Setup And Deployment 🔧](#setup-and-deployment-)
+- [Contributing](#contributing)
+- [Issues](#issues)
+- [Showcase 🚀](#showcase-)
+- [Contributors ✨](#contributors-)
+- [License 📄](#license-)
 
 ## Technology Stack 🛠️
 
-Dependencies defined in package.json
+Dependencies defined in package.json:
 
 - [Reactjs](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Typist](https://github.com/jstejada/react-typist)
-- [GitHub Api](https://developer.github.com/v3/repos/)
-- [Instagram Api](https://www.instagram.com/developer/embedding/)
+- [GitHub API](https://developer.github.com/v3/repos/)
+- [Instagram API](https://www.instagram.com/developer/embedding/)
 
 ## Structure
 
