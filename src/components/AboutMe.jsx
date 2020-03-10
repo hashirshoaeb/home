@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
-import Configs from '../configurations.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React, { Component } from "react";
+import Configs from "../configurations.json";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 class AboutMe extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      heading: 'About me',
+      heading: "About me",
       aboutDev: Configs.aboutDev,
-      instaProfilePic: 'bad request',
+      instaProfilePic: Configs.showInstaProfilePic,
+      resumeURL: Configs.resumeURL
     };
   }
 
   componentDidMount = () => {
-    this.handleRequest();
+    if (Configs.showInstaProfilePic) this.handleRequest();
   };
 
   handleRequest = (e) => {
@@ -40,21 +41,37 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div id="divaboutme" className="jumbotron jumbotron-fluid m-0">
+      <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
         <div className="container container-fluid p-5">
           <div className="row">
-            <div className=" col-5 d-none d-lg-block align-self-center">
-              <img
-                className="border border-secondary rounded-circle"
-                src={this.state.instaProfilePic}
-                alt="profilepicture"
-              />
-            </div>
-            <div className="col-lg-7">
+            {this.state.instaProfilePic !== true &&
+              <div className="col-5 d-none d-lg-block align-self-center">
+                <img
+                  className="border border-secondary rounded-circle"
+                  src={this.state.instaProfilePic}
+                  alt="profilepicture"
+                />
+              </div>
+            }
+            <div className={`col-lg-${this.state.instaProfilePic !== true ? "7" : "12"}`}>
               <h1 className="display-4 mb-5 text-center">
                 {this.state.heading}
               </h1>
               <p className="lead text-center">{this.state.aboutDev}</p>
+              {this.state.resumeURL &&
+                <p className="lead text-center">
+                  <a
+                    className="btn btn-outline-dark btn-lg"
+                    href={this.state.resumeURL}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    role="button"
+                    aria-label="Resume/CV"
+                  >
+                    Resume/CV
+                  </a>
+                </p>
+              }
             </div>
           </div>
         </div>

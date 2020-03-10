@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import '../App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React, { Component } from "react";
+import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 class ProjectCard extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class ProjectCard extends Component {
 
     this.state = {
       value: this.props.value,
-      updated_at: '0 mints',
+      updated_at: "0 mints",
       stargazers_count: this.props.value.stargazers_count,
       download_url: `${this.props.value.svn_url}/archive/master.zip`,
       repo_url: this.props.value.svn_url,
@@ -31,18 +31,18 @@ class ProjectCard extends Component {
       return this.setState({ updated_at: `${hours.toString()} hours ago` });
     } else {
       const monthNames = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
       ];
       const day = date.getDate();
       const monthIndex = date.getMonth();
@@ -64,26 +64,26 @@ class ProjectCard extends Component {
             <p className="card-text">{this.state.value.description} </p>
             <a
               href={this.state.download_url}
-              className=" btn btn-outline-secondary mr-3"
+              className="btn btn-outline-secondary mr-3"
             >
               <i className="fab fa-github" /> Clone Project
             </a>
             <a
               href={this.state.repo_url}
               target=" _blank"
-              className=" btn btn-outline-secondary"
+              className="btn btn-outline-secondary"
             >
               <i className="fab fa-github" /> Repo
             </a>
             <hr />
             <Language value={this.state.value.languages_url}></Language>
             <p className="card-text">
-              <h href="" className=" text-dark card-link mr-4">
+              <span className="text-dark card-link mr-4">
                 <i className="fab fa-github" /> Stars{" "}
                 <span className="badge badge-dark">
                   {this.state.stargazers_count}
                 </span>
-              </h>
+              </span>
               <small className="text-muted">
                 Updated {this.state.updated_at}
               </small>

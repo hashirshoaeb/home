@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Typist from 'react-typist';
-import '../App';
-import Configs from '../configurations.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React, { Component } from "react";
+import Typist from "react-typist";
+import "../App";
+import Configs from "../configurations.json";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 class MainBody extends Component {
   constructor(props) {
@@ -13,18 +13,18 @@ class MainBody extends Component {
       backgroundType: Configs.backgroundType,
       devInfo: Configs.devIntro,
       devDesc: Configs.devDesc,
-      hoverstatus: ['socialicons', 'socialicons', 'socialicons', 'socialicons'],
+      hoverstatus: ["socialicons", "socialicons", "socialicons", "socialicons"],
     };
   }
 
   toggleHover = (data) => {
     const newhoverStatus = [...this.state.hoverstatus];
 
-    if (data.event === 'enter') {
-      newhoverStatus[data.icon.id] = 'socialiconshover';
+    if (data.event === "enter") {
+      newhoverStatus[data.icon.id] = "socialiconshover";
       return this.setState({ hoverstatus: newhoverStatus });
-    } else if (data.event === 'leave') {
-      newhoverStatus[data.icon.id] = 'socialicons';
+    } else if (data.event === "leave") {
+      newhoverStatus[data.icon.id] = "socialicons";
       return this.setState({ hoverstatus: newhoverStatus });
     }
   };
@@ -50,25 +50,23 @@ class MainBody extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={icon.url}
+                  aria-label={`My ${icon.image.split("-")[1]}`}
                 >
                   <i
                     className={`fab ${icon.image}  fa-3x ${
                       this.state.hoverstatus[icon.id]
                     }`}
-                    onMouseOver={() =>
-                      this.toggleHover({ icon, event: "enter" })
-                    }
-                    onMouseOut={() =>
-                      this.toggleHover({ icon, event: "leave" })
-                    }
+                    onMouseOver={() => this.toggleHover({ icon, event: "enter" })}
+                    onMouseOut={() => this.toggleHover({ icon, event: "leave" })}
                   />
                 </a>
               ))}
             </div>
             <a
               className="btn btn-outline-light btn-lg"
-              href="#divaboutme"
+              href="#aboutme"
               role="button"
+              aria-label="Learn more about me"
             >
               More about me
             </a>

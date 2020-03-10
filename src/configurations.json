@@ -36,5 +36,8 @@
   "aboutDev": "A final year Computer Engineer from NUST CEME, Pakistan with 3+ years experience in web development and passion to teach machines think. I’m currently the Vice President of student body at Emerging Technologies Research Lab(ETL) and a former Intern at RiseTech.",
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "hashirshoaeb",
-  "gitHubQuerry": "/repos?sort=updated&direction=desc"
+  "gitHubQuerry": "/repos?sort=updated&direction=desc",
+  "resumeURL": "resumeURL",
+  "showInstaProfilePic": true,
+  "projectsLength": 4
 }
