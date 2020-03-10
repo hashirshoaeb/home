@@ -5,12 +5,14 @@
 It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
 
 ## Table of Contents
+
 - [Technology Stack 🛠️](#technology-stack-)
 - [Structure](#structure)
 - [Sharing](#sharing)
 - [Setup And Deployment 🔧](#setup-and-deployment-)
 - [Contributing](#contributing)
 - [Issues](#issues)
+- [Upcoming features](#Upcoming-features)
 - [Showcase 🚀](#showcase-)
 - [Contributors ✨](#contributors-)
 - [License 📄](#license-)
@@ -100,6 +102,12 @@ If anyone is looking to make some contribution, the following are issues that yo
 - [ ] Code optimization
 - [x] Hover property on social icons
 - [ ] Routing
+
+## Upcoming features:
+
+- [ ] Button and place for resume/CV.
+- [ ] Option: add or not to add Instagram's display picture.
+- [ ] Number of projects to show in website.
 
 ## Showcase 🚀
 
