@@ -31,7 +31,7 @@ class AboutMe extends Component {
       })
       .catch(error => {
         // handle error
-        return console.log(error);
+        return console.error(error.message);
       })
       .finally(() => {
         // always executed
