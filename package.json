@@ -1,6 +1,6 @@
 {
   "name": "developers-portfolio",
-  "description": "It is a personal static website/portfolio template hosted with GitHub Pages, build to showcase my recent projects.",
+  "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
   "homepage": "https://hashirshoaeb.github.io/home",
   "version": "0.1.0",
   "private": true,
@@ -10,13 +10,13 @@
     "url": "https://github.com/hashirshoaeb"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
     "react-typist": "^2.0.5"
