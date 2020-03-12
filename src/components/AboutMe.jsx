@@ -3,7 +3,7 @@ import Configs from "../editable-stuff/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Pdf from "../editable-stuff/resume.pdf"
+import Pdf from "../editable-stuff/resume.pdf";
 
 class AboutMe extends Component {
   constructor(props) {
@@ -12,13 +12,14 @@ class AboutMe extends Component {
     this.state = {
       heading: "About me",
       aboutDev: Configs.aboutDev,
-      instaProfilePic: Configs.showInstaProfilePic,
-      resumeURL: Configs.resumeURL
+      instaProfilePic: '',
+      showInsta: Configs.showInstaProfilePic,
+      resumeURL: Pdf
     };
   }
 
   componentDidMount = () => {
-    if (Configs.showInstaProfilePic) this.handleRequest();
+    if (this.state.showInsta) this.handleRequest();
   };
 
   handleRequest = (e) => {
@@ -33,7 +34,7 @@ class AboutMe extends Component {
       })
       .catch(error => {
         // handle error
-        this.setState({instaProfilePic : false});
+        this.setState({showInsta : false});
         return console.error(error.message);
       })
       .finally(() => {
@@ -46,7 +47,7 @@ class AboutMe extends Component {
       <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
         <div className="container container-fluid p-5">
           <div className="row">
-          {this.state.instaProfilePic &&
+          {this.state.showInsta &&
               <div className="col-5 d-none d-lg-block align-self-center">
                 <img
                   className="border border-secondary rounded-circle"
@@ -55,7 +56,7 @@ class AboutMe extends Component {
                 />
               </div>
             }
-            <div className={`col-lg-${this.state.instaProfilePic ? "7" : "12"}`}>
+            <div className={`col-lg-${this.state.showInsta ? "7" : "12"}`}>
               <h1 className="display-4 mb-5 text-center">
                 {this.state.heading}
               </h1>
@@ -70,7 +71,7 @@ class AboutMe extends Component {
                     role="button"
                     aria-label="Resume/CV"
                   >
-                    Resume/CV
+                    Resume
                   </a>
                 </p>
               }

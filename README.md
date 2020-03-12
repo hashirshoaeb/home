@@ -22,11 +22,11 @@ It is a personal static website/portfolio template hosted with GitHub Pages, bui
 
 Dependencies defined in package.json:
 
-- [Reactjs](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Typist](https://github.com/jstejada/react-typist)
-- [GitHub API](https://developer.github.com/v3/repos/)
-- [Instagram API](https://www.instagram.com/developer/embedding/)
+[Reactjs](https://reactjs.org/)
+| [Bootstrap](https://getbootstrap.com/)
+| [Typist](https://github.com/jstejada/react-typist)
+| [GitHub API](https://developer.github.com/v3/repos/)
+| [Instagram API](https://www.instagram.com/developer/embedding/)
 
 ## Structure ⚓
 
@@ -46,7 +46,7 @@ Dependencies defined in package.json:
 
 ## Sharing 💗
 
-Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [src/configurations.json](./src/configurations.json) file. Mark star ⭐ if you like the project.
+Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) and add resume. Mark star ⭐ if you like the project.
 
 ## Prerequisites 🍪
 
@@ -54,37 +54,38 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 ## Setup And Deployment 🔧
 
-1. To Get Started, Fork the repository to your GitHub account:
+1. To Get Started, Fork this repository to your GitHub account:
 2. Clone the forked repo from your account using:
 
    ```bash
      git clone https://github.com/<your-username>/home.git
    ```
 
-3. Open in editor and edit [src/configurations.json](./src/configurations.json) file.
+3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
 
-4. Change URL in [package.json](./package.json) file:
+4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
+5. Change URL in [package.json](./package.json) file:
 
    ```json
    "homepage": "https://<your-username>.github.io/home"
    ```
 
-5. Edit [title](./public/index.html#L32) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
+6. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
 
-6. After editing run the following bash commands:
+7. After editing run the following bash commands:
 
    ```bash
    npm install
    npm start
    ```
 
-7. To deploy website run:
+8. To deploy website run:
 
    ```bash
     npm run deploy
    ```
 
-8. Congrats your site is up and running. To see it live, visit:
+9. Congrats your site is up and running. To see it live, visit:
 
    ```https
      https://<your-username>.github.io/home
