@@ -105,9 +105,9 @@ If anyone is looking to make some contribution, the following are issues that yo
 
 ## Upcoming features:
 
-- [ ] Button and place for resume/CV.
-- [ ] Option: add or not to add Instagram's display picture.
-- [ ] Number of projects to show in website.
+- [x] Button and place for resume/CV.
+- [x] Option: add or not to add Instagram's display picture.
+- [x] Number of projects to show in website.
 
 ## Showcase 🚀
 

@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import '../App.css';
-import Configs from '../configurations.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import ProjectCard from './ProjectCard';
+import React, { Component } from "react";
+import "../App.css";
+import Configs from "../configurations.json";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import ProjectCard from "./ProjectCard";
 
 class Project extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      heading: 'Recent Projects',
+      heading: "Recent Projects",
       projectsArray: [],
+      projectsLength: Configs.projectsLength,
     };
   }
   componentDidMount = () => {
@@ -26,7 +27,7 @@ class Project extends Component {
         // handle success
         // console.log(response.data.slice(0, 4));
         return this.setState({
-          projectsArray: response.data.slice(0, 4)
+          projectsArray: response.data.slice(0, this.state.projectsLength)
         });
       })
       .catch(error => {
@@ -41,7 +42,7 @@ class Project extends Component {
   render() {
     return (
       <div
-        id="divproject"
+        id="projects"
         className="jumbotron jumbotron-fluid bg-transparent m-0"
       >
         <div className="container container-fluid p-5">

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import '../App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React, { Component } from "react";
+import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 class Footer extends Component {
   constructor(props) {
@@ -17,7 +17,12 @@ class Footer extends Component {
       <footer style={this.state.bgStyle} className="mt-auto py-3 text-center">
         {/* <strong> &copy; 2019 </strong>*/}
         <i className="fas fa-code"></i> with <i className="fas fa-heart"></i> by{" "}
-        <a className="badge badge-dark" rel="noopener" href="https://github.com/hashirshoaeb">
+        <a
+          className="badge badge-dark"
+          rel="noopener"
+          href="https://github.com/hashirshoaeb"
+          aria-label="My GitHub"
+        >
           Hashir Shoaib
         </a>
         {" "}using <i className="fab fa-react"></i>
