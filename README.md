@@ -111,6 +111,7 @@ If anyone is looking to make some contribution, the following are issues that yo
 - [x] Option: add or not to add Instagram's display picture.
 - [x] Number of projects to show in website.
 - [ ] If the Number of Projects are zero, hide the heading (Recent Projects)
+- [ ] Make resume optional.
 
 ## Showcase 🚀
 
