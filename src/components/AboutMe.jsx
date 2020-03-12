@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Configs from "../editables/configurations.json";
+import Configs from "../editable-stuff/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Pdf from "../editables/resume.pdf"
+import Pdf from "../editable-stuff/resume.pdf"
 
 class AboutMe extends Component {
   constructor(props) {
