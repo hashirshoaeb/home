@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Configs from "../configurations.json";
+import Configs from "../editables/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import Pdf from "../editables/resume.pdf"
 
 class AboutMe extends Component {
   constructor(props) {
@@ -60,10 +61,10 @@ class AboutMe extends Component {
               </h1>
               <p className="lead text-center">{this.state.aboutDev}</p>
               {this.state.resumeURL &&
-                <p className="lead text-center">
+                  <p className="lead text-center">
                   <a
                     className="btn btn-outline-dark btn-lg"
-                    href={this.state.resumeURL}
+                    href={Pdf}
                     target="_blank"
                     rel="noreferrer noopener"
                     role="button"

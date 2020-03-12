@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import Configs from "../configurations.json";
+import Configs from "../editables/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
