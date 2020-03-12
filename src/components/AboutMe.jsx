@@ -32,6 +32,7 @@ class AboutMe extends Component {
       })
       .catch(error => {
         // handle error
+        this.setState({instaProfilePic : false});
         return console.error(error.message);
       })
       .finally(() => {
@@ -44,7 +45,7 @@ class AboutMe extends Component {
       <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
         <div className="container container-fluid p-5">
           <div className="row">
-            {this.state.instaProfilePic !== true &&
+          {this.state.instaProfilePic &&
               <div className="col-5 d-none d-lg-block align-self-center">
                 <img
                   className="border border-secondary rounded-circle"
@@ -53,7 +54,7 @@ class AboutMe extends Component {
                 />
               </div>
             }
-            <div className={`col-lg-${this.state.instaProfilePic !== true ? "7" : "12"}`}>
+            <div className={`col-lg-${this.state.instaProfilePic ? "7" : "12"}`}>
               <h1 className="display-4 mb-5 text-center">
                 {this.state.heading}
               </h1>
