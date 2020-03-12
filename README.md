@@ -7,12 +7,13 @@ It is a personal static website/portfolio template hosted with GitHub Pages, bui
 ## Table of Contents
 
 - [Technology Stack 🛠️](#technology-stack-)
-- [Structure](#structure)
-- [Sharing](#sharing)
+- [Structure ⚓](#structure-)
+- [Sharing 💗](#sharing-)
+- [Prerequisites 🍪](#prerequisites-)
 - [Setup And Deployment 🔧](#setup-and-deployment-)
-- [Contributing](#contributing)
+- [Contributing 🙌](#contributing-)
 - [Issues](#issues)
-- [Upcoming features](#Upcoming-features)
+- [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
 - [Showcase 🚀](#showcase-)
 - [Contributors ✨](#contributors-)
 - [License 📄](#license-)
@@ -27,7 +28,7 @@ Dependencies defined in package.json:
 - [GitHub API](https://developer.github.com/v3/repos/)
 - [Instagram API](https://www.instagram.com/developer/embedding/)
 
-## Structure
+## Structure ⚓
 
 - Body
   - Name | Profession
@@ -43,11 +44,11 @@ Dependencies defined in package.json:
   - Copyrights - open source
   - (quote: Dream big, Think big)
 
-## Sharing
+## Sharing 💗
 
 Project is open source. Feel free to make your own version. All you need to do is to fork the project and edit the [src/configurations.json](./src/configurations.json) file. Mark star ⭐ if you like the project.
 
-## Prerequisites
+## Prerequisites 🍪
 
 You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
 
@@ -89,7 +90,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
      https://<your-username>.github.io/home
    ```
 
-## Contributing
+## Contributing 🙌
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -103,11 +104,12 @@ If anyone is looking to make some contribution, the following are issues that yo
 - [x] Hover property on social icons
 - [ ] Routing
 
-## Upcoming features:
+## Upcoming Features / Improvements 🔗
 
 - [x] Button and place for resume/CV.
 - [x] Option: add or not to add Instagram's display picture.
 - [x] Number of projects to show in website.
+- [ ] If the Number of Projects are zero, hide the heading (Recent Projects)
 
 ## Showcase 🚀
 
