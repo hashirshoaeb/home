@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../App.css";
 import Configs from "../editable-stuff/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,29 +6,21 @@ import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ProjectCard from "./ProjectCard";
 
-class Project extends Component {
-  constructor(props) {
-    super(props);
+const Project = () => {
 
-    this.state = {
-      heading: "Recent Projects",
-      projectsArray: [],
-      projectsLength: Configs.projectsLength,
-    };
-  }
-  componentDidMount = () => {
-    this.handleRequest();
-  };
+  const [heading] = useState("Recent Projects");
+  const [projectsArray, setProjectsArray] = useState([]);
+  const [projectsLength] = useState(Configs.projectsLength);
 
-  handleRequest = (e) => {
+  const handleRequest = useCallback((e) => {
     axios
       .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
       .then(response => {
         // handle success
         // console.log(response.data.slice(0, 4));
-        return this.setState({
-          projectsArray: response.data.slice(0, this.state.projectsLength)
-        });
+        return setProjectsArray(
+          response.data.slice(0, projectsLength)
+          );
       })
       .catch(error => {
         // handle error
@@ -37,29 +29,33 @@ class Project extends Component {
       .finally(() => {
         // always executed
       });
-  };
+  },[projectsLength]
+)
 
-  render() {
-    return (
-      <div
-        id="projects"
-        className="jumbotron jumbotron-fluid bg-transparent m-0"
-      >
-        <div className="container container-fluid p-5">
-          <h1 className="display-4 pb-5">{this.state.heading}</h1>
-          <div className="row">
-            {this.state.projectsArray.map(project => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                value={project}
-              />
-            ))}
-          </div>
+
+  useEffect(() => {
+    handleRequest();
+  }, [handleRequest])
+
+  return (
+    <div
+      id="projects"
+      className="jumbotron jumbotron-fluid bg-transparent m-0"
+    >
+      <div className="container container-fluid p-5">
+        <h1 className="display-4 pb-5">{heading}</h1>
+        <div className="row">
+          {projectsArray.map(project => (
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              value={project}
+            />
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default  Project;

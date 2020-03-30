@@ -1,40 +1,36 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Configs from "../editable-stuff/configurations.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Pdf from "../editable-stuff/resume.pdf";
 
-class AboutMe extends Component {
-  constructor(props) {
-    super(props);
+const AboutMe = () =>  {
 
-    this.state = {
-      heading: "About me",
-      aboutDev: Configs.aboutDev,
-      instaProfilePic: '',
-      showInsta: Configs.showInstaProfilePic,
-      resumeURL: Pdf
-    };
-  }
+  const [heading] = useState('About me');
+  const [aboutDev] = useState(Configs.aboutDev);
+  const [instaProfilePic, setInstaProfilePic] = useState('');
+  const [showInsta, setShowInsta] = useState(Configs.showInstaProfilePic);
+  const [resumeURL] = useState(Pdf);
 
-  componentDidMount = () => {
-    if (this.state.showInsta) this.handleRequest();
-  };
 
-  handleRequest = (e) => {
+  useEffect(() => {
+    if (showInsta) {
+      handleRequest()
+    }
+  },[showInsta])
+
+ const handleRequest = (e) => {
     axios
       .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
       .then(response => {
         // handle success
         // console.log(response.data.graphql);
-        return this.setState({
-          instaProfilePic: response.data.graphql.user.profile_pic_url_hd
-        });
+        return setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
       })
       .catch(error => {
         // handle error
-        this.setState({showInsta : false});
+        setShowInsta(false);
         return console.error(error.message);
       })
       .finally(() => {
@@ -42,45 +38,43 @@ class AboutMe extends Component {
       });
   };
 
-  render() {
-    return (
-      <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
-        <div className="container container-fluid p-5">
-          <div className="row">
-          {this.state.showInsta &&
-              <div className="col-5 d-none d-lg-block align-self-center">
-                <img
-                  className="border border-secondary rounded-circle"
-                  src={this.state.instaProfilePic}
-                  alt="profilepicture"
-                />
-              </div>
-            }
-            <div className={`col-lg-${this.state.showInsta ? "7" : "12"}`}>
-              <h1 className="display-4 mb-5 text-center">
-                {this.state.heading}
-              </h1>
-              <p className="lead text-center">{this.state.aboutDev}</p>
-              {this.state.resumeURL &&
-                  <p className="lead text-center">
-                  <a
-                    className="btn btn-outline-dark btn-lg"
-                    href={Pdf}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    role="button"
-                    aria-label="Resume/CV"
-                  >
-                    Resume
-                  </a>
-                </p>
-              }
+  return (
+    <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
+      <div className="container container-fluid p-5">
+        <div className="row">
+        {showInsta &&
+            <div className="col-5 d-none d-lg-block align-self-center">
+              <img
+                className="border border-secondary rounded-circle"
+                src={instaProfilePic}
+                alt="profilepicture"
+              />
             </div>
+          }
+          <div className={`col-lg-${showInsta ? "7" : "12"}`}>
+            <h1 className="display-4 mb-5 text-center">
+              {heading}
+            </h1>
+            <p className="lead text-center">{aboutDev}</p>
+            {resumeURL &&
+                <p className="lead text-center">
+                <a
+                  className="btn btn-outline-dark btn-lg"
+                  href={Pdf}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  role="button"
+                  aria-label="Resume/CV"
+                >
+                  Resume
+                </a>
+              </p>
+            }
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default AboutMe;
