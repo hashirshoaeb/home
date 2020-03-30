@@ -1,34 +1,46 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-class ProjectCard extends Component {
-  constructor(props) {
-    super(props);
+const ProjectCard = ({ value }) => {
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      value: this.props.value,
-      updated_at: "0 mints",
-      stargazers_count: this.props.value.stargazers_count,
-      download_url: `${this.props.value.svn_url}/archive/master.zip`,
-      repo_url: this.props.value.svn_url,
-    };
-  }
+  //   this.state = {
+  //     value: this.props.value,
+  //     updated_at: "0 mints",
+  //     stargazers_count: this.props.value.stargazers_count,
+  //     download_url: `${this.props.value.svn_url}/archive/master.zip`,
+  //     repo_url: this.props.value.svn_url,
+  //   };
+  // }
 
-  componentDidMount = () => {
-    this.handleUpdatetime();
-  };
 
-  handleUpdatetime = () => {
-    const date = new Date(this.state.value.pushed_at);
+  const [updated_at, setUpdatedAt] = useState("0 mints");
+  // const [stargazers_count, setStargazers_count] = useState(value.stargazers_count);
+  // const [download_url, setDownload_url] = useState(`${value.svn_url}/archive/master.zip`);
+  // const [repo_url, setRepo_url] = useState(value.svn_ur);
+
+  // console.log(repo_url)
+  // componentDidMount = () => {
+  //   this.handleUpdatetime();
+  // };
+
+  useEffect(() => {
+    handleUpdatetime()
+  }, [])
+
+
+  const handleUpdatetime = () => {
+    const date = new Date(value.pushed_at);
     const nowdate = new Date();
     const diff = nowdate.getTime() - date.getTime();
     const hours = Math.trunc(diff / 1000 / 60 / 60);
 
     if (hours < 24) {
-      return this.setState({ updated_at: `${hours.toString()} hours ago` });
+      return setUpdatedAt(`${hours.toString()} hours ago`);
     } else {
       const monthNames = [
         "January",
@@ -48,51 +60,50 @@ class ProjectCard extends Component {
       const monthIndex = date.getMonth();
       const year = date.getFullYear();
 
-      return this.setState({
-        updated_at: `on ${day} ${monthNames[monthIndex]} ${year}`
-      });
+      return setUpdatedAt(
+        `on ${day} ${monthNames[monthIndex]} ${year}`
+      );
     }
   };
 
-  render() {
-    return (
-      <div className="col-md-6">
-        <div className="card shadow-lg p-3 mb-5 bg-white rounded">
-          {/* <img src="" className="card-img-top" alt="..." /> */}
-          <div className="card-body">
-            <h5 className="card-title">{this.state.value.name} </h5>
-            <p className="card-text">{this.state.value.description} </p>
-            <a
-              href={this.state.download_url}
-              className="btn btn-outline-secondary mr-3"
-            >
-              <i className="fab fa-github" /> Clone Project
-            </a>
-            <a
-              href={this.state.repo_url}
-              target=" _blank"
-              className="btn btn-outline-secondary"
-            >
-              <i className="fab fa-github" /> Repo
-            </a>
-            <hr />
-            <Language value={this.state.value.languages_url}></Language>
-            <p className="card-text">
-              <span className="text-dark card-link mr-4">
-                <i className="fab fa-github" /> Stars{" "}
-                <span className="badge badge-dark">
-                  {this.state.stargazers_count}
-                </span>
+  const { name, description, svn_url, stargazers_count, languages_url} = value;
+  return (
+    <div className="col-md-6">
+      <div className="card shadow-lg p-3 mb-5 bg-white rounded">
+        {/* <img src="" className="card-img-top" alt="..." /> */}
+        <div className="card-body">
+          <h5 className="card-title">{name} </h5>
+          <p className="card-text">{description} </p>
+          <a
+            href={`${svn_url}/archive/master.zip`}
+            className="btn btn-outline-secondary mr-3"
+          >
+            <i className="fab fa-github" /> Clone Project
+          </a>
+          <a
+            href={svn_url}
+            target=" _blank"
+            className="btn btn-outline-secondary"
+          >
+            <i className="fab fa-github" /> Repo
+          </a>
+          <hr />
+          <Language value={languages_url}></Language>
+          <p className="card-text">
+            <span className="text-dark card-link mr-4">
+              <i className="fab fa-github" /> Stars{" "}
+              <span className="badge badge-dark">
+                {stargazers_count}
               </span>
-              <small className="text-muted">
-                Updated {this.state.updated_at}
-              </small>
-            </p>
-          </div>
+            </span>
+            <small className="text-muted">
+              Updated {updated_at}
+            </small>
+          </p>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 class Language extends Component {
