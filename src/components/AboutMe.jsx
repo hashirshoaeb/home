@@ -7,11 +7,11 @@ import Pdf from "../editable-stuff/resume.pdf";
 
 const AboutMe = () =>  {
 
-  const [heading, setHeading] = useState('About me');
-  const [aboutDev, setAboutDev] = useState(Configs.aboutDev);
+  const [heading] = useState('About me');
+  const [aboutDev] = useState(Configs.aboutDev);
   const [instaProfilePic, setInstaProfilePic] = useState('');
   const [showInsta, setShowInsta] = useState(Configs.showInstaProfilePic);
-  const [resumeURL, seResumeURL] = useState(Pdf);
+  const [resumeURL] = useState(Pdf);
 
 
   useEffect(() => {

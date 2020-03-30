@@ -9,9 +9,9 @@ const MainBody = () => {
 
   const icons = Configs.icons;
 
-  const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
-  const [devInfo, setDevInfo] = useState(Configs.devIntro);
-  const [devDesc, setDevDesc] = useState(Configs.devDesc);
+  // const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
+  const [devInfo] = useState(Configs.devIntro);
+  const [devDesc] = useState(Configs.devDesc);
   const [hoverstatus, setHoverstatus] = useState(["socialicons", "socialicons", "socialicons", "socialicons"]);
 
 

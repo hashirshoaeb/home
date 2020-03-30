@@ -8,9 +8,9 @@ import ProjectCard from "./ProjectCard";
 
 const Project = () => {
 
-  const [heading, setHeading] = useState("Recent Projects");
+  const [heading] = useState("Recent Projects");
   const [projectsArray, setProjectsArray] = useState([]);
-  const [projectsLength, setProjectsLength] = useState(Configs.projectsLength);
+  const [projectsLength] = useState(Configs.projectsLength);
 
   const handleRequest = useCallback((e) => {
     axios

@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Footer = () => {
 
-  const [bgStyle, setBgStyle] = useState({ backgroundColor: "#f5f5f5" })
+  const [bgStyle] = useState({ backgroundColor: "#f5f5f5" })
 
   return (
     <footer style={bgStyle} className="mt-auto py-3 text-center">

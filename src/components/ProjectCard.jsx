@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -10,7 +10,7 @@ const ProjectCard = ({ value }) => {
 
   useEffect(() => {
     handleUpdatetime()
-  }, [])
+  })
 
 
   const handleUpdatetime = () => {
@@ -86,22 +86,21 @@ const ProjectCard = ({ value }) => {
   );
 }
 
-class Language extends Component {
-  state = {
-    data: []
-  };
+const Language = ({ value }) => {
 
-  componentDidMount = () => {
-    this.handleRequest();
-  };
+  const [data, setData] = useState([])
 
-  handleRequest = () => {
+  useEffect(() => {
+    handleRequest();
+  })
+
+  const handleRequest = () => {
     axios
-      .get(this.props.value)
+      .get(value)
       .then(response => {
         // handle success
         // console.log(response.data);
-        return this.setState({ data: response.data });
+        return setData(response.data);
       })
       .catch(error => {
         // handle error
@@ -112,27 +111,25 @@ class Language extends Component {
       });
   };
 
-  render() {
     const array = [];
     let total_count = 0;
-    for (let index in this.state.data) {
+    for (let index in data) {
       array.push(index);
-      total_count += this.state.data[index];
+      total_count += data[index];
       // console.log(index, this.state.data[index]);
     }
     // console.log("array contains ", array, this.state.data[array[0]]);
 
-    return (
-      <div className="pb-3">
-        Languages:{" "}
-        {array.map(language => (
-          <p key={language} className="badge badge-light card-link">
-            {language}: {Math.trunc((this.state.data[language] / total_count) * 1000) / 10} %
-          </p>
-        ))}
-      </div>
-    );
-  }
+  return (
+    <div className="pb-3">
+      Languages:{" "}
+      {array.map(language => (
+        <p key={language} className="badge badge-light card-link">
+          {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %
+        </p>
+      ))}
+    </div>
+  );
 }
 
 export default ProjectCard;
