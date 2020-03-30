@@ -5,28 +5,8 @@ import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const ProjectCard = ({ value }) => {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     value: this.props.value,
-  //     updated_at: "0 mints",
-  //     stargazers_count: this.props.value.stargazers_count,
-  //     download_url: `${this.props.value.svn_url}/archive/master.zip`,
-  //     repo_url: this.props.value.svn_url,
-  //   };
-  // }
-
 
   const [updated_at, setUpdatedAt] = useState("0 mints");
-  // const [stargazers_count, setStargazers_count] = useState(value.stargazers_count);
-  // const [download_url, setDownload_url] = useState(`${value.svn_url}/archive/master.zip`);
-  // const [repo_url, setRepo_url] = useState(value.svn_ur);
-
-  // console.log(repo_url)
-  // componentDidMount = () => {
-  //   this.handleUpdatetime();
-  // };
 
   useEffect(() => {
     handleUpdatetime()
