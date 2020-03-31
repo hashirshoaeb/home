@@ -6,17 +6,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const MainBody = () => {
-
   const icons = Configs.icons;
 
   // const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
   const [devInfo] = useState(Configs.devIntro);
   const [devDesc] = useState(Configs.devDesc);
-  const [hoverstatus, setHoverstatus] = useState(["socialicons", "socialicons", "socialicons", "socialicons"]);
+  const [hoverstatus, setHoverstatus] = useState([
+    "socialicons",
+    "socialicons",
+    "socialicons",
+    "socialicons"
+  ]);
 
-
-
-  const toggleHover = (data) => {
+  const toggleHover = data => {
     const newhoverStatus = [...hoverstatus];
 
     if (data.event === "enter") {
@@ -35,9 +37,7 @@ const MainBody = () => {
         className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
         <div className="container container-fluid text-center ">
-          <h1 className="display-1">
-            {devInfo}
-          </h1>
+          <h1 className="display-1">{devInfo}</h1>
           <Typist className="lead"> {devDesc}</Typist>
           <div className="p-5">
             {icons.map(icon => (
@@ -49,9 +49,7 @@ const MainBody = () => {
                 aria-label={`My ${icon.image.split("-")[1]}`}
               >
                 <i
-                  className={`fab ${icon.image}  fa-3x ${
-                    hoverstatus[icon.id]
-                  }`}
+                  className={`fab ${icon.image}  fa-3x ${hoverstatus[icon.id]}`}
                   onMouseOver={() => toggleHover({ icon, event: "enter" })}
                   onMouseOut={() => toggleHover({ icon, event: "leave" })}
                 />
@@ -70,6 +68,6 @@ const MainBody = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MainBody;

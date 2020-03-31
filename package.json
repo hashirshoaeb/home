@@ -10,16 +10,16 @@
     "url": "https://github.com/hashirshoaeb"
   },
   "dependencies": {
+    "@popperjs/core": "^2.1.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
-    "react-typist": "^2.0.5"
+    "react-scripts": "^3.4.1",
+    "react-typist": "^2.0.5",
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "predeploy": "npm run build",

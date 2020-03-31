@@ -4,8 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Footer = () => {
-
-  const [bgStyle] = useState({ backgroundColor: "#f5f5f5" })
+  const [bgStyle] = useState({ backgroundColor: "#f5f5f5" });
 
   return (
     <footer style={bgStyle} className="mt-auto py-3 text-center">
@@ -18,8 +17,8 @@ const Footer = () => {
         aria-label="My GitHub"
       >
         Hashir Shoaib
-      </a>
-      {" "}using <i className="fab fa-react"></i>
+      </a>{" "}
+      using <i className="fab fa-react"></i>
       <p>
         <small className="text-muted">
           {" "}
@@ -29,6 +28,6 @@ const Footer = () => {
       </p>
     </footer>
   );
-}
+};
 
 export default Footer;

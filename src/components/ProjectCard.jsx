@@ -5,13 +5,11 @@ import axios from "axios";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const ProjectCard = ({ value }) => {
-
   const [updated_at, setUpdatedAt] = useState("0 mints");
 
   useEffect(() => {
-    handleUpdatetime()
-  })
-
+    handleUpdatetime();
+  });
 
   const handleUpdatetime = () => {
     const date = new Date(value.pushed_at);
@@ -34,19 +32,17 @@ const ProjectCard = ({ value }) => {
         "September",
         "October",
         "November",
-        "December",
+        "December"
       ];
       const day = date.getDate();
       const monthIndex = date.getMonth();
       const year = date.getFullYear();
 
-      return setUpdatedAt(
-        `on ${day} ${monthNames[monthIndex]} ${year}`
-      );
+      return setUpdatedAt(`on ${day} ${monthNames[monthIndex]} ${year}`);
     }
   };
 
-  const { name, description, svn_url, stargazers_count, languages_url} = value;
+  const { name, description, svn_url, stargazers_count, languages_url } = value;
   return (
     <div className="col-md-6">
       <div className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -72,27 +68,22 @@ const ProjectCard = ({ value }) => {
           <p className="card-text">
             <span className="text-dark card-link mr-4">
               <i className="fab fa-github" /> Stars{" "}
-              <span className="badge badge-dark">
-                {stargazers_count}
-              </span>
+              <span className="badge badge-dark">{stargazers_count}</span>
             </span>
-            <small className="text-muted">
-              Updated {updated_at}
-            </small>
+            <small className="text-muted">Updated {updated_at}</small>
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
 const Language = ({ value }) => {
-
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     handleRequest();
-  })
+  });
 
   const handleRequest = () => {
     axios
@@ -111,14 +102,14 @@ const Language = ({ value }) => {
       });
   };
 
-    const array = [];
-    let total_count = 0;
-    for (let index in data) {
-      array.push(index);
-      total_count += data[index];
-      // console.log(index, this.state.data[index]);
-    }
-    // console.log("array contains ", array, this.state.data[array[0]]);
+  const array = [];
+  let total_count = 0;
+  for (let index in data) {
+    array.push(index);
+    total_count += data[index];
+    // console.log(index, this.state.data[index]);
+  }
+  // console.log("array contains ", array, this.state.data[array[0]]);
 
   return (
     <div className="pb-3">
@@ -130,6 +121,6 @@ const Language = ({ value }) => {
       ))}
     </div>
   );
-}
+};
 
 export default ProjectCard;
