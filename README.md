@@ -167,3 +167,7 @@ Following awesome people have created their own version.
 ## License 📄
 
 [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home)
