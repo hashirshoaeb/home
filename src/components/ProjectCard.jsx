@@ -9,7 +9,7 @@ const ProjectCard = ({ value }) => {
 
   useEffect(() => {
     handleUpdatetime();
-  });
+  }, []);
 
   const handleUpdatetime = () => {
     const date = new Date(value.pushed_at);
@@ -32,7 +32,7 @@ const ProjectCard = ({ value }) => {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ];
       const day = date.getDate();
       const monthIndex = date.getMonth();
@@ -83,17 +83,17 @@ const Language = ({ value }) => {
 
   useEffect(() => {
     handleRequest();
-  });
+  }, []);
 
   const handleRequest = () => {
     axios
       .get(value)
-      .then(response => {
+      .then((response) => {
         // handle success
         // console.log(response.data);
         return setData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         // handle error
         return console.error(error.message);
       })
@@ -114,7 +114,7 @@ const Language = ({ value }) => {
   return (
     <div className="pb-3">
       Languages:{" "}
-      {array.map(language => (
+      {array.map((language) => (
         <p key={language} className="badge badge-light card-link">
           {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %
         </p>
