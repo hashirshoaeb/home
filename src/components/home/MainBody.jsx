@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Typist from "react-typist";
-import "../App";
-import Configs from "../editable-stuff/configurations.json";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import Configs from "../../editable-stuff/configurations.json";
 
 const MainBody = () => {
   const icons = Configs.icons;
@@ -15,10 +12,10 @@ const MainBody = () => {
     "socialicons",
     "socialicons",
     "socialicons",
-    "socialicons"
+    "socialicons",
   ]);
 
-  const toggleHover = data => {
+  const toggleHover = (data) => {
     const newhoverStatus = [...hoverstatus];
 
     if (data.event === "enter") {
@@ -33,14 +30,14 @@ const MainBody = () => {
   return (
     <div>
       <div
-        id="divmainbody"
+        id="home"
         className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
         <div className="container container-fluid text-center ">
           <h1 className="display-1">{devInfo}</h1>
           <Typist className="lead"> {devDesc}</Typist>
           <div className="p-5">
-            {icons.map(icon => (
+            {icons.map((icon) => (
               <a
                 key={icon.id}
                 target="_blank"

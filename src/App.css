@@ -2,13 +2,11 @@
   /* background: linear-gradient(136deg, #1ad7c0, #8E44AD, #ff9b11, #1F3A93, #ddd8c6, #000000, #000000);  */
   background: linear-gradient(
     136deg,
-    #1f3a93,
     #4484ce,
     #1ad7c0,
     #ff9b11,
     #9b59b6,
-    #efefef,
-    #000000,
+    #ff7f7f,
     #ecf0f1
   );
 
@@ -82,4 +80,8 @@
   padding-right: 5px;
   transition: all 0.8s;
   margin: 4px;
+}
+
+.bg-gradient {
+  background: linear-gradient(rgba(245, 245, 245), rgba(245, 245, 245, 0));
 }

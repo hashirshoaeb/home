@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Configs from "../editable-stuff/configurations.json";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Configs from "../../editable-stuff/configurations.json";
 import axios from "axios";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import Pdf from "../editable-stuff/resume.pdf";
+import Pdf from "../../editable-stuff/resume.pdf";
 
 const AboutMe = () => {
   const [heading] = useState("About me");
@@ -18,17 +16,17 @@ const AboutMe = () => {
     }
   }, [showInsta]);
 
-  const handleRequest = e => {
+  const handleRequest = (e) => {
     axios
       .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
-      .then(response => {
+      .then((response) => {
         // handle success
         // console.log(response.data.graphql);
         return setInstaProfilePic(
           response.data.graphql.user.profile_pic_url_hd
         );
       })
-      .catch(error => {
+      .catch((error) => {
         // handle error
         setShowInsta(false);
         return console.error(error.message);
