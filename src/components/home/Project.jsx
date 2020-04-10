@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "../App.css";
-import Configs from "../editable-stuff/configurations.json";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Configs from "../../editable-stuff/configurations.json";
 import axios from "axios";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import ProjectCard from "./ProjectCard";
 
 const Project = () => {
@@ -12,15 +9,15 @@ const Project = () => {
   const [projectsLength] = useState(Configs.projectsLength);
 
   const handleRequest = useCallback(
-    e => {
+    (e) => {
       axios
         .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
-        .then(response => {
+        .then((response) => {
           // handle success
           // console.log(response.data.slice(0, 4));
           return setProjectsArray(response.data.slice(0, projectsLength));
         })
-        .catch(error => {
+        .catch((error) => {
           // handle error
           return console.error(error.message);
         })
@@ -40,7 +37,7 @@ const Project = () => {
       <div className="container container-fluid p-5">
         <h1 className="display-4 pb-5">{heading}</h1>
         <div className="row">
-          {projectsArray.map(project => (
+          {projectsArray.map((project) => (
             <ProjectCard key={project.id} id={project.id} value={project} />
           ))}
         </div>

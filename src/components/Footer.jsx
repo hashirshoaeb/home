@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import "../App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Footer = () => {
   const [bgStyle] = useState({ backgroundColor: "#f5f5f5" });
