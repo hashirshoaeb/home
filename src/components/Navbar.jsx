@@ -37,19 +37,19 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#about"}
+              to={process.env.PUBLIC_URL + "/blog"}
             >
-              <b>Blog</b>
-            </a>
+              Blog
+            </Link>
           </li>
           <li className="nav-item">
             <a
               className="nav-link lead"
               href={process.env.PUBLIC_URL + "/#projects"}
             >
-              <b>Projects</b>
+              Projects
             </a>
           </li>
           <li className="nav-item">
