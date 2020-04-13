@@ -34,14 +34,16 @@ const Project = () => {
 
   return (
     <div id="projects" className="jumbotron jumbotron-fluid bg-transparent m-0">
-      <div className="container container-fluid p-5">
-        <h1 className="display-4 pb-5">{heading}</h1>
-        <div className="row">
-          {projectsArray.map((project) => (
-            <ProjectCard key={project.id} id={project.id} value={project} />
-          ))}
+      {projectsArray.length && (
+        <div className="container container-fluid p-5">
+          <h1 className="display-4 pb-5">{heading}</h1>
+          <div className="row">
+            {projectsArray.map((project) => (
+              <ProjectCard key={project.id} id={project.id} value={project} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
