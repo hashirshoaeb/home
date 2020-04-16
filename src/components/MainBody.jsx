@@ -31,11 +31,13 @@ const MainBody = () => {
   };
 
   return (
-    <div>
+      <div >
+     
       <div
-        id="divmainbody"
+        id="title"
         className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
+         <div id="stars"></div>
         <div className="container container-fluid text-center ">
           <h1 className="display-1">{devInfo}</h1>
           <Typist className="lead"> {devDesc}</Typist>
