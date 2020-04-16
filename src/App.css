@@ -84,26 +84,15 @@
   margin: 4px;
 }
 
-#title {
-  /* position: absolute;  */
+.title {
   height: 100%; 
-   left: 0;
+  left: 0;
   right: 0; 
-   color: #fff;
+  color: #fff;
   text-align: center;
-  /* font-family: Lato; */
-  /* font-weight: 300; */
-  /* font-size: 50px; */
-  /* letter-spacing: 10px; */
   margin-top: 0px;
-  /* padding-left: 10px; */
 }
 
-#title span {
-   background: -webkit-linear-gradient(white, #38495a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-}
 
 #stars {
   width: 1px;
