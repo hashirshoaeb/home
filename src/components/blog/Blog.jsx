@@ -4,6 +4,7 @@ import bloglist from "../../editable-stuff/blog";
 const Blog = (props) => {
   return (
     <div className="container-lg mt-5 bg-blue">
+      <h1 className="text-center">Blogs</h1>
       {bloglist.map((value, index) => {
         return (
           <BlogCard

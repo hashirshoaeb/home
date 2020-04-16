@@ -9,6 +9,7 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Blog } from "./components/blog/Blog";
+import BlogPost from "./components/blog/BlogPost";
 
 const Home = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => (
     <div>
       <Navbar />
       <Route path="/" exact component={Home} />
-      <Route path="/blog" component={Blog} />
+      <Route path="/blog" exact component={Blog} />
+      <Route path="/blog/:id" component={BlogPost} />
       <Footer />
     </div>
   </BrowserRouter>
