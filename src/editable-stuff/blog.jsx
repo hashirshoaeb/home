@@ -4,7 +4,8 @@ const bloglist = [];
 const blog = new BlogBuilder({
   title: "My First Blog",
   image: "img",
-  description: "description---",
+  description:
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia provident similique corporis rem ullam odio excepturi voluptas harum, architecto sit!",
 })
   .addHeading("Heading")
   .addParagraph("this is paragraph")
