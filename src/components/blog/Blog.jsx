@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { BlogBuilder } from "./BlogBuilder";
 import bloglist from "../../editable-stuff/blog";
+import { Link } from "react-router-dom";
 const Blog = (props) => {
   return (
     <div className="container-lg mt-5 bg-blue">
@@ -11,6 +12,7 @@ const Blog = (props) => {
             key={index}
             title={value.title}
             description={value.description}
+            index={index}
           />
         );
       })}
@@ -18,7 +20,7 @@ const Blog = (props) => {
   );
 };
 
-const BlogCard = ({ title, image, description }) => {
+const BlogCard = ({ index, title, image, description }) => {
   return (
     <div className="m-5">
       <div className="">
@@ -30,6 +32,9 @@ const BlogCard = ({ title, image, description }) => {
             <div className="">
               <h1 className="">{title}</h1>
               <p className="lead">{description}</p>
+              <Link to={`${process.env.PUBLIC_URL}blog/${index}`}>
+                Read more...{" "}
+              </Link>
             </div>
           </div>
         </div>
