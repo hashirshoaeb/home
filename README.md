@@ -1,8 +1,8 @@
-# [Developer's Portfolio](https://hashirshoaeb.github.io/home)
+# [Developer's Portfolio](https://hashirshoaeb.github.io)
 
-[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/home)
+[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io)
 
-It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/home](https://hashirshoaeb.github.io/home).
+It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io](https://hashirshoaeb.github.io).
 
 ## Table of Contents
 
@@ -85,6 +85,12 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
     npm run deploy
    ```
 
+   For custom deployment, refer [pages.js](./pages.js)
+
+   ```bash
+    npm run custom-deploy
+   ```
+
 9. Congrats your site is up and running. To see it live, visit:
 
    ```https
@@ -158,6 +164,14 @@ Following awesome people have created their own version.
         <img src="https://avatars3.githubusercontent.com/u/42126841?s=460" width="100px" alt="" />
         <br />
         <sub><b>Yoni Sisso</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/mallikarjuna-sharma">
+        <img src="https://avatars3.githubusercontent.com/u/40210749?s=460" width="100px" alt="" />
+        <br />
+        <sub><b>Mallikarjuna Sharma</b></sub>
       </a>
       <br />
     </td>
