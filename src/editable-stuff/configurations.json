@@ -1,9 +1,11 @@
 {
   "backgroundType": "gradient",
   "plainBackgroundMode": "daylight",
-  "devIntro": "Hashir Shoaib",
-  "devDesc": "| Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
   "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
+  "FirstName": "Hashir",
+  "MiddleName": "",
+  "LastName": "Shoaib",
+  "devDesc": "| Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
   "icons": [
     {
       "id": 0,
@@ -30,13 +32,17 @@
       "style": "socialicons"
     }
   ],
-  "instaLink": "https://www.instagram.com/",
-  "instaUsername": "hashir.shoaeb",
-  "instaQuerry": "/?__a=1",
+  "aboutHeading": "About Me",
   "showInstaProfilePic": true,
-  "aboutDev": "A final year Computer Engineer from NUST CEME, Pakistan with 3+ years experience in web development and passion to teach machines think. I’m currently the Vice President of student body at Emerging Technologies Research Lab(ETL) and a former Intern at RiseTech.",
+  "instaLink": "https://www.instagram.com/",
+  "instaUsername": "hashirshoaeb",
+  "instaQuerry": "/?__a=1",
+  "aboutDescription": "A final year Computer Engineer from NUST CEME, Pakistan with 3+ years experience in web development and passion to teach machines think. I’m currently the Vice President of student body at Emerging Technologies Research Lab(ETL) and a former Intern at RiseTech.",
+  "projectHeading": "Recent Projects",
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "hashirshoaeb",
   "gitHubQuerry": "/repos?sort=updated&direction=desc",
-  "projectsLength": 4
+  "projectsLength": 4,
+  "showNavigationbar": true,
+  "showBlog": false
 }

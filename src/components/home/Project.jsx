@@ -1,32 +1,33 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Configs from "../../editable-stuff/configurations.json";
 import axios from "axios";
 import ProjectCard from "./ProjectCard";
+import {
+  projectHeading,
+  gitHubLink,
+  gitHubUsername,
+  gitHubQuerry,
+  projectsLength,
+} from "../../editable-stuff/configurations.json";
 
 const Project = () => {
-  const [heading] = useState("Recent Projects");
   const [projectsArray, setProjectsArray] = useState([]);
-  const [projectsLength] = useState(Configs.projectsLength);
 
-  const handleRequest = useCallback(
-    (e) => {
-      axios
-        .get(Configs.gitHubLink + Configs.gitHubUsername + Configs.gitHubQuerry)
-        .then((response) => {
-          // handle success
-          // console.log(response.data.slice(0, 4));
-          return setProjectsArray(response.data.slice(0, projectsLength));
-        })
-        .catch((error) => {
-          // handle error
-          return console.error(error.message);
-        })
-        .finally(() => {
-          // always executed
-        });
-    },
-    [projectsLength]
-  );
+  const handleRequest = useCallback((e) => {
+    axios
+      .get(gitHubLink + gitHubUsername + gitHubQuerry)
+      .then((response) => {
+        // handle success
+        // console.log(response.data.slice(0, 4));
+        return setProjectsArray(response.data.slice(0, projectsLength));
+      })
+      .catch((error) => {
+        // handle error
+        return console.error(error.message);
+      })
+      .finally(() => {
+        // always executed
+      });
+  }, []);
 
   useEffect(() => {
     handleRequest();
@@ -36,7 +37,7 @@ const Project = () => {
     <div id="projects" className="jumbotron jumbotron-fluid bg-transparent m-0">
       {projectsArray.length && (
         <div className="container container-fluid p-5">
-          <h1 className="display-4 pb-5">{heading}</h1>
+          <h1 className="display-4 pb-5">{projectHeading}</h1>
           <div className="row">
             {projectsArray.map((project) => (
               <ProjectCard key={project.id} id={project.id} value={project} />

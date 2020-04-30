@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import Typist from "react-typist";
-import Configs from "../../editable-stuff/configurations.json";
+import {
+  FirstName,
+  LastName,
+  MiddleName,
+  devDesc,
+  icons,
+} from "../../editable-stuff/configurations.json";
 
 const MainBody = () => {
-  const icons = Configs.icons;
-
   // const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
-  const [devInfo] = useState(Configs.devIntro);
-  const [devDesc] = useState(Configs.devDesc);
-  const [hoverstatus, setHoverstatus] = useState([
-    "socialicons",
-    "socialicons",
-    "socialicons",
-    "socialicons",
-  ]);
+  const [hoverstatus, setHoverstatus] = useState(
+    new Array(icons.length).fill("socialicons")
+  );
 
   const toggleHover = (data) => {
     const newhoverStatus = [...hoverstatus];
@@ -34,7 +33,9 @@ const MainBody = () => {
         className="jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
         <div className="container container-fluid text-center ">
-          <h1 className="display-1">{devInfo}</h1>
+          <h1 className="display-1">
+            {FirstName + " " + MiddleName + " " + LastName}
+          </h1>
           <Typist className="lead"> {devDesc}</Typist>
           <div className="p-5">
             {icons.map((icon) => (
