@@ -3,6 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
+import {
+  showNavigationbar,
+  showBlog,
+} from "./editable-stuff/configurations.json";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -23,13 +27,11 @@ const Home = () => {
 
 const App = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-    <div>
-      <Navbar />
-      <Route path="/" exact component={Home} />
-      <Route path="/blog" exact component={Blog} />
-      <Route path="/blog/:id" component={BlogPost} />
-      <Footer />
-    </div>
+    {showNavigationbar && <Navbar />}
+    <Route path="/" exact component={Home} />
+    {showBlog && <Route path="/blog" exact component={Blog} />}
+    {showBlog && <Route path="/blog/:id" component={BlogPost} />}
+    <Footer />
   </BrowserRouter>
 );
 

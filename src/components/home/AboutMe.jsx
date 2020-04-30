@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import Configs from "../../editable-stuff/configurations.json";
 import axios from "axios";
 import Pdf from "../../editable-stuff/resume.pdf";
+import {
+  aboutHeading,
+  aboutDescription,
+  showInstaProfilePic,
+  instaLink,
+  instaUsername,
+  instaQuerry,
+} from "../../editable-stuff/configurations.json";
 
 const AboutMe = () => {
-  const [heading] = useState("About me");
-  const [aboutDev] = useState(Configs.aboutDev);
   const [instaProfilePic, setInstaProfilePic] = useState("");
-  const [showInsta, setShowInsta] = useState(Configs.showInstaProfilePic);
+  const [showInsta, setShowInsta] = useState(showInstaProfilePic);
   const [resumeURL] = useState(Pdf);
 
   useEffect(() => {
@@ -18,7 +23,7 @@ const AboutMe = () => {
 
   const handleRequest = (e) => {
     axios
-      .get(Configs.instaLink + Configs.instaUsername + Configs.instaQuerry)
+      .get(instaLink + instaUsername + instaQuerry)
       .then((response) => {
         // handle success
         // console.log(response.data.graphql);
@@ -50,8 +55,8 @@ const AboutMe = () => {
             </div>
           )}
           <div className={`col-lg-${showInsta ? "7" : "12"}`}>
-            <h1 className="display-4 mb-5 text-center">{heading}</h1>
-            <p className="lead text-center">{aboutDev}</p>
+            <h1 className="display-4 mb-5 text-center">{aboutHeading}</h1>
+            <p className="lead text-center">{aboutDescription}</p>
             {resumeURL && (
               <p className="lead text-center">
                 <a

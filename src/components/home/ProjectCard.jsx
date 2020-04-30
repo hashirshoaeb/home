@@ -1,43 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const ProjectCard = ({ value }) => {
   const [updated_at, setUpdatedAt] = useState("0 mints");
 
+  const handleUpdatetime = useCallback(
+    (e) => {
+      const date = new Date(value.pushed_at);
+      const nowdate = new Date();
+      const diff = nowdate.getTime() - date.getTime();
+      const hours = Math.trunc(diff / 1000 / 60 / 60);
+
+      if (hours < 24) {
+        return setUpdatedAt(`${hours.toString()} hours ago`);
+      } else {
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const day = date.getDate();
+        const monthIndex = date.getMonth();
+        const year = date.getFullYear();
+
+        return setUpdatedAt(`on ${day} ${monthNames[monthIndex]} ${year}`);
+      }
+    },
+    [value.pushed_at]
+  );
+
   useEffect(() => {
     handleUpdatetime();
-  }, []);
-
-  const handleUpdatetime = () => {
-    const date = new Date(value.pushed_at);
-    const nowdate = new Date();
-    const diff = nowdate.getTime() - date.getTime();
-    const hours = Math.trunc(diff / 1000 / 60 / 60);
-
-    if (hours < 24) {
-      return setUpdatedAt(`${hours.toString()} hours ago`);
-    } else {
-      const monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const day = date.getDate();
-      const monthIndex = date.getMonth();
-      const year = date.getFullYear();
-
-      return setUpdatedAt(`on ${day} ${monthNames[monthIndex]} ${year}`);
-    }
-  };
+  }, [handleUpdatetime]);
 
   const { name, description, svn_url, stargazers_count, languages_url } = value;
   return (
@@ -78,26 +81,29 @@ const ProjectCard = ({ value }) => {
 const Language = ({ value }) => {
   const [data, setData] = useState([]);
 
+  const handleRequest = useCallback(
+    (e) => {
+      axios
+        .get(value)
+        .then((response) => {
+          // handle success
+          // console.log(response.data);
+          return setData(response.data);
+        })
+        .catch((error) => {
+          // handle error
+          return console.error(error.message);
+        })
+        .finally(() => {
+          // always executed
+        });
+    },
+    [value]
+  );
+
   useEffect(() => {
     handleRequest();
-  }, []);
-
-  const handleRequest = () => {
-    axios
-      .get(value)
-      .then((response) => {
-        // handle success
-        // console.log(response.data);
-        return setData(response.data);
-      })
-      .catch((error) => {
-        // handle error
-        return console.error(error.message);
-      })
-      .finally(() => {
-        // always executed
-      });
-  };
+  }, [handleRequest]);
 
   const array = [];
   let total_count = 0;
