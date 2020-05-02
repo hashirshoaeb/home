@@ -1,8 +1,8 @@
-# [Developer's Portfolio](https://hashirshoaeb.github.io)
+# [Developer's Portfolio](https://hashirshoaeb.github.io/)
 
-[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io)
+[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/)
 
-It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io](https://hashirshoaeb.github.io).
+It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: [hashirshoaeb.github.io/](https://hashirshoaeb.github.io/).
 
 ## Table of Contents
 
@@ -30,15 +30,17 @@ Dependencies defined in package.json:
 
 ## Structure ⚓
 
+- Navigation bar (optional)
+- Blog (optional)
 - Body
   - Name | Profession
   - Contact / Follow / Find me / Facebook / LinkedIn / GitHub / Instagram / Email / CodePen
-  - Resume
+  - Resume | About me
 - About Me
-  - Display picture (using Instagram API)
-  - Interests, Goals and Hobbies
+  - Display picture (using Instagram API) (optional)
+  - About myself, my Interests, Goals and Hobbies
   - Things I'm good at (Skills)
-- Projects (using GitHub API)
+- Recent Projects (using GitHub API) (optional)
 - Footer
   - Acknowledgements (contributors)
   - Copyrights - open source
@@ -69,6 +71,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
    ```json
    "homepage": "https://<your-username>.github.io/home"
    ```
+
+   Or for custom deployment, refer [create-react-app.dev](https://create-react-app.dev/docs/deployment/)
 
 6. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
 
@@ -106,30 +110,51 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 If anyone is looking to make some contribution, the following are issues that you can solve:
 
 - [ ] UI improvements
-- [x] Grammar check | Spelling mistakes
 - [ ] Code optimization
-- [x] Hover property on social icons
-- [ ] Routing
+- [x] Routing
+- [ ] SEO
 
 ## Upcoming Features / Improvements 🔗
 
 - [x] Button and place for resume/CV.
 - [x] Option: add or not to add Instagram's display picture.
 - [x] Number of projects to show in website.
-- [ ] If the Number of Projects are zero, hide the heading (Recent Projects)
+- [x] If the Number of Projects are zero, hide the heading (Recent Projects).
+- [ ] Blogs page.
 - [ ] Make resume optional.
 
 ## Showcase 🚀
 
 Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
 
-Following awesome people have created their own version.
-
-1. [@khizarkhizar](https://github.com/khizarkhizar) version: https://khizarkhizar.github.io/home/
-
-2. [@meullah](https://github.com/meullah) version: https://meullah.github.io/home/
-
-3. [@AymunTariq](https://github.com/AymunTariq) version: https://github.com/AymunTariq/home/
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://khizarkhizar.github.io/home/">
+        <img src="READMEdocs/khizarkhizar-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Khizar Hayyat</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/hamzasohail0/home/">
+        <img src="READMEdocs/hamzasohail0-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Hamza Sohail</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/AymunTariq/home/">
+        <img src="READMEdocs/aymuntariq-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Aymun Tariq</b></sub>
+      </a>
+      <br />
+    </td>
+  </tr>
+</table>
 
 ## Contributors ✨
 
