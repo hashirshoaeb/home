@@ -101,6 +101,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
      https://<your-username>.github.io/home
    ```
 
+Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
+
 ## Contributing 🙌
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -130,7 +132,7 @@ Have you changed something in the code to create your own version? Feel free to 
 <table>
   <tr>
     <td align="center">
-      <a href="https://khizarkhizar.github.io/home/">
+      <a href="https://github.com/khizarkhizar/home/">
         <img src="READMEdocs/khizarkhizar-github-io-home.gif" width="300px" alt="" />
         <br />
         <sub><b>Khizar Hayyat</b></sub>
@@ -150,6 +152,32 @@ Have you changed something in the code to create your own version? Feel free to 
         <img src="READMEdocs/aymuntariq-github-io-home.gif" width="300px" alt="" />
         <br />
         <sub><b>Aymun Tariq</b></sub>
+      </a>
+      <br />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/ishaan-m/home/">
+        <img src="READMEdocs/ishaan-m-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Ishaan Manudhane</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/meenams/home/">
+        <img src="READMEdocs/meenams-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Meena Muthusubramanian</b></sub>
+      </a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/remimestdagh/home/">
+        <img src="READMEdocs/remimestdagh-github-io-home.gif" width="300px" alt="" />
+        <br />
+        <sub><b>Remi Mestdagh</b></sub>
       </a>
       <br />
     </td>
