@@ -30,6 +30,12 @@
       "image": "fa-linkedin",
       "url": "https://www.linkedin.com/in/hashir-shoaeb/",
       "style": "socialicons"
+    },
+    {
+      "id": 4,
+      "image": "fa-twitter",
+      "url": "https://www.twitter.com/hashirshoaeb/",
+      "style": "socialicons"
     }
   ],
   "aboutHeading": "About Me",
