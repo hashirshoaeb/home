@@ -107,12 +107,14 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 8. To deploy website run:
 
    ```bash
+    npm run build
     npm run deploy
    ```
 
-   For custom deployment, refer [pages.js](./pages.js)
+   Or for custom deployment, refer [pages.js](./pages.js)
 
    ```bash
+    npm run build
     npm run custom-deploy
    ```
 
