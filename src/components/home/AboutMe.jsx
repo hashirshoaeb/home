@@ -69,6 +69,18 @@ const AboutMe = () => {
                 >
                   Resume
                 </a>
+<br></br>
+<p></p>
+                <a
+                  className="btn btn-outline-dark btn-lg"
+                  href="mailto:saudalardi@outlook.sa"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  role="button"
+                  aria-label="Resume/CV"
+                >
+                  Send Email
+                </a>
               </p>
             )}
           </div>
