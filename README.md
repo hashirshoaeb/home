@@ -155,10 +155,10 @@ Have you changed something in the code to create your own version? Feel free to 
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/khizarkhizar/home/">
-        <img src="READMEdocs/khizarkhizar-github-io-home.gif" width="300px" alt="" />
+      <a href="https://github.com/justiceserv/justiceserv.github.io">
+        <img src="READMEdocs/justiceserv-github-io-home.gif" width="300px" alt="" />
         <br />
-        <sub><b>Khizar Hayyat</b></sub>
+        <sub><b>Guhyun Chung</b></sub>
       </a>
       <br />
     </td>
