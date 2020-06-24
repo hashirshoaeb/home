@@ -2,53 +2,53 @@
   "backgroundType": "gradient",
   "plainBackgroundMode": "daylight",
   "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
-  "FirstName": "Hashir",
+  "FirstName": "Pedro",
   "MiddleName": "",
-  "LastName": "Shoaib",
-  "devDesc": "| Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
+  "LastName": "Tashima",
+  "devDesc": "| Estudante | Gerente de projetos | Developer | Empresário Júnior | Maker ",
   "icons": [
     {
       "id": 0,
       "image": "fa-github",
-      "url": "https://github.com/hashirshoaeb",
+      "url": "https://github.com/tashima42",
       "style": "socialicons"
     },
     {
       "id": 1,
       "image": "fa-facebook",
-      "url": "https://www.facebook.com/hashirshoaeb",
+      "url": "https://www.facebook.com/",
       "style": "socialicons"
     },
     {
       "id": 2,
       "image": "fa-instagram",
-      "url": "https://www.instagram.com/hashirshoaeb/",
+      "url": "https://www.instagram.com/tashima42/",
       "style": "socialicons"
     },
     {
       "id": 3,
-      "image": "fa-linkedin",
-      "url": "https://www.linkedin.com/in/hashirshoaeb/",
+      "image": "fa-twitter",
+      "url": "https://www.twitter.com/tashima42/",
       "style": "socialicons"
     },
     {
       "id": 4,
-      "image": "fa-twitter",
-      "url": "https://www.twitter.com/hashirshoaeb/",
+      "image": "fa-linkedin",
+      "url": "https://www.linkedin.com/in/pedro-t-ba419216b",
       "style": "socialicons"
     }
   ],
-  "aboutHeading": "About Me",
-  "showInstaProfilePic": true,
+  "aboutHeading": "Sobre Mim",
+  "showInstaProfilePic": false,
   "instaLink": "https://www.instagram.com/",
-  "instaUsername": "hashirshoaeb",
+  "instaUsername": "xxx",
   "instaQuerry": "/?__a=1",
-  "aboutDescription": "I'm Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of student body at Emerging Technologies Research Lab(ETL) and a former Intern at RiseTech. I'm passionate about teaching machines how to think",
-  "projectHeading": "Recent Projects",
+  "aboutDescription": "Sou um estudante de Engenharia Eletrônica, Gerente de projetos, com ênfase em gestão ágil, developer web, mobile e maker nas horas vagas.",
+  "projectHeading": "Projetos Recentes",
   "gitHubLink": "https://api.github.com/users/",
-  "gitHubUsername": "hashirshoaeb",
+  "gitHubUsername": "tashima42",
   "gitHubQuerry": "/repos?sort=updated&direction=desc",
   "projectsLength": 4,
-  "showNavigationbar": true,
+  "showNavigationbar": false,
   "showBlog": false
 }
