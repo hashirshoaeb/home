@@ -13,7 +13,7 @@ const BlogPost = ({ match }) => {
           {post.getBlog()}
         </div>
       )}
-      {!post && <h1 className="display-1 text-center">404 - Page not found</h1>}
+      {!post && <h1 className="display-1 text-center">404 - Página não encontrada</h1>}
     </div>
   );
 };

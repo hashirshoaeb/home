@@ -2,12 +2,12 @@ import { BlogBuilder } from "../components/blog/BlogBuilder";
 const bloglist = [];
 
 const blog = new BlogBuilder({
-  title: "My First Blog",
+  title: "Meu Primeiro Blog",
   image: "img",
   description:
     "Description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia provident similique corporis rem ullam odio excepturi voluptas harum, architecto sit!",
 })
-  .addHeading("Heading")
+  .addHeading("Cabeçalho")
   .addParagraph(
     "1st Paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero reiciendis quas, autem sit culpa? Quibusdam, cupiditate voluptate a non nulla aliquid enim doloremque ullam, facilis quisquam similique hic omnis!"
   )
@@ -16,19 +16,19 @@ const blog = new BlogBuilder({
   );
 
 const blog1 = new BlogBuilder({
-  title: "My Second Blog",
+  title: "Meu Segundo Blog",
   image: "img",
   description:
     "Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure tempore aut neque consectetur voluptatem quam nihil, facere earum adipisci, animi beatae dicta maiores, ipsam delectus ab molestias dolorum aperiam? Sapiente?",
 })
-  .addHeading("Heading")
+  .addHeading("Caebçalho")
   .addParagraph(
     "1st Paragraph Aspernatur vero reiciendis quas, autem sit culpa? Quibusdam, cupiditate voluptate a non nulla aliquid enim doloremque ullam, facilis quisquam similique hic omnis!"
   )
   .addParagraph(
     "2nd Paragraph Consequuntur ad, temporibus quae obcaecati eum expedita pariatur aspernatur recusandae beatae iste soluta sunt blanditiis dolore ipsam quia laboriosam quas perspiciatis architecto?"
   )
-  .addHeading("New Heading")
+  .addHeading("Novo Cabeçalho")
   .addParagraph(
     "1st Paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero reiciendis quas, autem sit culpa? Quibusdam, cupiditate voluptate a non nulla aliquid enim doloremque ullam, facilis quisquam similique hic omnis!"
   )

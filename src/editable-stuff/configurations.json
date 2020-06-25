@@ -5,7 +5,7 @@
   "FirstName": "Pedro",
   "MiddleName": "",
   "LastName": "Tashima",
-  "devDesc": "| Estudante | Gerente de projetos | Developer | Empresário Júnior | Maker ",
+  "devDesc": "| Estudante de Engenharia | Gerente de projetos | Developer | Empresário Júnior | Maker ",
   "icons": [
     {
       "id": 0,
@@ -39,11 +39,11 @@
     }
   ],
   "aboutHeading": "Sobre Mim",
-  "showInstaProfilePic": false,
+  "showInstaProfilePic": true,
   "instaLink": "https://www.instagram.com/",
   "instaUsername": "xxx",
   "instaQuerry": "/?__a=1",
-  "aboutDescription": "Sou um estudante de Engenharia Eletrônica, Gerente de projetos, com ênfase em gestão ágil, developer web, mobile e maker nas horas vagas.",
+  "aboutDescription": "Sou um estudante de Engenharia Eletrônica na Universidade Tecnológica Federal do Paraná, Gerente de projetos, com ênfase em gestão ágil na empresa júnior de Controle, Automação e Eletrônica Solucaut, desenvolvedor web, mobile e maker nas horas .",
   "projectHeading": "Projetos Recentes",
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "tashima42",
