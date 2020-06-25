@@ -42,7 +42,7 @@
 
 ## Tecnologias Utilizadas 🛠️
 
-Dependencias definidas em package.json:
+Dependencias definidas no package.json:
 
 [Reactjs](https://reactjs.org/)
 | [Bootstrap](https://getbootstrap.com/)
@@ -62,7 +62,7 @@ Dependencias definidas em package.json:
   - Foto de perfil (usando API do Instagram) (opicional)
   - Sobre mim, meus interesses Metas e Hobbies
   - Coisas em que sou bom (Skills)
-- Projetos Recentes (usando uma API do GitHub) (opicional)
+- Projetos Recentes (usando API do GitHub) (opicional)
 - Footer [rodapé]
   - Reconhecimentos (contribuidores)
   - Copyrights - open source
@@ -70,7 +70,7 @@ Dependencias definidas em package.json:
 
 ## Compartilhando 💗
 
-O projeto é open-souce. Fique a vontade para fazer sua próxima versão. Tudo o que você precisa fazer é um fork e editar,  [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) e adicionar seu Currículo. Se você gostou do projeto, dê uma ⭐.
+O projeto é open-souce. Fique a vontade para fazer sua própria versão. Tudo o que você precisa fazer é criar um fork, editar [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) e adicionar seu Currículo. Se você gostou do projeto, dê uma ⭐.
 
 ## Pré-requisitos🍪
 
