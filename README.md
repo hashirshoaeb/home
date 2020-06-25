@@ -28,7 +28,7 @@
 
 ## Sumário
 
-- [Tecnologias Utilizadas 🛠️](#tecnologias-utilizadas-%EF%B8%8F-)
+- [Tecnologias Utilizadas 🛠️](#tecnologias-utilizadas-)
 - [Estrutura ⚓](#estrutura-)
 - [Compartilhando💗](#compartilhando-)
 - [Pré-requisitos🍪](#pré-requisitos)
