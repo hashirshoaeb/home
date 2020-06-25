@@ -1,18 +1,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer's Portfolio ✨</h1>
+  <h1 align="center">Portifólio de Desenvolvedor ✨</h1>
 
   <p align="center">
-    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: 
-    <a href="https://hashirshoaeb.github.io">hashirshoaeb.github.io</a>
+    Um site pessoal estático feito para mostrar os projetos mais recentes. Site URL / Demo: 
+    <a href="tashima42.github.io/site-pessoal">tashima42.github.io/site-pessoal</a>
     <br />
     <br />
-    <a href="https://hashirshoaeb.com">About Me</a>
+    <a href="https://home.tashima.tech">Sobre Mim</a>
     ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Report Bug</a>
+    <a href="https://github.com/hashirshoaeb/home/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Request Feature</a>
+    <a href="https://github.com/hashirshoaeb/home/issues">Pedir Feature</a>
   </p>
 </p>
 
