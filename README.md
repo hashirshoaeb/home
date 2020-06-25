@@ -28,14 +28,14 @@
 
 ## Sumário
 
-- [Tecnologias Utilizadas 🛠️](#tecnologias-utilizadas-)
+- [Tecnologias Utilizadas 🛠️](#tecnologias-utilizadas-%EF%B8%8F-)
 - [Estrutura ⚓](#estrutura-)
 - [Compartilhando💗](#compartilhando-)
-- [Pré-requisitos🍪](#pré-requisitos-)
+- [Pré-requisitos🍪](#pré-requisitos)
 - [Setup E Deployment 🔧](#setup-e-deployment-)
 - [Contribuindo🙌](#contribuindo-)
 - [Problemas](#problemas)
-- [Próximas Features / Melhorias 🔗](#proximas-features-/-melhorias-)
+- [Próximas Features / Melhorias 🔗](#próximas-features--melhorias-)
 - [Showcase 🚀](#showcase-)
 - [Contribuidores ✨](#contribuidores-)
 - [Licença 📄](#licença-)
