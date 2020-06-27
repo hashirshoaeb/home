@@ -1,6 +1,6 @@
 {
-  "name": "developers-portfolio",
-  "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
+  "name": "portifolio-para-developer",
+  "description": "Um template de site estático pessoal/portifolio hosteado com o Github Pages, construído para mostrar meus projetos recentes",
   "homepage": "http://home.tashima.tech",
   "version": "0.1.0",
   "private": true,

@@ -48,7 +48,7 @@
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "tashima42",
   "gitHubQuerry": "/repos?sort=updated&direction=desc",
-  "projectsLength": 4,
+  "projectsLength": 6,
   "showNavigationbar": false,
   "showBlog": false
 }
