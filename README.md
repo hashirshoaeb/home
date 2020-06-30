@@ -6,7 +6,7 @@
 
   <p align="center">
     Um site pessoal estático feito para mostrar projetos recentes. Site URL / Demo: 
-    <a href="tashima42.github.io/site-pessoal"https://home.tashima.tech</a>
+    <a href="tashima42.github.io/site-pessoal"https://home.tashima.tech"</a>
     <br />
     <br />
     <a href="https://home.tashima.tech">Sobre Mim</a>
