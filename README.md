@@ -74,7 +74,7 @@ O projeto é open-souce. Fique a vontade para fazer sua própria versão. Tudo o
 
 ## Pré-requisitos🍪
 
-Você precisa ter o[Node.js](https://nodejs.org/en/) e o  [Git](https://git-scm.com/) instalados no seu PC. Você tambem deve ter uma conta no GItHub.
+Você precisa ter o [Node.js](https://nodejs.org/en/) e o  [Git](https://git-scm.com/) instalados no seu PC. Você tambem deve ter uma conta no GItHub.
 
 ## Setup E Deployment 🔧
 
