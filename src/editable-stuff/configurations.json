@@ -15,18 +15,24 @@
     },
     {
       "id": 1,
+      "image": "fa-facebook",
+      "url": "https://www.facebook.com/",
+      "style": "socialicons"
+    },
+    {
+      "id": 2,
       "image": "fa-instagram",
       "url": "https://www.instagram.com/tashima42/",
       "style": "socialicons"
     },
     {
-      "id": 2,
+      "id": 3,
       "image": "fa-twitter",
       "url": "https://www.twitter.com/tashima42/",
       "style": "socialicons"
     },
     {
-      "id": 3,
+      "id": 4,
       "image": "fa-linkedin",
       "url": "https://www.linkedin.com/in/pedro-t-ba419216b",
       "style": "socialicons"
@@ -35,9 +41,9 @@
   "aboutHeading": "Sobre Mim",
   "showInstaProfilePic": true,
   "instaLink": "https://www.instagram.com/",
-  "instaUsername": "tashima42",
+  "instaUsername": "xxx",
   "instaQuerry": "/?__a=1",
-  "aboutDescription": "Sou um estudante de Engenharia Eletrônica na Universidade Tecnológica Federal do Paraná, Gerente de projetos, com ênfase em gestão ágil na empresa júnior de Controle, Automação e Eletrônica Solucaut, desenvolvedor web, mobile e maker nas horas vagas.",
+  "aboutDescription": "Sou um estudante de Engenharia Eletrônica na Universidade Tecnológica Federal do Paraná, Gerente de projetos, com ênfase em gestão ágil na empresa júnior de Controle, Automação e Eletrônica Solucaut, desenvolvedor web, mobile e maker nas horas .",
   "projectHeading": "Projetos Recentes",
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "tashima42",
