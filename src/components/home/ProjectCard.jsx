@@ -12,27 +12,27 @@ const ProjectCard = ({ value }) => {
       const hours = Math.trunc(diff / 1000 / 60 / 60);
 
       if (hours < 24) {
-        return setUpdatedAt(`${hours.toString()} hours ago`);
+        return setUpdatedAt(`${hours.toString()} horas atrás`);
       } else {
         const monthNames = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
         ];
         const day = date.getDate();
         const monthIndex = date.getMonth();
         const year = date.getFullYear();
 
-        return setUpdatedAt(`on ${day} ${monthNames[monthIndex]} ${year}`);
+        return setUpdatedAt(`em ${day} de ${monthNames[monthIndex]} de ${year}`);
       }
     },
     [value.pushed_at]
@@ -54,23 +54,23 @@ const ProjectCard = ({ value }) => {
             href={`${svn_url}/archive/master.zip`}
             className="btn btn-outline-secondary mr-3"
           >
-            <i className="fab fa-github" /> Clone Project
+            <i className="fab fa-github" /> Clonar Projeto
           </a>
           <a
             href={svn_url}
             target=" _blank"
             className="btn btn-outline-secondary"
           >
-            <i className="fab fa-github" /> Repo
+            <i className="fab fa-github" /> Repositório
           </a>
           <hr />
           <Language value={languages_url}></Language>
           <p className="card-text">
             <span className="text-dark card-link mr-4">
-              <i className="fab fa-github" /> Stars{" "}
+              <i className="fab fa-github" /> Estrelas{" "}
               <span className="badge badge-dark">{stargazers_count}</span>
             </span>
-            <small className="text-muted">Updated {updated_at}</small>
+            <small className="text-muted">Atualizado {updated_at}</small>
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ const Language = ({ value }) => {
 
   return (
     <div className="pb-3">
-      Languages:{" "}
+      Línguas:{" "}
       {array.map((language) => (
         <p key={language} className="badge badge-light card-link">
           {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %

@@ -2,18 +2,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer's Portfolio ✨</h1>
+  <h1 align="center">Portifólio de Desenvolvedor ✨</h1>
 
   <p align="center">
-    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: 
-    <a href="https://hashirshoaeb.github.io">hashirshoaeb.github.io</a>
+    Um site pessoal estático feito para mostrar projetos recentes. Site URL / Demo: 
+    <a href="https://home.tashima.tech">https://home.tashima.tech</a>
     <br />
     <br />
-    <a href="https://hashirshoaeb.com">About Me</a>
+    <a href="https://home.tashima.tech">Sobre Mim</a>
     ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Report Bug</a>
+    <a href="https://github.com/hashirshoaeb/home/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Request Feature</a>
+    <a href="https://github.com/hashirshoaeb/home/issues">Pedir Feature</a>
   </p>
 </p>
 
@@ -26,24 +26,24 @@
 
 [![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/)
 
-## Table of Contents
+## Sumário
 
-- [Technology Stack 🛠️](#technology-stack-)
-- [Structure ⚓](#structure-)
-- [Sharing 💗](#sharing-)
-- [Prerequisites 🍪](#prerequisites-)
-- [Setup And Deployment 🔧](#setup-and-deployment-)
-- [Contributing 🙌](#contributing-)
-- [Issues](#issues)
-- [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
+- [Tecnologias Utilizadas 🛠️](#tecnologias-utilizadas-)
+- [Estrutura ⚓](#estrutura-)
+- [Compartilhando💗](#compartilhando-)
+- [Pré-requisitos🍪](#pré-requisitos)
+- [Setup E Deployment 🔧](#setup-e-deployment-)
+- [Contribuindo🙌](#contribuindo-)
+- [Problemas](#problemas)
+- [Próximas Features / Melhorias 🔗](#próximas-features--melhorias-)
 - [Showcase 🚀](#showcase-)
 - [Versão em Português :brazil:](#versao-em-portugues-)
 - [Contributors ✨](#contributors-)
 - [License 📄](#license-)
 
-## Technology Stack 🛠️
+## Tecnologias Utilizadas 🛠️
 
-Dependencies defined in package.json:
+Dependencias definidas no package.json:
 
 [Reactjs](https://reactjs.org/)
 | [Bootstrap](https://getbootstrap.com/)
@@ -51,108 +51,108 @@ Dependencies defined in package.json:
 | [GitHub API](https://developer.github.com/v3/repos/)
 | [Instagram API](https://www.instagram.com/developer/embedding/)
 
-## Structure ⚓
+## Estrutura ⚓
 
-- Navigation bar (optional)
-- Blog (optional)
-- Body
-  - Name | Profession
-  - Contact / Follow / Find me / Facebook / LinkedIn / GitHub / Instagram / Email / CodePen
-  - Resume | About me
-- About Me
-  - Display picture (using Instagram API) (optional)
-  - About myself, my Interests, Goals and Hobbies
-  - Things I'm good at (Skills)
-- Recent Projects (using GitHub API) (optional)
-- Footer
-  - Acknowledgements (contributors)
+- Navigation bar (opicional)
+- Blog (opicional)
+- Body [corpo]
+  - Nome | Profissão
+  - Contato / Follow / Find me / Facebook / LinkedIn / GitHub / Instagram / Email / CodePen
+  - Currículo | Sobre mim
+-  Sobre mim
+  - Foto de perfil (usando API do Instagram) (opicional)
+  - Sobre mim, meus interesses Metas e Hobbies
+  - Coisas em que sou bom (Skills)
+- Projetos Recentes (usando API do GitHub) (opicional)
+- Footer [rodapé]
+  - Reconhecimentos (contribuidores)
   - Copyrights - open source
-  - (quote: Dream big, Think big)
+  - (citação: Sonhe grande, Pense grande)
 
-## Sharing 💗
+## Compartilhando 💗
 
-Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) and add resume. Mark star ⭐ if you like the project.
+O projeto é open-souce. Fique a vontade para fazer sua própria versão. Tudo o que você precisa fazer é criar um fork, editar [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) e adicionar seu Currículo. Se você gostou do projeto, dê uma ⭐.
 
-## Prerequisites 🍪
+## Pré-requisitos🍪
 
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
+Você precisa ter o [Node.js](https://nodejs.org/en/) e o  [Git](https://git-scm.com/) instalados no seu PC. Você tambem deve ter uma conta no GItHub.
 
-## Setup And Deployment 🔧
+## Setup E Deployment 🔧
 
-1. To Get Started, Fork this repository to your GitHub account:
-2. Clone the forked repo from your account using:
+1. Para começar, crie um fork deste repositório na sua conta:
+2. Clone o repositório que você acabou de fazer um fork usando:
 
    ```bash
-     git clone https://github.com/<your-username>/home.git
+     git clone https://github.com/<seu-username>/home.git
    ```
 
-3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
+3. Abra em um editor e altere o arquivo [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json).
 
-4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
-5. Change URL in [package.json](./package.json) file:
+4. Adicione o seu currículo como <resume.pdf> no lugar de [src/editable-stuff/resume.pdf](./src/editable-stuff/)
+5. Altere a URL no arquivo [package.json](./package.json):
 
    ```json
-   "homepage": "https://<your-username>.github.io/home"
+   "homepage": "https://<seu-username>.github.io/home"
    ```
 
-   Or for custom deployment, refer [create-react-app.dev](https://create-react-app.dev/docs/deployment/)
+   Ou, para um deployment customizado,  leia [create-react-app.dev](https://create-react-app.dev/docs/deployment/)
 
-6. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
+6. Edite [title](./public/index.html#L34) e meta [description](./public/index.html#L13) no [public/index.html](./public/index.html).
 
-7. After editing run the following bash commands:
+7. Após a edição, rode os seguintes comandos bash:
 
    ```bash
    npm install
    npm start
    ```
 
-8. To deploy website run:
+8. Para dar deploy 
 
    ```bash
     npm run build
     npm run deploy
    ```
 
-   Or for custom deployment, refer [pages.js](./pages.js)
+   Ou para deployment customizado alterar [pages.js](./pages.js)
 
    ```bash
     npm run build
     npm run custom-deploy
    ```
 
-9. Congrats your site is up and running. To see it live, visit:
+9. Parabéns, seu site está rodando. Para ver ele live, visite:
 
    ```https
      https://<your-username>.github.io/home
    ```
 
-Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
+Tendo problemas? Entre em contato! hashirshoaeb@gmail.com.
 
-## Contributing 🙌
+## Contribuindo 🙌
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests são bem vindas. Para grandes mudanças abra um issue antes para discutir o que você gostaria de mudar.
 
-## Issues
+## Problemas
 
-If anyone is looking to make some contribution, the following are issues that you can solve:
+Se você gostaria de contribuir, esses são os problemas que você pode resolver:
 
-- [ ] UI improvements
-- [ ] Code optimization
+- [ ] Melhorias na UI
+- [ ] Otimização do código
 - [x] Routing
 - [ ] SEO
 
-## Upcoming Features / Improvements 🔗
+## Próximas Features / Melhorias 🔗
 
-- [x] Button and place for resume/CV.
-- [x] Option: add or not to add Instagram's display picture.
-- [x] Number of projects to show in website.
-- [x] If the Number of Projects are zero, hide the heading (Recent Projects).
-- [ ] Blogs page.
-- [ ] Make resume optional.
+- [x] Botão e lugar para currículo.
+- [x] Opção de adicionar ou não a imagem de perfil do instagram.
+- [x] Número de projetos que serão mostrados no website.
+- [x] Se o número de projetos for zero, esconder a aba Projetos recentes.
+- [ ] Página de blogs.
+- [ ] Currículo opicional
 
 ## Showcase 🚀
 
-Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
+Você mudou algo no seu código para fazer sua própria versão? Fique a vontade para compartilhar comigo. Vou ouvir neste espaço
 
 <table>
   <tr>
@@ -261,10 +261,10 @@ Novas contribuições e revisões na tradução são muito bem vindas!
   </tr>
 </table>
 
-## License 📄
+## Licença 📄
 
 [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
 
-## Stargazers over time
+## Stargazers ao longo do tempo
 
 [![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home)

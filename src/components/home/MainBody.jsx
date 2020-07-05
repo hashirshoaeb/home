@@ -34,7 +34,7 @@ const MainBody = () => {
       >
         <div id="stars"></div>
         <div className="container container-fluid text-center ">
-          <h1 className="display-1">
+          <h1 className="display-2">
             {FirstName + " " + MiddleName + " " + LastName}
           </h1>
           <Typist className="lead"> {devDesc}</Typist>
@@ -61,7 +61,7 @@ const MainBody = () => {
             role="button"
             aria-label="Learn more about me"
           >
-            More about me
+            Mais sobre mim
           </a>
         </div>
       </div>

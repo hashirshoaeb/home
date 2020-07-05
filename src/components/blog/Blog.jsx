@@ -33,7 +33,7 @@ const BlogCard = ({ index, title, image, description }) => {
               <h1 className="">{title}</h1>
               <p className="lead">{description}</p>
               <Link to={`${process.env.PUBLIC_URL}blog/${index}`}>
-                Read more...{" "}
+                Ler mais...{" "}
               </Link>
             </div>
           </div>
