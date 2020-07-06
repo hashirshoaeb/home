@@ -36,6 +36,7 @@
 - [Issues](#issues)
 - [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
 - [Showcase 🚀](#showcase-)
+- [Versão em Português :brazil:](#versao-em-portugues-)
 - [Contributors ✨](#contributors-)
 - [License 📄](#license-)
 
@@ -206,6 +207,11 @@ Have you changed something in the code to create your own version? Feel free to 
     </td>
   </tr>
 </table>
+
+## Versão em Português :brazil:
+
+Esse projeto foi traduzido para português! Se você gostou dele e quer criar a sua própria versão, confira o repositório do [@tashima42](https://github.com/tashima42) em [https://github.com/Tashima42/home](https://github.com/Tashima42/home).
+Novas contribuições e revisões na tradução são muito bem vindas!
 
 ## Contributors ✨
 
