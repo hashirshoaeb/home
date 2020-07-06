@@ -5,7 +5,7 @@
   <h1 align="center">Portifólio de Desenvolvedor ✨</h1>
 
   <p align="center">
-    Um site pessoal estático feito para mostrar projetos recentes. Site URL / Demo: 
+    Um site pessoal estático feito para mostrar projetos recentes. URL do Site / Demo: 
     <a href="https://home.tashima.tech">https://home.tashima.tech</a>
     <br />
     <br />
