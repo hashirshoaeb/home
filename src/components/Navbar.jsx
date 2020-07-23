@@ -1,30 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Pdf from "../editable-stuff/resume.pdf";
-import { showBlog, FirstName } from "../editable-stuff/configurations.json";
-
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import Pdf from "../editable-stuff/resume.pdf"
+import { showBlog, FirstName } from "../editable-stuff/configurations.json"
+import styles from "./Navbar.module.css"
 const Navbar = (props) => {
-  const [isTop, setIsTop] = useState(true);
+  const [isTop, setIsTop] = useState(true)
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      const istop = window.scrollY < 200;
+      const istop = window.scrollY < 150
       if (istop !== isTop) {
-        setIsTop(istop);
+        setIsTop(istop)
       }
-    });
-  }, [isTop]);
+    })
+  }, [isTop])
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-light ${
-        isTop ? "bg-transparent" : "bg-gradient"
-      } `}
+      className={`navbar fixed-top navbar-light navbar-expand-xl ${
+        !isTop ? styles.navbarWhite : styles.navbarTransparent
+      }`}
+      id="main-navbar"
     >
-      <a className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <a
+        className={`navbar-brand ${styles.brand}`}
+        href={process.env.PUBLIC_URL + "/#home"}
+      >
         {`<${FirstName} />`}
       </a>
       <button
-        className="navbar-toggler"
+        className={`navbar-toggler ml-auto ${styles.toggler}`}
         type="button"
         data-toggle="collapse"
         data-target="#navbarTogglerDemo02"
@@ -35,12 +39,15 @@ const Navbar = (props) => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarTogglerDemo02"
+      >
+        <ul className={`navbar-nav mr-auto mt-2 mt-lg-0`}>
           {showBlog && (
             <li className="nav-item">
               <Link
-                className="nav-link lead"
+                className={`nav-link lead ${styles.navItem}`}
                 to={process.env.PUBLIC_URL + "/blog"}
               >
                 Blog
@@ -49,7 +56,7 @@ const Navbar = (props) => {
           )}
           <li className="nav-item">
             <a
-              className="nav-link lead"
+              className={`nav-link lead ${styles.navItem}`}
               href={process.env.PUBLIC_URL + "/#projects"}
             >
               Projects
@@ -57,7 +64,7 @@ const Navbar = (props) => {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link lead"
+              className={`nav-link lead ${styles.navItem}`}
               href={Pdf}
               target="_blank"
               rel="noreferrer noopener"
@@ -67,7 +74,7 @@ const Navbar = (props) => {
           </li>
           <li className="nav-item">
             <a
-              className="nav-link lead"
+              className={`nav-link lead ${styles.navItem}`}
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
               <b>About</b>
@@ -76,7 +83,7 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

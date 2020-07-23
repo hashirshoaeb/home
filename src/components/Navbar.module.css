@@ -1,0 +1,36 @@
+.navbarTransparent {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+.navbarWhite {
+  background-color: rgba(255, 255, 255, 0.97);
+  transition: background-color 0.2s;
+}
+@media (max-width: 36em) {
+  .navbarTransparent {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+.navbar a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navItem {
+  font-size: 18px;
+  transition: color, 0.2s;
+}
+
+.brand {
+  color: #363636 !important;
+  font-weight: 700;
+}
+
+.toggler {
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+}
+.toggler:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
