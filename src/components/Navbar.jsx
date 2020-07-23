@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import Pdf from "../editable-stuff/resume.pdf"
-import { showBlog, FirstName } from "../editable-stuff/configurations.json"
-import styles from "./Navbar.module.css"
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Pdf from "../editable-stuff/resume.pdf";
+import { showBlog, FirstName } from "../editable-stuff/configurations.json";
+import styles from "./Navbar.module.css";
 const Navbar = (props) => {
-  const [isTop, setIsTop] = useState(true)
+  const [isTop, setIsTop] = useState(true);
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      const istop = window.scrollY < 150
+      const istop = window.scrollY < 100;
       if (istop !== isTop) {
-        setIsTop(istop)
+        setIsTop(istop);
       }
-    })
-  }, [isTop])
+    });
+  }, [isTop]);
 
   return (
     <nav
@@ -83,7 +83,7 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

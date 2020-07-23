@@ -1,9 +1,9 @@
 .navbarTransparent {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0);
   transition: background-color 0.2s;
 }
 .navbarWhite {
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: rgba(234, 236, 239, 0.81);
   transition: background-color 0.2s;
 }
 @media (max-width: 36em) {
@@ -19,10 +19,8 @@
   font-size: 18px;
   transition: color, 0.2s;
 }
-
 .brand {
   color: #363636 !important;
-  font-weight: 700;
 }
 
 .toggler {
