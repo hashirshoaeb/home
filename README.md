@@ -78,7 +78,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 ## Setup And Deployment 🔧
 
-1. To Get Started, Fork this repository to your GitHub account:
+1. To Get Started, create a new repository with name \<your-username>.github.io
+1. Fork this repository to your GitHub account:
 2. Clone the forked repo from your account using:
 
    ```bash
@@ -91,13 +92,15 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 5. Change URL in [package.json](./package.json) file:
 
    ```json
-   "homepage": "https://<your-username>.github.io/home"
+   "homepage": "https://<your-username>.github.io"
    ```
 
-   Or for custom deployment, refer [create-react-app.dev](https://create-react-app.dev/docs/deployment/)
+6. You must now change the [pages.js](./pages.js#L3)
+```js
+const repoURL = "https://github.com/<your-username>/<your-username>.github.io.git";
+```
 
 6. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
-
 7. After editing run the following bash commands:
 
    ```bash
@@ -109,20 +112,14 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
    ```bash
     npm run build
-    npm run deploy
-   ```
-
-   Or for custom deployment, refer [pages.js](./pages.js)
-
-   ```bash
-    npm run build
     npm run custom-deploy
    ```
+
 
 9. Congrats your site is up and running. To see it live, visit:
 
    ```https
-     https://<your-username>.github.io/home
+     https://<your-username>.github.io/
    ```
 
 Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
