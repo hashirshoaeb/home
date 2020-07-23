@@ -112,7 +112,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
     npm run deploy
    ```
 
-   Or for custom deployment, refer [pages.js](./pages.js)
+  Or for custom deployment, refer [READMEdocs/custom-deployment.md](./READMEdocs/custom-deployment.md) and [pages.js](./pages.js)
 
    ```bash
     npm run build
