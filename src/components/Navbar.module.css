@@ -6,11 +6,7 @@
   background-color: rgba(234, 236, 239, 0.81);
   transition: background-color 0.2s;
 }
-@media (max-width: 36em) {
-  .navbarTransparent {
-    background-color: rgba(255, 255, 255, 0.85);
-  }
-}
+
 .navbar a {
   padding-top: 0;
   padding-bottom: 0;

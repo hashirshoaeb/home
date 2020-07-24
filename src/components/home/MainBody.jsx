@@ -8,7 +8,7 @@ import {
   icons,
 } from "../../editable-stuff/configurations.json";
 
-const MainBody = () => {
+const MainBody = React.forwardRef((props, ref) => {
   // const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
   const [hoverstatus, setHoverstatus] = useState(
     new Array(icons.length).fill("socialicons")
@@ -34,7 +34,7 @@ const MainBody = () => {
       >
         <div id="stars"></div>
         <div className="container container-fluid text-center ">
-          <h1 className="display-1">
+          <h1 ref={ref} className="display-1">
             {FirstName + " " + MiddleName + " " + LastName}
           </h1>
           <Typist className="lead"> {devDesc}</Typist>
@@ -67,6 +67,6 @@ const MainBody = () => {
       </div>
     </div>
   );
-};
+});
 
 export default MainBody;

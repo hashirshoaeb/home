@@ -1,18 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Pdf from "../editable-stuff/resume.pdf";
 import { showBlog, FirstName } from "../editable-stuff/configurations.json";
 import styles from "./Navbar.module.css";
-const Navbar = (props) => {
+import { useScrollPosition } from "../hooks/useScrollPosition";
+import useResizeObserver from "../hooks/useResizeObserver";
+const Navbar = React.forwardRef((props, ref) => {
   const [isTop, setIsTop] = useState(true);
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const istop = window.scrollY < 100;
-      if (istop !== isTop) {
-        setIsTop(istop);
-      }
-    });
-  }, [isTop]);
+  const navbarMenuRef = React.useRef();
+  const [scrollPosition, setScrollPosition] = useState(false);
+  const navbarDimensions = useResizeObserver(navbarMenuRef);
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 10
+        ? setIsTop(true)
+        : setIsTop(false);
+      setScrollPosition(currPos.y);
+    },
+    [navbarDimensions && navbarDimensions.bottom]
+  );
+  React.useEffect(() => {
+    navbarDimensions &&
+    navbarDimensions.bottom - scrollPosition >= ref.current.offsetTop
+      ? setIsTop(false)
+      : setIsTop(true);
+  }, [navbarDimensions && navbarDimensions.bottom]);
 
   return (
     <nav
@@ -20,6 +32,7 @@ const Navbar = (props) => {
         !isTop ? styles.navbarWhite : styles.navbarTransparent
       }`}
       id="main-navbar"
+      ref={navbarMenuRef}
     >
       <a
         className={`navbar-brand ${styles.brand}`}
@@ -84,6 +97,6 @@ const Navbar = (props) => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;
