@@ -66,6 +66,15 @@ code {
   margin-top: 0px;
 }
 
+.typist {
+  min-height: 6rem;
+  @media (min-width: 360px) {
+    min-height: 4rem;
+  }
+  @media (min-width: 768px) {
+    min-height: 2.5rem;
+  }
+}
 .bg-gradient {
   background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
 }
