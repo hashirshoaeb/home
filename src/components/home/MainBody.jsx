@@ -23,7 +23,10 @@ const MainBody = React.forwardRef((props, ref) => {
           <h1 ref={ref} className="display-1">
             {`${FirstName} ${MiddleName} ${LastName}`}
           </h1>
-          <Typist className="lead typist"> {devDesc}</Typist>
+          <Typist className="lead typist" cursor={{ show: false }}>
+            {" "}
+            {devDesc}
+          </Typist>
           <div className="p-5">
             {icons.map((icon) => (
               <a

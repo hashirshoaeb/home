@@ -3,9 +3,6 @@ html {
   @media (min-width: 768px) {
     font-size: 16px;
   }
-  @media (min-width: 992px) {
-    font-size: 18px;
-  }
 }
 body {
   margin: 0;
@@ -56,14 +53,14 @@ code {
 .brand {
   color: #363636 !important;
 }
-.nav-link{
+.nav-link {
   transition: color, 0.2s;
 }
 .toggler {
   border: none;
   padding: 4px;
   border-radius: 4px;
-  &:focus{
+  &:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.05);
   }
