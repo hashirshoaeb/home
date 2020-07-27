@@ -3,3 +3,12 @@
 @import "./index";
 @import "./stars";
 @import "./typography";
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 2rem 3rem rgba($black, 0.175) !important;
+    transform: translateY(-2px);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+}
