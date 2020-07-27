@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
 import {
   projectHeading,
@@ -8,6 +10,7 @@ import {
   gitHubQuery,
   projectsLength,
 } from "../../editable-stuff/configurations.json";
+import axios from "axios";
 
 const Project = () => {
   const [projectsArray, setProjectsArray] = useState([]);
@@ -37,10 +40,10 @@ const Project = () => {
   }, [handleRequest]);
 
   return (
-    <div id="projects" className="jumbotron jumbotron-fluid bg-light m-0">
-      <div className="container container-fluid p-5">
+    <Jumbotron fluid id="projects" className="bg-light m-0">
+      <Container className="p-5">
         <h2 className="display-4 pb-5 text-center">{projectHeading}</h2>
-        <div className="row">
+        <Row>
           {projectsArray.length
             ? projectsArray.map((project) => (
                 <ProjectCard key={project.id} id={project.id} value={project} />
@@ -52,9 +55,9 @@ const Project = () => {
                   value={project}
                 />
               ))}
-        </div>
-      </div>
-    </div>
+        </Row>
+      </Container>
+    </Jumbotron>
   );
 };
 

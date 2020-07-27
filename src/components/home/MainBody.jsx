@@ -1,5 +1,7 @@
 import React from "react";
 import Typist from "react-typist";
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
 import {
   FirstName,
   LastName,
@@ -10,15 +12,16 @@ import {
 
 const MainBody = React.forwardRef((props, ref) => {
   return (
-    <div>
-      <div
+    <>
+      <Jumbotron
+        fluid
         id="home"
-        className="title jumbotron jumbotron-fluid bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+        className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
         <div id="stars"></div>
-        <div className="container container-fluid text-center ">
+        <Container className="text-center">
           <h1 ref={ref} className="display-1">
-            {FirstName + " " + MiddleName + " " + LastName}
+            {`${FirstName} ${MiddleName} ${LastName}`}
           </h1>
           <Typist className="lead typist"> {devDesc}</Typist>
           <div className="p-5">
@@ -42,9 +45,9 @@ const MainBody = React.forwardRef((props, ref) => {
           >
             More about me
           </a>
-        </div>
-      </div>
-    </div>
+        </Container>
+      </Jumbotron>
+    </>
   );
 });
 

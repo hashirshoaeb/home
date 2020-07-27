@@ -6,7 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Pdf from "../editable-stuff/resume.pdf";
 import { showBlog, FirstName } from "../editable-stuff/configurations.json";
-import styles from "./Navbar.module.css";
 
 const Navigation = React.forwardRef((props, ref) => {
   const [isTop, setIsTop] = useState(true);
@@ -36,32 +35,32 @@ const Navigation = React.forwardRef((props, ref) => {
     <Navbar
       ref={navbarMenuRef}
       className={` fixed-top  ${
-        !isTop ? styles.navbarWhite : styles.navbarTransparent
+        !isTop ? "navbar-white" : "navbar-transparent"
       }`}
       expand="lg"
     >
-      <Navbar.Brand href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
         {`<${FirstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
-        className={styles.toggler}
+        className="toggler"
       />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           {showBlog && (
-            <Nav.Link className={`nav-link lead ${styles.navItem}`}>
+            <Nav.Link className="nav-link lead" >
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </Nav.Link>
           )}
           <Nav.Link
-            className={`nav-link lead ${styles.navItem}`}
+            className="nav-link lead" 
             href={process.env.PUBLIC_URL + "/#projects"}
           >
             Projects
           </Nav.Link>
           <Nav.Link
-            className={`nav-link lead ${styles.navItem}`}
+            className="nav-link lead" 
             href={Pdf}
             target="_blank"
             rel="noreferrer noopener"
@@ -69,13 +68,13 @@ const Navigation = React.forwardRef((props, ref) => {
             Resume
           </Nav.Link>
           <Nav.Link
-            className={`nav-link lead ${styles.navItem}`}
+            className="nav-link lead" 
             href={process.env.PUBLIC_URL + "/#aboutme"}
           >
             About
           </Nav.Link>
           <Nav.Link
-            className={`nav-link lead ${styles.navItem}`}
+            className="nav-link lead" 
             href={process.env.PUBLIC_URL + "/#skills"}
           >
             Skills

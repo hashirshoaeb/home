@@ -46,7 +46,7 @@ const AboutMe = () => {
             </div>
           )}
           <div className={`col-lg-${showInsta ? "7" : "12"}`}>
-            <h1 className="display-4 mb-5 text-center">{aboutHeading}</h1>
+            <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
             <p className="lead text-center">{aboutDescription}</p>
             {resumeURL && (
               <p className="lead text-center">
