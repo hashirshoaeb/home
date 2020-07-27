@@ -11,6 +11,15 @@ import {
 
 const Project = () => {
   const [projectsArray, setProjectsArray] = useState([]);
+  const dummyProject = {
+    name: null,
+    description: null,
+    svn_url: null,
+    stargazers_count: null,
+    languages_url: null,
+    pushed_at: null,
+  };
+  const dummyProjectsArr = new Array(projectsLength).fill(dummyProject);
 
   const handleRequest = useCallback((e) => {
     axios
@@ -35,16 +44,22 @@ const Project = () => {
 
   return (
     <div id="projects" className="jumbotron jumbotron-fluid bg-transparent m-0">
-      {projectsArray.length && (
-        <div className="container container-fluid p-5">
-          <h1 className="display-4 pb-5">{projectHeading}</h1>
-          <div className="row">
-            {projectsArray.map((project) => (
-              <ProjectCard key={project.id} id={project.id} value={project} />
-            ))}
-          </div>
+      <div className="container container-fluid p-5">
+        <h1 className="display-4 pb-5">{projectHeading}</h1>
+        <div className="row">
+          {projectsArray.length
+            ? projectsArray.map((project) => (
+                <ProjectCard key={project.id} id={project.id} value={project} />
+              ))
+            : dummyProjectsArr.map((project, index) => (
+                <ProjectCard
+                  key={`dummy-${index}`}
+                  id={`dummy-${index}`}
+                  value={project}
+                />
+              ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };

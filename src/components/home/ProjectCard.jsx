@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
 const ProjectCard = ({ value }) => {
@@ -48,30 +49,45 @@ const ProjectCard = ({ value }) => {
       <div className="card shadow-lg p-3 mb-5 bg-white rounded">
         {/* <img src="" className="card-img-top" alt="..." /> */}
         <div className="card-body">
-          <h5 className="card-title">{name} </h5>
-          <p className="card-text">{description} </p>
-          <a
-            href={`${svn_url}/archive/master.zip`}
-            className="btn btn-outline-secondary mr-3"
-          >
-            <i className="fab fa-github" /> Clone Project
-          </a>
-          <a
-            href={svn_url}
-            target=" _blank"
-            className="btn btn-outline-secondary"
-          >
-            <i className="fab fa-github" /> Repo
-          </a>
+          <h5 className="card-title">{name || <Skeleton />} </h5>
+          <p className="card-text">{description || <Skeleton count={3} />} </p>
+          {svn_url ? (
+            <>
+              {" "}
+              <a
+                href={`${svn_url}/archive/master.zip`}
+                className="btn btn-outline-secondary mr-3"
+              >
+                <i className="fab fa-github" /> Clone Project
+              </a>
+              <a
+                href={svn_url}
+                target=" _blank"
+                className="btn btn-outline-secondary"
+              >
+                <i className="fab fa-github" /> Repo
+              </a>
+            </>
+          ) : (
+            <Skeleton count={2} />
+          )}
           <hr />
-          <Language value={languages_url}></Language>
-          <p className="card-text">
-            <span className="text-dark card-link mr-4">
-              <i className="fab fa-github" /> Stars{" "}
-              <span className="badge badge-dark">{stargazers_count}</span>
-            </span>
-            <small className="text-muted">Updated {updated_at}</small>
-          </p>
+          {languages_url ? (
+            <Language value={languages_url}></Language>
+          ) : (
+            <Skeleton count={3} />
+          )}
+          {stargazers_count ? (
+            <p className="card-text">
+              <span className="text-dark card-link mr-4">
+                <i className="fab fa-github" /> Stars{" "}
+                <span className="badge badge-dark">{stargazers_count}</span>
+              </span>
+              <small className="text-muted">Updated {updated_at}</small>
+            </p>
+          ) : (
+            <Skeleton />
+          )}
         </div>
       </div>
     </div>
