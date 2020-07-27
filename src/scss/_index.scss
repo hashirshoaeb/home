@@ -41,6 +41,10 @@ code {
   height: 100%;
 }
 
+.bg-gradient {
+  background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+}
+
 .socialicons {
   color: white;
   padding-left: 5px;
@@ -75,6 +79,11 @@ code {
     min-height: 2.5rem;
   }
 }
+.btn-hover-text-transparent {
+  &:hover {
+    color: transparent !important;
+  }
+}
 
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
@@ -84,7 +93,10 @@ code {
     transition: transform 0.3s, box-shadow 0.3s;
   }
 }
-
-.bg-gradient {
-  background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+.skills-tabs {
+  flex-grow: 1;
+}
+.skills-tab {
+  flex-grow: 1;
+  text-align: center;
 }

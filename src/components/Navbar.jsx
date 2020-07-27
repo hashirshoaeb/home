@@ -13,24 +13,24 @@ const Navigation = React.forwardRef((props, ref) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
-
+  const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
   useScrollPosition(
     ({ prevPos, currPos }) => {
       if (!navbarDimensions) return;
-      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 10
+      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
         ? setIsTop(true)
         : setIsTop(false);
       setScrollPosition(currPos.y);
     },
-    [navbarDimensions && navbarDimensions.bottom]
+    [navBottom]
   );
 
   React.useEffect(() => {
     if (!navbarDimensions) return;
-    navbarDimensions.bottom - scrollPosition >= ref.current.offsetTop
+    navBottom - scrollPosition >= ref.current.offsetTop
       ? setIsTop(false)
       : setIsTop(true);
-  }, [navbarDimensions && navbarDimensions.bottom]);
+  }, [navBottom, navbarDimensions, ref, scrollPosition]);
 
   return (
     <Navbar
@@ -73,6 +73,12 @@ const Navigation = React.forwardRef((props, ref) => {
             href={process.env.PUBLIC_URL + "/#aboutme"}
           >
             About
+          </Nav.Link>
+          <Nav.Link
+            className={`nav-link lead ${styles.navItem}`}
+            href={process.env.PUBLIC_URL + "/#skills"}
+          >
+            Skills
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

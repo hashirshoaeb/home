@@ -5,7 +5,7 @@ import {
   projectHeading,
   gitHubLink,
   gitHubUsername,
-  gitHubQuerry,
+  gitHubQuery,
   projectsLength,
 } from "../../editable-stuff/configurations.json";
 
@@ -23,7 +23,7 @@ const Project = () => {
 
   const handleRequest = useCallback((e) => {
     axios
-      .get(gitHubLink + gitHubUsername + gitHubQuerry)
+      .get(gitHubLink + gitHubUsername + gitHubQuery)
       .then((response) => {
         // handle success
         // console.log(response.data.slice(0, 4));
@@ -43,9 +43,9 @@ const Project = () => {
   }, [handleRequest]);
 
   return (
-    <div id="projects" className="jumbotron jumbotron-fluid bg-transparent m-0">
+    <div id="projects" className="jumbotron jumbotron-fluid bg-light m-0">
       <div className="container container-fluid p-5">
-        <h1 className="display-4 pb-5">{projectHeading}</h1>
+        <h2 className="display-4 pb-5 text-center">{projectHeading}</h2>
         <div className="row">
           {projectsArray.length
             ? projectsArray.map((project) => (

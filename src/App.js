@@ -9,6 +9,7 @@ import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Skills from "./components/home/Skills";
 import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
 
@@ -18,6 +19,7 @@ const Home = React.forwardRef((props, ref) => {
       <MainBody ref={ref} />
       <AboutMe />
       <Project />
+      <Skills />
     </Fragment>
   );
 });

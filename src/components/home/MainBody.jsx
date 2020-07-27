@@ -56,7 +56,7 @@ const MainBody = React.forwardRef((props, ref) => {
             ))}
           </div>
           <a
-            className="btn btn-outline-light btn-lg"
+            className="btn btn-outline-light btn-lg "
             href="#aboutme"
             role="button"
             aria-label="Learn more about me"

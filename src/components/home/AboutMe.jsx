@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Pdf from "../../editable-stuff/resume.pdf";
 import {
   aboutHeading,
@@ -7,8 +6,9 @@ import {
   showInstaProfilePic,
   instaLink,
   instaUsername,
-  instaQuerry,
+  instaQuery,
 } from "../../editable-stuff/configurations.json";
+import axios from "axios";
 
 const AboutMe = () => {
   const [instaProfilePic, setInstaProfilePic] = useState("");
@@ -21,24 +21,15 @@ const AboutMe = () => {
     }
   }, [showInsta]);
 
-  const handleRequest = (e) => {
-    axios
-      .get(instaLink + instaUsername + instaQuerry)
-      .then((response) => {
-        // handle success
-        // console.log(response.data.graphql);
-        return setInstaProfilePic(
-          response.data.graphql.user.profile_pic_url_hd
-        );
-      })
-      .catch((error) => {
-        // handle error
-        setShowInsta(false);
-        return console.error(error.message);
-      })
-      .finally(() => {
-        // always executed
-      });
+  const handleRequest = async (e) => {
+    try {
+      const response = await axios.get(instaLink + instaUsername + instaQuery);
+      console.log(response);
+      setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
+    } catch (error) {
+      setShowInsta(false);
+      console.error(error.message);
+    }
   };
 
   return (
