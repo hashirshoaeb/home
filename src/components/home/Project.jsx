@@ -21,21 +21,15 @@ const Project = () => {
   };
   const dummyProjectsArr = new Array(projectsLength).fill(dummyProject);
 
-  const handleRequest = useCallback((e) => {
-    axios
-      .get(gitHubLink + gitHubUsername + gitHubQuery)
-      .then((response) => {
-        // handle success
-        // console.log(response.data.slice(0, 4));
-        return setProjectsArray(response.data.slice(0, projectsLength));
-      })
-      .catch((error) => {
-        // handle error
-        return console.error(error.message);
-      })
-      .finally(() => {
-        // always executed
-      });
+  const handleRequest = useCallback(async () => {
+    try {
+      const response = await axios.get(
+        gitHubLink + gitHubUsername + gitHubQuery
+      );
+      setProjectsArray(response.data.slice(0, projectsLength));
+    } catch (error) {
+      console.error(error.message);
+    }
   }, []);
 
   useEffect(() => {

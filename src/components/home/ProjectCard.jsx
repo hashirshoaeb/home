@@ -97,25 +97,14 @@ const ProjectCard = ({ value }) => {
 const Language = ({ value }) => {
   const [data, setData] = useState([]);
 
-  const handleRequest = useCallback(
-    (e) => {
-      axios
-        .get(value)
-        .then((response) => {
-          // handle success
-          // console.log(response.data);
-          return setData(response.data);
-        })
-        .catch((error) => {
-          // handle error
-          return console.error(error.message);
-        })
-        .finally(() => {
-          // always executed
-        });
-    },
-    [value]
-  );
+  const handleRequest = useCallback(async () => {
+    try {
+      const response = await axios.get(value);
+      return setData(response.data);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }, [value]);
 
   useEffect(() => {
     handleRequest();

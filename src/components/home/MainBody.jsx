@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Typist from "react-typist";
 import {
   FirstName,
@@ -9,23 +9,6 @@ import {
 } from "../../editable-stuff/configurations.json";
 
 const MainBody = React.forwardRef((props, ref) => {
-  // const [backgroundType, setBackgroundType] = useState(Configs.backgroundType);
-  const [hoverstatus, setHoverstatus] = useState(
-    new Array(icons.length).fill("socialicons")
-  );
-
-  const toggleHover = (data) => {
-    const newhoverStatus = [...hoverstatus];
-
-    if (data.event === "enter") {
-      newhoverStatus[data.icon.id] = "socialiconshover";
-      return setHoverstatus(newhoverStatus);
-    } else if (data.event === "leave") {
-      newhoverStatus[data.icon.id] = "socialicons";
-      return setHoverstatus(newhoverStatus);
-    }
-  };
-
   return (
     <div>
       <div
@@ -47,11 +30,7 @@ const MainBody = React.forwardRef((props, ref) => {
                 href={icon.url}
                 aria-label={`My ${icon.image.split("-")[1]}`}
               >
-                <i
-                  className={`fab ${icon.image}  fa-3x ${hoverstatus[icon.id]}`}
-                  onMouseOver={() => toggleHover({ icon, event: "enter" })}
-                  onMouseOut={() => toggleHover({ icon, event: "leave" })}
-                />
+                <i className={`fab ${icon.image}  fa-3x socialicons`} />
               </a>
             ))}
           </div>

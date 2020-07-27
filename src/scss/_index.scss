@@ -51,6 +51,13 @@ code {
   padding-right: 5px;
   transition: all 0.8s;
   margin: 4px;
+  &:hover {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.8s;
+    margin: 4px;
+  }
 }
 
 .socialiconshover {
@@ -77,11 +84,6 @@ code {
   }
   @media (min-width: 768px) {
     min-height: 2.5rem;
-  }
-}
-.btn-hover-text-transparent {
-  &:hover {
-    color: transparent !important;
   }
 }
 
