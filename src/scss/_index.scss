@@ -31,10 +31,10 @@ code {
   );
 
   background-size: 1200% 1200%;
-  -webkit-animation: AnimationName 70s ease infinite;
-  -moz-animation: AnimationName 70s ease infinite;
-  -o-animation: AnimationName 70s ease infinite;
-  animation: AnimationName 70s ease infinite;
+  -webkit-animation: BackgroundAnimation 70s ease infinite;
+  -moz-animation: BackgroundAnimation 70s ease infinite;
+  -o-animation: BackgroundAnimation 70s ease infinite;
+  animation: BackgroundAnimation 70s ease infinite;
   height: 100%;
 }
 

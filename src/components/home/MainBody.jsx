@@ -28,9 +28,9 @@ const MainBody = React.forwardRef((props, ref) => {
             {devDesc}
           </Typist>
           <div className="p-5">
-            {icons.map((icon) => (
+            {icons.map((icon, index) => (
               <a
-                key={icon.id}
+                key={`social-icon-${index}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 href={icon.url}

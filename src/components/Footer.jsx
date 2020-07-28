@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import {
-  footerMessage,
-  emailAddress,
-} from "../editable-stuff/configurations.json";
+import { showGetInTouch } from "../editable-stuff/configurations.json";
+import GetInTouch from "./home/GetInTouch";
 const Footer = () => {
   const [bgStyle] = useState({ backgroundColor: "#f5f5f5" });
 
   return (
     <footer style={bgStyle} className="mt-auto py-5 text-center ">
       <Container>
-        <h2 className="display-4 pb-3 text-center">Get In Touch</h2>
-        <p className="lead text-center pb-3">
-          {footerMessage}, <a href={`mailto:${emailAddress}`}>here</a>.
-        </p>
+        {showGetInTouch && <GetInTouch />}
         <i className="fas fa-code"></i> with <i className="fas fa-heart"></i> by{" "}
         <a
           className="badge badge-dark"

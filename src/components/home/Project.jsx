@@ -45,8 +45,12 @@ const Project = () => {
         <h2 className="display-4 pb-5 text-center">{projectHeading}</h2>
         <Row>
           {projectsArray.length
-            ? projectsArray.map((project) => (
-                <ProjectCard key={project.id} id={project.id} value={project} />
+            ? projectsArray.map((project, index) => (
+                <ProjectCard
+                  key={`project-card-${index}`}
+                  id={`project-card-${index}`}
+                  value={project}
+                />
               ))
             : dummyProjectsArr.map((project, index) => (
                 <ProjectCard

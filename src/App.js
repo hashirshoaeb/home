@@ -12,14 +12,14 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
 import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
-
+import { showSkills } from "./editable-stuff/configurations.json";
 const Home = React.forwardRef((props, ref) => {
   return (
     <Fragment>
       <MainBody ref={ref} />
       <AboutMe />
       <Project />
-      <Skills />
+      {showSkills && <Skills />}
     </Fragment>
   );
 });
