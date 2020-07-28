@@ -8,12 +8,27 @@ import {
   hardSkills,
   softSkills,
 } from "../../editable-stuff/configurations.json";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 function Skills() {
+  const skillsTabRef = React.useRef();
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  //const navbarDimensions = useResizeObserver(navbarMenuRef);
+
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      console.log(currPos);
+      if (!isScrolled && currPos.y - 400 < 0) setIsScrolled(true);
+    },
+    [skillsTabRef],
+    skillsTabRef
+  );
   return (
-    <Jumbotron fluid className="bg-white m-0" id="skills">
+    <Jumbotron ref={skillsTabRef} fluid className="bg-white m-0" id="skills">
       <Container className=" p-5 ">
-        <h2 className="display-4 pb-5 text-center">Skills</h2>
+        <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
+          Skills
+        </h2>
         <Tabs
           className="skills-tabs"
           defaultActiveKey="hard-skills"
@@ -25,7 +40,7 @@ function Skills() {
             title="Hard Skills"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={hardSkills} />
+              <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
           <Tab
@@ -34,7 +49,7 @@ function Skills() {
             title="Soft Skills"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={softSkills} />
+              <SkillsTab skills={softSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
         </Tabs>

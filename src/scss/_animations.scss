@@ -54,3 +54,14 @@
     background-position: 0% 7%;
   }
 }
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}

@@ -114,3 +114,14 @@ code {
   flex-grow: 1;
   text-align: center;
 }
+
+.progress-bar {
+  transform-origin: left;
+  transform: scaleX(0);
+  &:first-child {
+    transform: scaleX(1);
+  }
+}
+.progress-bar-animate {
+  animation: progress 1.5s ease-in-out forwards;
+}
