@@ -6,7 +6,7 @@ function SkillsBar({ skill, value, isScrolled }) {
     <div style={{ width: "95%" }}>
       <p className="lead mb-1 mt-2">{skill}</p>
       <ProgressBar
-        className={!isScrolled ? "progress-bar" : " progress-bar-animate"}
+        className={!isScrolled ? "progress" : " progress-bar-animation"}
         now={value}
       />
     </div>

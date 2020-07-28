@@ -115,13 +115,15 @@ code {
   text-align: center;
 }
 
-.progress-bar {
+.progress {
   transform-origin: left;
-  transform: scaleX(0);
-  &:first-child {
-    transform: scaleX(1);
+  & > * {
+    transform: scaleX(0);
   }
 }
-.progress-bar-animate {
-  animation: progress 1.5s ease-in-out forwards;
+.progress-bar-animation {
+  @extend .progress;
+  & > * {
+    animation: progress 1.5s ease-in-out forwards;
+  }
 }
