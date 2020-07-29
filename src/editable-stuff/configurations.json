@@ -1,11 +1,13 @@
 {
   "backgroundType": "gradient",
   "plainBackgroundMode": "daylight",
-  "gradientColors": "#EE7752, #E73C7E, #23A6D5, #23D5AB",
+  "showNavigationbar": true,
+  "showBlog": false,
+
+  "gradientColors": "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
   "FirstName": "Hashir",
   "MiddleName": "",
   "LastName": "Shoaib",
-  "emailAddress": "hashirshoaeb@gmail.com",
   "devDesc": " Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
   "icons": [
     {
@@ -29,22 +31,21 @@
       "url": "https://www.twitter.com/hashirshoaeb/"
     }
   ],
+
   "aboutHeading": "About Me",
   "showInstaProfilePic": true,
   "instaLink": "https://www.instagram.com/",
   "instaUsername": "hashirshoaeb",
   "instaQuery": "/?__a=1",
   "aboutDescription": "I'm a Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of the student body at Emerging Technologies Research Lab(ETL) and used to be an Intern at RiseTech. I'm passionate about teaching machines how to think",
-  "footerMessage": "Officia proident pariatur sint tempor ipsum ut reprehenderit aliquip.Amet veniam et ea enim aute ullamco elit reprehenderit irure officia duis esse. Deserunt quis ad est nostrud nostrud proident ea eu ad",
+
   "projectHeading": "Recent Projects",
   "gitHubLink": "https://api.github.com/users/",
   "gitHubUsername": "hashirshoaeb",
   "gitHubQuery": "/repos?sort=updated&direction=desc",
   "projectsLength": 4,
-  "showNavigationbar": true,
-  "showBlog": false,
+
   "showSkills": true,
-  "showGetInTouch": true,
   "hardSkills": [
     { "name": "Java", "value": 80 },
     { "name": "C#", "value": 80 },
@@ -64,5 +65,9 @@
     { "name": "Empathy", "value": 80 },
     { "name": "Organization", "value": 80 },
     { "name": "Creativity", "value": 80 }
-  ]
+  ],
+
+  "showGetInTouch": true,
+  "footerMessage": "I'm currently looking for full-time Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  "emailAddress": "hashirshoaeb@gmail.com"
 }
