@@ -9,7 +9,7 @@ function GetInTouch() {
     <>
       <h2 className="display-4 pb-3 text-center">Get In Touch</h2>
       <p className="lead text-center pb-3">
-        {footerMessage}, <a href={`mailto:${emailAddress}`}>here</a>.
+        {footerMessage}, <a href={`mailto:${emailAddress}`}>{emailAddress}</a>.
       </p>
     </>
   );
