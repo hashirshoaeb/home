@@ -8,6 +8,7 @@ import {
   MiddleName,
   devDesc,
   icons,
+  gradientColors,
 } from "../../editable-stuff/configurations.json";
 
 const MainBody = React.forwardRef((props, ref) => {
@@ -16,6 +17,10 @@ const MainBody = React.forwardRef((props, ref) => {
       <Jumbotron
         fluid
         id="home"
+        style={{
+          background: `linear-gradient(136deg,${gradientColors})`,
+          backgroundSize: "1200% 1200%",
+        }}
         className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
         <div id="stars"></div>
