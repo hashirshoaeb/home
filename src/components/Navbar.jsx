@@ -1,82 +1,88 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useScrollPosition } from "../hooks/useScrollPosition";
+import useResizeObserver from "../hooks/useResizeObserver";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import Pdf from "../editable-stuff/resume.pdf";
 import { showBlog, FirstName } from "../editable-stuff/configurations.json";
 
-const Navbar = (props) => {
+const Navigation = React.forwardRef((props, ref) => {
   const [isTop, setIsTop] = useState(true);
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const istop = window.scrollY < 200;
-      if (istop !== isTop) {
-        setIsTop(istop);
-      }
-    });
-  }, [isTop]);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const navbarMenuRef = React.useRef();
+  const navbarDimensions = useResizeObserver(navbarMenuRef);
+  const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      if (!navbarDimensions) return;
+      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
+        ? setIsTop(true)
+        : setIsTop(false);
+      setScrollPosition(currPos.y);
+    },
+    [navBottom]
+  );
+
+  React.useEffect(() => {
+    if (!navbarDimensions) return;
+    navBottom - scrollPosition >= ref.current.offsetTop
+      ? setIsTop(false)
+      : setIsTop(true);
+  }, [navBottom, navbarDimensions, ref, scrollPosition]);
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-light ${
-        isTop ? "bg-transparent" : "bg-gradient"
-      } `}
+    <Navbar
+      ref={navbarMenuRef}
+      className={` fixed-top  ${
+        !isTop ? "navbar-white" : "navbar-transparent"
+      }`}
+      expand="lg"
     >
-      <a className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
         {`<${FirstName} />`}
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+      </Navbar.Brand>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        className="toggler"
+      />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
           {showBlog && (
-            <li className="nav-item">
-              <Link
-                className="nav-link lead"
-                to={process.env.PUBLIC_URL + "/blog"}
-              >
-                Blog
-              </Link>
-            </li>
+            <Nav.Link className="nav-link lead" >
+              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
+            </Nav.Link>
           )}
-          <li className="nav-item">
-            <a
-              className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#projects"}
-            >
-              Projects
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link lead"
-              href={Pdf}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <b>Resume</b>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
-            >
-              <b>About</b>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          <Nav.Link
+            className="nav-link lead" 
+            href={process.env.PUBLIC_URL + "/#projects"}
+          >
+            Projects
+          </Nav.Link>
+          <Nav.Link
+            className="nav-link lead" 
+            href={Pdf}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Resume
+          </Nav.Link>
+          <Nav.Link
+            className="nav-link lead" 
+            href={process.env.PUBLIC_URL + "/#aboutme"}
+          >
+            About
+          </Nav.Link>
+          <Nav.Link
+            className="nav-link lead" 
+            href={process.env.PUBLIC_URL + "/#skills"}
+          >
+            Skills
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-};
+});
 
-export default Navbar;
+export default Navigation;
