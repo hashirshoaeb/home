@@ -178,18 +178,18 @@ Have you changed something in the code to create your own version? Feel free to 
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/ishaan-m/home/">
-        <img src="READMEdocs/ishaan-m-github-io-home.gif" width="300px" alt="" />
+      <a href="https://github.com/anaashrafi/home/">
+        <img src="READMEdocs/anaashrafi-github-io-home.gif" width="300px" alt="" />
         <br />
-        <sub><b>Ishaan Manudhane</b></sub>
+        <sub><b>Ana Ashrafi</b></sub>
       </a>
       <br />
     </td>
     <td align="center">
-      <a href="https://github.com/meenams/home/">
-        <img src="READMEdocs/meenams-github-io-home.gif" width="300px" alt="" />
+      <a href="https://github.com/jefferyjohn/home/">
+        <img src="READMEdocs/jefferyjohn-github-io-home.gif" width="300px" alt="" />
         <br />
-        <sub><b>Meena Muthusubramanian</b></sub>
+        <sub><b>Jeffery John</b></sub>
       </a>
       <br />
     </td>
