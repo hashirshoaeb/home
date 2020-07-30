@@ -4,11 +4,18 @@ import {
   aboutHeading,
   aboutDescription,
   showInstaProfilePic,
+  facebookId,
+  googleId,
+  gitHubUsername,
+  twitterHandle,
+  FirstName,
+  LastName,
   instaLink,
   instaUsername,
   instaQuery,
 } from "../../editable-stuff/configurations.json";
 import axios from "axios";
+import Avatar from "react-avatar";
 
 const AboutMe = () => {
   const [instaProfilePic, setInstaProfilePic] = useState("");
@@ -36,15 +43,26 @@ const AboutMe = () => {
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
       <div className="container container-fluid p-5">
         <div className="row">
-          {showInsta && (
-            <div className="col-5 d-none d-lg-block align-self-center">
-              <img
+          {/*{showInsta && (
+            
+              {/*<img
                 className="border border-secondary rounded-circle"
                 src={instaProfilePic}
                 alt="profilepicture"
               />
-            </div>
-          )}
+              )}*/}
+          <div className="col-5 d-none d-lg-block align-self-center">
+            <Avatar
+              className="border border-secondary rounded-circle"
+              googleId={googleId}
+              twitterHandle={twitterHandle}
+              githubHandle={gitHubUsername}
+              facebookId={facebookId}
+              name={`${FirstName} ${LastName}`}
+              size={350}
+            />
+          </div>
+
           <div className={`col-lg-${showInsta ? "7" : "12"}`}>
             <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
             <p className="lead text-center">{aboutDescription}</p>

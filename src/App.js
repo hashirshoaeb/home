@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import {
+  avatarRedirectUrl,
   showNavigationbar,
   showBlog,
 } from "./editable-stuff/configurations.json";
@@ -13,14 +14,15 @@ import Skills from "./components/home/Skills";
 import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
 import { showSkills } from "./editable-stuff/configurations.json";
+import { ConfigProvider } from "react-avatar";
 const Home = React.forwardRef((props, ref) => {
   return (
-    <Fragment>
+    <>
       <MainBody ref={ref} />
       <AboutMe />
       <Project />
       {showSkills && <Skills />}
-    </Fragment>
+    </>
   );
 });
 
@@ -28,13 +30,15 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-      {showNavigationbar && <Navbar ref={titleRef} />}
-      <Route path="/" exact component={() => <Home ref={titleRef} />} />
-      {showBlog && <Route path="/blog" exact component={Blog} />}
-      {showBlog && <Route path="/blog/:id" component={BlogPost} />}
-      <Footer />
-    </BrowserRouter>
+    <ConfigProvider avatarRedirectUrl={avatarRedirectUrl}>
+      <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+        {showNavigationbar && <Navbar ref={titleRef} />}
+        <Route path="/" exact component={() => <Home ref={titleRef} />} />
+        {showBlog && <Route path="/blog" exact component={Blog} />}
+        {showBlog && <Route path="/blog/:id" component={BlogPost} />}
+        <Footer />
+      </BrowserRouter>
+    </ConfigProvider>
   );
 };
 
