@@ -70,7 +70,7 @@ Dependencies defined in package.json:
 
 ## Sharing 💗
 
-Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) and add resume. Mark star ⭐ if you like the project.
+Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) and add resume. Mark star ⭐ if you like the project.
 
 ## Prerequisites 🍪
 
@@ -85,7 +85,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
      git clone https://github.com/<your-username>/home.git
    ```
 
-3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
+3. Open in editor and edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) file.
 
 4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
 5. Change URL in [package.json](./package.json) file:

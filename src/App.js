@@ -1,10 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import {
-  avatarRedirectUrl,
-  showNavigationbar,
-  showBlog,
-} from "./editable-stuff/configurations.json";
+import config from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -13,8 +9,10 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
 import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
-import { showSkills } from "./editable-stuff/configurations.json";
 import { ConfigProvider } from "react-avatar";
+
+const { avatarRedirectUrl, showNavigationbar, showBlog, showSkills } = config;
+
 const Home = React.forwardRef((props, ref) => {
   return (
     <>

@@ -1,69 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
-import {
-  aboutHeading,
-  aboutDescription,
-  showInstaProfilePic,
-  facebookId,
-  googleId,
-  gitHubUsername,
-  twitterHandle,
-  FirstName,
-  LastName,
-  instaLink,
-  instaUsername,
-  instaQuery,
-} from "../../editable-stuff/configurations.json";
-import axios from "axios";
+import config from "../../editable-stuff/config.js";
 import Avatar from "react-avatar";
 
 const AboutMe = () => {
-  const [instaProfilePic, setInstaProfilePic] = useState("");
-  const [showInsta, setShowInsta] = useState(showInstaProfilePic);
   const [resumeURL] = useState(Pdf);
-
-  useEffect(() => {
-    if (showInsta) {
-      handleRequest();
-    }
-  }, [showInsta]);
-
-  const handleRequest = async (e) => {
-    try {
-      const response = await axios.get(instaLink + instaUsername + instaQuery);
-      console.log(response);
-      setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
-    } catch (error) {
-      setShowInsta(false);
-      console.error(error.message);
-    }
-  };
-
+  const {
+    aboutHeading,
+    aboutDescription,
+    showProfilePicture,
+    avatarFallbackImgSrc,
+    facebookId,
+    //googleId,
+    gitHubUsername,
+    twitterHandle,
+    FirstName,
+    LastName,
+  } = config;
   return (
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
       <div className="container container-fluid p-5">
         <div className="row">
-          {/*{showInsta && (
-            
-              {/*<img
+          {showProfilePicture && (
+            <div className="col-5 d-none d-lg-block align-self-center">
+              <Avatar
                 className="border border-secondary rounded-circle"
-                src={instaProfilePic}
-                alt="profilepicture"
+                //googleId=""
+                twitterHandle={twitterHandle}
+                githubHandle={gitHubUsername}
+                facebookId={facebookId}
+                src={avatarFallbackImgSrc}
+                name={`${FirstName} ${LastName}`}
+                size={350}
               />
-              )}*/}
-          <div className="col-5 d-none d-lg-block align-self-center">
-            <Avatar
-              className="border border-secondary rounded-circle"
-              googleId={googleId}
-              twitterHandle={twitterHandle}
-              githubHandle={gitHubUsername}
-              facebookId={facebookId}
-              name={`${FirstName} ${LastName}`}
-              size={350}
-            />
-          </div>
+            </div>
+          )}
 
-          <div className={`col-lg-${showInsta ? "7" : "12"}`}>
+          <div className={`col-lg-${showProfilePicture ? "7" : "12"}`}>
             <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
             <p className="lead text-center">{aboutDescription}</p>
             {resumeURL && (

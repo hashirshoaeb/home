@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  footerMessage,
-  emailAddress,
-} from "../../editable-stuff/configurations.json";
+import config from "../../editable-stuff/config.js";
 
 function GetInTouch() {
+  const { footerMessage, emailAddress } = config;
   return (
     <>
       <h2 className="display-4 pb-3 text-center">Get In Touch</h2>
