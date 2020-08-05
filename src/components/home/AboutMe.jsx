@@ -1,42 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
 import config from "../../editable-stuff/config.js";
-import Avatar from "react-avatar";
-
+import axios from "axios";
 const AboutMe = () => {
-  const [resumeURL] = useState(Pdf);
+  const [resumeURL] = React.useState(Pdf);
   const {
     aboutHeading,
     aboutDescription,
     showProfilePicture,
-    avatarFallbackImgSrc,
-    facebookId,
-    //googleId,
-    gitHubUsername,
-    twitterHandle,
-    FirstName,
-    LastName,
+    instaLink,
+    instaUsername,
+    instaQuery,
   } = config;
+
+  const [instaProfilePic, setInstaProfilePic] = React.useState("");
+  const [showPic, setShowPic] = React.useState(showProfilePicture);
+
+  React.useEffect(() => {
+    if (showProfilePicture) {
+      handleRequest();
+    }
+  }, [showProfilePicture]);
+
+  const handleRequest = async (e) => {
+    try {
+      const response = await axios.get(instaLink + instaUsername + instaQuery);
+      console.log(response);
+      setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
+    } catch (error) {
+      setShowPic(false);
+      console.error(error.message);
+    }
+  };
   return (
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
       <div className="container container-fluid p-5">
         <div className="row">
-          {showProfilePicture && (
-            <div className="col-5 d-none d-lg-block align-self-center">
-              <Avatar
+          <div className="col-5 d-none d-lg-block align-self-center">
+            {showPic && (
+              <img
                 className="border border-secondary rounded-circle"
-                //googleId=""
-                twitterHandle={twitterHandle}
-                githubHandle={gitHubUsername}
-                facebookId={facebookId}
-                src={avatarFallbackImgSrc}
-                name={`${FirstName} ${LastName}`}
-                size={350}
+                src={instaProfilePic}
+                alt="profilepicture"
               />
-            </div>
-          )}
+            )}
+          </div>
 
-          <div className={`col-lg-${showProfilePicture ? "7" : "12"}`}>
+          <div className={`col-lg-${showPic ? "7" : "12"}`}>
             <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
             <p className="lead text-center">{aboutDescription}</p>
             {resumeURL && (

@@ -45,6 +45,9 @@ const configuration = {
 
   aboutHeading: "About Me",
   showProfilePicture: true,
+  instaLink: "https://www.instagram.com/",
+  instaUsername: "hashirshoaeb",
+  instaQuery: "/?__a=1",
   //The system will choose the first available image front the social media handles listed below. You can use several different references so that there is always one available even if the social media platform are not online, or use an external URL if you have a picture you would like to use.
   facebookId: "100008482692700", //i.e."100008482692700" ==> https://findmyfbid.com/
   gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
