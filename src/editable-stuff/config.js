@@ -1,6 +1,6 @@
 const configuration = {
   //NAVIGATION BAR
-  showNavigationbar: false,
+  showNavigationbar: true,
 
   //MAIN VIEW
   FirstName: "Hashir",
