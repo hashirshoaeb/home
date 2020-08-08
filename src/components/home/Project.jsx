@@ -3,16 +3,17 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
-import {
-  projectHeading,
-  gitHubLink,
-  gitHubUsername,
-  gitHubQuery,
-  projectsLength,
-} from "../../editable-stuff/configurations.json";
+import config from "../../editable-stuff/config.js";
 import axios from "axios";
 
 const Project = () => {
+  const {
+    projectHeading,
+    gitHubLink,
+    gitHubUsername,
+    gitHubQuery,
+    projectsLength,
+  } = config;
   const [projectsArray, setProjectsArray] = useState([]);
   const dummyProject = {
     name: null,
@@ -33,7 +34,7 @@ const Project = () => {
     } catch (error) {
       console.error(error.message);
     }
-  }, []);
+  }, [gitHubLink, gitHubUsername, gitHubQuery, projectsLength]);
 
   useEffect(() => {
     handleRequest();

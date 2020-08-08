@@ -2,16 +2,17 @@ import React from "react";
 import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import {
-  FirstName,
-  LastName,
-  MiddleName,
-  devDesc,
-  icons,
-  gradientColors,
-} from "../../editable-stuff/configurations.json";
+import config from "../../editable-stuff/config.js";
 
 const MainBody = React.forwardRef((props, ref) => {
+  const {
+    FirstName,
+    LastName,
+    MiddleName,
+    devDesc,
+    icons,
+    gradientColors,
+  } = config;
   return (
     <>
       <Jumbotron

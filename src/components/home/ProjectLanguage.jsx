@@ -27,11 +27,14 @@ const ProjectLanguage = ({ value }) => {
   return (
     <div className="pb-3">
       Languages:{" "}
-      {array.map((language) => (
-        <p key={language} className="badge badge-light card-link">
-          {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %
-        </p>
-      ))}
+      {array.length
+        ? array.map((language) => (
+            <p key={language} className="badge badge-light card-link">
+              {language}:{" "}
+              {Math.trunc((data[language] / total_count) * 1000) / 10} %
+            </p>
+          ))
+        : "code yet to be deployed."}
     </div>
   );
 };

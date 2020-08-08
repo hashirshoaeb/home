@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import { showGetInTouch } from "../editable-stuff/configurations.json";
+import config from "../editable-stuff/config.js";
 import GetInTouch from "./home/GetInTouch";
 const Footer = () => {
+  const { showGetInTouch } = config;
   const [bgStyle] = useState({ backgroundColor: "#f5f5f5" });
 
   return (

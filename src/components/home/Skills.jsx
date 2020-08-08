@@ -4,13 +4,11 @@ import Tabs from "react-bootstrap/Tabs";
 import SkillsTab from "./SkillsTab";
 import Row from "react-bootstrap/Row";
 import { Jumbotron, Container } from "react-bootstrap";
-import {
-  hardSkills,
-  softSkills,
-} from "../../editable-stuff/configurations.json";
+import config from "../../editable-stuff/config.js";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 function Skills() {
+  const { hardSkills, softSkills } = config;
   const skillsTabRef = React.useRef();
   const [isScrolled, setIsScrolled] = React.useState(false);
   //const navbarDimensions = useResizeObserver(navbarMenuRef);

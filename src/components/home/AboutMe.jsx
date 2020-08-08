@@ -1,33 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
-import {
-  aboutHeading,
-  aboutDescription,
-  showInstaProfilePic,
-  instaLink,
-  instaUsername,
-  instaQuery,
-} from "../../editable-stuff/configurations.json";
+import config from "../../editable-stuff/config.js";
 import axios from "axios";
 
+const pictureLinkRegex = new RegExp(
+  /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
+);
+
 const AboutMe = () => {
-  const [instaProfilePic, setInstaProfilePic] = useState("");
-  const [showInsta, setShowInsta] = useState(showInstaProfilePic);
-  const [resumeURL] = useState(Pdf);
+  const [resumeURL] = React.useState(Pdf);
+  const { aboutHeading, aboutDescription, profilePictureLink } = config;
+  const [profilePicUrl, setProfilePicUrl] = React.useState("");
+  const [showPic, setShowPic] = React.useState(Boolean(profilePictureLink));
 
-  useEffect(() => {
-    if (showInsta) {
+  React.useEffect(() => {
+    if (profilePictureLink && !pictureLinkRegex.test(profilePictureLink)) {
       handleRequest();
+    } else {
+      setProfilePicUrl(profilePictureLink);
     }
-  }, [showInsta]);
+  }, [profilePictureLink]);
 
-  const handleRequest = async (e) => {
+  const handleRequest = async () => {
+    const instaLink = "https://www.instagram.com/";
+    const instaQuery = "/?__a=1";
     try {
-      const response = await axios.get(instaLink + instaUsername + instaQuery);
-      console.log(response);
-      setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
+      const response = await axios.get(
+        instaLink + profilePictureLink + instaQuery
+      );
+      setProfilePicUrl(response.data.graphql.user.profile_pic_url_hd);
     } catch (error) {
-      setShowInsta(false);
+      setShowPic(false);
       console.error(error.message);
     }
   };
@@ -36,16 +39,17 @@ const AboutMe = () => {
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
       <div className="container container-fluid p-5">
         <div className="row">
-          {showInsta && (
-            <div className="col-5 d-none d-lg-block align-self-center">
+          <div className="col-5 d-none d-lg-block align-self-center">
+            {showPic && (
               <img
                 className="border border-secondary rounded-circle"
-                src={instaProfilePic}
+                src={profilePicUrl}
                 alt="profilepicture"
               />
-            </div>
-          )}
-          <div className={`col-lg-${showInsta ? "7" : "12"}`}>
+            )}
+          </div>
+
+          <div className={`col-lg-${showPic ? "7" : "12"}`}>
             <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
             <p className="lead text-center">{aboutDescription}</p>
             {resumeURL && (

@@ -5,9 +5,10 @@ import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Pdf from "../editable-stuff/resume.pdf";
-import { showBlog, FirstName } from "../editable-stuff/configurations.json";
+import config from "../editable-stuff/config.js";
 
 const Navigation = React.forwardRef((props, ref) => {
+  const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
@@ -42,25 +43,22 @@ const Navigation = React.forwardRef((props, ref) => {
       <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
         {`<${FirstName} />`}
       </Navbar.Brand>
-      <Navbar.Toggle
-        aria-controls="basic-navbar-nav"
-        className="toggler"
-      />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           {showBlog && (
-            <Nav.Link className="nav-link lead" >
+            <Nav.Link className="nav-link lead">
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </Nav.Link>
           )}
           <Nav.Link
-            className="nav-link lead" 
+            className="nav-link lead"
             href={process.env.PUBLIC_URL + "/#projects"}
           >
             Projects
           </Nav.Link>
           <Nav.Link
-            className="nav-link lead" 
+            className="nav-link lead"
             href={Pdf}
             target="_blank"
             rel="noreferrer noopener"
@@ -68,13 +66,13 @@ const Navigation = React.forwardRef((props, ref) => {
             Resume
           </Nav.Link>
           <Nav.Link
-            className="nav-link lead" 
+            className="nav-link lead"
             href={process.env.PUBLIC_URL + "/#aboutme"}
           >
             About
           </Nav.Link>
           <Nav.Link
-            className="nav-link lead" 
+            className="nav-link lead"
             href={process.env.PUBLIC_URL + "/#skills"}
           >
             Skills
