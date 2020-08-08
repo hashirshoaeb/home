@@ -1,22 +1,19 @@
 const configuration = {
-  //NAVIGATION BAR ----------------------------------------
+  //NAVIGATION BAR
+  showNavigationbar: false,
 
-  showNavigationbar: true,
-
-  //MAIN VIEW ----------------------------------------
-
-  //Personal information
+  //MAIN VIEW
   FirstName: "Hashir",
   MiddleName: "",
   LastName: "Shoaib",
-  emailAddress: "hashirshoaeb@gmail.com",
   devDesc:
     " Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
 
   //Background
   backgroundType: "gradient",
   plainBackgroundMode: "daylight",
-  gradientColors: "#EE7752, #E73C7E, #23A6D5, #23D5AB",
+  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+
   //Social Media Link Icons
   icons: [
     {
@@ -41,8 +38,7 @@ const configuration = {
     },
   ],
 
-  //ABOUT SECTION ----------------------------------------
-
+  //ABOUT SECTION
   aboutHeading: "About Me",
   //If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
   //a) your Instagram username (i.e:profilePictureLink:"johnDoe123",)
@@ -52,47 +48,44 @@ const configuration = {
   aboutDescription:
     "I'm a Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of the student body at Emerging Technologies Research Lab(ETL) and used to be an Intern at RiseTech. I'm passionate about teaching machines how to think",
 
-  //PROJECTS SECTION ----------------------------------------
+  //PROJECTS SECTION
   projectHeading: "Recent Projects",
   gitHubLink: "https://api.github.com/users/",
   gitHubQuery: "/repos?sort=updated&direction=desc",
   gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
   projectsLength: 4,
 
-  //BLOG SECTION ----------------------------------------
+  //BLOG SECTION
   showBlog: false,
 
-  //SKILLS SECTION ----------------------------------------
+  //SKILLS SECTION
   showSkills: true,
   hardSkills: [
-    { name: "Java", value: 80 },
+    { name: "JavaScript", value: 90 },
+    { name: "React", value: 65 },
+    { name: "HTML/CSS", value: 55 },
     { name: "C#", value: 80 },
-    { name: "C/C++", value: 80 },
-    { name: "Python", value: 80 },
-    { name: "JavaScript", value: 80 },
-    { name: "HTML/CSS", value: 80 },
-    { name: "SQL", value: 80 },
-    { name: "React", value: 80 },
+    { name: "Python", value: 90 },
+    { name: "SQL", value: 75 },
+    { name: "Data Structures", value: 85 },
+    { name: "C/C++", value: 65 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 80 },
-    { name: "Positivity", value: 80 },
-    { name: "Adaptability", value: 80 },
-    { name: "Problem Solving", value: 80 },
-    { name: "Empathy", value: 80 },
-    { name: "Organization", value: 80 },
-    { name: "Creativity", value: 80 },
+    { name: "Collaboration", value: 90 },
+    { name: "Positivity", value: 75 },
+    { name: "Adaptability", value: 85 },
+    { name: "Problem Solving", value: 75 },
+    { name: "Empathy", value: 90 },
+    { name: "Organization", value: 70 },
+    { name: "Creativity", value: 90 },
   ],
 
-  //GET IN TOUCH SECTION ----------------------------------------
-
+  //GET IN TOUCH SECTION
   showGetInTouch: true,
-
-  //FOOTER SECTION ----------------------------------------
-
   footerMessage:
-    "Officia proident pariatur sint tempor ipsum ut reprehenderit aliquip.Amet veniam et ea enim aute ullamco elit reprehenderit irure officia duis esse. Deserunt quis ad est nostrud nostrud proident ea eu ad",
+    "I'm currently looking for full-time Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  emailAddress: "hashirshoaeb@gmail.com",
 };
 
 export default configuration;
