@@ -44,16 +44,11 @@ const configuration = {
   //ABOUT SECTION ----------------------------------------
 
   aboutHeading: "About Me",
-  showProfilePicture: true,
-  instaLink: "https://www.instagram.com/",
-  instaUsername: "hashirshoaeb",
-  instaQuery: "/?__a=1",
-  //The system will choose the first available image front the social media handles listed below. You can use several different references so that there is always one available even if the social media platform are not online, or use an external URL if you have a picture you would like to use.
-  facebookId: "100008482692700", //i.e."100008482692700" ==> https://findmyfbid.com/
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  twitterHandle: "hashirshoeab", //i.e."johnDoe12Tw"
-  avatarFallbackImageSource: "", //i.e."https://imgur.com/mypiclink.jpeg"
-  avatarRedirectUrl: "https://avatar-redirect.appspot.com",
+  //If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
+  //a) your Instagram username (i.e:profilePictureLink:"johnDoe123",)
+  //b) a link to an hosted image you want to use as your personal picture (i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",)
+  //If you do not want any picture to be displayed, just leave it empty :)
+  profilePictureLink: "hashirshoaeb",
   aboutDescription:
     "I'm a Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of the student body at Emerging Technologies Research Lab(ETL) and used to be an Intern at RiseTech. I'm passionate about teaching machines how to think",
 
@@ -61,6 +56,7 @@ const configuration = {
   projectHeading: "Recent Projects",
   gitHubLink: "https://api.github.com/users/",
   gitHubQuery: "/repos?sort=updated&direction=desc",
+  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
   projectsLength: 4,
 
   //BLOG SECTION ----------------------------------------

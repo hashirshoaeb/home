@@ -2,36 +2,39 @@ import React from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
 import config from "../../editable-stuff/config.js";
 import axios from "axios";
+
+const pictureLinkRegex = new RegExp(
+  /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
+);
+
 const AboutMe = () => {
   const [resumeURL] = React.useState(Pdf);
-  const {
-    aboutHeading,
-    aboutDescription,
-    showProfilePicture,
-    instaLink,
-    instaUsername,
-    instaQuery,
-  } = config;
-
-  const [instaProfilePic, setInstaProfilePic] = React.useState("");
-  const [showPic, setShowPic] = React.useState(showProfilePicture);
+  const { aboutHeading, aboutDescription, profilePictureLink } = config;
+  const [profilePicUrl, setProfilePicUrl] = React.useState("");
+  const [showPic, setShowPic] = React.useState(Boolean(profilePictureLink));
 
   React.useEffect(() => {
-    if (showProfilePicture) {
+    if (profilePictureLink && !pictureLinkRegex.test(profilePictureLink)) {
       handleRequest();
+    } else {
+      setProfilePicUrl(profilePictureLink);
     }
-  }, [showProfilePicture]);
+  }, [profilePictureLink]);
 
-  const handleRequest = async (e) => {
+  const handleRequest = async () => {
+    const instaLink = "https://www.instagram.com/";
+    const instaQuery = "/?__a=1";
     try {
-      const response = await axios.get(instaLink + instaUsername + instaQuery);
-      console.log(response);
-      setInstaProfilePic(response.data.graphql.user.profile_pic_url_hd);
+      const response = await axios.get(
+        instaLink + profilePictureLink + instaQuery
+      );
+      setProfilePicUrl(response.data.graphql.user.profile_pic_url_hd);
     } catch (error) {
       setShowPic(false);
       console.error(error.message);
     }
   };
+
   return (
     <div id="aboutme" className="jumbotron jumbotron-fluid m-0">
       <div className="container container-fluid p-5">
@@ -40,7 +43,7 @@ const AboutMe = () => {
             {showPic && (
               <img
                 className="border border-secondary rounded-circle"
-                src={instaProfilePic}
+                src={profilePicUrl}
                 alt="profilepicture"
               />
             )}

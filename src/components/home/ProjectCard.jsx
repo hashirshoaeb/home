@@ -43,13 +43,14 @@ const ProjectCard = ({ value }) => {
   }, [handleUpdatetime]);
 
   const { name, description, svn_url, stargazers_count, languages_url } = value;
+  console.log(value);
   return (
     <Col md={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         {/* <img src="" className="card-img-top" alt="..." /> */}
         <Card.Body>
-          <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
-          <Card.Text>{description || <Skeleton count={3} />} </Card.Text>
+          <Card.Title as="h5">{value ? name : <Skeleton />} </Card.Title>
+          <Card.Text>{value ? description : <Skeleton count={3} />} </Card.Text>
           {svn_url ? (
             <>
               <a
@@ -75,14 +76,16 @@ const ProjectCard = ({ value }) => {
           ) : (
             <Skeleton count={3} />
           )}
-          {stargazers_count ? (
-            <p className="card-text">
-              <span className="text-dark card-link mr-4">
-                <i className="fab fa-github" /> Stars{" "}
-                <span className="badge badge-dark">{stargazers_count}</span>
-              </span>
-              <small className="text-muted">Updated {updated_at}</small>
-            </p>
+          {value ? (
+            stargazers_count ? (
+              <p className="card-text">
+                <span className="text-dark card-link mr-4">
+                  <i className="fab fa-github" /> Stars{" "}
+                  <span className="badge badge-dark">{stargazers_count}</span>
+                </span>
+                <small className="text-muted">Updated {updated_at}</small>
+              </p>
+            ) : null
           ) : (
             <Skeleton />
           )}
