@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import bloglist from "../../editable-stuff/blog";
 const BlogPost = ({ match }) => {
   const { id } = match.params;
