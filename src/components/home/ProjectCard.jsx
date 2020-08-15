@@ -114,6 +114,11 @@ const Language = ({ value }) => {
   }
   // console.log("array contains ", array, this.state.data[array[0]]);
 
+  // If data is empty object return null
+  if (Object.keys(data).length === 0 && data.constructor === Object) {
+    return null;
+  }
+
   return (
     <div className="pb-3">
       Languages:{" "}
