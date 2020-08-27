@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import config from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
+import ProjectTimeline from "./editable-stuff/ProjectTimeline"; 
+import Experience from "./editable-stuff/Experience";
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -18,8 +20,12 @@ const Home = React.forwardRef((props, ref) => {
     <>
       <MainBody ref={ref} />
       <AboutMe />
-      <Project />
-      {showSkills && <Skills />}
+	  {/*<ProjectTimeline />*/}
+	  {showSkills && <Skills />}
+	  {/*<Project />*/}
+      <Experience />
+	 
+      
     </>
   );
 });
