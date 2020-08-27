@@ -51,12 +51,24 @@ const Navigation = React.forwardRef((props, ref) => {
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </Nav.Link>
           )}
+		  
+		  
           <Nav.Link
             className="nav-link lead"
-            href={process.env.PUBLIC_URL + "/#projects"}
+            href={process.env.PUBLIC_URL + "/#experience"}
+          >
+            Career
+          </Nav.Link>
+		  
+		  {/*
+		  <Nav.Link
+            className="nav-link lead"
+            href={process.env.PUBLIC_URL + "/#projecttimeline"}
           >
             Projects
-          </Nav.Link>
+          </Nav.Link>*/}
+		  
+		  
           <Nav.Link
             className="nav-link lead"
             href={Pdf}
