@@ -1,20 +1,24 @@
 {
-  "name": "developers-portfolio",
+  "name": "Bibin's-portfolio",
   "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
-  "homepage": "http://hashirshoaeb.com",
-  "version": "0.1.0",
+  "homepage": "http://bibinvargheset.github.io",
+  "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "Hashir Shoaib",
-    "email": "hashirshoaeb@gmail.com",
-    "url": "https://github.com/hashirshoaeb"
+    "name": "Bibin Varghese",
+    "email": "bibinvargheset@gmail.com",
+    "url": "https://bibinvargheset.github.com/home"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@popperjs/core": "^2.1.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "gh-pages": "^2.2.0",
     "jquery": "^3.5.1",
+    "material-ui": "^0.20.2",
+    "material-ui-icons": "^1.0.0-beta.36",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -27,6 +31,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
     "react-typist": "^2.0.5",
+    "react-vertical-timeline-component": "^3.0.2",
     "typescript": "^3.8.3"
   },
   "scripts": {

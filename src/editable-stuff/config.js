@@ -2,12 +2,13 @@ const configuration = {
   //NAVIGATION BAR
   showNavigationbar: true,
 
-  //MAIN VIEW
-  FirstName: "Hashir",
+//MAIN VIEW
+  FirstName: "Bibin",
   MiddleName: "",
-  LastName: "Shoaib",
+  LastName: "Varghese",
   devDesc:
-    " Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
+     "| Engineer | Entrepreneur | Data Scientist| Teacher | Editor | Programmer  ",
+
 
   //Background
   backgroundType: "gradient",
@@ -15,26 +16,31 @@ const configuration = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
 
   //Social Media Link Icons
-  icons: [
+icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/bibinvargheset",
     },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
+   
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/bibinvargheset/",
     },
     {
       image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      url: "https://www.twitter.com/bibinvargheset/",
+    },
+	 {
+      image: "fa-facebook",
+      url: "https://www.facebook.com/bibinvargheset",
+    },
+    {
+      image: "fa-instagram",
+      url: "https://www.instagram.com/bibinthekkan/",
+    },
+	{
+      image: "fa-stack-overflow",
+      url: "https://stackoverflow.com/users/3561865/bibinvargheset",
     },
   ],
 
@@ -44,15 +50,16 @@ const configuration = {
   //a) your Instagram username (i.e:profilePictureLink:"johnDoe123",)
   //b) a link to an hosted image you want to use as your personal picture (i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",)
   //If you do not want any picture to be displayed, just leave it empty :)
-  profilePictureLink: "hashirshoaeb",
+  profilePictureLink: "bibinthekkan",
   aboutDescription:
-    "I'm a Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of the student body at Emerging Technologies Research Lab(ETL) and used to be an Intern at RiseTech. I'm passionate about teaching machines how to think",
+    " I'm an Electronic Engineer with graduated from CUSAT, Kerala, India, and pursued my M.Tech from Kannur University in Signal processing and Embedded system. I'm passionate about being an Engineer, who solves Challenging problems, using all the possible technologies such as programming, machine learning, statistical analysis, etc, and other practical tools.",
+
 
   //PROJECTS SECTION
   projectHeading: "Recent Projects",
   gitHubLink: "https://api.github.com/users/",
   gitHubQuery: "/repos?sort=updated&direction=desc",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "bibinvargheset", //i.e."johnDoe12Gh"
   projectsLength: 4,
 
   //BLOG SECTION
@@ -61,31 +68,37 @@ const configuration = {
   //SKILLS SECTION
   showSkills: true,
   hardSkills: [
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
+   
+    { name: "Python", value: 60 },
+    { name: "Matlab", value: 65 },
+    { name: "VHDL", value: 55 },
+	{ name: "Tcad", value: 75 },
+    { name: "Latex", value: 65 },
+    { name: "Data analysis", value: 55 },
+    { name: "Engineering", value: 70 },
+    { name: "GCP", value: 55 },
+    { name: "Excel", value: 75 },
+	{ name: "Digital Sales", value: 75 },
+    { name: "Operation Management", value: 65 },
+    { name: "Ecommerce", value: 75 },	
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
     { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
+    { name: "Positivity", value: 85 },
+    { name: "Adaptability", value: 95 },
+    { name: "Problem Solving", value: 95 },
     { name: "Empathy", value: 90 },
     { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Creativity", value: 60 },
   ],
+ 
 
   //GET IN TOUCH SECTION
   showGetInTouch: true,
   footerMessage:
-    "I'm currently looking for full-time Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  emailAddress: "hashirshoaeb@gmail.com",
+    "If you have any query or if you just want to say hi, please feel free to email me at",
+  emailAddress: "bibinvargheset+git@gmail.com",
 };
 
 export default configuration;
