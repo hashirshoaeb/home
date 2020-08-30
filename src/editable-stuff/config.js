@@ -6,8 +6,7 @@ const configuration = {
   FirstName: "Hashir",
   MiddleName: "",
   LastName: "Shoaib",
-  devDesc:
-    " Engineer | Programmer | Web Developer | Photographer | Athlete | Artist ",
+  devDesc: " Passionate about teaching machines how to think ",
 
   //Background
   backgroundType: "gradient",
@@ -46,7 +45,7 @@ const configuration = {
   //If you do not want any picture to be displayed, just leave it empty :)
   profilePictureLink: "hashirshoaeb",
   aboutDescription:
-    "I'm a Computer Engineer from NUST CEME, Pakistan with 3+ years of experience in web development. I’m currently the Vice President of the student body at Emerging Technologies Research Lab(ETL) and used to be an Intern at RiseTech. I'm passionate about teaching machines how to think",
+    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I see myself as a Machine Learning Engineer and Web Developer. In my free time I like working on open source projects and learning new things. ",
 
   //PROJECTS SECTION
   projectHeading: "Recent Projects",
@@ -61,14 +60,14 @@ const configuration = {
   //SKILLS SECTION
   showSkills: true,
   hardSkills: [
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
     { name: "Python", value: 90 },
     { name: "SQL", value: 75 },
     { name: "Data Structures", value: 85 },
     { name: "C/C++", value: 65 },
+    { name: "JavaScript", value: 90 },
+    { name: "React", value: 65 },
+    { name: "HTML/CSS", value: 55 },
+    { name: "C#", value: 80 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
@@ -84,7 +83,7 @@ const configuration = {
   //GET IN TOUCH SECTION
   showGetInTouch: true,
   footerMessage:
-    "I'm currently looking for full-time Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
   emailAddress: "hashirshoaeb@gmail.com",
 };
 
