@@ -1,6 +1,6 @@
 import React from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
-import config from "../../editable-stuff/config.js";
+import { config } from "../../editable-stuff/config.js";
 import axios from "axios";
 
 const pictureLinkRegex = new RegExp(

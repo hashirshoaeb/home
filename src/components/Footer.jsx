@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
-import config from "../editable-stuff/config.js";
-import GetInTouch from "./home/GetInTouch";
-const Footer = () => {
-  const { showGetInTouch } = config;
-  const [bgStyle] = useState({ backgroundColor: "#f5f5f5" });
+
+const Footer = (props) => {
+  const bgStyle = { backgroundColor: "#f5f5f5" };
 
   return (
     <footer style={bgStyle} className="mt-auto py-5 text-center ">
       <Container>
-        {showGetInTouch && <GetInTouch />}
-        <i className="fas fa-code"></i> with <i className="fas fa-heart"></i> by{" "}
+        {props.children}
+        <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
         <a
           className="badge badge-dark"
           rel="noopener"
@@ -19,10 +17,9 @@ const Footer = () => {
         >
           Hashir Shoaib
         </a>{" "}
-        using <i className="fab fa-react"></i>
+        using <i className="fab fa-react" />
         <p>
           <small className="text-muted">
-            {" "}
             Project code is open source. Feel free to fork and make your own
             version.
           </small>

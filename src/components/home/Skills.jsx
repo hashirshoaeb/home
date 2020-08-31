@@ -4,7 +4,7 @@ import Tabs from "react-bootstrap/Tabs";
 import SkillsTab from "./SkillsTab";
 import Row from "react-bootstrap/Row";
 import { Jumbotron, Container } from "react-bootstrap";
-import config from "../../editable-stuff/config.js";
+import { config } from "../../editable-stuff/config.js";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 function Skills() {

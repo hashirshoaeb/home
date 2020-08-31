@@ -1,4 +1,4 @@
-const configuration = {
+const config = {
   //NAVIGATION BAR
   showNavigationbar: true,
 
@@ -79,12 +79,15 @@ const configuration = {
     { name: "Organization", value: 70 },
     { name: "Creativity", value: 90 },
   ],
-
-  //GET IN TOUCH SECTION
-  showGetInTouch: true,
-  footerMessage:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  emailAddress: "hashirshoaeb@gmail.com",
 };
 
-export default configuration;
+//GET IN TOUCH SECTION
+const getInTouch = {
+  show: true,
+  heading: "Get In Touch",
+  message:
+    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "hashirshoaeb@gmail.com",
+};
+
+export { config, getInTouch };

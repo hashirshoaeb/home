@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import config from "./editable-stuff/config.js";
+import { config, getInTouch } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -10,6 +10,7 @@ import Skills from "./components/home/Skills";
 import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
 import { ConfigProvider } from "react-avatar";
+import GetInTouch from "./components/home/GetInTouch.jsx";
 
 const { avatarRedirectUrl, showNavigationbar, showBlog, showSkills } = config;
 
@@ -34,7 +35,15 @@ const App = () => {
         <Route path="/" exact component={() => <Home ref={titleRef} />} />
         {showBlog && <Route path="/blog" exact component={Blog} />}
         {showBlog && <Route path="/blog/:id" component={BlogPost} />}
-        <Footer />
+        <Footer>
+          {getInTouch.show && (
+            <GetInTouch
+              heading={getInTouch.heading}
+              message={getInTouch.message}
+              email={getInTouch.email}
+            />
+          )}
+        </Footer>
       </BrowserRouter>
     </ConfigProvider>
   );

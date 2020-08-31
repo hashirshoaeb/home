@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
-import config from "../../editable-stuff/config.js";
+import { config } from "../../editable-stuff/config.js";
 import axios from "axios";
 
 const Project = () => {

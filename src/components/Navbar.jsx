@@ -5,7 +5,7 @@ import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Pdf from "../editable-stuff/resume.pdf";
-import config from "../editable-stuff/config.js";
+import { config } from "../editable-stuff/config.js";
 
 const Navigation = React.forwardRef((props, ref) => {
   const { showBlog, FirstName } = config;
