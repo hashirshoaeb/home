@@ -56,9 +56,12 @@ const config = {
 
   //BLOG SECTION
   showBlog: false,
+};
 
-  //SKILLS SECTION
-  showSkills: true,
+// SKILLS SECTION
+const skills = {
+  show: true,
+  heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
     { name: "SQL", value: 75 },
@@ -90,4 +93,4 @@ const getInTouch = {
   email: "hashirshoaeb@gmail.com",
 };
 
-export { config, getInTouch };
+export { config, getInTouch, skills };
