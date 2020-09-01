@@ -7,7 +7,7 @@ const configuration = {
   MiddleName: "",
   LastName: "Varghese",
   devDesc:
-     "| Engineer | Entrepreneur | Data Scientist| Teacher | Editor | Programmer  ",
+     "Engineer ⚛ Entrepreneur ⚛ Data Scientist ⚛ Teacher ⚛ Editor ⚛ Programmer  ",
 
 
   //Background
@@ -19,6 +19,7 @@ const configuration = {
 icons: [
     {
       image: "fa-github",
+    
       url: "https://github.com/bibinvargheset",
     },
    
@@ -41,7 +42,11 @@ icons: [
 	{
       image: "fa-stack-overflow",
       url: "https://stackoverflow.com/users/3561865/bibinvargheset",
-    },
+	},
+	{
+      image: "fa-hackerrank",
+      url: "https://www.hackerrank.com/bibinvargheset",
+	},
   ],
 
   //ABOUT SECTION
