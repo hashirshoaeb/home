@@ -63,7 +63,7 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
   reposLength: 4, // setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none
-  specificRepos: ["home"], // if you want to display specfic projects, add the repository names, i.e ["project-1", "project-2"]
+  specificRepos: [], // if you want to display specfic projects, add the repository names, i.e ["project-1", "project-2"]
 };
 
 // SKILLS SECTION

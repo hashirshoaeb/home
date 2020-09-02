@@ -26,28 +26,41 @@ const Project = ({ heading, username, length, specfic }) => {
 
   const [projectsArray, setProjectsArray] = useState([]);
 
-  const fetchAllRepos = useCallback(async () => {
+  const fetchRepos = useCallback(async () => {
+    let repoList = [];
     try {
+      // getting all repos
       const response = await axios.get(allReposAPI);
-      setProjectsArray(response.data.slice(0, length));
+      // slicing to the length
+      repoList = [...response.data.slice(0, length)];
+      // adding specified repos
+      try {
+        // specfic.forEach(async (repoName) => {
+        //   const response = await axios.get(`${specficReposAPI}/${repoName}`);
+        //   repoList.push(response.data);
+        // });
+        // specfic(async (repoName, index) => {
+        //   const response = await axios.get(`${specficReposAPI}/${repoName}`);
+        //   repoList.push(response.data);
+        // });
+        for (let repoName of specfic) {
+          const response = await axios.get(`${specficReposAPI}/${repoName}`);
+          repoList.push(response.data);
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+      // setting projectArray
+      // TODO: remove the duplication.
+      setProjectsArray(repoList);
     } catch (error) {
       console.error(error.message);
     }
-  }, [allReposAPI, length]);
-
-  const fetchSpecficRepos = useCallback(async () => {
-    try {
-      for (let repoName of specfic) {
-        const response = await axios.get(`${specficReposAPI}/${repoName}`);
-        setProjectsArray((projectsArray) => [...projectsArray, response]);
-      }
-    } catch (error) {}
-  }, [projectsArray, specfic, specficReposAPI]);
+  }, [allReposAPI, length, specfic, specficReposAPI]);
 
   useEffect(() => {
-    fetchAllRepos();
-    // fetchSpecficRepos();
-  }, [fetchAllRepos]);
+    fetchRepos();
+  }, [fetchRepos]);
 
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
