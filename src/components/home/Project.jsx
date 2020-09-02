@@ -35,14 +35,6 @@ const Project = ({ heading, username, length, specfic }) => {
       repoList = [...response.data.slice(0, length)];
       // adding specified repos
       try {
-        // specfic.forEach(async (repoName) => {
-        //   const response = await axios.get(`${specficReposAPI}/${repoName}`);
-        //   repoList.push(response.data);
-        // });
-        // specfic(async (repoName, index) => {
-        //   const response = await axios.get(`${specficReposAPI}/${repoName}`);
-        //   repoList.push(response.data);
-        // });
         for (let repoName of specfic) {
           const response = await axios.get(`${specficReposAPI}/${repoName}`);
           repoList.push(response.data);
