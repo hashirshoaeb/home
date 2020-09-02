@@ -46,7 +46,11 @@ icons: [
 	{
       image: "fa-hackerrank",
       url: "https://www.hackerrank.com/bibinvargheset",
-	},
+  },
+  {
+    image: "fa-kaggle",
+    url: "https://www.kaggle.com/bibinvargheset",
+  },
   ],
 
   //ABOUT SECTION
