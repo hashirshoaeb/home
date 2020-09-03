@@ -32,12 +32,14 @@ const Home = React.forwardRef((props, ref) => {
           imgSize={about.imageSize}
         />
       )}
-      <Project
-        heading={repos.heading}
-        username={repos.gitHubUsername}
-        length={repos.reposLength}
-        specfic={repos.specificRepos}
-      />
+      {repos.show && (
+        <Project
+          heading={repos.heading}
+          username={repos.gitHubUsername}
+          length={repos.reposLength}
+          specfic={repos.specificRepos}
+        />
+      )}
       {skills.show && (
         <Skills
           heading={skills.heading}
