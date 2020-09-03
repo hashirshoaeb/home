@@ -2,24 +2,15 @@ import React from "react";
 import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import { config } from "../../editable-stuff/config.js";
 
-const MainBody = React.forwardRef((props, ref) => {
-  const {
-    FirstName,
-    LastName,
-    MiddleName,
-    devDesc,
-    icons,
-    gradientColors,
-  } = config;
-  return (
-    <>
+const MainBody = React.forwardRef(
+  ({ gradient, title, message, icons }, ref) => {
+    return (
       <Jumbotron
         fluid
         id="home"
         style={{
-          background: `linear-gradient(136deg,${gradientColors})`,
+          background: `linear-gradient(136deg,${gradient})`,
           backgroundSize: "1200% 1200%",
         }}
         className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
@@ -27,11 +18,11 @@ const MainBody = React.forwardRef((props, ref) => {
         <div id="stars"></div>
         <Container className="text-center">
           <h1 ref={ref} className="display-1">
-            {`${FirstName} ${MiddleName} ${LastName}`}
+            {title}
           </h1>
           <Typist className="lead typist" cursor={{ show: false }}>
             {" "}
-            {devDesc}
+            {message}
           </Typist>
           <div className="p-5">
             {icons.map((icon, index) => (
@@ -56,8 +47,8 @@ const MainBody = React.forwardRef((props, ref) => {
           </a>
         </Container>
       </Jumbotron>
-    </>
-  );
-});
+    );
+  }
+);
 
 export default MainBody;

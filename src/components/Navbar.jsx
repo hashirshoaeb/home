@@ -5,10 +5,10 @@ import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Pdf from "../editable-stuff/resume.pdf";
-import { config } from "../editable-stuff/config.js";
+import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
 
 const Navigation = React.forwardRef((props, ref) => {
-  const { showBlog, FirstName } = config;
+  // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
@@ -41,22 +41,24 @@ const Navigation = React.forwardRef((props, ref) => {
       expand="lg"
     >
       <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
-        {`<${FirstName} />`}
+        {`<${mainBody.firstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          {showBlog && (
+          {/* {
             <Nav.Link className="nav-link lead">
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </Nav.Link>
+          } */}
+          {repos.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#projects"}
+            >
+              Projects
+            </Nav.Link>
           )}
-          <Nav.Link
-            className="nav-link lead"
-            href={process.env.PUBLIC_URL + "/#projects"}
-          >
-            Projects
-          </Nav.Link>
           <Nav.Link
             className="nav-link lead"
             href={Pdf}
@@ -65,18 +67,22 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             Resume
           </Nav.Link>
-          <Nav.Link
-            className="nav-link lead"
-            href={process.env.PUBLIC_URL + "/#aboutme"}
-          >
-            About
-          </Nav.Link>
-          <Nav.Link
-            className="nav-link lead"
-            href={process.env.PUBLIC_URL + "/#skills"}
-          >
-            Skills
-          </Nav.Link>
+          {about.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#aboutme"}
+            >
+              About
+            </Nav.Link>
+          )}
+          {skills.show && (
+            <Nav.Link
+              className="nav-link lead"
+              href={process.env.PUBLIC_URL + "/#skills"}
+            >
+              Skills
+            </Nav.Link>
+          )}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

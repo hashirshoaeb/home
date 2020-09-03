@@ -1,19 +1,15 @@
-const config = {
-  //NAVIGATION BAR
-  showNavigationbar: true,
+// Navigation Bar SECTION
+const navBar = {
+  show: true,
+};
 
-  //MAIN VIEW
-  FirstName: "Hashir",
-  MiddleName: "",
-  LastName: "Shoaib",
-  devDesc: " Passionate about teaching machines how to think ",
-
-  //Background
-  backgroundType: "gradient",
-  plainBackgroundMode: "daylight",
+// Main Body SECTION
+const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-
-  //Social Media Link Icons
+  firstName: "Hashir",
+  middleName: "",
+  lastName: "Shoaib",
+  message: " Passionate about teaching machines how to think ",
   icons: [
     {
       image: "fa-github",
@@ -36,9 +32,6 @@ const config = {
       url: "https://www.twitter.com/hashirshoaeb/",
     },
   ],
-
-  //BLOG SECTION
-  showBlog: false,
 };
 
 // ABOUT SECTION
@@ -108,4 +101,9 @@ const getInTouch = {
   email: "hashirshoaeb@gmail.com",
 };
 
-export { config, getInTouch, skills, repos, about };
+// Blog SECTION
+// const blog = {
+//   show: false,
+// };
+
+export { navBar, mainBody, getInTouch, skills, repos, about };
