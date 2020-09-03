@@ -1,6 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import { config, getInTouch, skills, repos } from "./editable-stuff/config.js";
+import {
+  config,
+  getInTouch,
+  skills,
+  repos,
+  about,
+} from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -18,7 +24,14 @@ const Home = React.forwardRef((props, ref) => {
   return (
     <>
       <MainBody ref={ref} />
-      <AboutMe />
+      {about.show && (
+        <AboutMe
+          heading={about.heading}
+          message={about.message}
+          link={about.imageLink}
+          imgSize={about.imageSize}
+        />
+      )}
       <Project
         heading={repos.heading}
         username={repos.gitHubUsername}

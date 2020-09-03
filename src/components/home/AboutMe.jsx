@@ -1,33 +1,31 @@
 import React from "react";
 import Pdf from "../../editable-stuff/resume.pdf";
-import { config } from "../../editable-stuff/config.js";
+
 import axios from "axios";
 
 const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 );
 
-const AboutMe = () => {
-  const [resumeURL] = React.useState(Pdf);
-  const { aboutHeading, aboutDescription, profilePictureLink } = config;
+const AboutMe = ({ heading, message, link, imgSize }) => {
+  const resumeURL = Pdf;
+
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
-  const [showPic, setShowPic] = React.useState(Boolean(profilePictureLink));
+  const [showPic, setShowPic] = React.useState(Boolean(link));
 
   React.useEffect(() => {
-    if (profilePictureLink && !pictureLinkRegex.test(profilePictureLink)) {
+    if (link && !pictureLinkRegex.test(link)) {
       handleRequest();
     } else {
-      setProfilePicUrl(profilePictureLink);
+      setProfilePicUrl(link);
     }
-  }, [profilePictureLink]);
+  }, [link]);
 
   const handleRequest = async () => {
     const instaLink = "https://www.instagram.com/";
     const instaQuery = "/?__a=1";
     try {
-      const response = await axios.get(
-        instaLink + profilePictureLink + instaQuery
-      );
+      const response = await axios.get(instaLink + link + instaQuery);
       setProfilePicUrl(response.data.graphql.user.profile_pic_url_hd);
     } catch (error) {
       setShowPic(false);
@@ -45,13 +43,15 @@ const AboutMe = () => {
                 className="border border-secondary rounded-circle"
                 src={profilePicUrl}
                 alt="profilepicture"
+                width={imgSize}
+                height={imgSize}
               />
             )}
           </div>
 
           <div className={`col-lg-${showPic ? "7" : "12"}`}>
-            <h2 className="display-4 mb-5 text-center">{aboutHeading}</h2>
-            <p className="lead text-center">{aboutDescription}</p>
+            <h2 className="display-4 mb-5 text-center">{heading}</h2>
+            <p className="lead text-center">{message}</p>
             {resumeURL && (
               <p className="lead text-center">
                 <a

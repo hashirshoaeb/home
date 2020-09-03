@@ -37,25 +37,27 @@ const config = {
     },
   ],
 
-  //ABOUT SECTION
-  aboutHeading: "About Me",
-  //If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
-  //a) your Instagram username (i.e:profilePictureLink:"johnDoe123",)
-  //b) a link to an hosted image you want to use as your personal picture (i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",)
-  //If you do not want any picture to be displayed, just leave it empty :)
-  profilePictureLink: "hashirshoaeb",
-  aboutDescription:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I see myself as a Machine Learning Engineer and Web Developer. In my free time I like working on open source projects and learning new things. ",
-
-  //PROJECTS SECTION
-  projectHeading: "Recent Projects",
-  gitHubLink: "https://api.github.com/users/",
-  gitHubQuery: "/repos?sort=updated&direction=desc",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  projectsLength: 4,
-
   //BLOG SECTION
   showBlog: false,
+};
+
+// ABOUT SECTION
+// If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
+//a) your Instagram username
+//      i.e:profilePictureLink:"johnDoe123",
+//b) a link to an hosted image
+//      i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
+//c) image in "editable-stuff" directory and use require("") to import here,
+//      i.e: profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
+//d) If you do not want any picture to be displayed, just leave it empty :)
+//      i.e: profilePictureLink: "",
+const about = {
+  show: true,
+  heading: "About Me",
+  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageSize: 375,
+  message:
+    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I see myself as a Machine Learning Engineer and Web Developer. In my free time I like working on open source projects and learning new things. ",
 };
 
 // PROJECTS SECTION
@@ -101,4 +103,4 @@ const getInTouch = {
   email: "hashirshoaeb@gmail.com",
 };
 
-export { config, getInTouch, skills, repos };
+export { config, getInTouch, skills, repos, about };
