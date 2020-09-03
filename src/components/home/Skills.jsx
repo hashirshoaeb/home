@@ -32,7 +32,7 @@ function Skills({ heading, hardSkills, softSkills }) {
           <Tab
             tabClassName="skills-tab  "
             eventKey="hard-skills"
-            title="Hard Skills"
+            title="Technical Skills"
           >
             <Row className="pt-3 px-1">
               <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
