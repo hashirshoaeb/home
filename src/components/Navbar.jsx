@@ -4,7 +4,6 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Pdf from "../editable-stuff/resume.pdf";
 import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
 
 const Navigation = React.forwardRef((props, ref) => {
@@ -61,7 +60,7 @@ const Navigation = React.forwardRef((props, ref) => {
           )}
           <Nav.Link
             className="nav-link lead"
-            href={Pdf}
+            href={about.resume}
             target="_blank"
             rel="noreferrer noopener"
           >

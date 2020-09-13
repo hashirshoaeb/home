@@ -44,6 +44,10 @@ const mainBody = {
 //      i.e: profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
 //d) If you do not want any picture to be displayed, just leave it empty :)
 //      i.e: profilePictureLink: "",
+// For Resume either provide link to your resume or import from "editable-stuff" directory
+//     i.e resume: require("../editable-stuff/resume.pdf"),
+//         resume: "https://docs.google.com/document/d/16apx8s6zlVwCu7Aea6jdJtXOnAb6GsNP8QAsTv7gWZo/edit",
+
 const about = {
   show: true,
   heading: "About Me",
@@ -51,6 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I see myself as a Machine Learning Engineer and Web Developer. In my free time I like working on open source projects and learning new things. ",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
