@@ -22,12 +22,12 @@ const ProjectCard = ({ value }) => {
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
           {languages_url ? (
-            <Language url={languages_url} />
+            <Language languages_url={languages_url} repo_url={svn_url} />
           ) : (
             <Skeleton count={3} />
           )}
           {value ? (
-            <CardFooter star_count={stargazers_count} pushed_at={pushed_at} />
+            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
           ) : (
             <Skeleton />
           )}
@@ -53,17 +53,17 @@ const CardButtons = ({ svn_url }) => {
   );
 };
 
-const Language = ({ url }) => {
+const Language = ({ languages_url, repo_url }) => {
   const [data, setData] = useState([]);
 
   const handleRequest = useCallback(async () => {
     try {
-      const response = await axios.get(url);
+      const response = await axios.get(languages_url);
       return setData(response.data);
     } catch (error) {
       console.error(error.message);
     }
-  }, [url]);
+  }, [languages_url]);
 
   useEffect(() => {
     handleRequest();
@@ -81,17 +81,22 @@ const Language = ({ url }) => {
       Languages:{" "}
       {array.length
         ? array.map((language) => (
-            <p key={language} className="badge badge-light card-link">
+            <a
+              key={language} 
+              className="badge badge-light card-link"
+              href={repo_url + `/search?l=${language}`}
+              target=" _blank"
+            >
               {language}:{" "}
               {Math.trunc((data[language] / total_count) * 1000) / 10} %
-            </p>
+            </a>
           ))
         : "code yet to be deployed."}
     </div>
   );
 };
 
-const CardFooter = ({ star_count, pushed_at }) => {
+const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
@@ -115,10 +120,16 @@ const CardFooter = ({ star_count, pushed_at }) => {
 
   return (
     <p className="card-text">
-      <span className="text-dark card-link mr-4">
-        <i className="fab fa-github" /> Stars{" "}
-        <span className="badge badge-dark">{star_count}</span>
-      </span>
+      <a
+        href={repo_url + "/stargazers"}
+        target=" _blank"
+        className="text-dark text-decoration-none"
+      >
+        <span className="text-dark card-link mr-4">
+          <i className="fab fa-github" /> Stars{" "}
+          <span className="badge badge-dark">{star_count}</span>
+        </span>
+      </a>
       <small className="text-muted">Updated {updated_at}</small>
     </p>
   );
