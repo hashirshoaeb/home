@@ -54,7 +54,7 @@ const about = {
   imageLink: require("../editable-stuff/face.jpg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I see myself as a Machine Learning Engineer and Web Developer. In my free time I like working on open source projects and learning new things. ",
+    "I am Nicolás Pérez de Olaguer, an engineer from Barcelona based in Berlin. I am graduated in Telecomunications engineering from Universitat Pomepu Fabra of Barcelona and I have a master degree in Intelligent Adaptive Systems from University of Hamburg. I am focused on applying Machine Learning and computer vision in real-world problems.",
   resume: require("../editable-stuff/resume.pdf"),
 };
 
@@ -66,7 +66,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "nicolasperezdeo", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -89,23 +89,23 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Keras / Tensorflow", value: 85 },
+    { name: "OpenCV", value: 80 },
+    { name: "Git", value: 85 },
+    { name: "Docker", value: 65 },
+    { name: "Matlab", value: 90 },
+    { name: "PyTest", value: 65 },
+    { name: "Flask", value: 65 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
     { name: "Collaboration", value: 90 },
     { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
+    { name: "Adaptability", value: 95 },
+    { name: "Problem Solving", value: 80 },
     { name: "Empathy", value: 90 },
     { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Agile/Scrum methodologies", value: 90 },
   ],
 };
 
