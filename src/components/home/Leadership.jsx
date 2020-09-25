@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Profiler } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-const Leadership = ({ heading, message, img }) => {
+const Leadership = ({ heading, message, img, imageSize }) => {
   return (
     <div
       id="leadership"
@@ -23,8 +23,8 @@ const Leadership = ({ heading, message, img }) => {
                       className="d-block w-100"
                       src={value.img}
                       alt="First slide"
-                      width="615"
-                      height="450"
+                      width={imageSize.width}
+                      height={imageSize.height}
                     />
                     <Carousel.Caption>
                       <h3>First slide label</h3>

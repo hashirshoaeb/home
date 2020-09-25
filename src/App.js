@@ -52,6 +52,7 @@ const Home = React.forwardRef((props, ref) => {
           heading={leadership.heading}
           message={leadership.message}
           img={leadership.images}
+          imageSize={leadership.imageSize}
         />
       )}
       {skills.show && (

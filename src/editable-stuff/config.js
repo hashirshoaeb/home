@@ -81,6 +81,10 @@ const leadership = {
     { img: require("../editable-stuff/hashirshoaeb.png") },
     { img: require("../editable-stuff/hashirshoaeb.png") },
   ],
+  imageSize: {
+    width:"615",
+    height:"450"
+  }
 };
 
 // SKILLS SECTION
