@@ -23,15 +23,10 @@ const Leadership = ({ heading, message, img }) => {
                       className="d-block w-100"
                       src={value.img}
                       alt="First slide"
-                      width="615"
+                      width="550"
                       height="450"
                     />
                     <Carousel.Caption>
-                      <h3>First slide label</h3>
-                      <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                      </p>
                     </Carousel.Caption>
                   </Carousel.Item>
                 );

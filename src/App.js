@@ -15,6 +15,7 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
+import Experience from "./components/home/Experience";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
@@ -54,6 +55,7 @@ const Home = React.forwardRef((props, ref) => {
           img={leadership.images}
         />
       )}
+      <Experience/>
       {skills.show && (
         <Skills
           heading={skills.heading}

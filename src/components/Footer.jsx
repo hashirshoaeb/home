@@ -12,16 +12,15 @@ const Footer = (props) => {
         <a
           className="badge badge-dark"
           rel="noopener"
-          href="https://github.com/hashirshoaeb"
+          href="https://github.com/nicolasperezdeo"
           aria-label="My GitHub"
         >
-          Hashir Shoaib
+          Nicolás Pérez de Olaguer
         </a>{" "}
         using <i className="fab fa-react" />
         <p>
           <small className="text-muted">
-            Project code is open source. Feel free to fork and make your own
-            version.
+          Thanks for reading! If you have a project proposal, do not hesitate to contact me :)
           </small>
         </p>
       </Container>

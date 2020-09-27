@@ -8,8 +8,8 @@ const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
   firstName: "Nicolas",
   middleName: "",
-  lastName: "Pérez de Olaguer Santamaría",
-  message: " Passionate about teaching machines how to think ",
+  lastName: "Pérez de Olaguer",
+  message: " Machine learning engineer, researcher and whatnot",
   icons: [
     {
       image: "fa-github",
@@ -51,10 +51,10 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/face.jpg"),
+  imageLink: require("../editable-stuff/face_small.png"),
   imageSize: 375,
   message:
-    "I am Nicolás Pérez de Olaguer, an engineer from Barcelona based in Berlin. I am graduated in Telecomunications engineering from Universitat Pomepu Fabra of Barcelona and I have a master degree in Intelligent Adaptive Systems from University of Hamburg. I am focused on applying Machine Learning and computer vision in real-world problems.",
+    "I am Nicolás Pérez de Olaguer, an engineer from Barcelona based in Berlin. I have graduated in Telecommunications Engineering at the Universitat Pompeu Fabra of Barcelona and I completed a master's degree in Intelligent Adaptive Systems at the University of Hamburg. I focus on applying machine learning and computer vision to real-world problems.",
   resume: require("../editable-stuff/resume.pdf"),
 };
 
@@ -74,12 +74,14 @@ const repos = {
 // Leadership SECTION
 const leadership = {
   show: true,
-  heading: "Leadership",
+  heading: "Research that matters",
   message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+    "Throughout my corporative and academic career, I continually sought to apply my knowledge and skills into solutions that positively impact society. I mostly focused on applications in the bio-medical field. Working with cochlear implants, epilepsy prediction, signal processing and medical imaging allowed me to explore a wide range of technologies. The prospect of making an impact through my research keeps me motivated to deliver high-quality work. With this in mind, I am searching for opportunities to further advance my skills and give me a sense of purpose.",
   images: [
-    { img: require("../editable-stuff/face.jpg") },
-    { img: require("../editable-stuff/face.jpg") },
+    { img: require("../editable-stuff/master.png") },
+    { img: require("../editable-stuff/xray.png") },
+    { img: require("../editable-stuff/cochlear.jpg") },
+    { img: require("../editable-stuff/chimera.gif") },
   ],
 };
 
@@ -99,19 +101,19 @@ const skills = {
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
+    { name: "Collaboration", value: 80 },
+    { name: "Positivity", value: 85 },
     { name: "Adaptability", value: 95 },
     { name: "Problem Solving", value: 80 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Agile/Scrum methodologies", value: 90 },
+    { name: "Empathy", value: 80 },
+    { name: "Organization", value: 95 },
+    { name: "Agile/Scrum Methodologies", value: 90 },
   ],
 };
 
 // GET IN TOUCH SECTION
 const getInTouch = {
-  show: true,
+  show: false,
   heading: "Get In Touch",
   message:
     "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
