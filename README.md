@@ -73,9 +73,9 @@ Project is open source. Feel free to make your own version. All you need to do i
 
 ## Prerequisites 🍪
 
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
+You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should have also own a GitHub account.
 
-## Setup And Deployment 🔧
+## Setup and Deployment 🔧
 
 1. To Get Started, Fork this repository to your GitHub account:
 2. Clone the forked repo from your account using:
