@@ -51,21 +51,26 @@ Dependencies defined in package.json:
 ## Structure ⚓
 
 - Navigation bar (optional)
-- Blog (optional)
 - Body
   - Name | Profession
   - Contact / Follow / Find me / Facebook / LinkedIn / GitHub / Instagram / Email / CodePen
   - Resume | About me
 - About Me
-  - Display picture (using Instagram API) (optional)
+  - Display picture (optional)
   - About myself, my Interests, Goals and Hobbies
   - Things I'm good at (Skills)
   - Resume button
 - Recent Projects (using GitHub API) (optional)
+- Leadership (optional)
+  - Paragraph
+  - Carousel images
+- Skills (optional)
+  - Technical Skills
+  - Soft Skills
 - Footer
-  - Acknowledgements (contributors)
+  - Footer Note (optional)
   - Copyrights - open source
-  - (quote: Dream big, Think big)
+  - Acknowledgements(
 
 ## Sharing 💗
 
@@ -142,15 +147,6 @@ If anyone is looking to make some contribution, the following are issues that yo
 - [ ] Code optimization
 - [x] Routing
 - [ ] SEO
-
-## Upcoming Features / Improvements 🔗
-
-- [x] Button and place for resume/CV.
-- [x] Option: add or not to add Instagram's display picture.
-- [x] Number of projects to show in website.
-- [x] If the Number of Projects are zero, hide the heading (Recent Projects).
-- [ ] Blogs page.
-- [ ] Make resume optional.
 
 ## Showcase 🚀
 
