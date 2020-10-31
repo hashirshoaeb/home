@@ -1,0 +1,92 @@
+$type-scales: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+);
+
+$heading-type-scale-base: minor-third;
+$display-type-scale-base: minor-third;
+
+@function check-type-scale-value($scale) {
+  @if map-has-key($type-scales, $scale) {
+    @return map-get($type-scales, $scale);
+  } @else if type-of($scale) == number and unitless($scale) {
+    @return $scale;
+  } @else {
+    @error "Sorry, `#{$scale}` is not a unitless number value or a pre-defined key in the $type-scales map.";
+  }
+}
+
+@mixin create-heading-type-scale($scale) {
+  $the-heading-type-scale: check-type-scale-value($scale);
+  $font-size-h6: $font-size-base;
+  $font-size-h5: $font-size-h6 * $the-heading-type-scale;
+  $font-size-h4: $font-size-h5 * $the-heading-type-scale;
+  $font-size-h3: $font-size-h4 * $the-heading-type-scale;
+  $font-size-h2: $font-size-h3 * $the-heading-type-scale;
+  $font-size-h1: $font-size-h2 * $the-heading-type-scale;
+  $font-size-display-base: $font-size-h1 !global;
+  h1,
+  .h1 {
+    font-size: $font-size-h1;
+  }
+  h2,
+  .h2 {
+    font-size: $font-size-h2;
+  }
+  h3,
+  .h3 {
+    font-size: $font-size-h3;
+  }
+  h4,
+  .h4 {
+    font-size: $font-size-h4;
+  }
+  h5,
+  .h5 {
+    font-size: $font-size-h5;
+  }
+  h6,
+  .h6 {
+    font-size: $font-size-h6;
+  }
+}
+
+@mixin create-display-type-scale($scale) {
+  $the-display-type-scale: check-type-scale-value($scale);
+  $font-size-display-4: $font-size-display-base + $font-size-base;
+  $font-size-display-3: $font-size-display-4 * $the-display-type-scale;
+  $font-size-display-2: $font-size-display-3 * $the-display-type-scale;
+  $font-size-display-1: $font-size-display-2 * $the-display-type-scale;
+  .display-4 {
+    font-size: $font-size-display-4;
+  }
+  .display-3 {
+    font-size: $font-size-display-3;
+  }
+  .display-2 {
+    font-size: $font-size-display-2;
+  }
+  .display-1 {
+    font-size: $font-size-display-1;
+  }
+}
+// Create the heading font sizes
+@include create-heading-type-scale($heading-type-scale-base);
+
+// Create the display font sizes
+@include create-display-type-scale(minor-second);
+
+// At the Bootstrap md breakpoint, adjust the heading font sizes.
+
+@media (min-width: 576px) {
+  @include create-display-type-scale(major-second);
+}
+@media (min-width: 768px) {
+  @include create-display-type-scale($display-type-scale-base);
+}
+$enable-responsive-font-sizes: true;

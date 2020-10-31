@@ -51,25 +51,30 @@ Dependencies defined in package.json:
 ## Structure ⚓
 
 - Navigation bar (optional)
-- Blog (optional)
 - Body
   - Name | Profession
   - Contact / Follow / Find me / Facebook / LinkedIn / GitHub / Instagram / Email / CodePen
   - Resume | About me
 - About Me
-  - Display picture (using Instagram API) (optional)
+  - Display picture (optional)
   - About myself, my Interests, Goals and Hobbies
   - Things I'm good at (Skills)
   - Resume button
 - Recent Projects (using GitHub API) (optional)
+- Leadership (optional)
+  - Paragraph
+  - Carousel images
+- Skills (optional)
+  - Technical Skills
+  - Soft Skills
 - Footer
-  - Acknowledgements (contributors)
+  - Footer Note (optional)
   - Copyrights - open source
-  - (quote: Dream big, Think big)
+  - Acknowledgements(
 
 ## Sharing 💗
 
-Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) and add resume. Mark star ⭐ if you like this project.
+Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) and add resume. Mark star ⭐ if you like the project.
 
 ## Prerequisites 🍪
 
@@ -84,7 +89,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
      git clone https://github.com/<your-username>/home.git
    ```
 
-3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
+3. Open in editor and edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) file.
 
 4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
 
@@ -119,6 +124,13 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
      https://<your-username>.github.io/home
    ```
 
+10. To change the thumbnail image:
+
+    - Navigate to the "public" folder.  
+    - There you will see "social-image.png".  
+    - Delete it.   
+    - Take a screenshot of your version and rename it "social-image.png" and place it there.  
+    
    Next time if you make changes, repeat from step 8.
 
 Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
@@ -135,15 +147,6 @@ If anyone is looking to make some contribution, the following are issues that yo
 - [ ] Code optimization
 - [x] Routing
 - [ ] SEO
-
-## Upcoming Features / Improvements 🔗
-
-- [x] Button and place for resume/CV.
-- [x] Option: add or not to add Instagram's display picture.
-- [x] Number of projects to show in website.
-- [x] If the Number of Projects are zero, hide the heading (Recent Projects).
-- [ ] Blogs page.
-- [ ] Make resume optional.
 
 ## Showcase 🚀
 
