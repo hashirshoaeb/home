@@ -106,9 +106,9 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
     const hours = Math.trunc(diff / 1000 / 60 / 60);
 
     if (hours < 24) {
-      if (hours < 1) return setUpdatedAt("just now");
+      if (hours < 1) return setUpdated_at("just now");
       let measurement = hours === 1 ? "hour" : "hours";
-      return setUpdatedAt(`${hours.toString()} ${measurement} ago`);
+      return setUpdated_at(`${hours.toString()} ${measurement} ago`);
     } else {
       const options = { day: "numeric", month: "long", year: "numeric" };
       const time = new Intl.DateTimeFormat("en-US", options).format(date);

@@ -27,10 +27,9 @@ const Leadership = ({ heading, message, img, imageSize }) => {
                       height={imageSize.height}
                     />
                     <Carousel.Caption>
-                      <h3>First slide label</h3>
+                      <h3>{value.label}</h3>
                       <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
+                        {value.paragraph}
                       </p>
                     </Carousel.Caption>
                   </Carousel.Item>
