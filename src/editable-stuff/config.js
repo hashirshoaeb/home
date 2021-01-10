@@ -130,9 +130,43 @@ const getInTouch = {
   email: "hashirshoaeb@gmail.com",
 };
 
+const experiences = {
+  show: true,
+  data: [
+    {
+      role: 'Software Engineer',
+      company: 'Quora',
+      companylogo: require('../assets/img/quoraLogo.png'),
+      date: 'June 2018 – Present',
+      desc:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      descBullets: [
+        'Lorem ipsum dolor sit amet',
+        'Lorem ipsum dolor sit amet.',
+      ],
+    },
+    {
+      role: 'Front-End Developer',
+      company: 'Facebook',
+      companylogo: require('../assets/img/facebookLogo.png'),
+      date: 'May 2017 – May 2018',
+      desc:
+        'Lorem ipsum dolor sit amet, consefdctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      role: 'Software Engineer Intern',
+      company: 'Airbnb',
+      companylogo: require('../assets/img/airbnbLogo.png'),
+      date: 'Jan 2015 – Sep 2015',
+      desc:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ]
+}
+
 // Blog SECTION
 // const blog = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
