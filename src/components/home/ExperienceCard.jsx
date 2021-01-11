@@ -2,27 +2,26 @@ import React from 'react';
 
 import { 
     Col,
-    Button,
     Card
  } from "react-bootstrap";
 const ExperienceCard = ({data}) => {
     return ( 
         <Col lg="4">
-             <Card className="shadow-lg--hover shadow border-0 text-center rounded my-2">
+             <Card className="shadow-lg--hover shadow border-0 text-center rounded m-3">
                <Card.Header>
                     <h5>{data.company}</h5>
                 </Card.Header>
                 <Card.Body className="py-5">
                     <Card.Img className=" bg-white rounded-circle mb-3 img-center img-fluid shadow-lg" src={data.companylogo} style={{ width: "100px" }} alt=""/>
-                    <Card.Title tag="h5">{data.role}</Card.Title>
+                    <Card.Title tag="h5">{data.heading}</Card.Title>
                     <Card.Subtitle>{data.date}</Card.Subtitle>
                     <Card.Text className="my-3 text-left">
-                        {data.desc}
+                        {data.description}
                     </Card.Text>
                     <ul className="text-left">
                             {
-                                data.descBullets ? 
-                                data.descBullets.map((desc) => {
+                                data.descriptionBullets ? 
+                                data.descriptionBullets.map((desc) => {
                                     return <li key={desc}>{desc}</li>
                                 }) : null
                             }

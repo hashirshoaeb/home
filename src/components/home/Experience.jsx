@@ -7,7 +7,7 @@ import {
 
 const Experience = ({experiences}) => {
     return (  
-        <section className="section section-lg">
+        <section className="section section-lg mb-5">
             <Container>
             <h2 className="display-4 pb-5 text-center">
                     Experiences

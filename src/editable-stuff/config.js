@@ -134,31 +134,31 @@ const experiences = {
   show: true,
   data: [
     {
-      role: 'Software Engineer',
-      company: 'Quora',
+      heading: 'Software Engineer', // Here add your role in job role role 
+      company: 'Quora', // Here Add Company Name
       companylogo: require('../assets/img/quoraLogo.png'),
-      date: 'June 2018 – Present',
-      desc:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      descBullets: [
+      date: 'June 2018 – Present', // DUration of Job
+      description: 
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',// Add Description
+      descriptionBullets: [
         'Lorem ipsum dolor sit amet',
         'Lorem ipsum dolor sit amet.',
-      ],
+      ], // Description Bullets (Show Description as a list) (optional)
     },
     {
-      role: 'Front-End Developer',
+      heading: 'Front-End Developer',
       company: 'Facebook',
       companylogo: require('../assets/img/facebookLogo.png'),
       date: 'May 2017 – May 2018',
-      desc:
+      description:
         'Lorem ipsum dolor sit amet, consefdctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      role: 'Software Engineer Intern',
+      heading: 'Software Engineer Intern',
       company: 'Airbnb',
       companylogo: require('../assets/img/airbnbLogo.png'),
       date: 'Jan 2015 – Sep 2015',
-      desc:
+      description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
   ]
