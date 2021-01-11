@@ -7,11 +7,11 @@ import {
 const ExperienceCard = ({data}) => {
     return ( 
         <Col lg="4">
-             <Card className="shadow-lg--hover shadow border-0 text-center rounded m-3">
+             <Card className="shadow--hover shadow-sm border-1 text-center rounded mx-3">
                <Card.Header>
                     <h5>{data.company}</h5>
                 </Card.Header>
-                <Card.Body className="py-5">
+                <Card.Body className="pb-5">
                     <Card.Img className=" bg-white rounded-circle mb-3 img-center img-fluid shadow-lg" src={data.companylogo} style={{ width: "100px" }} alt=""/>
                     <Card.Title tag="h5">{data.heading}</Card.Title>
                     <Card.Subtitle>{data.date}</Card.Subtitle>
