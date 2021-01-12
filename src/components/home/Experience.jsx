@@ -3,22 +3,25 @@ import ExperienceCard from "./ExperienceCard";
 import {
     Container,
     Row,
+    Jumbotron
 } from "react-bootstrap";
 
 const Experience = ({experiences}) => {
     return (  
-        <section className="section section-lg mb-5">
+        <section className="section">
             <Container>
-            <h2 className="display-4 pb-5 text-center">
-                    Experiences
-                </h2>
-                <Row>
-                    {
-                        experiences.map(data => {
-                            return <ExperienceCard key={data.company} data={data} />
-                        })
-                    }
-                </Row>
+                <Jumbotron fluid className="bg-white">
+                    <h2 className="display-4 mb-5 text-center">
+                        {experiences.heading}
+                    </h2>
+                    <Row>
+                        {
+                            experiences.data.map(data => {
+                                return <ExperienceCard key={data.company} data={data} />
+                            })
+                        }
+                    </Row>
+                </Jumbotron>
             </Container>
         </section>
     );

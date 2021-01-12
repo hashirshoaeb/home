@@ -132,34 +132,17 @@ const getInTouch = {
 
 const experiences = {
   show: true,
+  heading: "Experiences",
   data: [
     {
-      heading: 'Software Engineer', // Here add your role in job role role 
-      company: 'Quora', // Here Add Company Name
-      companylogo: require('../assets/img/quoraLogo.png'),
-      date: 'June 2018 – Present', // DUration of Job
-      description: 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',// Add Description
-      descriptionBullets: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet.',
-      ], // Description Bullets (Show Description as a list) (optional)
+      role: 'Software Engineer',// Here Add Company Name
+      companylogo: require('../assets/img/dell.png'),
+      date: 'June 2018 – Present',
     },
     {
-      heading: 'Front-End Developer',
-      company: 'Facebook',
-      companylogo: require('../assets/img/facebookLogo.png'),
+      role: 'Front-End Developer',
+      companylogo: require('../assets/img/boeing.png'),
       date: 'May 2017 – May 2018',
-      description:
-        'Lorem ipsum dolor sit amet, consefdctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      heading: 'Software Engineer Intern',
-      company: 'Airbnb',
-      companylogo: require('../assets/img/airbnbLogo.png'),
-      date: 'Jan 2015 – Sep 2015',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
   ]
 }
