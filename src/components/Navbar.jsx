@@ -10,6 +10,7 @@ const Navigation = React.forwardRef((props, ref) => {
   // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [active, setActive] = useState('home');
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
@@ -29,6 +30,22 @@ const Navigation = React.forwardRef((props, ref) => {
     navBottom - scrollPosition >= ref.current.offsetTop
       ? setIsTop(false)
       : setIsTop(true);
+
+      const sections = document.querySelectorAll(".target-section");
+      
+      sections.forEach(function(current) {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute("id");
+        const pos = navBottom - scrollPosition;
+       /* If our current scroll position enters the space where current section 
+        * on screen is, set active section
+        */
+        if (pos > sectionTop && pos <= sectionTop + sectionHeight) {
+          setActive(sectionId);
+        } 
+    });
+
   }, [navBottom, navbarDimensions, ref, scrollPosition]);
 
   return (
@@ -45,19 +62,7 @@ const Navigation = React.forwardRef((props, ref) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          {/* {
-            <Nav.Link className="nav-link lead">
-              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </Nav.Link>
-          } */}
-          {repos.show && (
-            <Nav.Link
-              className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#projects"}
-            >
-              Projects
-            </Nav.Link>
-          )}
+          {repos.show && <NavLink  title ="Projects" active={active} anchor="projects"/>}
           <Nav.Link
             className="nav-link lead"
             href={about.resume}
@@ -66,26 +71,20 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             Resume
           </Nav.Link>
-          {about.show && (
-            <Nav.Link
-              className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#aboutme"}
-            >
-              About
-            </Nav.Link>
-          )}
-          {skills.show && (
-            <Nav.Link
-              className="nav-link lead"
-              href={process.env.PUBLIC_URL + "/#skills"}
-            >
-              Skills
-            </Nav.Link>
-          )}
+          {about.show && <NavLink  title ="About" active={active} anchor="aboutme"/>}
+          {skills.show && <NavLink  title ="Skills" active={active} anchor="skills"/>}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
-});
+   );
+  });
 
+  const NavLink= ({active, title, anchor}) => (
+  <Nav.Link
+  className={`nav-link lead ${active===anchor ? "active" : ""}`}
+  href={`${process.env.PUBLIC_URL}/#${anchor}`}
+  >
+    {title}
+  </Nav.Link>
+)
 export default Navigation;

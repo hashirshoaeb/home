@@ -5,7 +5,7 @@ const Leadership = ({ heading, message, img, imageSize }) => {
   return (
     <div
       id="leadership"
-      className="jumbotron jumbotron-fluid m-0"
+      className="jumbotron jumbotron-fluid m-0 target-section"
       style={{ backgroundColor: "white" }}
     >
       <div className="container container-fluid">
