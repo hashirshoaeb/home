@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Tyler Kim. I'm an incoming freshman for Columbia University who is motivated, initiative, and open to trying new things including but not limited to Data Analysis, Computer Science, and Machine Learning. ",
-  resume: "https://drive.google.com/file/d/1dbI9nAWIxG8kxsRdynA6UvFszLkrYz5d/view?usp=sharing",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -129,6 +129,13 @@ const getInTouch = {
     "If you have any questions, or if you just want to say hi, please feel free to email me at",
   email: "tylertaewook@gmail.com",
 };
+
+const contactInfo = {
+  email: "tylertaewook@gmail.com",
+  location: "New York, NY",
+  locationLink: "https://www.openstreetmap.org/way/732228095#map=18/40.80787/-73.96143",
+  occupation: "Serving mandatory military service in Korea until Aug 2022; "
+}
 
 const experiences = {
   show: true,
