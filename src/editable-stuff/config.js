@@ -147,13 +147,6 @@ const experiences = {
   ]
 }
 
-const contactInfo = {
-  email: "tylertaewook@gmail.com",
-  location: "New York, NY",
-  locationLink: "https://www.openstreetmap.org/way/732228095#map=18/40.80787/-73.96143",
-  occupation: "Serving mandatory military service in Korea until Aug 2022; "
-}
-
 // Blog SECTION
 // const blog = {
 //   show: false,
