@@ -67,7 +67,7 @@ const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "tylertaewook", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  reposLength: 0,
   specificRepos: ["project-orbitron","sstp-hist-cnn","arduino-turret","chisktale"],
 };
 
@@ -81,7 +81,7 @@ const leadership = {
     { 
       img: require("../editable-stuff/orbitron.png"), 
       label: "Project Orbitron", 
-      paragraph: "A 4WIS/WID vehicle with sphericla wheels" 
+      paragraph: "A 4WIS/WID vehicle with sphericla wheels"
     },
     { 
       img: require("../editable-stuff/turret.png"), 
@@ -135,7 +135,7 @@ const experiences = {
   heading: "Education",
   data: [
     {
-      role: 'SEAS, Columbia University',// Here Add Company Name
+      role: 'Columbia University',// Here Add Company Name
       companylogo: require('../assets/img/columbia.png'),
       date: 'Sept 2020 – Present',
     },
