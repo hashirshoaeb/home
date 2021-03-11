@@ -6,30 +6,30 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Tyler",
   middleName: "",
-  lastName: "Shoaib",
+  lastName: "Kim",
   message: " Passionate about changing the world with technology. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/tylertaewook",
     },
     {
       image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
+      url: "https://www.facebook.com/tyler.kim.338211",
     },
     {
       image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://www.instagram.com/tylr.kim/",
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/tylertaewook/",
     },
     {
       image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      url: "https://www.twitter.com/tylertaewook/",
     },
   ],
 };
@@ -66,7 +66,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "tylertaewook", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -127,7 +127,7 @@ const getInTouch = {
   heading: "Get In Touch",
   message:
     "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+  email: "tylertaewook@gmail.com",
 };
 
 const experiences = {
