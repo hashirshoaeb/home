@@ -55,7 +55,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Tyler Kim. I'm an incoming freshman for Columbia University who is motivated, initiative, and open to trying new things including but not limited to Data Analysis, Computer Science, and Machine Learning. ",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: "https://drive.google.com/file/d/1dbI9nAWIxG8kxsRdynA6UvFszLkrYz5d/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -68,7 +68,7 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "tylertaewook", //i.e."johnDoe12Gh"
   reposLength: 4,
-  specificRepos: [],
+  specificRepos: ["project-orbitron","sstp-hist-cnn","arduino-turret","chisktale"],
 };
 
 // Leadership SECTION
@@ -76,17 +76,17 @@ const leadership = {
   show: true,
   heading: "Featured",
   message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+    "",
   images: [
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+      img: require("../editable-stuff/orbitron.png"), 
+      label: "Project Orbitron", 
+      paragraph: "A 4WIS/WID vehicle with sphericla wheels" 
     },
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+      img: require("../editable-stuff/turret.png"), 
+      label: "Arduino Turret", 
+      paragraph: "Terminator-inspired Turret Project Controlled with C# WinForms App" 
     },
   ],
   imageSize: {
@@ -131,18 +131,18 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
-  heading: "Experiences",
+  show: true,
+  heading: "Education",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'SEAS, Columbia University',// Here Add Company Name
+      companylogo: require('../assets/img/columbia.png'),
+      date: 'Sept 2020 – Present',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Kent School',
+      companylogo: require('../assets/img/kent.png'),
+      date: 'Sept 2017 – June 2020',
     },
   ]
 }
