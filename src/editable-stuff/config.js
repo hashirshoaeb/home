@@ -132,17 +132,34 @@ const getInTouch = {
 
 const experiences = {
   show: true,
-  heading: "Education",
   data: [
     {
-      role: 'Columbia University',// Here Add Company Name
+      role: 'Software Engineer',
+      company: 'Quora',
       companylogo: require('../assets/img/columbia.png'),
-      date: 'Sept 2020 – Present',
+      date: 'June 2018 – Present',
+      desc:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      descBullets: [
+        'Lorem ipsum dolor sit amet',
+        'Lorem ipsum dolor sit amet.',
+      ],
     },
     {
-      role: 'Kent School',
-      companylogo: require('../assets/img/kent.png'),
-      date: 'Sept 2017 – June 2020',
+      role: 'Front-End Developer',
+      company: 'Facebook',
+      companylogo: require('../assets/img/columbia.png'),
+      date: 'May 2017 – May 2018',
+      desc:
+        'Lorem ipsum dolor sit amet, consefdctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      role: 'Software Engineer Intern',
+      company: 'Airbnb',
+      companylogo: require('../assets/img/columbia.png'),
+      date: 'Jan 2015 – Sep 2015',
+      desc:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
   ]
 }
