@@ -79,14 +79,19 @@ const leadership = {
     "",
   images: [
     { 
-      img: require("../editable-stuff/orbitron.png"), 
-      label: "Project Orbitron", 
-      paragraph: "A 4WIS/WID vehicle with sphericla wheels"
+      img: require("../editable-stuff/cc1.jpeg"), 
+      label: "Coding Club", 
+      paragraph: "Teaching how to use foldscopes"
     },
     { 
-      img: require("../editable-stuff/turret.png"), 
-      label: "Arduino Turret", 
-      paragraph: "Terminator-inspired Turret Project Controlled with C# WinForms App" 
+      img: require("../editable-stuff/cc2.jpeg"), 
+      label: "Coding Club", 
+      paragraph: "Presenting how to program mBots" 
+    },
+    { 
+      img: require("../editable-stuff/kentgenomebox.jpeg"), 
+      label: "Coding Club", 
+      paragraph: "Presenting how to program mBots" 
     },
   ],
   imageSize: {
