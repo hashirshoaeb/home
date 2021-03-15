@@ -7,7 +7,10 @@ import {
  } from "react-bootstrap";
 const ExperienceCard = ({data}) => {
     return ( 
-        <Col lg="4">
+        <h2 className="display-4 mb-5 text-center">
+                        {experiences.heading}
+        </h2>
+        <Col lg="6">
              <Card className="shadow-lg--hover shadow border-0 text-center rounded my-2">
                <Card.Header>
                     <h5>{data.company}</h5>
