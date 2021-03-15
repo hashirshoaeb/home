@@ -132,6 +132,7 @@ const getInTouch = {
 
 const experiences = {
   show: true,
+  headings: "Publications",
   data: [
     {
       role: 'Software Engineer',
@@ -145,14 +146,7 @@ const experiences = {
         'Lorem ipsum dolor sit amet.',
       ],
     },
-    {
-      role: 'Front-End Developer',
-      company: 'Facebook',
-      companylogo: require('../assets/img/columbia.png'),
-      date: 'May 2017 – May 2018',
-      desc:
-        'Lorem ipsum dolor sit amet, consefdctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
+
     {
       role: 'Software Engineer Intern',
       company: 'Airbnb',
