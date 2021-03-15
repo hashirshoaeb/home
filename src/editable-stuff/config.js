@@ -135,25 +135,25 @@ const experiences = {
   headings: "Publications",
   data: [
     {
-      role: 'Software Engineer',
-      company: 'Quora',
+      role: 'Intuitive Control Algorithm Development of 4WIS/4WID Using a SpaceMouse',
+      company: 'Kent School Guild',
       companylogo: require('../assets/img/columbia.png'),
-      date: 'June 2018 – Present',
+      date: 'Jan 2018 – June 2020',
       desc:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       descBullets: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet.',
+        'Built a vehicle with a spherical wheel that implements a 4 wheel independent steering/driving system with Arduino and C# Winform Application.',
+        'Developed a unique control algorithm in Mathematica and wrote/presented a paper in front of school body; Accepted as one of three members in Kent Guild; Won 7 awards at CT Science Fair; patent-pending (Application Number: KR 10-2019-0087022)',
       ],
     },
 
     {
-      role: 'Software Engineer Intern',
-      company: 'Airbnb',
+      role: 'Histogram Layer for Texture Classification',
+      company: 'UF SSTP',
       companylogo: require('../assets/img/columbia.png'),
-      date: 'Jan 2015 – Sep 2015',
+      date: 'June 2019 – Aug 2019',
       desc:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'In this paper, we propose a hybrid model that incorporates a stackable, localized histogram layer on convolutional neural network (CNN) for texture analysis applications. Texture classification is a part of texture analysis that focuses on the image’s spatial variation in pixel intensity values and gray levels to classify texture. Instead of using standard histogram operation, we used RBF (Radial Basis Function) to perform a localized binning operation without binning constraints. In order to evaluate the proposed model’s performance, we used six different CNNs comprising of histogram and convolution layer to classify images. Experiments were conducted using the KTH-TIPS 2b dataset and the use of standardization was analyzed during this study. As a result, every network improved performance significantly with standardization, averaging about 6.50\% increase in average overall accuracy. Then, the results were evaluated using confusion matrices, classification metrics, and overall accuracy on the networks standardized data to further evaluate the proposed model. Overall, the proposed model did not necessarily perform better than the standard CNNs, but the histogram CNN performed better on some classes. Future works will include evaluating different initialization methods and parameters such as number of bins, window size, and kernel size.',
     },
   ]
 }
