@@ -76,7 +76,7 @@ const leadership = {
   show: true,
   heading: "Featured",
   message:
-    "",
+    "Throughout my high school career, I've been extremely grateful to have opportunities to lead my peers and make an impact in the Kent community. In my role as the President of Kent Coding Club, I initiated and led a STEM outreach program where members taught local students programming and robotics using mBots. During weekdays, I assisted my peers to understand concepts easily in math/science as Peer Tutor. In addition, I proposed and implemented a demo chatbot application to make the peer tutor signup process much easier.",
   images: [
     { 
       img: require("../editable-stuff/cc1.jpeg"), 
