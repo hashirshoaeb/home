@@ -7,7 +7,7 @@ const navBar = {
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
   firstName: "Tyler",
-  middleName: "(태욱)",
+  middleName: "\"태욱\"",
   lastName: "Kim",
   message: " Making cool things since 2015😎.",
   icons: [
