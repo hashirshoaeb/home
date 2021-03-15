@@ -132,7 +132,7 @@ const getInTouch = {
 
 const experiences = {
   show: true,
-  headings: "Publications",
+  heading: "Publications",
   data: [
     {
       role: 'Intuitive Control Algorithm Development of 4WIS/4WID Using a SpaceMouse',
@@ -150,7 +150,6 @@ const experiences = {
     {
       role: 'Histogram Layer for Texture Classification',
       company: 'UF SSTP',
-      companylogo: require('../assets/img/columbia.png'),
       date: 'June 2019 – Aug 2019',
       desc:
         'Paper written and presented as part of the 61st Annual UF SSTP; Assisted ML texture analysis research in Professor Alina Zare’s Machine Learning and Sensing Lab by implementing deep network models in PyTorch and conducted various experiments with different parameters',
