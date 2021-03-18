@@ -30,7 +30,7 @@ const ExperienceCard = ({data, paper}) => {
                         </ul>
                     <div>
                     </div>
-                    <Button href={paper} variant="outline-success" size="lg">
+                    <Button href={data.paper} variant="outline-success" size="lg">
                       Paper
                     </Button>{' '}
                 </Card.Body>
