@@ -150,7 +150,7 @@ const experiences = {
         'Built a vehicle with a spherical wheel that implements a 4 wheel independent steering/driving system with Arduino and C# Winform Application.',
         'Developed a unique control algorithm in Mathematica and wrote/presented a paper in front of school body; Accepted as one of three members in Kent Guild; Won 7 awards at CT Science Fair; patent-pending (Application Number: KR 10-2019-0087022)',
       ],
-      paper: require("../editable-stuff/sstp-paper.pdf"),
+      paper: require("../editable-stuff/orbitron-paper.pdf"),
     },
 
     {
