@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { 
     Col,
@@ -29,7 +30,7 @@ const ExperienceCard = ({data}) => {
                         </ul>
                     <div>
                     </div>
-                    <Button variant="outline-success" size="lg">
+                    <Button href="home/src/editable-stuff/resume.pdf" variant="outline-success" size="lg">
                       Paper
                     </Button>{' '}
                 </Card.Body>
