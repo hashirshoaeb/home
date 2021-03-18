@@ -6,7 +6,7 @@ import {
     Button,
     Card
  } from "react-bootstrap";
-const ExperienceCard = ({data}) => {
+const ExperienceCard = ({data, paper}) => {
     return ( 
         <Col lg="6">
              <Card className="shadow-lg--hover shadow border-0 text-center rounded my-2">
@@ -30,7 +30,7 @@ const ExperienceCard = ({data}) => {
                         </ul>
                     <div>
                     </div>
-                    <Button href="home/src/editable-stuff/resume.pdf" variant="outline-success" size="lg">
+                    <Button href={paper} variant="outline-success" size="lg">
                       Paper
                     </Button>{' '}
                 </Card.Body>
