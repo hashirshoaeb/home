@@ -163,8 +163,8 @@ const experiences = {
         'We propose a hybrid model that incorporates a stackable, localized histogram layer on convolutional neural network (CNN) for texture analysis applications.',
         'Instead of using standard histogram operation, we used RBF (Radial Basis Function) to perform a localized binning operation without binning constraints.',
       ],
+      paper: require("../editable-stuff/sstp-paper.pdf"),
     },
-    paper: require("../editable-stuff/sstp-paper.pdf"),
   ]
 }
 
