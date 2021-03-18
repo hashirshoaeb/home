@@ -29,8 +29,8 @@ const ExperienceCard = ({data}) => {
                         </ul>
                     <div>
                     </div>
-                    <Button variant="success" size="lg">
-                      Success
+                    <Button variant="outline-success" size="lg">
+                      Paper
                     </Button>{' '}
                 </Card.Body>
             </Card> 
