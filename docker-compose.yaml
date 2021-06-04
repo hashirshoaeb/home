@@ -10,3 +10,9 @@ services:
       - "traefik.enable=true"
       - "traefik.basic.port=3000"
       - "traefik.basic.frontend.rule=Host:home.jiggyjigs.me"
+    restart: always
+    networks:
+      jitsi:
+networks:
+  jitsi:
+    external: true
