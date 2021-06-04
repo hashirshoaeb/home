@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bump this version every time you need update containers
-TAG="0.1.2"
+TAG="0.1.3"
 
 # Build and promote the image to integration
 docker build --no-cache . -t jjp1023/home:$TAG && \
