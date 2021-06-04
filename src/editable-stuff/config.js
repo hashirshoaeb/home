@@ -54,8 +54,10 @@ const about = {
   imageLink: require("../editable-stuff/jigar.jpg"),
   imageSize: 375,
   message:
-    "My name is Jigar Patel. I'm a passionate individual seeking an opportunities in the DevOps world. During my free time, I love tinkering with new technologies.  I've a self hosted server as well as a home lab that I run out of my house.",
-  resume: "https://nextcloud.jiggyjigs.me/s/s7TSqZdGPz282Gm",
+    "Jigar Patel is a Senior systems engineer at Cerner Corporation, an American supplier of health information technology services, devices, and hardware. With over 5 years of cloud experience, he finds that honesty, creativity, and dedication to be the most valuable qualities for successfully being a consequential member of a team.",
+  message2:
+    "Jigar holds a Bachelor’s in Information Technology and Management from the Illinois Institute of Technology. During his free time, he loves new technologies and exploring new skills. Jigar hopes to continue using his determination and quick-thinking to pursue new opportunities in the DevOps world.",
+  resume: "https://nextcloud.jiggyjigs.me/s/jigar-resume",
 };
 
 // PROJECTS SECTION
@@ -125,7 +127,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Senior DevOps opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "I'm currently looking for full-time Senior DevOps opportunities! If you have any positions available,  questions, or just want to say hi, please feel free to email me at",
   email: "jobs@jiggyjigs.me",
 };
 
