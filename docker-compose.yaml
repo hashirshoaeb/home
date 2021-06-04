@@ -9,7 +9,7 @@ services:
       - "traefik.docker.network=jitsi"
       - "traefik.enable=true"
       - "traefik.basic.port=3000"
-      - "traefik.basic.frontend.rule=Host:home.jiggyjigs.me"
+      - "traefik.basic.frontend.rule=Host:jiggyjigs.me"
     restart: always
     networks:
       jitsi:
