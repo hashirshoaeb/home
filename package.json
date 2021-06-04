@@ -10,7 +10,7 @@
     "url": "https://github.com/hashirshoaeb"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "gh-pages": "^2.2.0",
     "jquery": "^3.5.1",
@@ -22,7 +22,7 @@
     "react-loading-skeleton": "^2.1.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^4.0.3",
     "react-typist": "^2.0.5",
     "typescript": "^3.9.7"
   },

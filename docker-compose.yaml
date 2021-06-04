@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  home:
+    image: jjp1023/home:latest
+    expose:
+      - "3000"
+    labels:
+      - "traefik.backend=home"
+      - "traefik.docker.network=jitsi"
+      - "traefik.enable=true"
+      - "traefik.basic.port=3000"
+      - "traefik.basic.frontend.rule=Host:home.jiggyjigs.me"
