@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   home:
-    image: jjp1023/home:latest
+    image: jjp1023/home:0.1.0
     expose:
       - "3000"
     labels:

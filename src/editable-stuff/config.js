@@ -54,7 +54,7 @@ const about = {
   imageLink: require("../editable-stuff/jigar.jpg"),
   imageSize: 375,
   message:
-    "My name is Jigar Patel. I'm a passionate individual seeking an opportunities in the DevOps works. I love tinkering and learning new things during my free time.  I've a self hosted server as well as a home lab that I run out of my house.",
+    "My name is Jigar Patel. I'm a passionate individual seeking an opportunities in the DevOps world. During my free time, I love tinkering with new technologies.  I've a self hosted server as well as a home lab that I run out of my house.",
   resume: "https://nextcloud.jiggyjigs.me/s/s7TSqZdGPz282Gm",
 };
 
