@@ -17,10 +17,10 @@ const API = "https://api.github.com";
 // const gitHubQuery = "/repos?sort=updated&direction=desc";
 // const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
-const Project = ({ heading, username, length, specfic }) => {
-  const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/${username}`;
-  const dummyProjectsArr = new Array(length + specfic.length).fill(
+const Project = ({ heading }) => {
+  // const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
+  const specficReposAPI = `${API}/repos/`;
+  const dummyProjectsArr = new Array(3).fill(
     dummyProject
   );
 
@@ -29,26 +29,30 @@ const Project = ({ heading, username, length, specfic }) => {
   const fetchRepos = useCallback(async () => {
     let repoList = [];
     try {
-      // getting all repos
-      const response = await axios.get(allReposAPI);
-      // slicing to the length
-      repoList = [...response.data.slice(0, length)];
-      // adding specified repos
-      try {
-        for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`);
-          repoList.push(response.data);
-        }
-      } catch (error) {
-        console.error(error.message);
-      }
-      // setting projectArray
-      // TODO: remove the duplication.
-      setProjectsArray(repoList);
+        const response = await axios.get(`${specficReposAPI}/mogarcia626/letseat`);
+        response.data.liveLink = 'https://let-s-eat.herokuapp.com/#/'
+        repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
     }
-  }, [allReposAPI, length, specfic, specficReposAPI]);
+    try {
+        const response = await axios.get(`${specficReposAPI}/mmbarness/home_court`);
+        response.data.liveLink = 'https://www.homecourt.club/#/splash'
+        repoList.push(response.data);
+    } catch (error) {
+      console.error(error.message);
+    }
+    try {
+        const response = await axios.get(`${specficReposAPI}/mogarcia626/light_show`);
+        response.data.liveLink = 'https://mogarcia626.github.io/light_show/'
+        repoList.push(response.data);
+    } catch (error) {
+      console.error(error.message);
+    }
+    // setting projectArray
+    // TODO: remove the duplication.
+    setProjectsArray(repoList);
+  }, [specficReposAPI]);
 
   useEffect(() => {
     fetchRepos();

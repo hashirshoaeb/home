@@ -50,19 +50,19 @@ const Home = React.forwardRef((props, ref) => {
       {repos.show && (
         <Project
           heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
+          // username={repos.gitHubUsername}
+          // length={repos.reposLength}
+          // specfic={repos.specificRepos}
         />
       )}
-      {leadership.show && (
+      {/* {leadership.show && (
         <Leadership
           heading={leadership.heading}
           message={leadership.message}
           img={leadership.images}
           imageSize={leadership.imageSize}
         />
-      )}
+      )} */}
       {skills.show && (
         <Skills
           heading={skills.heading}

@@ -5,31 +5,35 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  gradientColors: "#374453, #4a5d23, #6b1818, #db8a6c",
+  firstName: "Moustafa",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Garcia",
+  message: " Engineer and Problem Solver. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/mogarcia626",
     },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
+    // {
+    //   image: "fa-facebook",
+    //   url: "https://www.facebook.com/hashirshoaeb",
+    // },
+    // {
+    //   image: "fa-instagram",
+    //   url: "https://www.instagram.com/hashirshoaeb/",
+    // },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/moustafagarcia/",
     },
+    // {
+    //   image: "fa-twitter",
+    //   url: "https://www.twitter.com/hashirshoaeb/",
+    // },
     {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      image: "fa-angellist",
+      url: "https://angel.co/u/moustafa-garcia-bengochea",
     },
   ],
 };
@@ -51,11 +55,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/moustafagarcia.jpg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects.\nBefore getting into web development I was a mechanical engineer in the construction industry for nearly 10 years.  In my free time i play soccer, take my kayak out for long-distance rides, and read.",
+  resume: "https://docs.google.com/document/d/1KiXjxxPmluMufu_tCroKjYR1BpJPlK29AU7KdS0zSGw/edit?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -66,9 +70,9 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  gitHubUsername: "mogarcia626", //i.e."johnDoe12Gh"
+  reposLength: 0,
+  specificRepos: ["mogarcia626/letseat", "mmbarness/home_court","mogarcia626/light_show"],
 };
 
 // Leadership SECTION
@@ -100,24 +104,30 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "React", value: 0 },
+    { name: "Redux", value: 0 },
+    { name: "Javascript", value: 0 },
+    { name: "NodeJS", value: 0 },
+    { name: "Ruby", value: 0 },
+    { name: "Rails", value: 0 },
+    { name: "HTML/SCSS", value: 0 },
+    { name: "HTML/Canvas", value: 0 },
+    { name: "PostgreSQL", value: 0 },
+    { name: "JQuery", value: 0 },
+    { name: "MongoDB", value: 0 },
+    { name: "Express", value: 0 },
+    { name: "Google Maps API", value: 0 },
+    { name: "Amazon AWS", value: 0 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Goal-Oriented", value: 0 },
+    { name: "Collaboration", value: 0 },
+    { name: "Positivity", value: 0 },
+    { name: "Adaptability", value: 0 },
+    { name: "Problem Solving", value: 0 },
+    { name: "Empathy", value: 0 },
+    { name: "Organization", value: 0 },
+    { name: "Creativity", value: 0 },
   ],
 };
 
@@ -126,8 +136,8 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for full-time Software Engineering role! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "mogarcia626@gmail.com",
 };
 
 const experiences = {
@@ -135,14 +145,14 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Mechanical Engineer at exp',// Here Add Company Name
+      companylogo: null,//require('../assets/img/dell.png'),
+      date: 'April 2016 – July 2021',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Energy Engineer at Alares',
+      companylogo: null,//require('../assets/img/boeing.png'),
+      date: 'January 2013 – November 2016',
     },
   ]
 }
