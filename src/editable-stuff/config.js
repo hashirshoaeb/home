@@ -59,7 +59,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects.\nBefore getting into web development I was a mechanical engineer in the construction industry for nearly 10 years.  In my free time i play soccer, take my kayak out for long-distance rides, and read.",
-  resume: "https://docs.google.com/document/d/1KiXjxxPmluMufu_tCroKjYR1BpJPlK29AU7KdS0zSGw/edit?usp=sharing",
+  resume: "https://docs.google.com/document/d/16jpxNcZjfYH1aFq3jV-gLtzgGKbb0s2JlIdkBXY-teQ/edit?usp=sharing",
 };
 
 // PROJECTS SECTION
