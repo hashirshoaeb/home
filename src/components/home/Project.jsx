@@ -19,7 +19,7 @@ const API = "https://api.github.com";
 
 const Project = ({ heading }) => {
   // const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/`;
+  const specficReposAPI = `${API}/repos`;
   const dummyProjectsArr = new Array(3).fill(
     dummyProject
   );
@@ -30,21 +30,27 @@ const Project = ({ heading }) => {
     let repoList = [];
     try {
         const response = await axios.get(`${specficReposAPI}/mogarcia626/letseat`);
-        response.data.liveLink = 'https://let-s-eat.herokuapp.com/#/'
+        response.data.liveLink = 'https://let-s-eat.herokuapp.com/#/';
+        response.data.imageUrl = 'https://i.imgur.com/oqsGTlD.gif';
+        response.data.description = "A fullstack reservation booking website inspired by OpenTable. Users can log in book and manage restaurant reservations and leave reviews.";
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
     }
     try {
         const response = await axios.get(`${specficReposAPI}/mmbarness/home_court`);
-        response.data.liveLink = 'https://www.homecourt.club/#/splash'
+        response.data.liveLink = 'https://www.homecourt.club/#/splash';
+        response.data.imageUrl = 'https://i.imgur.com/nMvzDeO.gif';
+        response.data.description = "A fullstack reservation booking website inspired by OpenTable.com. Users can log in to book manage and leave reviews for reservations made at their favorite restaurants.";
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
     }
     try {
         const response = await axios.get(`${specficReposAPI}/mogarcia626/light_show`);
-        response.data.liveLink = 'https://mogarcia626.github.io/light_show/'
+        response.data.liveLink = 'https://mogarcia626.github.io/light_show/';
+        response.data.imageUrl = 'https://i.imgur.com/eyvVg9l.gif';
+        response.data.description = "An interactive digital fireworks show!";
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);

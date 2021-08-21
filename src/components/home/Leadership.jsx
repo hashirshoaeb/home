@@ -1,4 +1,5 @@
-import React, { useState, useEffect, Profiler } from "react";
+// import React, { useState, useEffect, Profiler } from "react";
+import React from 'react';
 import Carousel from "react-bootstrap/Carousel";
 
 const Leadership = ({ heading, message, img, imageSize }) => {

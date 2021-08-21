@@ -3,3 +3,24 @@
 @import "./index";
 @import "./stars";
 @import "./typography";
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-image {
+    max-width: 100%;
+    object-fit: contain;
+    height: 16.5rem;
+}
+
+.live-link {
+    color: inherit;
+}
+
+.rounded-circle {
+    object-fit: cover;
+}

@@ -5,7 +5,7 @@ import {
   mainBody,
   about,
   repos,
-  leadership,
+  // leadership,
   skills,
   getInTouch,
   experiences
@@ -19,7 +19,7 @@ import Skills from "./components/home/Skills";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
+// import Leadership from "./components/home/Leadership.jsx";
 
 import Experience from "./components/home/Experience";
 

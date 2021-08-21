@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { Link } from 'react-router-dom'
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
@@ -12,6 +13,8 @@ const ProjectCard = ({ value }) => {
     stargazers_count,
     languages_url,
     pushed_at,
+    liveLink,
+    imageUrl,
   } = value;
   return (
     <Col md={6}>
@@ -19,6 +22,11 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description)?"":description || <Skeleton count={3} />} </Card.Text>
+          <Link className='image-container' to={liveLink}>
+            <img className='feature-image' src={imageUrl} alt={name} />
+            <p className='live-link' >Live Link</p>
+          </Link>
+
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
           {languages_url ? (
