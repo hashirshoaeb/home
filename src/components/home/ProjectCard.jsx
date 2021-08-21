@@ -12,13 +12,25 @@ const ProjectCard = ({ value }) => {
     stargazers_count,
     languages_url,
     pushed_at,
+    liveLink,
+    imageUrl,
   } = value;
+  
+  function handleClick() {
+    window.open(liveLink);
+  }
+
   return (
     <Col md={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description)?"":description || <Skeleton count={3} />} </Card.Text>
+          <div className='image-container' onClick={handleClick}>
+            <img className='feature-image' src={imageUrl} alt={name} />
+            <p className='live-link' >Live Link</p>
+          </div>
+
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
           {languages_url ? (

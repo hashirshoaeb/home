@@ -2,7 +2,7 @@ import React from 'react';
 
 import { 
     Col,
-    Card
+    // Card
  } from "react-bootstrap";
 const ExperienceCard = ({data}) => {
     return ( 

@@ -19,7 +19,7 @@ const API = "https://api.github.com";
 
 const Project = ({ heading }) => {
   // const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/`;
+  const specficReposAPI = `${API}/repos`;
   const dummyProjectsArr = new Array(3).fill(
     dummyProject
   );
@@ -31,6 +31,7 @@ const Project = ({ heading }) => {
     try {
         const response = await axios.get(`${specficReposAPI}/mogarcia626/letseat`);
         response.data.liveLink = 'https://let-s-eat.herokuapp.com/#/'
+        response.data.imageUrl = 'https://i.imgur.com/oqsGTlD.gif'
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
@@ -38,6 +39,7 @@ const Project = ({ heading }) => {
     try {
         const response = await axios.get(`${specficReposAPI}/mmbarness/home_court`);
         response.data.liveLink = 'https://www.homecourt.club/#/splash'
+        response.data.imageUrl = 'https://i.imgur.com/nMvzDeO.gif'
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
@@ -45,6 +47,7 @@ const Project = ({ heading }) => {
     try {
         const response = await axios.get(`${specficReposAPI}/mogarcia626/light_show`);
         response.data.liveLink = 'https://mogarcia626.github.io/light_show/'
+        response.data.imageUrl = 'https://i.imgur.com/eyvVg9l.gif'
         repoList.push(response.data);
     } catch (error) {
       console.error(error.message);
