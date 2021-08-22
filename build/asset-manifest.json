@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/home/static/css/main.0abaa039.chunk.css",
+    "main.js": "/home/static/js/main.ac79c407.chunk.js",
+    "main.js.map": "/home/static/js/main.ac79c407.chunk.js.map",
+    "runtime-main.js": "/home/static/js/runtime-main.3c590061.js",
+    "runtime-main.js.map": "/home/static/js/runtime-main.3c590061.js.map",
+    "static/js/2.8aec16b3.chunk.js": "/home/static/js/2.8aec16b3.chunk.js",
+    "static/js/2.8aec16b3.chunk.js.map": "/home/static/js/2.8aec16b3.chunk.js.map",
+    "index.html": "/home/index.html",
+    "precache-manifest.b06110bf9440523c3e099a1b62ba7eb5.js": "/home/precache-manifest.b06110bf9440523c3e099a1b62ba7eb5.js",
+    "service-worker.js": "/home/service-worker.js",
+    "static/css/main.0abaa039.chunk.css.map": "/home/static/css/main.0abaa039.chunk.css.map",
+    "static/js/2.8aec16b3.chunk.js.LICENSE.txt": "/home/static/js/2.8aec16b3.chunk.js.LICENSE.txt",
+    "static/media/moustafagarcia.jpg": "/home/static/media/moustafagarcia.6392d987.jpg",
+    "static/media/moustafagarcia_resume.pdf": "/home/static/media/moustafagarcia_resume.377e2810.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c590061.js",
+    "static/js/2.8aec16b3.chunk.js",
+    "static/css/main.0abaa039.chunk.css",
+    "static/js/main.ac79c407.chunk.js"
+  ]
+}
