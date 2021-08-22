@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/moustafa-personal-site/static/css/main.0abaa039.chunk.css",
+    "main.js": "/moustafa-personal-site/static/js/main.b8d62ce4.chunk.js",
+    "main.js.map": "/moustafa-personal-site/static/js/main.b8d62ce4.chunk.js.map",
+    "runtime-main.js": "/moustafa-personal-site/static/js/runtime-main.45dc7e3b.js",
+    "runtime-main.js.map": "/moustafa-personal-site/static/js/runtime-main.45dc7e3b.js.map",
+    "static/js/2.6dfc12a4.chunk.js": "/moustafa-personal-site/static/js/2.6dfc12a4.chunk.js",
+    "static/js/2.6dfc12a4.chunk.js.map": "/moustafa-personal-site/static/js/2.6dfc12a4.chunk.js.map",
+    "index.html": "/moustafa-personal-site/index.html",
+    "precache-manifest.678d1e727a23d6cf95f1fbc8ea6d8bfd.js": "/moustafa-personal-site/precache-manifest.678d1e727a23d6cf95f1fbc8ea6d8bfd.js",
+    "service-worker.js": "/moustafa-personal-site/service-worker.js",
+    "static/css/main.0abaa039.chunk.css.map": "/moustafa-personal-site/static/css/main.0abaa039.chunk.css.map",
+    "static/js/2.6dfc12a4.chunk.js.LICENSE.txt": "/moustafa-personal-site/static/js/2.6dfc12a4.chunk.js.LICENSE.txt",
+    "static/media/hashirshoaeb.png": "/moustafa-personal-site/static/media/hashirshoaeb.32f6b574.png",
+    "static/media/moustafagarcia.jpg": "/moustafa-personal-site/static/media/moustafagarcia.6392d987.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45dc7e3b.js",
+    "static/js/2.6dfc12a4.chunk.js",
+    "static/css/main.0abaa039.chunk.css",
+    "static/js/main.b8d62ce4.chunk.js"
+  ]
+}
