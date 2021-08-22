@@ -1,0 +1,66 @@
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <meta name="image" property="og:image" content="https://i.imgur.com/WVngZL8.gif>
+      <meta property="og:description" content="My personal portfolio website">
+      <meta property="og:url" content="https://moustafa-garcia.com">
+      <meta name="theme-color" content="#000000" />
+      <meta
+        name="description"
+        content=""
+      />
+      <!-- <link rel="apple-touch-icon" href="logo192.png" /> -->
+      <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+      -->
+      <!-- <link rel="manifest" href="/manifest.json" />
+      <meta property="twitter:image" content="/social-image.png" />
+      <meta property="og:image" content="/social-image.png" /> -->
+      <!--
+        Notice the use of  in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
+        Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+      -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <title>Moustafa Garcia</title>
+    <link href="/static/css/main.0abaa039.chunk.css" rel="stylesheet"></head>
+    <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+      <!--
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
+        You can add webfonts, meta tags, or analytics to this file.
+        The build step will place the bundled scripts into the <body> tag.
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+    <script>!function(e){function r(r){for(var n,l,p=r[0],f=r[1],i=r[2],c=0,s=[];c<p.length;c++)l=p[c],Object.prototype.  hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in f)Object.prototype.hasOwnProperty.call(f,n)&&(e[n]=f[n  ]);for(a&&a(r);s.length;)s.shift()();return u.push.apply(u,i||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(v  ar t=u[r],n=!0,p=1;p<t.length;p++){var f=t[p];0!==o[f]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o=  {1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.e  xports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})}  ,l.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"M  odule"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"ob  ject"===typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enum  erable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.  n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=funct  ion(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="/";var p=this["webpackJsonpdevelopers-portfolio"]=this  ["webpackJsonpdevelopers-portfolio"]||[],f=p.push.bind(p);p.push=r,p=p.slice();for(var i=0;i<p.length;i++)r(p[i]);var   a=f;t()}([]);
+  //# sourceMappingURL=runtime-main.554504a0.js.map</script><script src="/static/js/2.8aec16b3.chunk.js"></script><scrip  t src="/static/js/main.181e201f.chunk.js"></script></body>
+  </html>
+  
+  - htmlparser.js:244 new HTMLParser
+    [moustafa-personal-site]/[html-minifier-terser]/src/htmlparser.js:244:13
+  
+  - htmlminifier.js:993 minify
+    [moustafa-personal-site]/[html-minifier-terser]/src/htmlminifier.js:993:3
+  
+  - htmlminifier.js:1354 Object.exports.minify
+    [moustafa-personal-site]/[html-minifier-terser]/src/htmlminifier.js:1354:16
+  
+  - index.js:445 HtmlWebpackPlugin.postProcessHtml
+    [moustafa-personal-site]/[html-webpack-plugin]/index.js:445:41
+  
+  - index.js:274 
+    [moustafa-personal-site]/[html-webpack-plugin]/index.js:274:25
+  
+  - task_queues.js:93 processTicksAndRejections
+    internal/process/task_queues.js:93:5
+  
+</pre>

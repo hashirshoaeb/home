@@ -57,9 +57,8 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/moustafagarcia.jpg"),
   imageSize: 375,
-  message:
-    "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects.\nBefore getting into web development I was a mechanical engineer in the construction industry for nearly 10 years.  In my free time i play soccer, take my kayak out for long-distance rides, and read.",
-  resume: "https://docs.google.com/document/d/1KiXjxxPmluMufu_tCroKjYR1BpJPlK29AU7KdS0zSGw/edit?usp=sharing",
+  message: "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects. Before getting into web development I was a mechanical engineer in the construction industry for nearly 10 years, collaborating on large multidisciplinary projects. In my free time I play soccer, take my kayak out for long-distance rides, and read.",
+  resume: "https://docs.google.com/document/d/16jpxNcZjfYH1aFq3jV-gLtzgGKbb0s2JlIdkBXY-teQ/edit?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -76,28 +75,28 @@ const repos = {
 };
 
 // Leadership SECTION
-const leadership = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
-  images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-  ],
-  imageSize: {
-    width:"615",
-    height:"450"
-  }
-};
+// const leadership = {
+//   show: false,
+//   heading: "Leadership",
+//   message:
+//     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+//   images: [
+//     { 
+//       img: require("../editable-stuff/hashirshoaeb.png"), 
+//       label: "First slide label", 
+//       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+//     },
+//     { 
+//       img: require("../editable-stuff/hashirshoaeb.png"), 
+//       label: "Second slide label", 
+//       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+//     },
+//   ],
+//   imageSize: {
+//     width:"615",
+//     height:"450"
+//   }
+// };
 
 // SKILLS SECTION
 const skills = {
@@ -162,4 +161,6 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+// export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+
+export { navBar, mainBody, about, repos, skills, getInTouch, experiences };
