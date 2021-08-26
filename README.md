@@ -220,7 +220,7 @@ Novas contribuições e revisões na tradução são muito bem vindas!
 
 ## Notice:
 
-Project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and maintain your own version.
+This project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and maintain your own version. You can check my new portfolio template [here](https://github.com/hashirshoaeb/portfolio)
 
 ## Stargazers over time
 
