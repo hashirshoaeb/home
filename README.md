@@ -8,7 +8,7 @@
     <a href="https://hashirshoaeb.github.io/home">hashirshoaeb.github.io/home</a>
     <br />
     <br />
-    <a href="https://hashirshoaeb.com/home">About Me</a>
+    <a href="https://hashirshoaeb.github.io">About Me</a>
     ·
     <a href="https://github.com/hashirshoaeb/home/issues">Report Bug</a>
     ·
@@ -135,19 +135,6 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
 
-## Contributing 🙌
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## Issues
-
-If anyone is looking to make some contribution, the following are issues that you can solve:
-
-- [ ] UI improvements
-- [ ] Code optimization
-- [x] Routing
-- [ ] SEO
-
 ## Showcase 🚀
 
 Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
@@ -234,6 +221,10 @@ Have you changed something in the code to create your own version? Feel free to 
 
 Esse projeto foi traduzido para português! Se você gostou dele e quer criar a sua própria versão, confira o repositório do [@tashima42](https://github.com/tashima42) em [https://github.com/Tashima42/home](https://github.com/Tashima42/home).
 Novas contribuições e revisões na tradução são muito bem vindas!
+
+## Notice:
+
+Project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and make your own versions.  
 
 ## Stargazers over time
 
