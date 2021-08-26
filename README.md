@@ -11,8 +11,6 @@
     <a href="https://hashirshoaeb.github.io">About Me</a>
     ·
     <a href="https://github.com/hashirshoaeb/home/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Request Feature</a>
   </p>
 </p>
 
