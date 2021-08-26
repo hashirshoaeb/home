@@ -9,8 +9,6 @@
     <br />
     <br />
     <a href="https://hashirshoaeb.github.io">About Me</a>
-    ·
-    <a href="https://github.com/hashirshoaeb/home/issues">Report Bug</a>
   </p>
 </p>
 
@@ -222,7 +220,7 @@ Novas contribuições e revisões na tradução são muito bem vindas!
 
 ## Notice:
 
-Project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and make your own versions.  
+Project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and maintain your own version.
 
 ## Stargazers over time
 
