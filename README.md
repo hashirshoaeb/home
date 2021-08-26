@@ -205,6 +205,29 @@ Have you changed something in the code to create your own version? Feel free to 
       <br />
     </td>
   </tr>
+    <tr>
+    <td align="center">
+      <a href="https://github.com/xunxdd/portfolio/tree/master">
+        <br />
+        <sub><b>Xun Ding</b></sub>
+      </a>
+      <br />
+    </td>    
+    <td align="center">
+      <a href="https://github.com/S-Philp/Shannel.philp">
+        <br />
+        <sub><b>Shannel Philp</b></sub>
+      </a>
+      <br />
+    </td>    
+    <td align="center">
+      <a href="https://github.com/bibinvargheset/home">
+        <br />
+        <sub><b>Bibin Varghese</b></sub>
+      </a>
+      <br />
+    </td>
+  </tr>
 </table>
 
 ## Versão em Português :brazil:
