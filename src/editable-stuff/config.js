@@ -57,7 +57,7 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/moustafagarcia.jpg"),
   imageSize: 375,
-  message: "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects. Before getting into web development I was a mechanical engineer in the construction industry for nearly 10 years, collaborating on large multidisciplinary projects. In my free time I play soccer, take my kayak out for long-distance rides, and read.",
+  message: "My name is Moustafa Garcia. I’m a software engineer based in Orlando, FL. I'm passionate about finding new hobbies, learning new skills, and applying them to meaningful projects. Before getting into web development I was a mechanical engineer in the construction industry for nearly 10 years, collaborating on large multidisciplinary projects. In my free time I like to read Sci-Fi and historical fiction, play soccer, and take my kayak out for long-distance rides",
   resume: "https://docs.google.com/document/d/16jpxNcZjfYH1aFq3jV-gLtzgGKbb0s2JlIdkBXY-teQ/edit?usp=sharing",
 };
 
@@ -108,8 +108,8 @@ const skills = {
     { name: "Javascript", value: 0 },
     { name: "NodeJS", value: 0 },
     { name: "Ruby", value: 0 },
-    { name: "Rails", value: 0 },
-    { name: "HTML/SCSS", value: 0 },
+    { name: "Ruby on Rails", value: 0 },
+    { name: "HTML/CSS", value: 0 },
     { name: "HTML/Canvas", value: 0 },
     { name: "PostgreSQL", value: 0 },
     { name: "JQuery", value: 0 },
