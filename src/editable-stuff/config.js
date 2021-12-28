@@ -6,14 +6,18 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Bohdan",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Sydorenko",
+  message: "My Personal Website",
   icons: [
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/bsydorenko/",
+    },
+    {
+      image: "fa-telegram",
+      url: "https://t.me/badanio/"
     },
   ],
 };
@@ -35,12 +39,10 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/bsydorenko.jpg"),
-  imageSize: 375,
+  imageLink: require("../editable-stuff/bsydorenko.png"),
+  imageSize: 400,
   message:
-    "My name is Bohdan Sydorenko. I have more than 8 years of experience in software & hardware testing. Experience in\
-    implementation of new technologies. Proficient in stages of the Software Development,\
-    Testing Life Cycles and Bug Life Cycle.",
+    "My name is Bohdan Sydorenko. I have more than 8 years of experience in software & hardware testing. Experience in implementation of new technologies. Proficient in stages of the Software Development, Testing Life Cycles and Bug Life Cycle.",
   resume: "https://docs.google.com/document/d/1V-kr0gejGMG-8-oP-5b1Gj7gB6crVENaLV0GV6aGDeM/edit?usp=sharing",
 };
 
@@ -110,9 +112,7 @@ const skills = {
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
-  //message:
-  //  "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "b.sydorenko@gmail.com",
+  email: "b.sydorenko@gmail.com"
 };
 
 // const experiences = {
@@ -137,4 +137,4 @@ const getInTouch = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, skills, getInTouch };
