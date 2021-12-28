@@ -1,1 +1,1 @@
-https://bsydorenko.github.io
+https://bsydorenko.github.io/home
