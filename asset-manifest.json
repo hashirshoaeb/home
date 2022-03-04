@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.b969e632.css",
-    "main.js": "/static/js/main.327a964d.js",
+    "main.css": "/static/css/main.c1645fdd.css",
+    "main.js": "/static/js/main.1c5c455a.js",
     "static/media/lostevo.png": "/static/media/lostevo.3359ded72d69f3a9df41.png",
     "index.html": "/index.html",
-    "main.b969e632.css.map": "/static/css/main.b969e632.css.map",
-    "main.327a964d.js.map": "/static/js/main.327a964d.js.map"
+    "main.c1645fdd.css.map": "/static/css/main.c1645fdd.css.map",
+    "main.1c5c455a.js.map": "/static/js/main.1c5c455a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b969e632.css",
-    "static/js/main.327a964d.js"
+    "static/css/main.c1645fdd.css",
+    "static/js/main.1c5c455a.js"
   ]
 }
