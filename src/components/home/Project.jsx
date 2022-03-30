@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
-import ProjectCard from "./ProjectCard";
+import { ProjectCard, GitlabProjectCard } from "./ProjectCard";
 import axios from "axios";
 
 const dummyProject = {
@@ -21,15 +21,19 @@ const GitlabAPI = "https://gitlab.com/api/v4";
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/${username}`;
+  const specficReposAPI = `${API}/repos`;
+  const gitlabReposAPI = `${GitlabAPI}`
+  const gitlabSpecificRepoAPI = `${GitlabAPI}/projects`
   const dummyProjectsArr = new Array(length + specfic.length).fill(
     dummyProject
   );
 
   const [projectsArray, setProjectsArray] = useState([]);
+  const [gitlabProjectsArray, setGitlabProjectsArray] = useState([]);
 
   const fetchRepos = useCallback(async () => {
     let repoList = [];
+    let gitlabRepoList = [];
     try {
       // getting all repos
       const response = await axios.get(allReposAPI);
@@ -38,15 +42,21 @@ const Project = ({ heading, username, length, specfic }) => {
       // adding specified repos
       try {
         for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`);
-          repoList.push(response.data);
+          if (repoName.source == "github") {
+            let github_response = await axios.get(`${specficReposAPI}/${repoName.org}/${repoName.repo}`);
+            repoList.push(github_response.data);
+          } else if (repoName.source == "gitlab") {
+            let gitlab_response = await axios.get(`${gitlabSpecificRepoAPI}/${repoName.org}%2F${repoName.repo}`);
+            // Gitlab doesn't return the language URL in the response, but it's at a well known location
+            gitlab_response.data.languages_url = `${gitlabSpecificRepoAPI}/${repoName.org}%2F${repoName.repo}/languages`;
+            gitlabRepoList.push(gitlab_response.data);
+          }
         }
+        setProjectsArray(repoList);
+        setGitlabProjectsArray(gitlabRepoList);
       } catch (error) {
         console.error(error.message);
       }
-      // setting projectArray
-      // TODO: remove the duplication.
-      setProjectsArray(repoList);
     } catch (error) {
       console.error(error.message);
     }
@@ -61,6 +71,21 @@ const Project = ({ heading, username, length, specfic }) => {
       <Container className="">
         <h2 className="display-4 pb-5 text-center">{heading}</h2>
         <Row>
+          {gitlabProjectsArray.length
+            ? gitlabProjectsArray.map((project, index) => (
+                <GitlabProjectCard
+                  key={`project-card-${index}`}
+                  id={`project-card-${index}`}
+                  value={project}
+                />
+              ))
+            : dummyProjectsArr.map((project, index) => (
+                <ProjectCard
+                  key={`dummy-${index}`}
+                  id={`dummy-${index}`}
+                  value={project}
+                />
+              ))}
           {projectsArray.length
             ? projectsArray.map((project, index) => (
                 <ProjectCard

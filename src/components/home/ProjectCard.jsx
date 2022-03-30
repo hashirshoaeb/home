@@ -6,12 +6,16 @@ import axios from "axios";
 
 const ProjectCard = ({ value }) => {
   const {
-    name,
-    description,
-    svn_url,
-    stargazers_count,
-    languages_url,
-    pushed_at,
+    name, // github + gitlab
+    description, // github + gitlab
+    svn_url, // github, gitlab uses web_url
+    web_url,
+    stargazers_count, // github, gitlab uses star_count
+    star_count,
+    languages_url, // github, gitlab uses APIURL/languages (which is also what gitlab uses, but isn't included in response)
+    pushed_at, // github, gitlab has last_activity_at (which more closely matches github's updated_at)
+    last_activity_at,
+    fetched_from, // gitlab or github
   } = value;
   return (
     <Col md={6}>
@@ -19,7 +23,7 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description)?"":description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          <CardButtons svn_url={svn_url} fetched_from="github" />
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
@@ -27,7 +31,7 @@ const ProjectCard = ({ value }) => {
             <Skeleton count={3} />
           )}
           {value ? (
-            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
+            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} fetched_from="github" />
           ) : (
             <Skeleton />
           )}
@@ -37,17 +41,44 @@ const ProjectCard = ({ value }) => {
   );
 };
 
-const CardButtons = ({ svn_url }) => {
+const GitlabProjectCard = ({ value }) => {
+  const {
+    name, // github + gitlab
+    description, // github + gitlab
+    web_url,
+    star_count,
+    languages_url, // github, gitlab uses APIURL/languages (which is also what gitlab uses, but isn't included in response)
+    last_activity_at,
+  } = value;
+  return (
+    <Col md={6}>
+      <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
+        <Card.Body>
+          <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
+          <Card.Text>{(!description)?"":description || <Skeleton count={3} />} </Card.Text>
+          <CardButtons svn_url={web_url} fetched_from="gitlab" />
+          <hr />
+          {languages_url ? (
+            <Language languages_url={languages_url} repo_url={web_url} />
+          ) : (
+            <Skeleton count={3} />
+          )}
+          {value ? (
+            <CardFooter star_count={star_count} repo_url={web_url} pushed_at={last_activity_at} fetched_from="gitlab" />
+          ) : (
+            <Skeleton />
+          )}
+        </Card.Body>
+      </Card>
+    </Col>
+  );
+};
+
+const CardButtons = ({ svn_url, fetched_from }) => {
   return (
     <>
-      <a
-        href={`${svn_url}/archive/master.zip`}
-        className="btn btn-outline-secondary mr-3"
-      >
-        <i className="fab fa-github" /> Clone Project
-      </a>
       <a href={svn_url} target=" _blank" className="btn btn-outline-secondary">
-        <i className="fab fa-github" /> Repo
+        <i className={`fab fa-${fetched_from}`} /> Repo
       </a>
     </>
   );
@@ -88,7 +119,7 @@ const Language = ({ languages_url, repo_url }) => {
               target=" _blank"
             >
               {language}:{" "}
-              {Math.trunc((data[language] / total_count) * 1000) / 10} %
+              {Number((data[language] / total_count * 1000) / 10).toFixed(2)} %
             </a>
           ))
         : "code yet to be deployed."}
@@ -96,7 +127,7 @@ const Language = ({ languages_url, repo_url }) => {
   );
 };
 
-const CardFooter = ({ star_count, repo_url, pushed_at }) => {
+const CardFooter = ({ star_count, repo_url, pushed_at, fetched_from }) => {
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
@@ -123,12 +154,11 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   return (
     <p className="card-text">
       <a
-        href={repo_url + "/stargazers"}
         target=" _blank"
         className="text-dark text-decoration-none"
       >
         <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Stars{" "}
+          <i className={`fab fa-${fetched_from}`} /> Stars{" "}
           <span className="badge badge-dark">{star_count}</span>
         </span>
       </a>
@@ -138,3 +168,4 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
 };
 
 export default ProjectCard;
+export {ProjectCard, GitlabProjectCard};

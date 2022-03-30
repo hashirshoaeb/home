@@ -63,8 +63,41 @@ const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "jeremiahbonney", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: ["userchroot"],
+  gitLabUsername: "jbonney",
+  reposLength: 0,
+  specificRepos: [ // TODO update Project/ProjectCard to actually use this new info
+  {
+    source: "gitlab",
+    org: "buildgrid",
+    repo: "buildgrid",
+  },
+  {
+    source: "gitlab",
+    org: "buildgrid",
+    repo: "recc",
+  },
+  {
+    source: "gitlab",
+    org: "buildgrid",
+    repo: "buildbox%2Fbuildbox-casd",
+  },
+  {
+    source: "gitlab",
+    org: "buildgrid",
+    repo: "buildbox%2Fbuildbox-worker",
+  },
+  {
+    source: "gitlab",
+    org: "buildgrid",
+    repo: "bgd-browser",
+  },
+  {
+    source: "github",
+    org: "jeremiahbonney",
+    repo: "Neural-Key-Exchange-Protocol",
+  },
+  ],
+
 };
 
 // Leadership SECTION
