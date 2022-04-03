@@ -5,7 +5,7 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+  gradientColors: "#4484ce, #1ad7c0, #ce7700, #77165c, #ff7f7f, #ecf0f1",
   firstName: "Jeremiah",
   middleName: "",
   lastName: "Bonney",
@@ -51,7 +51,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Jeremiah Bonney and I'm a Senior Software Engineer at Bloomberg LP. I work on creating open source distributed build tools using the Remote Execution API. You can find most of our projects at https://gitlab.com/BuildGrid including BuildGrid, a REAPI server implementation and RECC, a caching compiler wrapper which leverages the REAPI to distribute and cache compilations.",
-  resume: "https://docs.google.com/document/d/1UPjzHxKv7kNT9doiSNPIVdSQix7CfmRb/edit?usp=sharing&ouid=105415267679882691685&rtpof=true&sd=true",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
