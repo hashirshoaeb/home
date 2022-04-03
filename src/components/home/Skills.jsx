@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import { Jumbotron, Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
-function Skills({ heading, hardSkills, softSkills }) {
+function Skills({ heading, techincalSkills, otherSkills }) {
   const skillsTabRef = React.useRef();
   const [isScrolled, setIsScrolled] = React.useState(false);
   //const navbarDimensions = useResizeObserver(navbarMenuRef);
@@ -26,25 +26,25 @@ function Skills({ heading, hardSkills, softSkills }) {
         </h2>
         <Tabs
           className="skills-tabs"
-          defaultActiveKey="hard-skills"
+          defaultActiveKey="technical-skills"
           id="skills-tabs"
         >
           <Tab
             tabClassName="skills-tab lead"
-            eventKey="hard-skills"
+            eventKey="technical-skills"
             title="Technical Skills"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
+              <SkillsTab skills={techincalSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
           <Tab
             tabClassName="skills-tab lead"
-            eventKey="soft-skills"
-            title="Soft Skills"
+            eventKey="other-skills"
+            title="Other Skills"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={softSkills} isScrolled={isScrolled} />
+              <SkillsTab skills={otherSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
         </Tabs>
