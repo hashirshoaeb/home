@@ -139,14 +139,14 @@ const skills = {
     { name: "Perl", value: 70 },
   ],
   otherSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Coffee Drinking", value: 90 },
+    { name: "Coffee Making", value: 85 },
+    { name: "Ordering Take-out", value: 80 },
+    { name: "Just Dance", value: 75 },
+    { name: "Guitar Hero", value: 70 },
+    { name: "Party-Parrot Usage", value: 70 },
+    { name: "Magic Tricks", value: 50 },
+    { name: "Picking a song when given AUX", value: 5 },
   ],
 };
 
