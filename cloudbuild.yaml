@@ -24,7 +24,7 @@ steps:
   args:
   - run
   - --filename=k8s.yaml
-  - --location=${_CLOUDSDK_COMPUTE_ZONE}
-  - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
+  - --location=us-central1
+  - --cluster=autopilot-cluster-1
 options:
  logging: CLOUD_LOGGING_ONLY
