@@ -1,0 +1,28 @@
+steps:
+# build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/third-expanse-93423/home:${SHORT_SHA}", "."]
+# push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/third-expanse-93423/home:${SHORT_SHA}"]
+# prepare the deployment
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+  id: 'Update deployment image '
+  entrypoint: 'sed'
+  args:
+  - -i
+  - "s#@IMAGE_NAME@#gcr.io/third-expanse-93423/home:${SHORT_SHA}#g"
+  - k8s.yaml
+# prepare the deployment
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+  id: 'cat deployment image '
+  entrypoint: 'cat'
+  args:
+  - k8s.yaml
+# deploy the image
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=k8s.yaml
+  - --location=us-central1
+  - --cluster=autopilot-cluster-1
