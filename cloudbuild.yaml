@@ -26,3 +26,5 @@ steps:
   - --filename=k8s.yaml
   - --location=${_CLOUDSDK_COMPUTE_ZONE}
   - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
+options:
+ logging: CLOUD_LOGGING_ONLY
