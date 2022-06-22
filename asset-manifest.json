@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/michelle_liu.github.io/home/static/css/main.956fad23.chunk.css",
-    "main.js": "/michelle_liu.github.io/home/static/js/main.ab7a5585.chunk.js",
-    "main.js.map": "/michelle_liu.github.io/home/static/js/main.ab7a5585.chunk.js.map",
-    "runtime-main.js": "/michelle_liu.github.io/home/static/js/runtime-main.6342d727.js",
-    "runtime-main.js.map": "/michelle_liu.github.io/home/static/js/runtime-main.6342d727.js.map",
-    "static/js/2.689c31cf.chunk.js": "/michelle_liu.github.io/home/static/js/2.689c31cf.chunk.js",
-    "static/js/2.689c31cf.chunk.js.map": "/michelle_liu.github.io/home/static/js/2.689c31cf.chunk.js.map",
-    "index.html": "/michelle_liu.github.io/home/index.html",
-    "precache-manifest.31941312c4e11bff5f2c689bedd8e5e1.js": "/michelle_liu.github.io/home/precache-manifest.31941312c4e11bff5f2c689bedd8e5e1.js",
-    "service-worker.js": "/michelle_liu.github.io/home/service-worker.js",
-    "static/css/main.956fad23.chunk.css.map": "/michelle_liu.github.io/home/static/css/main.956fad23.chunk.css.map",
-    "static/js/2.689c31cf.chunk.js.LICENSE.txt": "/michelle_liu.github.io/home/static/js/2.689c31cf.chunk.js.LICENSE.txt",
-    "static/media/mingxuanliu.jpg": "/michelle_liu.github.io/home/static/media/mingxuanliu.d56a0172.jpg",
-    "static/media/research.jpg": "/michelle_liu.github.io/home/static/media/research.72d0432a.jpg",
-    "static/media/resume.pdf": "/michelle_liu.github.io/home/static/media/resume.1ec58e25.pdf"
+    "main.css": "/Michllemingxuan.github.io/home/static/css/main.956fad23.chunk.css",
+    "main.js": "/Michllemingxuan.github.io/home/static/js/main.873de98f.chunk.js",
+    "main.js.map": "/Michllemingxuan.github.io/home/static/js/main.873de98f.chunk.js.map",
+    "runtime-main.js": "/Michllemingxuan.github.io/home/static/js/runtime-main.9013f1e9.js",
+    "runtime-main.js.map": "/Michllemingxuan.github.io/home/static/js/runtime-main.9013f1e9.js.map",
+    "static/js/2.689c31cf.chunk.js": "/Michllemingxuan.github.io/home/static/js/2.689c31cf.chunk.js",
+    "static/js/2.689c31cf.chunk.js.map": "/Michllemingxuan.github.io/home/static/js/2.689c31cf.chunk.js.map",
+    "index.html": "/Michllemingxuan.github.io/home/index.html",
+    "precache-manifest.8446377c66a632488bd10463f3a9dadc.js": "/Michllemingxuan.github.io/home/precache-manifest.8446377c66a632488bd10463f3a9dadc.js",
+    "service-worker.js": "/Michllemingxuan.github.io/home/service-worker.js",
+    "static/css/main.956fad23.chunk.css.map": "/Michllemingxuan.github.io/home/static/css/main.956fad23.chunk.css.map",
+    "static/js/2.689c31cf.chunk.js.LICENSE.txt": "/Michllemingxuan.github.io/home/static/js/2.689c31cf.chunk.js.LICENSE.txt",
+    "static/media/mingxuanliu.jpg": "/Michllemingxuan.github.io/home/static/media/mingxuanliu.d56a0172.jpg",
+    "static/media/research.jpg": "/Michllemingxuan.github.io/home/static/media/research.72d0432a.jpg",
+    "static/media/resume.pdf": "/Michllemingxuan.github.io/home/static/media/resume.1ec58e25.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.6342d727.js",
+    "static/js/runtime-main.9013f1e9.js",
     "static/js/2.689c31cf.chunk.js",
     "static/css/main.956fad23.chunk.css",
-    "static/js/main.ab7a5585.chunk.js"
+    "static/js/main.873de98f.chunk.js"
   ]
 }
