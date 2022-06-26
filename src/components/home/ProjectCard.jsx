@@ -26,11 +26,11 @@ const ProjectCard = ({ value }) => {
           ) : (
             <Skeleton count={3} />
           )}
-          {value ? (
+          {/* {value ? (
             <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
           ) : (
             <Skeleton />
-          )}
+          )} */}
         </Card.Body>
       </Card>
     </Col>

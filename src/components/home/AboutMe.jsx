@@ -39,7 +39,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
             {showPic && (
               <img
                 className="border border-secondary rounded-circle"
-                src={profilePicUrl}
+                src="./image/avatar.jpg"
                 alt="profilepicture"
                 width={imgSize}
                 height={imgSize}
