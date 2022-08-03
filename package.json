@@ -10,7 +10,7 @@
     "url": "https://github.com/hashirshoaeb"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "bootstrap": "^4.5.2",
     "gh-pages": "^2.2.0",
     "jquery": "^3.5.1",
