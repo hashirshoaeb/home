@@ -1,0 +1,54 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: apps
+  name: home
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: home
+  replicas: 2
+  revisionHistoryLimit: 10
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: home
+        app.kubernetes.io/part-of: home
+    spec:
+      nodeSelector:
+        storage: freenas
+      containers:
+      - image: ghcr.io/jiggyjigsj/home:master
+        imagePullPolicy: Always
+        name: home
+        ports:
+        - containerPort: 3000
+        env:
+        - name: UID
+          value: "1000"
+        - name: GID
+          value: "1000"
+        livenessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
