@@ -18,7 +18,7 @@ const ProjectCard = ({ value }) => {
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
-          <Card.Text>{(!description)?"":description || <Skeleton count={3} />} </Card.Text>
+          <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
           {languages_url ? (
@@ -39,17 +39,17 @@ const ProjectCard = ({ value }) => {
 
 const CardButtons = ({ svn_url }) => {
   return (
-    <>
+    <div className="d-grid gap-2 d-md-block">
       <a
         href={`${svn_url}/archive/master.zip`}
-        className="btn btn-outline-secondary mr-3"
+        className="btn btn-outline-secondary mx-2"
       >
         <i className="fab fa-github" /> Clone Project
       </a>
-      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary">
+      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
         <i className="fab fa-github" /> Repo
       </a>
-    </>
+    </div>
   );
 };
 
@@ -81,16 +81,20 @@ const Language = ({ languages_url, repo_url }) => {
       Languages:{" "}
       {array.length
         ? array.map((language) => (
-            <a
-              key={language} 
-              className="badge badge-light card-link"
-              href={repo_url + `/search?l=${language}`}
-              target=" _blank"
-            >
+          <a
+            key={language}
+            className="card-link"
+            href={repo_url + `/search?l=${language}`}
+            target=" _blank"
+            rel="noopener noreferrer"
+          >
+            <span className="badge bg-light text-dark">
               {language}:{" "}
               {Math.trunc((data[language] / total_count) * 1000) / 10} %
-            </a>
-          ))
+            </span>
+          </a>
+
+        ))
         : "code yet to be deployed."}
     </div>
   );
