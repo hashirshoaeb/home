@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
+import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
   // const { showBlog, FirstName } = config;
@@ -34,53 +34,52 @@ const Navigation = React.forwardRef((props, ref) => {
   return (
     <Navbar
       ref={navbarMenuRef}
-      className={` fixed-top  ${
-        !isTop ? "navbar-white" : "navbar-transparent"
-      }`}
+      className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"
+        }`}
       expand="lg"
     >
-      <Navbar.Brand className="brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
         {`<${mainBody.firstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="navbar-nav mr-auto">
           {/* {
-            <Nav.Link className="nav-link lead">
+            <NavLink className="nav-item lead">
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </Nav.Link>
+            </NavLink>
           } */}
           {repos.show && (
-            <Nav.Link
-              className="nav-link lead"
+
+            <NavLink
               href={process.env.PUBLIC_URL + "/#projects"}
             >
               Projects
-            </Nav.Link>
+            </NavLink>
           )}
-          <Nav.Link
-            className="nav-link lead"
+          <NavLink
+            className="nav-item lead"
             href={about.resume}
             target="_blank"
             rel="noreferrer noopener"
           >
             Resume
-          </Nav.Link>
+          </NavLink>
           {about.show && (
-            <Nav.Link
-              className="nav-link lead"
+            <NavLink
+              className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
               About
-            </Nav.Link>
+            </NavLink>
           )}
           {skills.show && (
-            <Nav.Link
-              className="nav-link lead"
+            <NavLink
+              className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#skills"}
             >
               Skills
-            </Nav.Link>
+            </NavLink>
           )}
         </Nav>
       </Navbar.Collapse>

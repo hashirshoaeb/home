@@ -1,7 +1,7 @@
 import React from "react";
-import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Typist from 'react-typist-component';
+import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
   ({ gradient, title, message, icons }, ref) => {
@@ -20,9 +20,10 @@ const MainBody = React.forwardRef(
           <h1 ref={ref} className="display-1">
             {title}
           </h1>
-          <Typist className="lead typist" cursor={{ show: false }}>
-            {" "}
-            {message}
+          <Typist>
+            <div className="lead typist">
+              {message}
+            </div>
           </Typist>
           <div className="p-5">
             {icons.map((icon, index) => (
