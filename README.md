@@ -84,7 +84,7 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 2. Clone the forked repo from your account using:
 
    ```bash
-     git clone https://github.com/<your-username>/home.git
+     git clone https://github.com/<your-username>/personal-site-react.git
    ```
 
 3. Open in editor and edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) file.
