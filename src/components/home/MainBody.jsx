@@ -56,6 +56,7 @@ const MainBody = React.forwardRef(
             href={resume}
             role="button"
             aria-label="My Resume"
+            style={{ marginTop: '0.8rem' }}
           >
             Resume
           </a>
@@ -66,8 +67,10 @@ const MainBody = React.forwardRef(
             href="#aboutme"
             role="button"
             aria-label="Learn more about me"
+            style={{ marginTop: '0.8rem' }}
           >
             More about me
+            
           </a>
           <span> &nbsp; </span>
           <a
@@ -77,6 +80,7 @@ const MainBody = React.forwardRef(
             href="https://salad-spinner.netlify.app/"
             role="button"
             aria-label="Salad Spinner"
+            style={{ marginTop: '0.8rem' }}
           >
             My Game!
           </a>
