@@ -51,7 +51,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Salil Khanna. I’m graduating from Northeastern University (Boston) in 2023, I'm based in the New York City Area, and I'm a huge lover of learning. I'm currently seeking out Software Engineering Internships for Winter and Summer 2023.",
-  resume: require("../editable-stuff/Resume.pdf"),
+  resume: "/documents/resume.pdf",
 };
 
 // PROJECTS SECTION
