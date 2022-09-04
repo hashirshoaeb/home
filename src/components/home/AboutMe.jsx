@@ -49,7 +49,14 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
         </div>
         <div className={`col-lg-${showPic ? "7" : "12"}`}>
           <h2 className="display-4 mb-5 text-center">{heading}</h2>
-          <p className="lead text-center">{message}</p>
+          <p className="lead text-center">
+          My name is Salil Khanna. I’m graduating from <a href="https://www.northeastern.edu" target="_blank" rel="noreferrer">Northeastern University (Boston)</a> in 2023, 
+          I'm based in the <a href="https://www.nyc.gov" target="_blank" rel="noreferrer"> New York City</a>, and I'm a huge lover of <a href= "https://www.youtube.com/watch?v=jksPhQhJRoc" target="_blank" rel="noreferrer">learning</a>. 
+          <br/>
+          <br/>
+          I'm currently seeking out Software Engineering Internships for Winter and Summer 2023.
+
+          </p>
           {resume && (
             <p className="lead text-center">
               <a

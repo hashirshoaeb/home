@@ -4,7 +4,7 @@ import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons }, ref) => {
+  ({ gradient, title, message, icons, resume }, ref) => {
     return (
       <Jumbotron
         fluid
@@ -34,10 +34,33 @@ const MainBody = React.forwardRef(
                 href={icon.url}
                 aria-label={`My ${icon.image.split("-")[1]}`}
               >
-                <i className={`fab ${icon.image}  fa-3x socialicons`} />
+                {icon.image === "fa-envelope" ? <i className={`fas fa-envelope fa-3x socialicons`} /> 
+                : <i className={`fab ${icon.image}  fa-3x socialicons`} />}
+                
               </a>
             ))}
+             <a
+                key={`social-icon-4`}
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:salilkhannawork@gmail.com"
+                aria-label={`My Email`}
+              >
+                
+              </a>
           </div>
+          <a
+            className="btn btn-outline-light btn-lg "
+            target="_blank"
+            rel="noopener noreferrer"
+            href={resume}
+            role="button"
+            aria-label="My Resume"
+          >
+            Resume
+          </a>
+          <span> &nbsp; </span>
+
           <a
             className="btn btn-outline-light btn-lg "
             href="#aboutme"
@@ -45,6 +68,17 @@ const MainBody = React.forwardRef(
             aria-label="Learn more about me"
           >
             More about me
+          </a>
+          <span> &nbsp; </span>
+          <a
+            className="btn btn-outline-light btn-lg "
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://salad-spinner.netlify.app/"
+            role="button"
+            aria-label="Salad Spinner"
+          >
+            My Game!
           </a>
         </Container>
       </Jumbotron>

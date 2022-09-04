@@ -17,7 +17,7 @@ const API = "https://api.github.com";
 // const gitHubQuery = "/repos?sort=updated&direction=desc";
 // const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
-const Project = ({ heading, username, length, specfic }) => {
+const Project = ({ heading, username, length, specfic, demoLinkArray }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
   const specficReposAPI = `${API}/repos/${username}`;
   const dummyProjectsArr = new Array(length + specfic.length).fill(
@@ -57,7 +57,9 @@ const Project = ({ heading, username, length, specfic }) => {
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
       <Container className="">
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
+        <h2 className="display-4 text-center">{heading}</h2>
+        <h4 className="display-7 pb-5 text-center">All projects can be found <a href="https://www.github.com/salil-khanna/" target="_blank" rel="noreferrer">here</a>  :) 
+        </h4>
         <Row>
           {projectsArray.length
             ? projectsArray.map((project, index) => (
@@ -65,6 +67,7 @@ const Project = ({ heading, username, length, specfic }) => {
                 key={`project-card-${index}`}
                 id={`project-card-${index}`}
                 value={project}
+                demoLink={demoLinkArray[index]}
               />
             ))
             : dummyProjectsArr.map((project, index) => (

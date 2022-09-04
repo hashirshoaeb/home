@@ -32,6 +32,7 @@ const Home = React.forwardRef((props, ref) => {
         message={mainBody.message}
         icons={mainBody.icons}
         ref={ref}
+        resume={about.resume}
       />
       {about.show && (
         <AboutMe
@@ -53,6 +54,7 @@ const Home = React.forwardRef((props, ref) => {
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
+          demoLinkArray={repos.demoLinkArray}
         />
       )}
       {leadership.show && (

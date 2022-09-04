@@ -6,30 +6,26 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Salil",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Khanna",
+  message: " Software Engineer, Professional Procrastinator, and Coffee Addict. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://github.com/salil-khanna",
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/salil-khanna/",
     },
     {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      image: "fa-youtube",
+      url: "https://www.youtube.com/channel/UCrw0LE9SqBVY31v_jo0rIGg",
+    },
+    {
+      image: "fa-envelope",
+      url: "mailto:salilkhannawork@gmail.com",
     },
   ],
 };
@@ -51,11 +47,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/nycProfilePic3.jpg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "My name is Salil Khanna. I’m graduating from Northeastern University (Boston) in 2023, I'm based in the New York City Area, and I'm a huge lover of learning. I'm currently seeking out Software Engineering Internships for Winter and Summer 2023.",
+  resume: require("../editable-stuff/Resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -66,9 +62,10 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  gitHubUsername: "salil-khanna", //i.e."johnDoe12Gh"
+  reposLength: 0,
+  specificRepos: ["northeastern-checklist", "northeastern-checklist-flask", "Draw-Note", "salad-spinner"],
+  demoLinkArray: ["https://northeasternchecklist.com/", "https://northeasternchecklist.com/", "https://youtu.be/oNP--bx7L1k", "https://https://salad-spinner.netlify.app/"],
 };
 
 // Leadership SECTION
@@ -79,12 +76,12 @@ const leadership = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
+      img: require("../editable-stuff/nycProfilePic3.jpg"), 
       label: "First slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
+      img: require("../editable-stuff/nycProfilePic3.jpg"), 
       label: "Second slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
@@ -97,7 +94,7 @@ const leadership = {
 
 // SKILLS SECTION
 const skills = {
-  show: true,
+  show: false,
   heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
@@ -124,25 +121,51 @@ const skills = {
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
-  heading: "Get In Touch",
+  heading: "Contact Me",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for Software Engineering intern opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "salilkhannawork@gmail.com",
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Software Engineer Intern',// Datadog
+      width: '25%',
+      height: '25%',
+      companylogo: require('../assets/img/datadog.png'),
+      date: 'Sept 2022 – Present',
+      info: "*GoLang *Kafka *Real Time Usage",
+      link: "https://www.datadoghq.com",
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Software Engineer Intern', //Microsoft
+      width: '60%',
+      height: '60%',
+      companylogo: require('../assets/img/microsoft.jpeg'),
+      date: 'May 2022 – Aug 2022',
+      info: "*C# *.NET *Outlook Notifications",
+      link: "https://www.microsoft.com",
+    },
+    {
+      role: 'Technology Analyst Co-op',// Fidelity
+      width: '50%',
+      height: '50%',
+      companylogo: require('../assets/img/fidelity.png'),
+      date: 'July 2021 – Dec 2021',
+      info: "*Python *Cloud *API Calls",
+      link: "https://www.fidelity.com",
+    },
+    {
+      role: 'Teaching Assistant',// Northeastern
+      width: '60%',
+      height: '60%',
+      companylogo: require('../assets/img/northeastern.png'),
+      date: 'Jan 2020 – May 2022',
+      info: "*Engineering *OOD *Co-op",
+      link: "https://www.northeastern.edu",
     },
   ]
 }

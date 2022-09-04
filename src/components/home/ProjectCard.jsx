@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
-const ProjectCard = ({ value }) => {
+const ProjectCard = ({ value, demoLink }) => {
   const {
     name,
     description,
@@ -19,7 +19,11 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />} 
+          {demoLink !== "" ? <a href={demoLink} style={{ marginTop: '0.8rem' }}target=" _blank" className="btn btn-outline-secondary mx-2"> 
+          <i className={`fas fa-link `} /> Demo
+          </a> : ""}
+
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
