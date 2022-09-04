@@ -1,7 +1,7 @@
 {
   "name": "developers-portfolio",
   "description": "A personal website made with react.",
-  "homepage": "https://salilkhannanew.netlify.app",
+  "homepage": "https://salilkhanna.com",
   "version": "2.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
