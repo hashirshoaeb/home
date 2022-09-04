@@ -65,7 +65,7 @@ const repos = {
   gitHubUsername: "salil-khanna", //i.e."johnDoe12Gh"
   reposLength: 0,
   specificRepos: ["northeastern-checklist", "northeastern-checklist-flask", "Draw-Note", "salad-spinner"],
-  demoLinkArray: ["https://northeasternchecklist.com/", "https://northeasternchecklist.com/", "https://youtu.be/oNP--bx7L1k", "https://https://salad-spinner.netlify.app/"],
+  demoLinkArray: ["https://northeasternchecklist.com/", "https://northeasternchecklist.com/", "https://youtu.be/oNP--bx7L1k", "https://salad-spinner.netlify.app/"],
 };
 
 // Leadership SECTION
