@@ -6,31 +6,26 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Aravind",
   middleName: "",
-  lastName: "Shoaib",
+  lastName: "Subramanian",
   message: " Passionate about changing the world with technology. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/Aravind-Subramanian",
     },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
+
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/aravindsubramanians/",
     },
+
     {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      image: "fa-instagram",
+      url: "https://www.instagram.com/aravind.subramanian_/",
     },
+    
   ],
 };
 
@@ -51,10 +46,10 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/aravind-subramanian.jpeg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
+    "Hello, World. I'm Aravind Subramanian, A Graduate Research Assistant from University of Florida.I'm an experienced software professional who constantly seeks out innovative solutions to problems. In my four years in this industry with Microsoft, I've honed my analytical thinking and collaboration skills, and I love working with a team. *I wanted to steer my career towards software design and development, and hence pursuing Masters , did the following projects to showcase my skills in data structures and algorithms, object oriented design and distributed systems.* I am interested in designing and developing highly available, scalable, and secure distributed software systems.",
   resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 };
 
@@ -66,7 +61,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "Aravind-Subramanian", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -101,23 +96,21 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
     { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
+    { name: "Java", value: 50 },
     { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "SQL", value: 80 },
+    { name: "MongoDB", value: 80 },
+    { name: "PostgreSQL", value: 70 },
+    { name: "Shell Scripting", value: 80 },
+    { name: "Azure Cloud Services", value: 80 },
+    { name: "Git", value: 75 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Software Engineering", value: 80 },
+    { name: "Risk Assessment", value: 90 },
+    { name: "Gap Analysis", value: 95 },
+    { name: "IT Service Managment", value: 85 },
   ],
 };
 
@@ -126,23 +119,28 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for full-time Software Engineering opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "aravindssubramanian@gmail.com",
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Graduate Research Assistant, University of Florida',// Here Add Company Name
+      companylogo: require('../assets/img/uf_logo.png'),
+      date: 'August 2022 – Present',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Sofware Engineer, Intern, University of Florida',// Here Add Company Name
+      companylogo: require('../assets/img/uf_logo.png'),
+      date: 'April 2022 – August 2022',
+    },
+    {
+      role: 'Customer Engineer',
+      companylogo: require('../assets/img/ms-logo.png'),
+      date: 'July 2017 – August 2021',
     },
   ]
 }
