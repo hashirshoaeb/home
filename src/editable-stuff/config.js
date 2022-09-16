@@ -50,7 +50,7 @@ const about = {
   imageSize: 375,
   message:
     "Hello, World. I'm Aravind Subramanian, A Graduate Research Assistant from University of Florida.I'm an experienced software professional who constantly seeks out innovative solutions to problems. In my four years in this industry with Microsoft, I've honed my analytical thinking and collaboration skills, and I love working with a team. *I wanted to steer my career towards software design and development, and hence pursuing Masters , did the following projects to showcase my skills in data structures and algorithms, object oriented design and distributed systems.* I am interested in designing and developing highly available, scalable, and secure distributed software systems.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  // resume: "../",
 };
 
 // PROJECTS SECTION
