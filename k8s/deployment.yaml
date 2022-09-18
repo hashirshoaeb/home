@@ -23,7 +23,7 @@ spec:
       nodeSelector:
         storage: freenas
       containers:
-      - image: ghcr.io/jiggyjigsj/home:master
+      - image: ghcr.io/jiggyjigsj/home@sha256:26c24c82e121eb97ddeeec7494027ed78a807c09ee9ad294530165ebee7946ba
         imagePullPolicy: Always
         name: home
         ports:
