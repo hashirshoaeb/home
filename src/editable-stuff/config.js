@@ -42,7 +42,7 @@ const about = {
   imageLink: require("../editable-stuff/kpyangprofileImage.png"),
   imageSize: 375,
   message:
-    "Hi there, my name is KP. As a Generalist, I am enthusiastic about where technology is heading. I'm most passionate about understanding what technology to use and how to best implement them. My goal is to developing software that solve real-world problems.",
+    "Hi there! My name is KP. As a Generalist, I am enthusiastic about the direction technology is headed. On my free time I stay up-to-date with technological trends through personal research. With over 2 years of professional experience building software, I'm most passionate about utilizing current technology to developing software that solve real-world problems.",
   resume: "https://docs.google.com/document/d/1yEdxffQkFaG_ixTwE3yBJUtrHd7PNNNs_fD6hTyiHaA/edit?usp=sharing",
 };
 
@@ -64,7 +64,7 @@ const leadership = {
   show: false,
   heading: "Leadership",
   message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   images: [
     { 
       img: require("../editable-stuff/kpyangprofileImage.png"), 
@@ -78,8 +78,8 @@ const leadership = {
     },
   ],
   imageSize: {
-    width:"615",
-    height:"450"
+    width:"325",
+    height:"325"
   }
 };
 
@@ -143,7 +143,7 @@ const experiences = {
 
 // // Blog SECTION
 // const blog = {
-//   show: true,
+//   show: false,
 // };
 
 export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
