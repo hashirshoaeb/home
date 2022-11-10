@@ -56,7 +56,7 @@ const about = {
   imageSize: 375,
   message:
     "Principal data scientist at Capital One. Michigan and Northwestern grad. Lover of anything math, statistics, baseball, and data.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -124,11 +124,11 @@ const skills = {
 
 // GET IN TOUCH SECTION
 const getInTouch = {
-  show: true,
+  show: false,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "If you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "evanselliott1@gmail.com",
 };
 
 const experiences = {
