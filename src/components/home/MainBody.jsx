@@ -40,11 +40,11 @@ const MainBody = React.forwardRef(
           </div>
           <a
             className="btn btn-outline-light btn-lg "
-            href="#aboutme"
+            href="auth"
             role="button"
-            aria-label="Learn more about me"
+            aria-label="Sign In"
           >
-            More about me
+            Sign In
           </a>
         </Container>
       </Jumbotron>
