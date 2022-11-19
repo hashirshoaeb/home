@@ -26,7 +26,7 @@ const BlogCard = ({ index, title, image, description }) => {
       <div className="">
         <div className="row">
           <div className="col-4 col-lg-12">
-            {/* <img src={image} className="card-img" alt="..." /> */}
+            <img src={image} className="card-img" alt="..." />
           </div>
           <div className="col-8 col-lg-12">
             <div className="">

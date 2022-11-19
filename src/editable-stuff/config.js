@@ -25,7 +25,7 @@ const mainBody = {
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/alexkemboi97/",
+      url: "https://www.linkedin.com/in/alex-kemboi-9642a3166?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqEFKddaaQva8m%2BPVTRRdCg%3D%3D",
     },
     {
       image: "fa-twitter",
