@@ -53,8 +53,7 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/sulaimanbehzad.png"),
   imageSize: 375,
-  message:
-    "I am Mohammad Sulaiman Behzad, a graduate of Ferdowsi University of Mashhad with a degree in Computer Engineering.",
+  message: "I am Mohammad Sulaiman Behzad, a graduate of Ferdowsi University of Mashhad with a degree in Computer Engineering.",
   resume: "https://www.canva.com/design/DAFOYzbJKKE/aURZBb2h9MdvQzNxW2umXQ/view?utm_content=DAFOYzbJKKE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
 };
 
