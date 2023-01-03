@@ -1,4 +1,8 @@
 <!-- PROJECT LOGO -->
+---
+permalink: /index.html
+---
+
 <br />
 <p align="center">
   <h1 align="center">Developer's Portfolio ✨</h1>
