@@ -69,8 +69,8 @@ const repos = {
   show: true,
   heading: "Some of My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
-  reposLength: 6,
-  specificRepos: ["SFDC-Eintstein-Sentiment-Analysis","react-portfolio-page", "sfdc-shawn-dev-ed","python-investments", "sportmaster"],
+  reposLength: 5,
+  specificRepos: ["SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","python-investments", "sportmaster","react-portfolio-page"],
 };
 
 // Leadership SECTION

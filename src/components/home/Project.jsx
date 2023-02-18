@@ -36,7 +36,17 @@ const Project = ({ heading, username, length, specfic }) => {
       // getting all repos
       const response = await axios.get(allReposAPI);
       // slicing to the length
-      repoList = [...response.data.slice(0, length)];
+      //repoList = [...response.data.slice(0, length)];
+      //repoList = response.data.filter(item => specfic.includes(item.name));
+      for(var selectedRepoIndex in specfic){
+        var selectedRepo = specfic[selectedRepoIndex];
+        for(var receivedReposIndex in response.data){
+          var receivedRepo = response.data[receivedReposIndex];
+          var foundSelectedRepo = (receivedRepo.name === selectedRepo);
+          if(foundSelectedRepo) repoList.push(receivedRepo);
+        }
+      }
+      /*
       // adding specified repos
       try {
         for (let repoName of specfic) {
@@ -46,6 +56,7 @@ const Project = ({ heading, username, length, specfic }) => {
       } catch (error) {
         console.error(error.message);
       }
+      */
       // setting projectArray
       // TODO: remove the duplication.
       setProjectsArray(repoList);
