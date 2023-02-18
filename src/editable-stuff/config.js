@@ -157,34 +157,39 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Javascript", value: 90 },
+    { name: "React", value: 85 },
+    { name: "Python", value: 75 },
+    { name: "Web Developement", value: 95 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Program / Project Management", value: 85 },
+    { name: "Strategy Planning", value: 75 },
+    { name: "Product Management", value: 75 },
+  ],
+  musicHardSkills: [
+    { name: "Logic X", value: 90 },
+    { name: "FL Studio", value: 85 },
+    { name: "Mixing", value: 55 },
+    { name: "Guitar", value: 69 },
+    { name: "Piano", value: 55 },
+    { name: "Music Theory", value: 55 },
+  ],
+  musicSoftSkills: [
+    { name: "Songwriting", value: 35 },
+    { name: "Vibes", value: 75 },
+    { name: "Ideas", value: 85 },
   ],
 };
+
 
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm always open to collaboration, and am happy to chat. Feel free to drop me a line at",
+  email: "shawn.soneja85@gmail.com",
 };
 
 const experiences = {
@@ -209,4 +214,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, musicBody, musicAbout, about, repos, musicRepos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, musicBody, musicAbout, about, repos, musicRepos, skills, leadership, getInTouch, experiences,  };

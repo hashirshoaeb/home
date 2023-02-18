@@ -129,3 +129,8 @@ code {
     animation: progress 1.5s ease-in-out forwards;
   }
 }
+.secretLink:hover{
+  opacity:1 !important;
+  transition: 0.2s ease-in;
+  color:lightgray;
+}

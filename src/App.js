@@ -113,8 +113,8 @@ const Music = React.forwardRef((props, ref) => {
       {skills.show && (
         <Skills
           heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
+          hardSkills={skills.musicHardSkills}
+          softSkills={skills.musicSoftSkills}
         />
       )}
       
