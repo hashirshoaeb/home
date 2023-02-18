@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   navBar,
   mainBody,
+  musicBody,
+  musicAbout,
   about,
   repos,
   musicRepos,
@@ -81,19 +83,18 @@ const Music = React.forwardRef((props, ref) => {
   return (
     <>
       <MainBody
-        gradient={mainBody.gradientColors}
-        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={mainBody.message}
-        icons={mainBody.icons}
+        gradient={musicBody.gradientColors}
+        title={`${musicBody.firstName} ${musicBody.middleName} ${musicBody.lastName}`}
+        message={musicBody.message}
+        icons={musicBody.icons}
         ref={ref}
       />
       {about.show && (
         <AboutMe
-          heading={about.heading}
-          message={about.message}
-          link={about.imageLink}
-          imgSize={about.imageSize}
-          resume={about.resume}
+          heading={musicAbout.heading}
+          message={musicAbout.message}
+          link={musicAbout.imageLink}
+          imgSize={musicAbout.imageSize}
         />
       )}
       {
@@ -101,14 +102,6 @@ const Music = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
-      {repos.show && (
-        <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={musicRepos.specificRepos}
-        />
-      )}
       {leadership.show && (
         <Leadership
           heading={leadership.heading}

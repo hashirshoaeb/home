@@ -3,6 +3,7 @@ const navBar = {
   show: true,
 };
 
+
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#087E8B, #DC7F9B, #3C3C3C, #C1CAD6, #C1839F",
@@ -14,6 +15,43 @@ const mainBody = {
     {
       image: "fa-github",
       url: "https://github.com/shawn-don-soneja",
+    },
+    /*
+    {
+      image: "fa-facebook",
+      url: "https://www.facebook.com/hashirshoaeb",
+    },
+    {
+      image: "fa-instagram",
+      url: "https://www.instagram.com/hashirshoaeb/",
+    },
+    {
+      image: "fa-linkedin",
+      url: "https://www.linkedin.com/in/hashirshoaeb/",
+    },
+    {
+      image: "fa-twitter",
+      url: "https://www.twitter.com/hashirshoaeb/",
+    },
+    */
+  ],
+};
+
+// Main Body SECTION
+const musicBody = {
+  gradientColors: "#CAE7B9, #F3DE8A, #EB9486, #7E7F9A, #97A7B3",
+  firstName: "Shawn",
+  middleName: "",
+  lastName: "Soneja",
+  message: "The artist",
+  icons: [
+    {
+      image: "fa-soundcloud",
+      url: "https://soundcloud.com/user-207519198",
+    },
+    {
+      image: "fa-instagram",
+      url: "https://www.instagram.com/essexstreetsounds/",
     },
     /*
     {
@@ -58,6 +96,15 @@ const about = {
   message:
     "I'm Shawn. I like trying new things. I like technology, among other things. What's up.",
   resume: "https://docs.google.com/document/d/e/2PACX-1vTFklxhTdEwKjuaOzn6HcZ-KHQ_hQrnxsjmvjKobkNy5dSOVej89_j8ZQBa_qlhwg/pub",
+};
+
+const musicAbout = {
+  show: true,
+  heading: "About Me",
+  imageLink: require("../editable-stuff/mountain.jpg"),
+  imageSize: 375,
+  message:
+    "I'm Shawn. I also make music, and appreciate art.",
 };
 
 // PROJECTS SECTION
@@ -162,4 +209,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, musicRepos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, musicBody, musicAbout, about, repos, musicRepos, skills, leadership, getInTouch, experiences };
