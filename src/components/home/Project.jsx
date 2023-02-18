@@ -27,6 +27,10 @@ const Project = ({ heading, username, length, specfic }) => {
   const [projectsArray, setProjectsArray] = useState([]);
 
   const fetchRepos = useCallback(async () => {
+    //authentication
+    const config = {
+      headers: { Authorization: `Bearer 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` }
+    };
     let repoList = [];
     try {
       // getting all repos
@@ -36,7 +40,7 @@ const Project = ({ heading, username, length, specfic }) => {
       // adding specified repos
       try {
         for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`);
+          const response = await axios.get(`${specficReposAPI}/${repoName}`, config);
           repoList.push(response.data);
         }
       } catch (error) {
