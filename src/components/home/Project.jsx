@@ -35,9 +35,19 @@ const Project = ({ heading, username, length, specfic }) => {
     try {
       // getting all repos
       const response = await axios.get(allReposAPI);
-      // slicing to the length
-      //repoList = [...response.data.slice(0, length)];
-      //repoList = response.data.filter(item => specfic.includes(item.name));
+
+      //adding custom card
+      var temp_item = {...response.data[0]};
+      temp_item.name = 'Hexient';
+      temp_item.description = 'Enterprise-grade Recruiting Tool';
+      temp_item.svn_url = null;
+      temp_item.url = 'https://hexient.io';
+      temp_item.languages_url = null;
+      repoList.push(temp_item);
+      //repoList.push({name:"Hexient"});
+
+      //iterate over each of our selected projects (coming from config.specificRepos)
+      //and show the projects in the order they appear in our conifg projects array
       for(var selectedRepoIndex in specfic){
         var selectedRepo = specfic[selectedRepoIndex];
         for(var receivedReposIndex in response.data){
@@ -46,17 +56,7 @@ const Project = ({ heading, username, length, specfic }) => {
           if(foundSelectedRepo) repoList.push(receivedRepo);
         }
       }
-      /*
-      // adding specified repos
-      try {
-        for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`, config);
-          repoList.push(response.data);
-        }
-      } catch (error) {
-        console.error(error.message);
-      }
-      */
+
       // setting projectArray
       // TODO: remove the duplication.
       setProjectsArray(repoList);

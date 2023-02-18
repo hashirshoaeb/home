@@ -5,11 +5,13 @@ import {
   mainBody,
   about,
   repos,
+  musicRepos,
   leadership,
   skills,
   getInTouch,
   experiences
 } from "./editable-stuff/config.js";
+
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -75,6 +77,58 @@ const Home = React.forwardRef((props, ref) => {
   );
 });
 
+const Music = React.forwardRef((props, ref) => {
+  return (
+    <>
+      <MainBody
+        gradient={mainBody.gradientColors}
+        title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
+        message={mainBody.message}
+        icons={mainBody.icons}
+        ref={ref}
+      />
+      {about.show && (
+        <AboutMe
+          heading={about.heading}
+          message={about.message}
+          link={about.imageLink}
+          imgSize={about.imageSize}
+          resume={about.resume}
+        />
+      )}
+      {
+        experiences.show && (
+          <Experience experiences={experiences}/>
+        )
+      }
+      {repos.show && (
+        <Project
+          heading={repos.heading}
+          username={repos.gitHubUsername}
+          length={repos.reposLength}
+          specfic={musicRepos.specificRepos}
+        />
+      )}
+      {leadership.show && (
+        <Leadership
+          heading={leadership.heading}
+          message={leadership.message}
+          img={leadership.images}
+          imageSize={leadership.imageSize}
+        />
+      )}
+      {skills.show && (
+        <Skills
+          heading={skills.heading}
+          hardSkills={skills.hardSkills}
+          softSkills={skills.softSkills}
+        />
+      )}
+      
+    </>
+  );
+});
+
 const App = () => {
   const titleRef = React.useRef();
 
@@ -83,6 +137,7 @@ const App = () => {
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path="/music" exact element={<Music ref={titleRef} />} />
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}

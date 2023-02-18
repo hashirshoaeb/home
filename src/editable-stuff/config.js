@@ -57,7 +57,7 @@ const about = {
   imageSize: 375,
   message:
     "I'm Shawn. I like trying new things. I like technology, among other things. What's up.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: "https://docs.google.com/document/d/e/2PACX-1vTFklxhTdEwKjuaOzn6HcZ-KHQ_hQrnxsjmvjKobkNy5dSOVej89_j8ZQBa_qlhwg/pub",
 };
 
 // PROJECTS SECTION
@@ -70,8 +70,16 @@ const repos = {
   heading: "Some of My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
-  specificRepos: ["SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","python-investments", "sportmaster","react-portfolio-page"],
+  specificRepos: ["Hexient","SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","python-investments", "sportmaster","react-portfolio-page"],
 };
+
+const musicRepos = {
+  show: true,
+  heading: "Some of My Work",
+  gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
+  reposLength: 2,
+  specificRepos: ["SoundCloud", "Instagram"],
+}
 
 // Leadership SECTION
 const leadership = {
@@ -154,4 +162,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, musicRepos, skills, leadership, getInTouch, experiences };

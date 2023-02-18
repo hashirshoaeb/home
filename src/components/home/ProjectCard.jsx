@@ -9,6 +9,7 @@ const ProjectCard = ({ value }) => {
     name,
     description,
     svn_url,
+    url,
     stargazers_count,
     languages_url,
     pushed_at,
@@ -19,15 +20,15 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          {svn_url ? <CardButtons svn_url={svn_url} /> : <AltLink url={url} />}
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
           ) : (
-            <Skeleton count={3} />
+            <Skeleton count={0} />
           )}
           {value ? (
-            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
+            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} name={name} url={url}/>
           ) : (
             <Skeleton />
           )}
@@ -48,6 +49,20 @@ const CardButtons = ({ svn_url }) => {
       </a>
       <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
         <i className="fab fa-github" /> Repo
+      </a>
+    </div>
+  );
+};
+
+const AltLink = ({ url }) => {
+  return (
+    <div className="d-grid gap-2 d-md-block">
+      <a
+        href={`${url}/`}
+        target={"_blank"}
+        className="btn btn-outline-secondary mx-2"
+      >
+        <i className="fa fa-external-link-square-alt" /> View Product
       </a>
     </div>
   );
@@ -100,7 +115,7 @@ const Language = ({ languages_url, repo_url }) => {
   );
 };
 
-const CardFooter = ({ star_count, repo_url, pushed_at }) => {
+const CardFooter = ({ star_count, repo_url, pushed_at, name, url}) => {
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
@@ -127,16 +142,16 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   return (
     <p className="card-text">
       <a
-        href={repo_url + "/stargazers"}
+        href={repo_url === null ? url : repo_url}
         target=" _blank"
         className="text-dark text-decoration-none"
       >
         <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Stars{" "}
+          <i className={repo_url === null ? "fa fa-external-link-square-alt" : "fab fa-github"} /> {name}{" "}
           <span className="badge badge-dark">{star_count}</span>
         </span>
       </a>
-      <small className="text-muted">Updated {updated_at}</small>
+      {repo_url === null ? <></> : <small className="text-muted">Updated {updated_at}</small>}
     </p>
   );
 };
