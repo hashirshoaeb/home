@@ -35,7 +35,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
 
   return (
     <Jumbotron id="aboutme" className="m-0">
-      <div className="container row">
+      <div className="container row mx-auto">
         <div className="col-5 d-none d-lg-block align-self-center">
           {showPic && (
             <img
