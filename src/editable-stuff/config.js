@@ -94,7 +94,15 @@ const about = {
   imageLink: require("../editable-stuff/Headshot.jpg"),
   imageSize: 375,
   message:
-    "I'm Shawn. I like trying new things. I like technology, among other things. What's up.",
+`I graduated from NYU's Stern School of Business in 2019, with a BSc in Finance, and minor in Computer Science and Mathematics.
+
+I have a passion for technology, and impact applications of it. My interests have allowed me to become a self-taught, full-stack developer. I started in college with building websites from scratch, and have since been able to build out full-stack, enterprise-grade web applications. 
+
+Professionally, I'm a Technology Consultant in the Salesforce and AWS space. I have experience across global projects, through a slew of technologies. 
+  
+I have experience and interest in managing teams, but currently I'm especially interested in learning more advanced applications of technology. 
+
+Check out some of my work below!`,
   resume: "https://docs.google.com/document/d/e/2PACX-1vTFklxhTdEwKjuaOzn6HcZ-KHQ_hQrnxsjmvjKobkNy5dSOVej89_j8ZQBa_qlhwg/pub",
 };
 

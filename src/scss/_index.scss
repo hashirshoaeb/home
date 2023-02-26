@@ -91,6 +91,10 @@ code {
   margin-top: 0px;
 }
 
+.line-break-fix {
+  white-space: pre-wrap; /* or pre-line */
+}
+
 .typist {
   min-height: 6rem;
   @media (min-width: 360px) {
