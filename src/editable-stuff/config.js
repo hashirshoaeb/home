@@ -10,11 +10,15 @@ const mainBody = {
   firstName: "Shawn",
   middleName: "",
   lastName: "Soneja",
-  message: "",
+  message: "the technologist",
   icons: [
     {
       image: "fa-github",
       url: "https://github.com/shawn-don-soneja",
+    },
+    {
+      image: "fa-linkedin",
+      url: "https://www.linkedin.com/in/shawn-soneja-325521144/",
     },
     /*
     {
@@ -24,10 +28,6 @@ const mainBody = {
     {
       image: "fa-instagram",
       url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
     },
     {
       image: "fa-twitter",
@@ -43,7 +43,7 @@ const musicBody = {
   firstName: "Shawn",
   middleName: "",
   lastName: "Soneja",
-  message: "The artist",
+  message: "the artist",
   icons: [
     {
       image: "fa-soundcloud",
@@ -64,7 +64,7 @@ const musicBody = {
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/shawn-soneja-325521144/",
     },
     {
       image: "fa-twitter",
@@ -94,7 +94,15 @@ const about = {
   imageLink: require("../editable-stuff/Headshot.jpg"),
   imageSize: 375,
   message:
-    "I'm Shawn. I like trying new things. I like technology, among other things. What's up.",
+`I graduated from NYU's Stern School of Business in 2019, with a BSc in Finance, and minor in Computer Science and Mathematics.
+
+I have a passion for technology, and the impacts it can make. Through my interests, I've become a self-taught, full-stack developer. I started in college building websites from scratch, and have since been learned full-stack engineering and technical architecture at the enterprise level. 
+
+Professionally, I'm currently a Technology Consultant in the Salesforce and AWS space. I have experience in global programs, playing a number of leadership roles from Functional Lead to Technical Architect. 
+  
+I have experience in and a genuine interest for managing teams. I'm currently focused on learning more advanced applications of technology. 
+
+Check out some of my work below!`,
   resume: "https://docs.google.com/document/d/e/2PACX-1vTFklxhTdEwKjuaOzn6HcZ-KHQ_hQrnxsjmvjKobkNy5dSOVej89_j8ZQBa_qlhwg/pub",
 };
 
@@ -117,7 +125,7 @@ const repos = {
   heading: "Some of My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
-  specificRepos: ["Hexient","SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","python-investments", "sportmaster","react-portfolio-page"],
+  specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","sportmaster","react-portfolio-page"],
 };
 
 const musicRepos = {
