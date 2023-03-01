@@ -122,7 +122,7 @@ const musicAbout = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Some of My Work",
+  heading: "My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
   specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","sportmaster","react-portfolio-page"],
@@ -130,7 +130,7 @@ const repos = {
 
 const musicRepos = {
   show: true,
-  heading: "Some of My Work",
+  heading: "My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 2,
   specificRepos: ["SoundCloud", "Instagram"],
@@ -166,9 +166,11 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "Javascript", value: 90 },
+    { name: "CSS", value: 90 },
     { name: "React", value: 85 },
     { name: "Swift", value: 35 },
-    { name: "CSS", value: 90 },
+    
+    { name: "Git & Version Control", value: 90 },
     { name: "Python", value: 75 },
     { name: "Java", value: 65 },
     
