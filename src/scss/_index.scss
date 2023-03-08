@@ -67,6 +67,20 @@ code {
     background-color: rgba(0, 0, 0, 0.05);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .mobile-headshot{
+    display: flex !important;
+  }
+  
+}
+.mobile-headshot{
+  display: none;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
 .socialicons {
   color: white;
   padding-left: 5px;

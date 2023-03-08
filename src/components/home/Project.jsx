@@ -39,7 +39,8 @@ const Project = ({ heading, username, length, specfic }) => {
       //adding custom card
       var temp_item = {...response.data[0]};
       temp_item.name = 'Hexient';
-      temp_item.description = 'Our goal is to improve hiring, by making it more transparent and data-driven. As the primary architect and developer, I built an enterprise-grade Recruiting Tool, using React and a number of AWS services for the back-end and authentication.';
+      temp_item.description = 
+      `Our goal is to improve hiring, by making it more transparent and data-driven.\n\nAs the primary architect and developer, I built an enterprise-grade Recruiting Tool, using React and a number of AWS services for the back-end and authentication.`;
       temp_item.svn_url = null;
       temp_item.url = 'https://hexient.io';
       temp_item.languages_url = null;

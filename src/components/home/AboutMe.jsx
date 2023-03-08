@@ -35,6 +35,17 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
 
   return (
     <Jumbotron id="aboutme" className="m-0">
+      <div class="mobile-headshot">
+        {showPic && (
+          <img
+            className="border border-secondary rounded-5"
+            src={profilePicUrl}
+            alt="profilepicture"
+            width={imgSize * 0.9}
+            height={imgSize * 0.9}
+          />
+        )}
+      </div>
       <div className="container row mx-auto">
         <div className="col-5 d-none d-lg-block align-self-center">
           {showPic && (
@@ -50,6 +61,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
         <div className={`col-lg-${showPic ? "7" : "12"}`}>
           <h2 className="display-4 mb-5 text-center">{heading}</h2>
           <p className="lead line-break-fix">{message}</p>
+          <br/>
           {resume && (
             <p className="lead text-center">
               <a

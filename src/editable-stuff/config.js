@@ -103,7 +103,7 @@ Professionally, I'm currently a Technology Consultant in the Salesforce and AWS 
 I have experience in and a genuine interest for managing teams. I'm currently focused on learning more advanced applications of technology. 
 
 Check out some of my work below!`,
-  resume: "https://docs.google.com/document/d/e/2PACX-1vTFklxhTdEwKjuaOzn6HcZ-KHQ_hQrnxsjmvjKobkNy5dSOVej89_j8ZQBa_qlhwg/pub",
+  resume: "https://docs.google.com/document/d/1ygVQb7nLXuLV-Q8-zHP4-0miR-1I9hNq/edit?usp=sharing&ouid=108614653152877262110&rtpof=true&sd=true",
 };
 
 const musicAbout = {
@@ -122,7 +122,7 @@ const musicAbout = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Some of My Work",
+  heading: "My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
   specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","sportmaster","react-portfolio-page"],
@@ -130,7 +130,7 @@ const repos = {
 
 const musicRepos = {
   show: true,
-  heading: "Some of My Work",
+  heading: "My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 2,
   specificRepos: ["SoundCloud", "Instagram"],
@@ -166,9 +166,11 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "Javascript", value: 90 },
+    { name: "CSS", value: 90 },
     { name: "React", value: 85 },
     { name: "Swift", value: 35 },
-    { name: "CSS", value: 90 },
+    
+    { name: "Git & Version Control", value: 90 },
     { name: "Python", value: 75 },
     { name: "Java", value: 65 },
     
