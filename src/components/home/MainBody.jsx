@@ -38,14 +38,14 @@ const MainBody = React.forwardRef(
               </a>
             ))}
           </div>
-          {/* <a
+          <a
             className="btn btn-outline-light btn-lg "
-            href="#aboutme"
+            href="#projects"
             role="button"
-            aria-label="Learn more about me"
+            aria-label="Learn more about my projects"
           >
-            More about me
-          </a> */}
+            More about my projects
+          </a>
         </Container>
       </Jumbotron>
     );
