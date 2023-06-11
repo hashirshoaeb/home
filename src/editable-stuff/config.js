@@ -94,15 +94,17 @@ const about = {
   imageLink: require("../editable-stuff/Headshot.jpg"),
   imageSize: 375,
   message:
-`I graduated from NYU's Stern School of Business in 2019, with a BSc in Finance, and minor in Computer Science and Mathematics.
+`Hey, what's up, I'm Shawn. 
 
-I have a passion for technology, and the impacts it can make. Through my interests, I've become a self-taught, full-stack developer. I started in college building websites from scratch, and have since been learned full-stack engineering and technical architecture at the enterprise level. 
+Professionally, I'm 'functional technologist'. That is to say, I enjoy working on 'business' side of things - supporting sales, strategy building, roadmapping, and building a great product. While also enjoying -building- those things, with things like React, Salesforce, and AWS. 
 
-Professionally, I'm currently a Technology Consultant in the Salesforce and AWS space. I have experience in global programs, playing a number of leadership roles from Functional Lead to Technical Architect. 
+I'm currently a Salesforce Consultant at Accenture, where I fulfill a 'Technical Lead' role, and am transitioning into more of a 'Technical Architect / Manager' role. 
   
-I have experience in and a genuine interest for managing teams. I'm currently focused on learning more advanced applications of technology. 
+My professional interests outside of Salesforce & IT Consulting lie in learning about, and finding cool ways to apply the latest technologies. Et al. machine learning, or designing enterprise architecture. 
 
-Check out some of my work below!`,
+Oh and on the side of that, I like to (try to) make music, play some sports, and I am an avid enjoyer of adventures. 
+
+Thank you for dropping by! I encourage you to check out some of My Work below! You're also welcome to look at my resume, if you're into that sort of thing`,
   resume: "https://docs.google.com/document/d/1ygVQb7nLXuLV-Q8-zHP4-0miR-1I9hNq/edit?usp=sharing&ouid=108614653152877262110&rtpof=true&sd=true",
 };
 
