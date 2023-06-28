@@ -64,7 +64,7 @@ Dependencies defined in package.json:
   - Carousel images
 - Skills (optional)
   - Technical Skills
-  - Soft Skills
+  - Functional Skills
 - Footer
   - Footer Note (optional)
   - Copyrights - open source

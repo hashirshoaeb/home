@@ -94,11 +94,11 @@ const about = {
   imageLink: require("../editable-stuff/Headshot.jpg"),
   imageSize: 375,
   message:
-`Hey, what's up, I'm Shawn. 
+`Hey, what's up, I'm Shawn! Professionally, I'm 'functional technologist'.
 
-Professionally, I'm 'functional technologist'. That is to say, I enjoy working on 'business' side of things - supporting sales, strategy building, roadmapping, and building a great product. While also enjoying -building- those things, with things like React, Salesforce, and AWS. 
+That is to say, I enjoy both the 'business' and 'technical' sides of solving problems. On one hand, I enjoy supporting sales, research, and strategy generation. And on the other hand, I enjoy the process of *building* solutions, with tools like React, Salesforce, and AWS. 
 
-I'm currently a Salesforce Consultant at Accenture, where I fulfill a 'Technical Lead' role, and am transitioning into more of a 'Technical Architect / Manager' role. 
+Currently I'm a Salesforce Consultant at Accenture, where I fulfill a 'Technical Lead' role, and am transitioning into more of a 'Technical Architect / Manager' role. 
   
 My professional interests outside of Salesforce & IT Consulting lie in learning about, and finding cool ways to apply the latest technologies. Et al. machine learning, or designing enterprise architecture. 
 
@@ -114,7 +114,13 @@ const musicAbout = {
   imageLink: require("../editable-stuff/mountain.jpg"),
   imageSize: 375,
   message:
-    "I'm Shawn. I also make music, and appreciate art.",
+`Hey! I'm impressed you found this page! Well, since you're here, I'm happy let you in on my interests for the arts.
+    
+I make some music here and there. What kind of music? I'm not really sure myself. I play some guitar (acoustic / electric and bass), some piano, and know how to mess around with a DAW. With all that, I find myself making beats, and have begun to dabble in making songs.
+
+I'm interested in other mediums and creative processes too. That includes things like basic sketching, 2D animation, and writing / storytelling.
+
+For now, though, I only have some beats to show for all of this interest. If you're curious to listen to some of my work, check out SoundCloud and Instagram above `,
 };
 
 // PROJECTS SECTION
@@ -175,7 +181,7 @@ const skills = {
     { name: "Git & Version Control", value: 90 },
     { name: "Python", value: 75 },
     { name: "Java", value: 65 },
-    
+
     { name: "PHP", value: 55 },
     
   ],
@@ -183,6 +189,7 @@ const skills = {
     { name: "Program / Project Management", value: 85 },
     { name: "Strategy Planning", value: 75 },
     { name: "Product Management", value: 75 },
+    { name: "Equity Valuation & Market Research", value: 35 },
   ],
   musicHardSkills: [
     { name: "Logic X", value: 90 },
