@@ -94,15 +94,17 @@ const about = {
   imageLink: require("../editable-stuff/Headshot.jpg"),
   imageSize: 375,
   message:
-`I graduated from NYU's Stern School of Business in 2019, with a BSc in Finance, and minor in Computer Science and Mathematics.
+`Hey, what's up, I'm Shawn! Professionally, I'm 'functional technologist'.
 
-I have a passion for technology, and the impacts it can make. Through my interests, I've become a self-taught, full-stack developer. I started in college building websites from scratch, and have since been learned full-stack engineering and technical architecture at the enterprise level. 
+That is to say, I enjoy both the 'business' and 'technical' sides of solving problems. On one hand, I enjoy supporting sales, research, and strategy generation. And on the other hand, I enjoy the process of *building* solutions, with tools like React, Salesforce, and AWS. 
 
-Professionally, I'm currently a Technology Consultant in the Salesforce and AWS space. I have experience in global programs, playing a number of leadership roles from Functional Lead to Technical Architect. 
+Currently I'm a Salesforce Consultant at Accenture, where I fulfill a 'Technical Lead' role, and am transitioning into more of a 'Technical Architect / Manager' role. 
   
-I have experience in and a genuine interest for managing teams. I'm currently focused on learning more advanced applications of technology. 
+My professional interests outside of Salesforce & IT Consulting lie in learning about, and finding cool ways to apply the latest technologies. Et al. machine learning, or designing enterprise architecture. 
 
-Check out some of my work below!`,
+Oh and on the side of that, I like to (try to) make music, play some sports, and I am an avid enjoyer of adventures. 
+
+Thank you for dropping by! I encourage you to check out some of My Work below! You're also welcome to look at my resume, if you're into that sort of thing`,
   resume: "https://docs.google.com/document/d/1ygVQb7nLXuLV-Q8-zHP4-0miR-1I9hNq/edit?usp=sharing&ouid=108614653152877262110&rtpof=true&sd=true",
 };
 
@@ -112,7 +114,13 @@ const musicAbout = {
   imageLink: require("../editable-stuff/mountain.jpg"),
   imageSize: 375,
   message:
-    "I'm Shawn. I also make music, and appreciate art.",
+`Hey! I'm impressed you found this page! Well, since you're here, I'm happy let you in on my interests for the arts.
+    
+I make some music here and there. What kind of music? I'm not really sure myself. I play some guitar (acoustic / electric and bass), some piano, and know how to mess around with a DAW. With all that, I find myself making beats, and have begun to dabble in making songs.
+
+I'm interested in other mediums and creative processes too. That includes things like basic sketching, 2D animation, and writing / storytelling.
+
+For now, though, I only have some beats to show for all of this interest. If you're curious to listen to some of my work, check out SoundCloud and Instagram above `,
 };
 
 // PROJECTS SECTION
@@ -173,7 +181,7 @@ const skills = {
     { name: "Git & Version Control", value: 90 },
     { name: "Python", value: 75 },
     { name: "Java", value: 65 },
-    
+
     { name: "PHP", value: 55 },
     
   ],
@@ -181,6 +189,7 @@ const skills = {
     { name: "Program / Project Management", value: 85 },
     { name: "Strategy Planning", value: 75 },
     { name: "Product Management", value: 75 },
+    { name: "Equity Valuation & Market Research", value: 35 },
   ],
   musicHardSkills: [
     { name: "Logic X", value: 90 },
