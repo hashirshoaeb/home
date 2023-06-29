@@ -133,7 +133,7 @@ const repos = {
   heading: "My Work",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
-  specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","sportmaster","react-portfolio-page"],
+  specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed", "react-portfolio-page"],
 };
 
 const musicRepos = {
