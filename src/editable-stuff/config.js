@@ -71,7 +71,6 @@ const repos = {
   specificRepos: ["dashboard-hotel-miranda","api-hotel-miranda","laravel-hotel-miranda"],
 };
 
-
 // Leadership SECTION
 const leadership = {
   show: false,
