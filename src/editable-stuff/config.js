@@ -6,10 +6,10 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Federico",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Iglesias",
+  message: " Apasionado por la tecnologia y su impacto a un mejor futuro. ",
   icons: [
     {
       image: "fa-github",
@@ -51,7 +51,7 @@ const mainBody = {
 const about = {
   show: true,
   heading: "Acerca de mi",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/me.jpg"),
   imageSize: 375,
   message:
     "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
@@ -67,7 +67,7 @@ const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "FedericoIglesias", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  reposLength: 0,
   specificRepos: ["dashboard-hotel-miranda","api-hotel-miranda","laravel-hotel-miranda","navPhoto"],
 };
 
