@@ -68,7 +68,7 @@ const repos = {
   heading: "Recent Projects",
   gitHubUsername: "FedericoIglesias", //i.e."johnDoe12Gh"
   reposLength: 4,
-  specificRepos: ["dashboard-hotel-miranda","api-hotel-miranda","laravel-hotel-miranda"],
+  specificRepos: ["dashboard-hotel-miranda","api-hotel-miranda","laravel-hotel-miranda","navPhoto"],
 };
 
 // Leadership SECTION
