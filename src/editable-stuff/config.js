@@ -54,7 +54,7 @@ const about = {
   imageLink: require("../editable-stuff/me.jpg"),
   imageSize: 375,
   message:
-    "👋🏻 Hola, mi nombre es Federico y soy Developer Full Stack.</n>💻 Llevo poco más de 1 año en la industria, pero lo suficiente como para adquirir habilidad en en ciertas tecnologías. Además, haber desarrollado aún más mis SoftSkill. En los trabajos que he estado, siempre destaqué por mi responsabilidad y eficaz a la hora de ejecutar las tareas asignadas.<br/>📚 Me apasiona todo lo relacionado a la lógica, pensar y resolver situaciones difíciles. Fuera del trabajo, siempre estoy buscando nuevas formas de aprender y crecer en mi campo, ya sea aprendiendo nuevas herramientas o perfeccionando mi inglés.",
+    "👋🏻 Hola, mi nombre es Federico y soy Developer Full Stack.💻 Llevo poco más de 1 año en la industria, pero lo suficiente como para adquirir habilidad en en ciertas tecnologías. Además, haber desarrollado aún más mis SoftSkill. En los trabajos que he estado, siempre destaqué por mi responsabilidad y eficaz a la hora de ejecutar las tareas asignadas.📚 Me apasiona todo lo relacionado a la lógica, pensar y resolver situaciones difíciles. Fuera del trabajo, siempre estoy buscando nuevas formas de aprender y crecer en mi campo, ya sea aprendiendo nuevas herramientas o perfeccionando mi inglés.",
   resume: require("../editable-stuff/resume.pdf"),
 };
 
