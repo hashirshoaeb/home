@@ -98,7 +98,7 @@ const leadership = {
 // SKILLS SECTION
 const skills = {
   show: true,
-  heading: "Skills",
+  heading: "Habilidades",
   hardSkills: [
     { name: "JavaScript", value: 90 },
     { name: "TypeScript", value: 80 },
