@@ -141,42 +141,45 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Java", value: 90 },
+    { name: "Java", value: 90 }, // TODO: do i really want rankings like this?
     { name: "Python", value: 90 },
     { name: "MongoDB", value: 80 },
-    { name: "SQL", value: 75 },
+    { name: "SQL", value: 60 },
     { name: "GraphQL", value: 75 },
     { name: "Spring Boot", value: 50 },
     { name: "C", value: 65 },
+    { name: "Object Oriented Programming", value: 90 },
     { name: "JavaScript", value: 90 },
     { name: "React.js", value: 90 },
     { name: "Node.js", value: 80 },
     { name: "HTML/CSS", value: 55 },
+    { name: "Robot/Gherkin", value: 90 },
+    { name: "Discrete Math", value: 80 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    // TODO: get rid of this or change better
+    // { name: "Goal-Oriented", value: 80 },
+    // { name: "Collaboration", value: 90 },
+    // { name: "Positivity", value: 75 },
+    // { name: "Adaptability", value: 85 },
+    // { name: "Problem Solving", value: 75 },
+    // { name: "Empathy", value: 90 },
+    // { name: "Organization", value: 70 },
+    // { name: "Creativity", value: 90 },
   ],
 };
 
-// GET IN TOUCH SECTION TODO:
+// GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
-  heading: "Get In Touch",
-  message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+  heading: "I'd love to connect!", // TODO: find out where the comma is coming from lmao
+  message: "Email:",
+  email: "anya.gu@ymail.com",
 };
 
 const experiences = {
   // TODO:
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
