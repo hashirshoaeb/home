@@ -17,10 +17,6 @@ const mainBody = {
       url: "https://github.com/anyaguuu",
     },
     {
-      image: "",
-      url: "https://github.com/anyaguuu",
-    },
-    {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/anya-g-769260182/",
     },
@@ -29,7 +25,7 @@ const mainBody = {
       url: "https://www.youtube.com/watch?v=EWsLKGUdUhk&ab_channel=RiceUniversity",
     },
     {
-      image: "far-star", // TODO: ?
+      image: "fas fa-star", // TODO: ?
       url: "https://24.anyagu.com",
     },
   ],
@@ -55,7 +51,7 @@ const about = {
   imageLink: require("../editable-stuff/hashirshoaeb.png"), // TODO: change
   imageSize: 375,
   message:
-    "My name is Anya Gu. I am a Junior at Rice University studying Computer Science and Mathematics",
+    "Hi! My name is Anya Gu -- I'm a junior at Rice University studying Computer Science and Mathematics",
   resume:
     "https://docs.google.com/document/d/16GQrBZ0vZKnIKoLpwZ7dt72i3PPGN3WqRv8AzasTkY8/edit?usp=sharing",
 };
@@ -184,15 +180,16 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: "Software Engineer", // Here Add Company Name
-      companylogo: require("../assets/img/dell.png"),
-      date: "June 2018 – Present",
+      role: "Summer Analyst", // Here Add Company Name
+      companylogo: require("../assets/img/citi.png"),
+      date: "June 2023 – Present",
     },
     {
-      role: "Front-End Developer",
-      companylogo: require("../assets/img/boeing.png"),
-      date: "May 2017 – May 2018",
+      role: "Techcomm Tools Developer Co-op",
+      companylogo: require("../assets/img/nokia.png"),
+      date: "May 2022 – May 2023",
     },
+    // TODO: add riceapps projects
   ],
 };
 
