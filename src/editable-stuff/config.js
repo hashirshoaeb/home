@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Anya",
   middleName: "",
   lastName: "Gu",
-  message: " Passionate about changing the world with technology. ",
+  message: " Clever message ", // TODO: change
   icons: [
     {
       image: "",
@@ -54,7 +54,7 @@ const about = {
   imageLink: require("../editable-stuff/hashirshoaeb.png"), // TODO: change
   imageSize: 375,
   message:
-    "My name is Anya Gu Shoaib. I am a junior at Rice University studying Computer Science and Math.",
+    "My name is Anya Gu. I am a Junior at Rice University studying Computer Science and Mathematics",
   resume:
     "https://docs.google.com/document/d/16GQrBZ0vZKnIKoLpwZ7dt72i3PPGN3WqRv8AzasTkY8/edit?usp=sharing",
 };
@@ -67,33 +67,71 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "anyaguuu",
   reposLength: 0, // TODO: change this
-  specificRepos: [],
+  specificRepos: [
+    "24",
+    "pomodoro",
+    "rice-apps/Carpool-V3",
+    "rice-apps/tunedin", // TODO: get these to work
+  ],
 };
 
 // Leadership SECTION
+// TODO: message include more about skating
+// TODO: include links to skating vids
+
 const leadership = {
   //TODO: change this
-  show: false,
-  heading: "Leadership",
+  show: true,
+  heading: "Other Passions :)",
   message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+    "Founder and President of Rice University Ice Skating Club. I am also ... ",
   images: [
     {
-      img: require("../editable-stuff/hashirshoaeb.png"),
-      label: "First slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      img: require("../editable-stuff/anyagu.JPG"), // TODO: make this show up better
+      // label: "First slide label",
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      size: {
+        width: "400",
+        height: "550",
+      },
     },
     {
-      img: require("../editable-stuff/hashirshoaeb.png"),
-      label: "Second slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      img: require("../editable-stuff/img1.JPG"),
+      label: "2022 Christmas Event!", // TODO: make prettier
+      size: {
+        width: "400",
+        height: "550",
+      },
+    },
+    {
+      img: require("../editable-stuff/img2.jpg"),
+      // label: "Second slide label",
+      size: {
+        width: "400",
+        height: "550",
+      },
+    },
+    {
+      img: require("../editable-stuff/competition.png"),
+      // label: "Second slide label",
+      size: {
+        width: "400",
+        height: "550",
+      },
+    },
+    {
+      img: require("../editable-stuff/skating_logo.JPG"),
+      size: {
+        width: "400",
+        height: "550",
+      },
     },
   ],
   imageSize: {
-    width: "615",
-    height: "450",
+    width: "400",
+    height: "550",
   },
 };
 
