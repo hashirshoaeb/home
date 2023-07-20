@@ -21,16 +21,16 @@ const mainBody = {
       url: "https://github.com/anyaguuu",
     },
     {
-      image: "",
+      image: "fa-linkedin",
       url: "https://www.linkedin.com/in/anya-g-769260182/",
     },
     {
-      image: "",
-      url: "https://24.anyagu.com",
+      image: "fa-youtube",
+      url: "https://www.youtube.com/watch?v=EWsLKGUdUhk&ab_channel=RiceUniversity",
     },
     {
-      image: "",
-      url: "https://pomodoro.anyagu.com",
+      image: "far-star", // TODO: ?
+      url: "https://24.anyagu.com",
     },
   ],
 };
