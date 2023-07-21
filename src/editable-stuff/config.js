@@ -63,7 +63,7 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Recent Projects",
+  heading: "Passion Projects",
   gitHubUsername: "anyaguuu",
   reposLength: 0, // TODO: change this
   specificRepos: [
@@ -187,7 +187,16 @@ const experiences = {
       companylogo: require("../assets/img/nokia.png"),
       date: "May 2022 – May 2023",
     },
-    // TODO: add riceapps projects
+    {
+      role: "Technical Lead for OwlMart (coming soon!)",
+      companylogo: require("../assets/img/riceapps.png"),
+      date: "May 2023 - Present",
+    },
+    {
+      role: "Team Developer - carpool.riceapps.org",
+      companylogo: require("../assets/img/riceapps.png"),
+      date: "Sept 2021 - Sept 2022",
+    },
   ],
 };
 
