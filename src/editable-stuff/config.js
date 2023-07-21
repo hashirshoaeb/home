@@ -138,20 +138,18 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Java", value: 90 }, // TODO: do i really want rankings like this?
+    { name: "Java /OOP", value: 90 }, // TODO: do i really want rankings like this?
     { name: "Python", value: 90 },
+    { name: "Javascript", value: 90 },
     { name: "MongoDB", value: 80 },
-    { name: "SQL", value: 60 },
     { name: "GraphQL", value: 75 },
-    { name: "Spring Boot", value: 50 },
+    { name: "SQL", value: 60 },
     { name: "C", value: 65 },
-    { name: "Object Oriented Programming", value: 90 },
-    { name: "JavaScript", value: 90 },
+    { name: "Spring Boot", value: 50 },
     { name: "React.js", value: 90 },
     { name: "Node.js", value: 80 },
-    { name: "HTML/CSS", value: 55 },
+    { name: "HTML/CSS", value: 80 },
     { name: "Robot/Gherkin", value: 90 },
-    { name: "Discrete Math", value: 80 },
   ],
   softSkills: [
     // TODO: get rid of this or change better
