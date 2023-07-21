@@ -50,7 +50,7 @@ const about = {
   imageLink: require("../editable-stuff/anyagu.JPG"), // TODO: change
   imageSize: 375,
   message:
-    "Hi! My name is Anya Gu -- I'm a junior at Rice University studying Computer Science and Mathematics",
+    "Hello! I'm Anya Gu, a junior at Rice University studying Computer Science and Mathematics.",
   resume:
     "https://docs.google.com/document/d/16GQrBZ0vZKnIKoLpwZ7dt72i3PPGN3WqRv8AzasTkY8/edit?usp=sharing",
 };
