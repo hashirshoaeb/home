@@ -47,7 +47,7 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"), // TODO: change
+  imageLink: require("../editable-stuff/anyagu.JPG"), // TODO: change
   imageSize: 375,
   message:
     "Hi! My name is Anya Gu -- I'm a junior at Rice University studying Computer Science and Mathematics",
