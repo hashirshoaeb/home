@@ -11,7 +11,6 @@ const mainBody = {
   lastName: "Gu",
   message: " Clever message ", // TODO: change
   icons: [
-    // TODO: figure this out
     {
       image: "fa-github",
       url: "https://github.com/anyaguuu",
