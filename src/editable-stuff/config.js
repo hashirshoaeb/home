@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Anya",
   middleName: "",
   lastName: "Gu",
-  message: " Clever message ", // TODO: change
+  message: "Do something worth remembering 😊 ", // "in a world where you can be anything, be kind"
   icons: [
     {
       image: "fa-github",
@@ -62,7 +62,7 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Passion Projects",
+  heading: "Passion Projects ⭐️",
   gitHubUsername: "anyaguuu",
   reposLength: 0, // TODO: change this
   specificRepos: [
@@ -80,7 +80,7 @@ const repos = {
 const leadership = {
   //TODO: change this
   show: true,
-  heading: "Other Passions :)",
+  heading: "Extracurriculars :)",
   message:
     "Founder and President of Rice University Ice Skating Club. I am also ... ",
   images: [
