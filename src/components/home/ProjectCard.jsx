@@ -127,12 +127,12 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   return (
     <p className="card-text">
       <a
-        href={repo_url + "/stargazers"}
+        href={repo_url}
         target=" _blank"
         className="text-dark text-decoration-none"
       >
         <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Actual name{" "}
+          <i className="fab fa-github" /> anyaguuu
           <span className="badge badge-dark">{star_count}</span>
         </span>
       </a>
