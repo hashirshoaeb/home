@@ -166,7 +166,7 @@ const skills = {
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
-  heading: "I'd love to connect!", // TODO: find out where the comma is coming from lmao
+  heading: "I'd love to get in touch!",
   message: "Email:",
   email: "anya.gu@ymail.com",
 };
