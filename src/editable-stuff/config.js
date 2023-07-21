@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Anya",
   middleName: "",
   lastName: "Gu",
-  message: "Do something worth remembering 😊 ", // "in a world where you can be anything, be kind"
+  message: "Tech-Sis in Texas 😊 ", // "in a world where you can be anything, be kind"
   icons: [
     {
       image: "fa-github",
