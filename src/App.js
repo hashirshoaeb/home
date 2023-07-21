@@ -85,7 +85,7 @@ const App = () => {
         {getInTouch.show && (
           <GetInTouch
             heading={getInTouch.heading}
-            message={getInTouch.message}
+            // message={getInTouch.message}
             email={getInTouch.email}
           />
         )}
