@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Anya",
   middleName: "",
   lastName: "Gu",
-  message: "TechSis in Texas 😊 ", // "in a world where you can be anything, be kind"
+  message: "TechSis in Texas 👩🏻‍💻 ",
   icons: [
     {
       image: "fa-github",
@@ -172,12 +172,11 @@ const getInTouch = {
 };
 
 const experiences = {
-  // TODO:
   show: true,
   heading: "Experiences",
   data: [
     {
-      role: "Summer Analyst", // Here Add Company Name
+      role: "Summer Analyst",
       companylogo: require("../assets/img/citi.png"),
       date: "June 2023 – Present",
     },
