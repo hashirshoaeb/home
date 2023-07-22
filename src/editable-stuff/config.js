@@ -5,8 +5,8 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  // gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  gradientColors: "#c20000, #e00000, #ff0000, #ff4040, #ff7676, #ffffff",
+  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+  // gradientColors: "#0C4876, #608FB7, #AEC5D8, #E9E1DA, #D9BBB8, #C2ACB4,",
   firstName: "Federico",
   middleName: "",
   lastName: "Iglesias",
@@ -16,10 +16,10 @@ const mainBody = {
       image: "fa-github",
       url: "https://github.com/FedericoIglesias",
     },
-    // {
-    //   image: "fa-facebook",
-    //   url: "https://www.facebook.com/hashirshoaeb",
-    // },
+    {
+      image: "fa-gmail",
+      url: "https://www.facebook.com/hashirshoaeb",
+    },
     // {
     //   image: "fa-instagram",
     //   url: "https://www.instagram.com/hashirshoaeb/",
@@ -52,10 +52,10 @@ const mainBody = {
 const about = {
   show: true,
   heading: "Acerca de mi",
-  imageLink: require("../editable-stuff/me.jpg"),
+  imageLink: require("../editable-stuff/me.png"),
   imageSize: 375,
   message:
-    "👋🏻 Hola, mi nombre es Federico y soy Developer Full Stack.💻 Llevo poco más de 1 año en la industria, pero lo suficiente como para adquirir habilidad en en ciertas tecnologías. Además, haber desarrollado aún más mis SoftSkill. En los trabajos que he estado, siempre destaqué por mi responsabilidad y eficaz a la hora de ejecutar las tareas asignadas.📚 Me apasiona todo lo relacionado a la lógica, pensar y resolver situaciones difíciles. Fuera del trabajo, siempre estoy buscando nuevas formas de aprender y crecer en mi campo, ya sea aprendiendo nuevas herramientas o perfeccionando mi inglés.",
+    "👋🏻Hola, mi nombre es Federico y soy Developer Full Stack.💻Llevo cerca de 2 años en el sector, lo que me ha servido para adquirir habilidades en ciertas tecnologías y desarrollar mis SoftSkills, de las cuales destaco mi responsabilidad y eficacia a la hora de resolver los problemas que puedan presentarse.📚Me apasiona todo lo relacionado a la lógica de programación, pensar y resolver situaciones difíciles. Siempre estoy buscando nuevas formas de aprender y crecer en mi campo, ya sea aprendiendo nuevas herramientas o perfeccionando mi inglés. ",
   resume: require("../editable-stuff/resume.pdf"),
 };
 
