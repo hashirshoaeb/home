@@ -24,7 +24,7 @@ const mainBody = {
       url: "https://www.youtube.com/watch?v=EWsLKGUdUhk&ab_channel=RiceUniversity",
     },
     {
-      image: "fas fa-star", // TODO: ?
+      image: "fas fa-star",
       url: "https://24.anyagu.com",
     },
   ],
@@ -52,6 +52,7 @@ const about = {
   message:
     "Hello! I'm Anya Gu, a junior at Rice University studying Computer Science and Mathematics.",
   resume:
+    // require("../editable-stuff/resume.pdf"),
     "https://docs.google.com/document/d/16GQrBZ0vZKnIKoLpwZ7dt72i3PPGN3WqRv8AzasTkY8/edit?usp=sharing",
 };
 
@@ -186,7 +187,7 @@ const experiences = {
       date: "May 2022 – May 2023",
     },
     {
-      role: "Technical Lead for OwlMart (coming soon!)",
+      role: "Technical Lead - OwlMart (coming soon!)",
       companylogo: require("../assets/img/riceapps.png"),
       date: "May 2023 - Present",
     },
