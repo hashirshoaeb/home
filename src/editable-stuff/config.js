@@ -37,7 +37,7 @@ const mainBody = {
 //b) a link to an hosted image
 //      i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
 //c) image in "editable-stuff" directory and use require("") to import here,
-//      i.e: profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
+//      i.e: profilePictureLink: require("../editable-stuff/anyagu.png"),
 //d) If you do not want any picture to be displayed, just leave it empty :)
 //      i.e: profilePictureLink: "",
 // For Resume either provide link to your resume or import from "editable-stuff" directory
@@ -66,12 +66,7 @@ const repos = {
   heading: "Passion Projects ⭐️",
   gitHubUsername: "anyaguuu",
   reposLength: 0, // TODO: change this
-  specificRepos: [
-    "24",
-    "pomodoro",
-    "rice-apps/Carpool-V3",
-    "rice-apps/tunedin", // TODO: get these to work
-  ],
+  specificRepos: ["24", "pomodoro"],
 };
 
 // Leadership SECTION
