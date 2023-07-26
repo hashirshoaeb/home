@@ -4,6 +4,8 @@ import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
+import pomodoro from "./pomo.png";
+import twentyfour from "./24.png";
 
 const dummyProject = {
   name: null,
@@ -12,7 +14,10 @@ const dummyProject = {
   stargazers_count: null,
   languages_url: null,
   pushed_at: null,
+  img: null,
 };
+
+const imgs = [pomodoro, twentyfour, null, null, null];
 const API = "https://api.github.com";
 const org = "rice-apps";
 // const gitHubQuery = "/repos?sort=updated&direction=desc";
@@ -80,6 +85,7 @@ const Project = ({ heading, username, length, specfic }) => {
                 key={`project-card-${index}`}
                 id={`project-card-${index}`}
                 value={project}
+                img={imgs[index]}
               />
             ))
             : dummyProjectsArr.map((project, index) => (
@@ -87,6 +93,7 @@ const Project = ({ heading, username, length, specfic }) => {
                 key={`dummy-${index}`}
                 id={`dummy-${index}`}
                 value={project}
+                img={imgs[index]}
               />
             ))}
         </Row>
