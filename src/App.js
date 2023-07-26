@@ -51,6 +51,14 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
+      {repos.show && (
+        <Project
+          heading={"Team Projects"}
+          username={null}
+          length={repos.reposLength}
+          specfic={["Carpool-V3", "tunedin"]}
+        />
+      )}
       {leadership.show && (
         <Leadership
           heading={leadership.heading}
