@@ -39,11 +39,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/Jamel_Saadaoui_9303ter.png"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "My name is Jamel Saadaoui. I am a teacher and researcher in social sciences, specialized in several topics related to international economics. I sometimes write on Probability, Philosophy, Economics, and other topics with a macro perspective. My recent works explore the interactions between geopolitical tensions and the economy.",
+  resume: "https://github.com/JamelSaadaoui/EconMacroProjects/blob/master/src/editable-stuff/CV_Jamel_Saadaoui_OL_8aug2023.pdf",
 };
 
 // PROJECTS SECTION
@@ -54,7 +54,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "JamelSaadaoui", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -88,24 +88,24 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
+    { name: "Stata", value: 90 },
+    { name: "EViews", value: 80 },
+    { name: "MATLAB", value: 60 },
+    { name: "Mathematica", value: 65 },
+    { name: "GAUSS", value: 55 },
+    { name: "RATS", value: 50 },
     { name: "HTML/CSS", value: 55 },
     { name: "C#", value: 80 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
+    { name: "Goal-Oriented", value: 90 },
     { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
+    { name: "Positivity", value: 80 },
     { name: "Adaptability", value: 85 },
     { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Empathy", value: 75 },
+    { name: "Organization", value: 85 },
+    { name: "Creativity", value: 80 },
   ],
 };
 
