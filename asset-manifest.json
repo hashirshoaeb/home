@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a4e54024.css",
+    "main.js": "/static/js/main.65d18403.js",
+    "static/js/787.6971d1b3.chunk.js": "/static/js/787.6971d1b3.chunk.js",
+    "static/media/amoghmadireddi.jpg": "/static/media/amoghmadireddi.0690ef7f2b02eaf0a1a8.jpg",
+    "index.html": "/index.html",
+    "main.a4e54024.css.map": "/static/css/main.a4e54024.css.map",
+    "main.65d18403.js.map": "/static/js/main.65d18403.js.map",
+    "787.6971d1b3.chunk.js.map": "/static/js/787.6971d1b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4e54024.css",
+    "static/js/main.65d18403.js"
+  ]
+}
