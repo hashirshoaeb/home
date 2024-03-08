@@ -27,6 +27,12 @@ const Project = ({ heading, username, length, specfic }) => {
   const [projectsArray, setProjectsArray] = useState([]);
 
   const fetchRepos = useCallback(async () => {
+    /*
+    Need to:
+    1. update authorization information to pull from an env secret, from aws amplify
+    2. update mapping of response to front-end objects
+    */
+
     //authentication
     const config = {
       headers: { Authorization: `Bearer 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` }
