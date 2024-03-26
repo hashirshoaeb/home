@@ -21,6 +21,7 @@ import Skills from "./components/home/Skills";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 
+import AudioPlayer from "./components/AudioPlayer.jsx";
 import Experience from "./components/home/Experience";
 
 const Home = React.forwardRef((props, ref) => {
@@ -70,7 +71,7 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
+      <AudioPlayer />
     </>
   );
 });
@@ -79,7 +80,7 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
