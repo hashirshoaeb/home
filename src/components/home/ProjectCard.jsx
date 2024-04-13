@@ -20,7 +20,7 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <AltLink url={url} />}
+          <CardButtons url={url} />
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
@@ -28,7 +28,7 @@ const ProjectCard = ({ value }) => {
             <Skeleton count={0} />
           )}
           {value ? (
-            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} name={name} url={url}/>
+            <CardFooterSimple star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} name={name} url={url}/>
           ) : (
             <Skeleton />
           )}
@@ -38,7 +38,7 @@ const ProjectCard = ({ value }) => {
   );
 };
 
-const CardButtons = ({ svn_url }) => {
+const CardButtons = ({ url }) => {
   return (
     <div className="d-grid gap-2 d-md-block">
       {/*
@@ -49,8 +49,8 @@ const CardButtons = ({ svn_url }) => {
         <i className="fab fa-github" /> Clone Project
       </a>
       */}
-      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
-        <i className="fab fa-github" /> View Repo
+      <a href={url} target=" _blank" className="btn btn-outline-secondary mx-2">
+      View Project <i className="fa fa-arrow-circle-right" /> 
       </a>
     </div>
   );
@@ -64,7 +64,7 @@ const AltLink = ({ url }) => {
         target={"_blank"}
         className="btn btn-outline-secondary mx-2"
       >
-        <i className="fa fa-external-link-square-alt" /> View Product
+        <i className="fa fa-external-link-square-alt" /> View
       </a>
     </div>
   );
@@ -154,6 +154,20 @@ const CardFooter = ({ star_count, repo_url, pushed_at, name, url}) => {
         </span>
       </a>
       {repo_url === null ? <></> : <small className="text-muted">Updated {updated_at}</small>}
+    </p>
+  );
+};
+
+const CardFooterSimple = ({ star_count, repo_url, pushed_at, name, url}) => {
+
+  return (
+    <p className="card-text">
+      {repo_url === null ? <></> : 
+        <a href={repo_url} className="text-dark text-decoration-none">
+          <i className={repo_url === null ? "fa fa-external-link-square-alt" : "fab fa-github"} /> {" "}
+          <small>Repository</small>
+        </a>
+      }
     </p>
   );
 };

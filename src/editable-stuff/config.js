@@ -92,7 +92,7 @@ const about = {
   show: true,
   heading: "About Me",
   imageLink: require("../editable-stuff/Headshot.jpg"),
-  imageSize: 375,
+  imageSize: 335,
   message:
 `I graduated from NYU's Stern School of Business in 2019, with a BSc in Finance, and minor in Computer Science and Mathematics.
 
@@ -116,13 +116,38 @@ const musicAbout = {
 };
 
 // PROJECTS SECTION
+const projects = [
+  {
+    name: "Hexient",
+    description: 'We built Hexient to improve hiring, by making it more transparent and data-driven. As the primary architect and developer, I built an enterprise-grade Recruiting Tool, using React and a number of AWS services for the back-end and authentication.',
+    svn_url: null,
+    url: 'https://hexient.io',
+    languages_url: null
+  },
+  {
+    name: "Financial Dashboard - US Economy",
+    description: 'Financial Dashboard which tracks a few key, Macroeconomic indicators for the US. I perform ongoing predictions on these key indicators, using a basic LTSM (machine learning) model.',
+    svn_url: 'https://github.com/shawn-don-soneja/shawn-sf-dev-ed',
+    url: 'https://d5e0000012hzdeai-dev-ed.my.site.com/financedashboard2/s/',
+    languages_url: null
+  },
+  {
+    name: "Real Estate DCF Valuation",
+    description: 'This is my personal, built-from-scratch, Real Estate DCF. I’ve used this to try and value real estate investments, specifically rental properties',
+    svn_url: null,
+    url: 'https://docs.google.com/spreadsheets/d/19sdzmD47srzTaQ3_jaKKsID8iIa3kE8LCTBKErwNXKw/edit?usp=sharing',
+    languages_url: null
+  }
+]
+
+
 // Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
 //      i.e: reposLength: 0,
 // If you want to display specfic projects, add the repository names,
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Some of My Work",
+  heading: "Projects",
   gitHubUsername: "shawn-don-soneja", //i.e."johnDoe12Gh"
   reposLength: 5,
   specificRepos: ["Hexient","shawn-sf-dev-ed", "SFDC-Eintstein-Sentiment-Analysis", "sfdc-shawn-dev-ed","sportmaster","react-portfolio-page"],
@@ -227,4 +252,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, musicBody, musicAbout, about, repos, musicRepos, skills, leadership, getInTouch, experiences,  };
+export { navBar, mainBody, musicBody, musicAbout, about, repos, projects, musicRepos, skills, leadership, getInTouch, experiences,  };
