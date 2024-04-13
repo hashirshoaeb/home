@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const SHAWN_PROJECTS_API_KEY = process.env._SHAWN_PROJECTS_API_KEY_STAGING;
-console.log("api key: " + SHAWN_PROJECTS_API_KEY)
+
 root.render(
   <React.StrictMode>
     <App />
