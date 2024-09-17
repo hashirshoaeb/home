@@ -1,0 +1,30 @@
+/* src/components/WorkCard.css */
+.work-card {
+    display: flex;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 33vh;
+  }
+  
+  .work-card img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .work-card-content {
+    padding-left: 20px;
+  }
+  
+  .work-card-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .work-card-content p {
+    color: #555;
+  }
+  

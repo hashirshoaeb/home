@@ -1,0 +1,13 @@
+.project-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .project-image {
+    max-width: 100%;
+    height: auto; /* Ensures that the image resizes according to the screen width */
+  }
+  
