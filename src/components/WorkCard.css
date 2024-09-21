@@ -1,30 +1,58 @@
-/* src/components/WorkCard.css */
-.work-card {
-    display: flex;
-    background-color: #f4f4f4;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    min-height: 33vh;
+/* Card styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image in card */
+.card img {
+  width: 100%;
+  height: 50%;
+  object-fit:contain; /* Ensures the image covers the area without distortion */
+  object-position: left; /* Center the image in the card */
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* Card content */
+.card-content {
+  font-family: 'Cabin';
+  color: #373B44;
+  font-weight: 400;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .work-container {
+      grid-template-columns: repeat(2, 1fr);
   }
-  
-  .work-card img {
-    width: 60%;
-    height: auto;
-    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+.work-container {
+    grid-template-columns: 1fr;
+}
+
+.card {
+      height: auto; /* Make the card adjust to content size on small screens */
   }
-  
-  .work-card-content {
-    padding-left: 20px;
-  }
-  
-  .work-card-content h2 {
-    margin-bottom: 10px;
-  }
-  
-  .work-card-content p {
-    color: #555;
-  }
-  
+}

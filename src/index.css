@@ -1,9 +1,12 @@
 /* src/index.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* Additional font weight styling for elements */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-weight: 700; /* Bold for headers and brand */
+}
+
+p, li, a {
+  font-weight: 400; /* Regular weight for paragraphs and links */
 }
 
 .work {
@@ -13,6 +16,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Apply Montserrat globally */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  box-sizing: border-box;
 }
 
 

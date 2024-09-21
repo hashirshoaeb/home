@@ -1,23 +1,41 @@
-
-/* src/components/Navbar.css */
+/* Style for the Navbar */
 .navbar {
-    background-color: #333;
-    padding: 1rem;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar ul li {
-    margin-right: 20px;
-  }
-  
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white; /* White background */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: black; /* Black text for the brand */
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  margin-left: 20px;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: black; /* Black text for the links */
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.navbar-links ul li a:hover {
+  color: #705574; /* Change color on hover */
+}

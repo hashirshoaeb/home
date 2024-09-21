@@ -1,0 +1,26 @@
+.contact-container {
+    max-width: 600px; /* Center and limit the width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center the text */
+}
+
+.contact-container h1 {
+    font-size: 2.5em; /* Make the heading large */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.contact-container p {
+    font-size: 1.2em; /* Slightly larger text for readability */
+    margin: 10px 0; /* Space above and below paragraphs */
+}
+
+.contact-info a {
+    color: #2E5DA7; /* LinkedIn link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
