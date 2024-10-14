@@ -3,19 +3,19 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
+import { mainBody, repos, about, skills, blog } from "../editable-stuff/config.js";
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
-  // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+  
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      if (!navbarDimensions) return;
+      if (!navbarDimensions || !ref.current) return;
       currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
         ? setIsTop(true)
         : setIsTop(false);
@@ -34,29 +34,15 @@ const Navigation = React.forwardRef((props, ref) => {
   return (
     <Navbar
       ref={navbarMenuRef}
-      className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"
-        }`}
+      className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"}`}
       expand="lg"
     >
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
-        {`<${mainBody.firstName} />`}
+        {`- ${mainBody.firstName} -`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="navbar-nav mr-auto">
-          {/* {
-            <NavLink className="nav-item lead">
-              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </NavLink>
-          } */}
-          {repos.show && (
-
-            <NavLink
-              href={process.env.PUBLIC_URL + "/#projects"}
-            >
-              Projects
-            </NavLink>
-          )}
           <NavLink
             className="nav-item lead"
             href={about.resume}
@@ -70,7 +56,22 @@ const Navigation = React.forwardRef((props, ref) => {
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
-              About
+              About Me
+            </NavLink>
+          )}
+          {repos.show && (
+            <NavLink
+              className="nav-item lead"
+              href={process.env.PUBLIC_URL + "/#experiences"}
+            >
+              Experiences
+            </NavLink>
+          )}
+          {repos.show && (
+            <NavLink
+              href={process.env.PUBLIC_URL + "/#projects"}
+            >
+              Projects
             </NavLink>
           )}
           {skills.show && (
@@ -79,6 +80,14 @@ const Navigation = React.forwardRef((props, ref) => {
               href={process.env.PUBLIC_URL + "/#skills"}
             >
               Skills
+            </NavLink>
+          )}
+          {blog.show && (
+            <NavLink
+              className="nav-item lead"
+              href={process.env.PUBLIC_URL + "/#blog"}
+            >
+              Blog
             </NavLink>
           )}
         </Nav>

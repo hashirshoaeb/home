@@ -248,3 +248,6 @@ This project has been **archived**. Means that it is no longer actively maintain
 # Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home)
+
+# MY INSTRUCTIONS
+Make sure to run everything at: https://create-react-app.dev/docs/deployment, I was skipping npm install --save gh-pages
