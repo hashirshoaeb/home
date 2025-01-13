@@ -5,31 +5,27 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  gradientColors: "#0A2347, #384967, #0071D9, #71439A, #D41E3D, #F2BE19",
+  firstName: "Juan P.",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Romero",
+  message: " Decoding the complexities of biology through computational power and algorithms ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://github.com/jpromeror",
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/jpromeror/",
+    },
+    {
+      image: "fa-instagram",
+      url: "https://www.instagram.com/jp.romeror/",
     },
     {
       image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      url: "https://www.x.com/jprr91/",
     },
   ],
 };
@@ -51,11 +47,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/jpromero.jpg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "Hello! Im Juan Pablo Romero. I receieved my PhD in Applied Engineering / Bioinformatics in 2017 from the University of Navarra. Currently Im a Senior Computational Biologist at 10x Genomics. I've spent a few years trying to understand biology from the side of algorithms and computer science. Im happily married and passionate about all things related to video games and food",
+  resume: "https://drive.google.com/file/d/1Hse6ncbdJoFK9dgqcH3b_1eiv7N8HxdY/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -65,11 +61,12 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  heading: "Projects",
+  gitHubUsername: "jpromeror", //i.e."johnDoe12Gh"
+  reposLength: 1,
+  specificRepos: ["EventPointer"],
 };
+
 
 // Leadership SECTION
 const leadership = {
@@ -100,35 +97,34 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "R", value: 90 },
+    { name: "Python", value: 75 },
+    { name: "Bash", value: 80 },
+    { name: "SQL", value: 85 },
+    { name: "Rust", value: 20 },
+    { name: "Github", value: 80 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Single Cell RNA-seq", value: 90 },
+    { name: "Single Cell ATAC-seq", value: 85 },
+    { name: "Single Cell Immune Profiling", value: 75 },
+    { name: "Spatial Transcriptomics", value: 90 },
+    { name: "In-Situ", value: 85 },
+    { name: "Bulk RNA-seq", value: 90 },
+    { name: "Bulk ATAC-seq", value: 85 },
+    { name: "Whole Exome/Genome Sequencing", value: 75 },
   ],
 };
+
 
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "Interested in discussing Computational Biology, Genomics, Transcriptomics, or just want to say hi? Feel free to reach out to me on any of my social media accounts.",
 };
+
 
 const experiences = {
   show: false,
