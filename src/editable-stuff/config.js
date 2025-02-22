@@ -9,11 +9,11 @@ const mainBody = {
   firstName: "Hashir",
   middleName: "",
   lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  message: " Passionate about changing people's lives with technology. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/Gusoro",
     },
     {
       image: "fa-facebook",
