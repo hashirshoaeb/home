@@ -50,7 +50,7 @@ const about = {
   imageLink: require("../editable-stuff/jpromero.jpg"),
   imageSize: 375,
   message:
-    "Hello! I'm Juan Pablo. I received my PhD in Applied Engineering and Bioinformatics from the University of Navarra in 2017. Currently, I'm a Senior Computational Biologist at 10x Genomics. I have dedicated several years to understanding biology through the lens of algorithms and computer science. I'm happily married and passionate about video games and food",
+    "Hello! I'm Juan Pablo. I received my PhD in Applied Engineering and Bioinformatics from the University of Navarra in 2017. I have dedicated several years to understanding biology through the lens of algorithms and computer science. I'm happily married and passionate about video games and food",
   resume: "https://drive.google.com/file/d/1Hse6ncbdJoFK9dgqcH3b_1eiv7N8HxdY/view?usp=sharing",
 };
 
