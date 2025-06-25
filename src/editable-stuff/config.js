@@ -57,10 +57,11 @@ const about = {
 const publications = {
 show: true,
 heading: "Selected Publications",
-PublicationIDs: ["32972203", "30253752","36629404","32333836"], // Pubmed IDS
-preprintIDS: ["10.1101/2024.06.04.597233","10.1101/2022.10.27.514084"], // biorXiv
+PublicationIDs: ["40473992","32972203", "30253752","36629404","32333836"], // Pubmed IDS
+preprintIDS: ["10.1101/2022.10.27.514084"], // biorXiv
 ScholarID: "DSGeebYAAAAJ",
 }
+
 
 // PROJECTS SECTION
 // Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
