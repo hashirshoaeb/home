@@ -14,23 +14,7 @@ const mainBody = {
     {
       image: "fa-github",
       url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
-    },
+    }
   ],
 };
 
