@@ -4,7 +4,9 @@
   <h1 align="center">Developer's Portfolio ✨</h1>
 
   <p align="center">
-    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. Site URL / Demo: 
+    It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects. 
+    <br/>
+    <strong>Site URL / Demo » </strong> 
     <a href="https://hashirshoaeb.github.io/home">hashirshoaeb.github.io/home</a>
     <br />
     <br />
@@ -18,25 +20,59 @@
 [![GitHub issues](https://img.shields.io/github/issues/hashirshoaeb/home?color=ffcc66&style=for-the-badge)](https://github.com/hashirshoaeb/star_book/issues)
 [![GitHub license](https://img.shields.io/github/license/hashirshoaeb/home?style=for-the-badge)](https://github.com/hashirshoaeb/home/blob/master/LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/hashirshoaeb?color=ffcc66&logo=twitter&logoColor=ffffff&style=for-the-badge)](https://twitter.com/hashirshoaeb)
-[![Node Version](https://img.shields.io/static/v1?label=Node&message=v18.13.0&color=026e00&style=for-the-badge)](https://nodejs.org)
-[![npm Version](https://img.shields.io/static/v1?label=npm&message=8.11.0&color=cb0000&style=for-the-badge)](https://nodejs.org)
+[![Node Version](https://img.shields.io/static/v1?label=Node&message=^22.12.0&color=026e00&style=for-the-badge)](https://nodejs.org)
+[![npm Version](https://img.shields.io/static/v1?label=npm&message=^10.9.0&color=cb0000&style=for-the-badge)](https://nodejs.org)
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About the project</a>
+      <ul>
+        <li>
+          <a href="#technology-stack-">Technology Stack 🛠️</a>
+        </li>
+        <li>
+          <a href="#structure-">Structure ⚓</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting started 💗</a>
+      <ul>
+        <li>
+          <a href="#prerequisites-">Prerequisites 🍪</a>
+        </li>
+        <li>
+          <a href="#setup-and-deployment-">Setup And Deployment 🔧</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#support-my-work">Support my work</a>
+    </li>
+    <li>
+      <a href="#showcase-">Showcase 🚀</a>
+    </li>
+    <li>
+      <a href="#versão-em-português-brazil">Versão em Português :brazil:</a>
+    </li>
+    <li>
+      <a href="#notice">Notice</a>
+    </li>
+    <li>
+      <a href="#stargazers-over-time">Stargazers over time</a>
+    </li>
+  </ol>
+</details>
+
+# About the project
 
 [![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/home)
 
-## Table of Contents
 
-- [Technology Stack 🛠️](#technology-stack-)
-- [Structure ⚓](#structure-)
-- [Sharing 💗](#sharing-)
-- [Prerequisites 🍪](#prerequisites-)
-- [Setup And Deployment 🔧](#setup-and-deployment-)
-- [Contributing 🙌](#contributing-)
-- [Issues](#issues)
-- [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
-- [Showcase 🚀](#showcase-)
-- [Versão em Português :brazil:](#versao-em-portugues-)
-
-## Technology Stack 🛠️
+## Technology stack 🛠️
 
 Dependencies defined in package.json:
 
@@ -68,9 +104,9 @@ Dependencies defined in package.json:
 - Footer
   - Footer Note (optional)
   - Copyrights - open source
-  - Acknowledgements(
+  - Acknowledgements
 
-## Sharing 💗
+# Getting started 💗
 
 Project is open source. Feel free to make your own version. All you need to do is to fork this repository, edit [src/editable-stuff/config.js](./src/editable-stuff/config.js) and add resume. Mark star ⭐ if you like the project.
 
@@ -133,7 +169,15 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
 
-## Showcase 🚀
+# Support my work
+
+If you found this project valuable, please consider giving it a ⭐️ on GitHub. Your support keeps me motivated! If you'd like to further support my work, you can buy me a book. Thank you for your generosity!
+
+<div>
+  <a href="https://www.buymeacoffee.com/hashirshoaeb"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a book&emoji=📖&slug=hashirshoaeb&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
+ </div>
+
+# Showcase 🚀
 
 Have you changed something in the code to create your own version? Feel free to share with me, I will list them in this space.
 
@@ -190,40 +234,17 @@ Have you changed something in the code to create your own version? Feel free to 
       <br />
     </td>
   </tr>
-    <tr>
-    <td align="center">
-      <a href="https://github.com/xunxdd/portfolio/tree/master">
-        <br />
-        <sub><b>Xun Ding</b></sub>
-      </a>
-      <br />
-    </td>    
-    <td align="center">
-      <a href="https://github.com/S-Philp/Shannel.philp">
-        <br />
-        <sub><b>Shannel Philp</b></sub>
-      </a>
-      <br />
-    </td>    
-    <td align="center">
-      <a href="https://github.com/bibinvargheset/home">
-        <br />
-        <sub><b>Bibin Varghese</b></sub>
-      </a>
-      <br />
-    </td>
-  </tr>
 </table>
 
-## Versão em Português :brazil:
+# Versão em Português :brazil:
 
 Esse projeto foi traduzido para português! Se você gostou dele e quer criar a sua própria versão, confira o repositório do [@tashima42](https://github.com/tashima42) em [https://github.com/Tashima42/home](https://github.com/Tashima42/home).
 Novas contribuições e revisões na tradução são muito bem vindas!
 
-## Notice:
+# Notice:
 
-This project has been archived. Means that it is no longer actively maintained by developer. Free free to fork, use and maintain your own version. You can check my new portfolio template [here](https://github.com/hashirshoaeb/portfolio)
+This project has been **archived**. Means that it is no longer actively maintained by developer. Free free to fork, use and maintain your own version. You can check my new portfolio template [here](https://github.com/hashirshoaeb/portfolio)
 
-## Stargazers over time
+# Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/hashirshoaeb/home.svg)](https://starchart.cc/hashirshoaeb/home)
