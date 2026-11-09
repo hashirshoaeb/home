@@ -19,7 +19,7 @@ export const NavLink = (props) => {
       target={props.target}
       rel={props.rel}
     >
-      <span className={`nav-item lead ${props.className}`}>
+      <span className="nav-item lead">
         {props.children}
       </span>
     </Nav.Link>

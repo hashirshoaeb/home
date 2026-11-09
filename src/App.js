@@ -6,10 +6,8 @@ import {
   about,
   publications,
   repos,
-  leadership,
   skills,
   getInTouch,
-  experiences
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -18,16 +16,11 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
 import Publication from "./components/home/Publication.jsx";
-// import { Blog } from "./components/blog/Blog";
-// import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
-
-import Experience from "./components/home/Experience";
 
 const Home = React.forwardRef((props, ref) => {
   return (
-    <>
+    <main>
       <MainBody
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
@@ -44,18 +37,8 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
       {publications.show && (
-        <Publication
-          heading={publications.heading}
-          PID={publications.PublicationIDs}
-          BID={publications.preprintIDS}
-          SID={publications.ScholarID}
-        />
+        <Publication heading={publications.heading} SID={publications.ScholarID} />
       )}
       {repos.show && (
         <Project
@@ -65,14 +48,6 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )}
       {skills.show && (
         <Skills
           heading={skills.heading}
@@ -80,8 +55,7 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
-    </>
+    </main>
   );
 });
 
@@ -92,17 +66,11 @@ const App = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path="/" element={<Home ref={titleRef} />} />
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
       <Footer>
         {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
+          <GetInTouch heading={getInTouch.heading} message={getInTouch.message} />
         )}
       </Footer>
     </BrowserRouter>

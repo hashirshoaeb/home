@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
-import axios from "axios";
 
 const ProjectCard = ({ value }) => {
   const {
@@ -12,21 +11,27 @@ const ProjectCard = ({ value }) => {
     stargazers_count,
     languages_url,
     pushed_at,
+    default_branch,
   } = value;
+  const loaded = Boolean(name);
   return (
     <Col md={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
-          <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          <Card.Text>{loaded ? description : <Skeleton count={3} />} </Card.Text>
+          {svn_url ? (
+            <CardButtons svn_url={svn_url} default_branch={default_branch} />
+          ) : (
+            <Skeleton count={2} />
+          )}
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
           ) : (
             <Skeleton count={3} />
           )}
-          {value ? (
+          {loaded ? (
             <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
           ) : (
             <Skeleton />
@@ -37,106 +42,95 @@ const ProjectCard = ({ value }) => {
   );
 };
 
-const CardButtons = ({ svn_url }) => {
+const CardButtons = ({ svn_url, default_branch }) => {
   return (
     <div className="d-grid gap-2 d-md-block">
       <a
-        href={`${svn_url}/archive/master.zip`}
+        href={`${svn_url}/archive/refs/heads/${default_branch || "main"}.zip`}
         className="btn btn-outline-secondary mx-2"
       >
-        <i className="fab fa-github" /> Clone Project
+        <i className="fa-brands fa-github" /> Clone Project
       </a>
-      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
-        <i className="fab fa-github" /> Repo
+      <a
+        href={svn_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-outline-secondary mx-2"
+      >
+        <i className="fa-brands fa-github" /> Repo
       </a>
     </div>
   );
 };
 
 const Language = ({ languages_url, repo_url }) => {
-  const [data, setData] = useState([]);
-
-  const handleRequest = useCallback(async () => {
-    try {
-      const response = await axios.get(languages_url);
-      return setData(response.data);
-    } catch (error) {
-      console.error(error.message);
-    }
-  }, [languages_url]);
+  const [data, setData] = useState({});
 
   useEffect(() => {
-    handleRequest();
-  }, [handleRequest]);
+    let cancelled = false;
+    fetch(languages_url)
+      .then((response) => {
+        if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+        return response.json();
+      })
+      .then((languages) => {
+        if (!cancelled) setData(languages);
+      })
+      .catch((error) => console.error(error.message));
+    return () => {
+      cancelled = true;
+    };
+  }, [languages_url]);
 
-  const array = [];
-  let total_count = 0;
-  for (let index in data) {
-    array.push(index);
-    total_count += data[index];
-  }
+  const languages = Object.keys(data);
+  const total_count = languages.reduce((sum, language) => sum + data[language], 0);
 
   return (
     <div className="pb-3">
       Languages:{" "}
-      {array.length
-        ? array.map((language) => (
-          <a
-            key={language}
-            className="card-link"
-            href={repo_url + `/search?l=${language}`}
-            target=" _blank"
-            rel="noopener noreferrer"
-          >
-            <span className="badge bg-light text-dark">
-              {language}:{" "}
-              {Math.trunc((data[language] / total_count) * 1000) / 10} %
-            </span>
-          </a>
-
-        ))
+      {languages.length
+        ? languages.map((language) => (
+            <a
+              key={language}
+              className="card-link"
+              href={repo_url + `/search?l=${encodeURIComponent(language)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="badge bg-light text-dark">
+                {language}: {Math.trunc((data[language] / total_count) * 1000) / 10} %
+              </span>
+            </a>
+          ))
         : "code yet to be deployed."}
     </div>
   );
 };
 
+const formatUpdated = (pushed_at) => {
+  const date = new Date(pushed_at);
+  const hours = Math.trunc((Date.now() - date.getTime()) / 1000 / 60 / 60);
+  if (hours < 1) return "just now";
+  if (hours < 24) return `${hours} ${hours === 1 ? "hour" : "hours"} ago`;
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  return `on ${new Intl.DateTimeFormat("en-US", options).format(date)}`;
+};
+
 const CardFooter = ({ star_count, repo_url, pushed_at }) => {
-  const [updated_at, setUpdated_at] = useState("0 mints");
-
-  const handleUpdatetime = useCallback(() => {
-    const date = new Date(pushed_at);
-    const nowdate = new Date();
-    const diff = nowdate.getTime() - date.getTime();
-    const hours = Math.trunc(diff / 1000 / 60 / 60);
-
-    if (hours < 24) {
-      if (hours < 1) return setUpdated_at("just now");
-      let measurement = hours === 1 ? "hour" : "hours";
-      return setUpdated_at(`${hours.toString()} ${measurement} ago`);
-    } else {
-      const options = { day: "numeric", month: "long", year: "numeric" };
-      const time = new Intl.DateTimeFormat("en-US", options).format(date);
-      return setUpdated_at(`on ${time}`);
-    }
-  }, [pushed_at]);
-
-  useEffect(() => {
-    handleUpdatetime();
-  }, [handleUpdatetime]);
-
   return (
     <p className="card-text">
       <a
         href={repo_url + "/stargazers"}
-        target=" _blank"
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-dark text-decoration-none"
       >
-        <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Stars{" "}
-          <span className="badge badge-dark">{star_count}</span>
+        <span className="text-dark card-link me-4">
+          <i className="fa-brands fa-github" /> Stars{" "}
+          <span className="badge bg-dark">{star_count}</span>
         </span>
       </a>
-      <small className="text-muted">Updated {updated_at}</small>
+      {pushed_at && <small className="text-muted">Updated {formatUpdated(pushed_at)}</small>}
     </p>
   );
 };

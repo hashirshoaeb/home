@@ -7,7 +7,6 @@ import { mainBody, repos, about, skills, publications } from "../editable-stuff/
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
-  // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
@@ -37,18 +36,14 @@ const Navigation = React.forwardRef((props, ref) => {
       className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"
         }`}
       expand="lg"
+      collapseOnSelect
     >
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
       {`<${mainBody.firstName} ${mainBody.lastName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="navbar-nav mr-auto">
-          {/* {
-            <NavLink className="nav-item lead">
-              <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
-            </NavLink>
-          } */}
+        <Nav className="navbar-nav me-auto">
           {publications.show && (
 
             <NavLink
